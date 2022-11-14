@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='432.00pt' height='504.00pt' viewBox='0 0 432.00 504.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw0MzIuMDB8MC4wMHw1MDQuMDA='>
+    <rect x='0.00' y='0.00' width='432.00' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHw1MDQuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpMTk3LjE2fDQyNi4wMnw1Ljk4fDQ5NS4wMw=='>
+    <rect x='197.16' y='5.98' width='228.86' height='489.06' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMTk3LjE2fDQyNi4wMnw1Ljk4fDQ5NS4wMw==)'>
+<polyline points='248.36,495.03 248.36,5.98 ' style='stroke-width: 0.58; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='329.95,495.03 329.95,5.98 ' style='stroke-width: 0.58; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='411.54,495.03 411.54,5.98 ' style='stroke-width: 0.58; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='207.56,495.03 207.56,5.98 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='289.15,495.03 289.15,5.98 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='370.74,495.03 370.74,5.98 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<line x1='207.56' y1='34.75' x2='400.12' y2='34.75' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='82.69' x2='291.60' y2='82.69' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='130.64' x2='249.17' y2='130.64' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='178.59' x2='241.83' y2='178.59' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='226.53' x2='236.94' y2='226.53' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='274.48' x2='236.12' y2='274.48' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='322.43' x2='232.86' y2='322.43' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='370.37' x2='229.59' y2='370.37' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='418.32' x2='227.96' y2='418.32' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<line x1='207.56' y1='466.27' x2='227.15' y2='466.27' style='stroke-width: 2.56; stroke: #BEBEBE; stroke-linecap: butt;' />
+<circle cx='400.12' cy='34.75' r='21.69' style='stroke-width: 0.71; stroke: #56B1F7; fill: #56B1F7;' />
+<circle cx='291.60' cy='82.69' r='17.54' style='stroke-width: 0.71; stroke: #2A5981; fill: #2A5981;' />
+<circle cx='249.17' cy='130.64' r='14.83' style='stroke-width: 0.71; stroke: #1B3A57; fill: #1B3A57;' />
+<circle cx='241.83' cy='178.59' r='14.13' style='stroke-width: 0.71; stroke: #183551; fill: #183551;' />
+<circle cx='236.94' cy='226.53' r='13.56' style='stroke-width: 0.71; stroke: #16324C; fill: #16324C;' />
+<circle cx='236.12' cy='274.48' r='13.45' style='stroke-width: 0.71; stroke: #16314B; fill: #16314B;' />
+<circle cx='232.86' cy='322.43' r='12.96' style='stroke-width: 0.71; stroke: #152F48; fill: #152F48;' />
+<circle cx='229.59' cy='370.37' r='12.29' style='stroke-width: 0.71; stroke: #142D45; fill: #142D45;' />
+<circle cx='227.96' cy='418.32' r='11.76' style='stroke-width: 0.71; stroke: #132C44; fill: #132C44;' />
+<circle cx='227.15' cy='466.27' r='11.02' style='stroke-width: 0.71; stroke: #132B43; fill: #132B43;' />
+<text x='400.12' y='39.32' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='21.34px' lengthAdjust='spacingAndGlyphs'>236</text>
+<text x='291.60' y='87.27' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='21.34px' lengthAdjust='spacingAndGlyphs'>103</text>
+<text x='249.17' y='135.22' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>51</text>
+<text x='241.83' y='183.16' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>42</text>
+<text x='236.94' y='231.11' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>36</text>
+<text x='236.12' y='279.06' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>35</text>
+<text x='232.86' y='327.00' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>31</text>
+<text x='229.59' y='374.95' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>27</text>
+<text x='227.96' y='422.90' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='227.15' y='470.84' text-anchor='middle' style='font-size: 12.80px;fill: #FFFFFF; font-family: "Arial";' textLength='14.23px' lengthAdjust='spacingAndGlyphs'>24</text>
+<line x1='207.56' y1='495.03' x2='207.56' y2='5.98' style='stroke-width: 1.07; stroke-linecap: butt;' />
+</g>
+<g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHw1MDQuMDA=)'>
+<text x='191.78' y='469.70' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='135.37px' lengthAdjust='spacingAndGlyphs'>GUPTA RD, 2010, TROP ECOL</text>
+<text x='191.78' y='421.75' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='185.80px' lengthAdjust='spacingAndGlyphs'>KIMOTHI MM, 2010, INT J REMOTE SENS</text>
+<text x='191.78' y='373.81' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='124.34px' lengthAdjust='spacingAndGlyphs'>SINGH A, 1995, VEGETATIO</text>
+<text x='191.78' y='325.86' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='135.37px' lengthAdjust='spacingAndGlyphs'>BARGALI SS, 1993, J VEG SCI</text>
+<text x='191.78' y='272.73' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='149.94px' lengthAdjust='spacingAndGlyphs'>SANYAL P, 2005, PALAEOGEOGR</text>
+<text x='191.78' y='283.10' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='150.82px' lengthAdjust='spacingAndGlyphs'>PALAEOCLIMATOL PALAEOECOL</text>
+<text x='191.78' y='229.97' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='146.74px' lengthAdjust='spacingAndGlyphs'>MISHRA NB, 2015, APPL GEOGR</text>
+<text x='191.78' y='182.02' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='180.85px' lengthAdjust='spacingAndGlyphs'>LODHIYAL N, 2003, FOR ECOL MANAGE</text>
+<text x='191.78' y='134.07' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='107.68px' lengthAdjust='spacingAndGlyphs'>LAMSAL P, 2018, AMBIO</text>
+<text x='191.78' y='86.13' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='182.97px' lengthAdjust='spacingAndGlyphs'>SHARMA CM, 2010, FOR ECOL MANAGE</text>
+<text x='191.78' y='38.18' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Arial";' textLength='124.18px' lengthAdjust='spacingAndGlyphs'>YANG XQ, 2013, ECOL ENG</text>
+</g>
+</svg>

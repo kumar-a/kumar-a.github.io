@@ -1,0 +1,934 @@
+---
+name: "2022-kumar-troe"
+
+title: "Plant ecology in Indian Siwalik range: a systematic map and its bibliometric analysis"
+
+description: |
+  We systematically identified the patterns and trends in plant ecological research of the Siwaliks
+  
+author:
+  - name: Abhishek Kumar
+    url: https://akumar.netlify.app
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in
+    orcid: 0000-0003-2252-7623
+        
+  - name: Meenu Patil
+    url: https://www.researchgate.net/profile/Meenu-Patil
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in
+    orcid: 0000-0002-7664-7877
+
+  - name: Pardeep Kumar
+    url: https://www.researchgate.net/profile/Pardeep-Kumar-22
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in
+    
+  - name: Manoj Kumar
+    url: 
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in        
+    
+  - name: Anand Narain Singh
+    url: https://www.researchgate.net/profile/Anand-Singh-15
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in
+    orcid: 0000-0002-0148-8680
+
+date: 2022-02-14
+
+doi: "10.1007/s42965-022-00229-x"
+
+bibliography: refs.bib
+
+citation:
+  type: article-journal
+  container-title: "Tropical Ecology"
+  doi: "10.1007/s42965-022-00229-x"
+  volume: 63
+  issue: 3
+  page: 338-350
+  
+image: "map.png"
+---
+
+
+```{r setup, include=FALSE}
+## set global chunk options
+knitr::opts_chunk$set(echo = FALSE, comment = "#>",
+                      dev = "svglite",
+                      fig.align = "center",
+                      warning = FALSE, message = FALSE)
+
+###############################################################################
+
+## load the required packages
+library(bibliometrix)  # for bibliometric analysis
+library(dplyr)         # general data manipulation and operations
+library(ggplot2)       # data visualisation
+library(ggforce)       # parallel plot
+library(gt)            # for document tables
+library(raster)        # for raster data operations
+library(revtools)      # article screening
+library(sf)            # spatial data operations
+library(tmap)          # spatial data visualisation and mapping
+
+###############################################################################
+
+## a colour-blind friendly palette
+cbf <- c("#999999", "#E69F00", "#56B4E9", "#009E73", 
+           "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+###############################################################################
+
+## theme for tables
+tab_theme <- function(data, ...) {
+  
+  data |>
+    
+    # apa style three lined table
+    tab_options(
+      column_labels.border.top.width = 2,
+      column_labels.border.top.color = "black",
+          
+      table_body.border.top.color = "black",
+      table_body.border.top.width = 3,
+          
+      table_body.border.bottom.color = "black",
+      table_body.border.bottom.width = 2,
+          
+      table.border.bottom.width = 0,
+      table.border.bottom.color = NULL,
+          
+      # make the width 100%
+      table.width = pct(100),
+      table.background.color = "white",
+      ...
+    )
+}
+```
+
+:::{.callout-note}
+This is the original draft, which may differ from published manuscript. Please refer to <https://doi.org/10.1007/s42965-022-00229-x>
+:::
+
+
+
+
+
+## Abstract
+
+The Himalayan foothills or the Siwaliks have been considered as one of the most fragile ecosystems of India. The underlying cause of degradation includes natural settings (geological formation and climate change) and human-mediated pressures (sandstone mining, urbanisation and developmental activities). Since the Siwaliks is associated with the livelihood of about 20 million people, it becomes imperative to respond appropriately for sustaining this ecologically fragile region. Ecological principles have great potential to develop sustainable practices for the conservation and management of natural resources. These principles offer nature-based solutions to sustain the ecologically sensitive and degraded ecosystems such as the ‘Siwaliks’. However, there is a need for concerted research to develop data-driven decisions for effective management. Therefore, a systematic analysis was conducted to assess the current patterns and knowledge gaps about plant ecological studies in the Indian Siwalik region. This article analysed the available peer-reviewed literature using established guidelines and bibliometric analyses. We found an increasing trend in the scientific output, and most studies were concentrated in the Siwalik region belonging to the Indian state of Uttarakhand. Although studies have been conducted on plant ecology, landscape ecology and ecosystem ecology have been disproportionately focused. Our findings suggest a growing interest in the plant ecology of the region; however, these studies seem relatively small compared to the complexity and diversity of this ecosystem structural and functional attributes. Further, with advances in computer application and remote sensing satellite data availability, we observed a shift towards ecological modelling studies, though experimental evidence also needs to be addressed.
+
+**Keywords:** Himalayan foothills, Northwest Himalaya, Shivalik, Sivalik, Shiwalik, Uttarakhand
+
+## Introduction
+
+The southernmost foothills of the Himalayas with an average elevation of 900–1200 m are known as Siwaliks [@Wadia1944] or other spelling variants [@Kumar2020]. This younger range of the Himalayas is characterised by rich fossil remains of vertebrates, plants, and molluscs [@Dhital2015]. Geographically, these hills run parallel to the Himalayas from the Potwar Plateau of Pakistan to Brahmaputra valley in India [@Wadia1944; @Dhital2015]. It is well developed in India’s northwest region and covers a 3.33 Mha area across six Indian states and a union territory [@Yadav2015]. The Siwalik landscape supports a rich diversity of flora [@Rout1989; @Singh1995; @Rawat1999] and fauna [@Sivakumar2010]. Apart from biological and geological importance, the present region also harbours culturally diverse human population whose livelihood depends on the region’s natural resources. However, the Siwaliks have been degrading due to inevitable pressure from human activities (e.g., mining, industrialisation and more urban expansion) and climate change [@Tewari2017]. These human-mediated disturbances and geological settings make the region fragile, leading to frequent landslides and soil erosion. Soil erosion has remained a persistent problem of the region despite numerous efforts for management [@Scott1993; @Semwal2017]. Considering the unprecedented ecological degradation, Indian Siwalik has been once proposed to be declared as a biosphere reserve [@PTI2010]. Such initiatives to sustain and preserve threatened landscapes can be supported by knowledge derived from ecological studies.
+
+Plant ecology focuses on the interactions of plants (primarily terrestrial plants) with their environments over a range of spatio-temporal scales [@Gurevitch2002]. The interests and focus of plant ecologists varied over time from community ecology, population ecology, physiological ecology, ecosystem ecology, species interactions, landscape ecology to macroecology [@Gurevitch2002]. Despite substantial growth and development of the field, many mysteries of nature are neither well-known nor fully understood [@Schulze2019]. For instance, human activities and climate change have been rapidly altering the interactions of organisms with their environment; yet their consequences are not fully known [@Schulze2019]. These alterations in nature can considerably threaten the balance of organisms and their environment. Thus, studying ecological interactions becomes important to sustainably manage natural resources and ensure continuity of life on the earth.
+
+Research synthesis is crucial to integrate past findings and develop a future roadmap for research [@Koricheva2013]. Traditional narrative synthesis and vote count approaches of literature reviews often suffer from bias and lack replicability [@Koricheva2013]. Modern research synthesis employs a well-defined methodology for literature review to answer specific questions to overcome these constraints. Although systematic reviews have been frequently used in medical sciences, the same is also being applied in ecology and evolution. Systematic reviews aim to answer precise questions, whereas a systematic map aims to describe the field [@James2016; @CEE2018]. On the other hand, bibliometrics measure scientific articles’ influence and relationships based on statistical methods [@bibliometrix2017]. Therefore, bibliometrics has been contemporarily included in review articles [@Xie2020; @Rodriguez-Soler2020; @Singh2021; @Verma2021]. Recently, a new framework of research synthesis called “research weaving” combines the systematic map and bibliometric approaches [@Nakagawa2019]. Thus, the research weaving approach describes and summarises the evidence and visualises the influence and relationships among the evidence [@Nakagawa2019].
+
+Considering the importance of plant ecology and ecological problems of the Indian Siwaliks, this review aims to describe the focus of plant ecological studies by analysing the current evidence from the bibliometric analysis. Further, we aim to identify the patterns and gaps in the current knowledge, guiding future investigations. The taxonomic scope of this review is any plant species in the Siwaliks of northwest India. The Siwalik region has been spatially defined according to the Geological Survey of India (<https://bhukosh.gsi.gov.in/Bhukosh/MapViewer.aspx>). However, this study will not focus on agroecological aspects; therefore, studies concentrating on agricultural systems will be beyond the scope of this review. Overall, we aim to answer the following questions: (1) What are the focus areas of plant ecological studies conducted in the Indian Siwaliks? (2) What is the geographical and temporal distribution of the studies? (3) What are the research gaps and opportunities for future investigations?
+
+## Methodology
+
+We adopted the guidelines and recommendations established by Collaboration for Environmental Evidence (CEE) for evidence synthesis in environmental management [@CEE2018]. These recommendations are designed to improve the transparency and reproducibility of reviews in environmental contexts [@CEE2018; @Grames2020]. We departed from recommended practices as we neither consulted stakeholders nor registered a protocol. A review team comprising of individuals with relevant skills and knowledge (subject and methodological) was framed. The roles and responsibilities of each participant have been defined during the initial project development. Every weekend, we organised meetings and discussions to develop the protocol, search strategy, screening, data extraction, analyses, and writing. The selection of appropriate studies for the present review involved three phases: searching, screening, and inclusion (@fig-a).
+
+```{r}
+#| label: fig-a
+#| fig-cap: "Schematic flow diagram for literature search, screening and inclusion process [modified from @Haddaway2017]"
+
+
+library(DiagrammeR)
+grViz("digraph G{
+			
+	graph[ranksep=0.35, newrank=true, nodesep=0.25, splines=ortho]
+			
+	subgraph cluster_searching{
+	label=''; style=filled; color=mintcream; fontsize=18
+	node[label='Scopus\n(n = 1,876)', shape=box, width=1.25, 
+	fillcolor=grey95]searching_A;
+	node[label='Web of Science\n(n = 1,013)', shape=box, width=1.25]searching_B;
+	node[label='Total records\n(n = 2,888)', shape=box, width=3]searching_C;
+	searching_A -> searching_C
+	searching_B -> searching_C
+	{rank=same;searching_A;searching_B}
+	}
+	
+	subgraph cluster_screening{
+	label=''; style=filled; color=lightyellow; shape=box; fontsize=18
+	node[label='Records after duplicates removed \n (n = 2,171)', shape=box, 
+	width=3]screening_1
+	node[label='Records after title screening \n (n = 375)', shape=box, 
+	width=3]screening_2
+	node[label='Records after abstract screening \n (n = 111)',shape=box, 
+	width=3]screening_3
+	node[label='Articles retrieved at full text \n (n = 100)',shape=box, 
+	width=3]screening_4
+	node[label='Articles after full text screening \n (n = 40)',shape=box, 
+	width=3]screening_5
+	searching_C -> screening_1[minlen=1, label='    Screening']
+	screening_1 -> screening_2 -> screening_3 -> screening_4 -> screening_5
+	}
+	
+	node[label='Duplicates \n (n = 717)', shape=box, width=2, style=filled,
+	fillcolor=seashell]screening_a
+	node[label='Excluded titles \n (n = 1,796)', shape=box, width=2, style=filled,
+	fillcolor=seashell]screening_b
+	node[label='Excluded abstracts \n (n = 264)', shape=box, width=2, style=filled,
+	fillcolor=seashell]screening_c
+	node[label='Unretrievable full text \n (n = 11)', shape=box, width=2, style=filled,
+	fillcolor=seashell]screening_d
+	node[label='Excluded articles \n (n = 71)', shape=box, width=2, style=filled,
+	fillcolor=seashell]screening_e
+	
+	screening_1 -> screening_a
+	screening_2 -> screening_b
+	screening_3 -> screening_c
+	screening_4 -> screening_d
+	screening_5 -> screening_e
+	
+	{rank=same;screening_1;screening_a;}
+	{rank=same;screening_2;screening_b;}
+	{rank=same;screening_3;screening_c;}
+	{rank=same;screening_4;screening_d;}
+	{rank=same;screening_5;screening_e;}
+	
+	subgraph cluster_articles{
+	label=''; style=filled; color=grey95;
+	node[label='Studies after full text screening \n (n = 40)', shape=box, width=3, 
+	style=filled, fillcolor=grey95]articles_A
+	node[label='Studies included in synthesis \n (n = 39)', shape=box, width=3, 
+	style=filled, fillcolor=grey40, color=grey20, fontcolor=white]articles_B
+	screening_5 -> articles_A[minlen=1, label='    Synthesis']
+	articles_A -> articles_B
+	}
+	
+	node[label='Excluded studies \n (n = 1)', shape=box, width=2, style=filled,
+	fillcolor=seashell]studies_e
+	articles_A -> studies_e
+	{rank=same;articles_A;studies_e}	
+	
+	}",
+	height = 800, width = 750)
+```
+
+### Literature database
+
+Scopus (<https://scopus.com/>) and Web of Science Core Collection
+(<https://webofknowledge.com/>) are the most reliable databases for retrieval of
+high-quality peer-reviewed scientific literature in the fields of science and
+technology. Although the Web of Science Core Collection consists of seven
+indices: (i) Science Citation Index Expanded (SCIE), (ii) Social Sciences
+Citation Index (SSCI), (iii) Arts & Humanities Citation Index (AHCI), (iv)
+Conference Proceedings Citation Index (CPCI), (v) Book Citation Index (BCI),
+(vi) Emerging Sources Citation Index (ESCI), and (vii) Current Chemical
+Reactions and Index Chemicus
+(<https://clarivate.com/webofsciencegroup/solutions/web-of-science-core-collection/>),
+our institution provided us access to SCIE, SSCI and AHCI for the timespan
+1989-present. Both databases allow to export bibliographic meta-data offer great
+accuracy and reproducibility of literature search. However, access to these
+databases required a subscription through payment of large money. Although both
+databases emerged in 2004, Scopus offers relatively larger coverage of
+scientific literature whereas Web of Science provides offers coverage from early
+1900.
+
+On the other hand, Google Scholar (<https://scholar.google.com/>) is freely
+available and has most comprehensive coverage as it offers retrieval of most
+obscure information. Although it also provides access to full text articles, it
+is not a bibliographic database. Its content is dynamic and has compromised
+accuracy. Further, it lacks several functionalities in literature search like
+subject filtering and tagging. Considering these limitations, we limited our
+literature search to two bibliographic databases of peer-reviewed literature
+([Web of Science Core Collection](https://webofknowledge.com/) and
+[Scopus](https://scopus.com/)).
+
+### Search strings
+
+We identified the terms that are frequently applied to the region using a
+preliminary literature search and discussion with review team members 
+(@tbl-a). 
+
+```{r tab1}
+#| label: tbl-a
+#| tbl-cap: "List of keywords used for developing search string"
+
+
+data.frame(
+    group1 = c("shivalik", "sivalik", "shiwalik", "siwalik"), 
+    group2 = c("himalayan foothills", "outer himalayas", "sub himalayas", ""), 
+	group3 = c("jammu hills", "kangra hills", "morni hills", "mohand hills"), 
+	group4 = c("dudhwa range", "dundwa range", "", "")
+) |>
+    gt() |>
+    tab_theme()
+```
+
+Further, we searched for various spelling variants of terms applied to the region [@Kumar2020]. Using a combination of these terms with boolean operators, 
+we developed the following common search string for 
+[Web of Science](https://webofknowledge.com/) and [Scopus](https://scopus.com/).
+
+> (shivalik OR sivalik OR shiwalik OR siwalik) OR (himalaya\* AND (foothill\* OR outer OR sub)) OR (hill\* AND (jammu OR kangra OR morni OR mohand)) OR (range\* AND (dudhwa OR dundwa))
+
+### Literature search
+
+* [Scopus](https://scopus.com/): We have queried the above defined search string to the "Article title, Abstract, Keywords" in "Documents" using the default options for "Limit" (Date range (inclusive): Published from "All years" to "Present"; Document type: "ALL"). This query returned a total of 4,102 document results on 03 April 2021. Then, we have filtered the results by limiting subject to "Agricultural and Biological Sciences" and "Environmental Science" subject areas, which yielded a total of 1,875 documents. All these documents were selected by choosing "Select All" option and then exported all information by selecting "Citation information", "Bibliographical information", "Abstract & keywords", "Funding details" and "Other information" in the BibTex format.
+
+* [Web of Science Core Collection](https://webofknowledge.com/): The same keyword combination was queried in the "Topic" field of Web of Science by selecting the database "Web of Science Core Collection". Default settings (Web of Science Core Collection: Citation Indexes - Science Citation Index Expanded (SCI-EXPANDED) --1989-present, Social Sciences Citation Index (SSCI) --1989-present, and Arts & Humanities Citation Index (A&HCI) --1989-present; Auto-suggest publication names: On; and Default Number of Search Fields to Display: 1 field (Topic)) were used under the more settings option. This yielded us 2,978 results on 03 April 2021. Then the results were refined by selecting following Web of Science categories: ENVIRONMENTAL SCIENCES, PLANT SCIENCES, PALEONTOLOGY, ECOLOGY, BIOLOGY, REMOTE SENSING, SOIL SCIENCE, BIODIVERSITY CONSERVATION, FORESTRY, EVOLUTIONARY BIOLOGY, and ENVIRONMENTAL STUDIES. This yielded a total of 1,013 results. Then the "Show" option was changed from "10 per page" (Default) to "50 per page". Next, all entries on a page were first selected using the "Select Page" option and then added to "Marked List" using the "Add to Marked List" button. This was repeated for all the 21 pages and thus all the 1,103 entries were added to the "Marked List". Since Web of Science allows export of 500 records at time, we have first selected the first 500 records by defining the record range "Records: 1 to 500" under the "Step 1: Select records." option. Then we have selected all the fields using the "Select All" option under "Step 2: Select content. Select from the fields below:" option. Next, we have exported the records in BibTex format using the "Export" option under the "Step 3: Select destination." And then choosing the "BibTex" option under the "Other File Formats". The same process was repeated for records 501 to 1,000 and 1,001 to 1,013.
+
+### Article screening
+
+Article screening was implemented in the `R` programming environment [@R2020] using the package `revtools` version `r packageVersion("revtools")` [@revtools2019]. This phase included de-duplication, title screening, abstract screening, and full-text screening. We adhered to the previously proposed eligibility criteria for the article screening phase (@tbl-b).
+
+```{r}
+#| label: tbl-b
+#| tbl-cap: "Eligibility criteria for inclusion or exclusion of studies"
+
+
+data.frame(
+    Criteria = c("articles falling in general scope of plant ecology",
+                 "study sites or their part situated within the boundary of Siwaliks",
+                 "studies involving plants as one of the component",
+                 "studies related to plant distributions and their interactions with environment",
+                 "studies involving ecosystem processes such as nutrient cycling, carbon sequestration, and biomass production",
+                 "studies referring to palaeoecological studies such as fossil distribution and past vegetation",
+                 "studies concerning animals, fungi, microbes or any organism other than plants",
+                 "studies focusing agroecosystems and agricultural practices", 
+                 "studies related to ethnobotanical or traditional uses of plants", 
+                 "studies evaluating phytochemicals or biological activities",
+                 "studies focusing cytology, genetics or molecular biology of plants",
+                 "studies reporting discovery of new species"),
+    Type = c(rep("Inclusion", 6), rep("Exclusion", 6))
+) |>
+    group_by(Type) |> 
+    gt() |>
+    tab_theme()
+```
+
+```{r eval=FALSE}
+## De-duplication
+#===============
+
+## read all the bibliography
+data_all <- read_bibliography(
+    c("./data/scopus.bib", "./data/wos1.bib", "./data/wos2.bib",
+      "./data/wos3.bib")
+)
+
+## identify and remove duplicates by doi
+match.doi <- find_duplicates(data = data_all) # match by doi
+unique_doi <- extract_unique_references(x = data_all, matches = match.doi)
+
+## identify and remove duplicates by title
+# exact title matching
+match.title <- find_duplicates(data = unique_doi, match_variable = "title",
+					 to_lower = TRUE, remove_punctuation = TRUE)
+unique_title <- extract_unique_references(x = unique_doi, matches = match.title)
+
+## write and save unique references
+#write_bibliography(x = unique_title, filename = "./data/unique_refs.ris")
+
+## remove variables from the environment
+rm(list = ls()) 
+```
+
+**De-duplication**: Database may have erroneous duplications or due to automated information extraction systems. Thus, the documents can be largely duplicated within and across literature databases. These duplicates might waste the energy and time of the reviewers apart from erroneous results of reviews. Therefore, removal of duplicates is necessary. Several procedures and software are available for automated de-duplication of literature. Here, we have first de-duplicated the documents based on doi (digital object identifier) of each articles. Then, we have de-duplicated by matching title of each article. However, the upper- or lower case and punctuations can interfere with title matching. Therefore, we converted titles to lower case and removed punctuations before matching. Thus, after de-duplication we are left with 2,171 (unique doi = 2,366, unique doi + unique title = 2,171) articles out of total 2,888 articles (@fig-a). After this, we have performed manual screening of duplicates, if remained any.
+
+```{r eval=FALSE}
+## Title screening
+#=================
+
+## read the unique articles
+unique_refs <- read_bibliography(filename = "./data/unique_refs.ris")
+
+## screen titles of unique articles
+sc_titles <- screen_titles(unique_refs)
+
+## write screened titles to local file
+#write.csv(sc_titles, "./data/screened_titles.csv")
+
+## remove all variables from the environment
+rm(list = ls())
+```
+
+**Title screening**: After de-duplication of articles, we performed  article screening based on their titles. We have hidden every other information during title screening to avoid any potential bias. We assigned one of three labels to each article (i) *selected*, (ii) *excluded*, or (iii) *unknown*. We excluded  1,796 articles based on title screen and remaining 375 articles were selected for abstract screening out of which 158 articles were assigned "selected" and 217 articles were assigned "unknown" during the title screening. Next, we removed the articles assigned as "excluded" and screened for abstracts.
+
+```{r eval=FALSE}
+## Abstract screening
+#====================
+
+## read screened titles and filter the included titles
+included_title <- read.csv("./data/screened_titles.csv") |>
+    filter(screened_titles != "excluded")
+
+## screen abstracts of included titles
+sc_abstracts <- screen_abstracts(included_title)
+
+## write screened abstracts
+#write.csv(sc_abstracts, "./data/screened_abstracts.csv")
+
+## remove variables from the environment
+rm(list = ls()) 
+```
+
+**Abstract screening**: Our abstract screening resulted in exclusion of 264 articles and we are left with only 111 articles. Then we filtered these 111 articles and saved as the included articles (@fig-a). 
+
+```{r eval=FALSE}
+## read screened abstracts and filter the included abstracts
+included_abstracts <- read.csv("./data/screened_abstracts.csv") |>
+    filter(screened_abstracts != "excluded")
+
+## write included abstracts
+#write.csv(x = included_abstracts, file = "./data/included_abstracts.csv")
+```
+
+**Full-text searching:** Then we searched for full text for every article from publisher's website, Google Scholar, Research Gate and institutional repositories. We were not able to retrieve full text of following 11 articles. We excluded these 11 articles and 
+screened full text of articles.  
+
+1. Devi, B., Bhardwaj, D. R., Panwar, P., Pal, S., Gupta, N. K., & Thakur, C. L. (2013). Long term effects of natural and plantation forests on carbon sequestration and soil properties in mid-hill sub-humid condition of Himachal Pradesh, India. *Range Management and Agroforestry, 34*, 19--25.
+
+2. Mehta, S., & Singh, Y. (1994). Spatio-temporal changes in the natural hilly ecosystem: a case study of the Chandigarh Siwalik Hills. *Transactions - Institute of Indian Geographers, 16*, 135--146.
+
+3. Pandey, R. K., Bindroo, B. B., Dhar, A., & Khan, M. A. (2010). Oak regeneration in Sub-Himalayan India. *Indian Silk, 1*, 19--21.
+
+4. Panwar, P., Pal, S., Bhatt, V. K., & Prasad, R. (2014). Land use and canopy positions affect organic carbon pools and fertility of soils in lower Himalayan region, India. *Agrochimica, 58*, 51--62.
+
+5. Pokhriyal, T. C., Chaukiyal, S. P., & Singh, K. C. H. (1996). Nitrogen fixation and nodulation behaviour in relation to seasonal changes in six multipurpose tree species. *Indian Forester, 122*, 718--726.
+
+6. Purohit, S., Aggarwal, S. P., & Patel, N. R. (2021). Estimation of forest aboveground biomass using combination of Landsat 8 and Sentinel-1A data with random forest regression algorithm in Himalayan Foothills. *Tropical Ecology, 62*, 288--300. <https://doi.org/10.1007/s42965-021-00140-x>
+
+7. Rajwar, G. S. (1991). *Advances in Himalayan Ecology*. Today & Tomorrow's Printers and Publishers, New Delhi.
+
+8. Rajwar, G. S. (1993). *Garhwal Himalaya: Ecology and Environment*. Ashish Publishing House, New Delhi.
+
+9. Ram, N., & Jana, M. M. (1997). Ecological impact of compaction under teak plantation in the foothill of Darjeeling himalaya. *Indian Forester, 123*, 623--630.
+
+10. Rout, S., & Gupta, S. (1989). Soil respiration in relation to abiotic factors, forest floor litter, root biomass and litter quality in forest ecosystems of Siwaliks in Northern India. *Acta Oecologica. Oecologia Plantarum, 10*(3), 229--244.
+
+11. Singh, R., Goraya, G. S., Singh, C., Kumar, S., & Kumar, S. (2001). Mortality of Chir pine trees by insect borers in Morni Hills, Haryana - A case study. *Indian Forester, 127*, 1279--1286.
+
+```{r eval=FALSE}
+## Full-text screening
+#=====================
+
+## read the included abstracts and select the label, journal and year columns
+included_abstracts <- read.csv("./data/included_abstracts.csv") |>
+    dplyr::select(label, title, journal, year, doi)
+
+## write included abstracts with selected column
+#write.csv(x = included_abstracts, file = "./data/screened_fulltext.csv")
+
+## read the screened fulltext
+screened_fulltext <- read.csv("./data/screened_fulltext.csv")
+```
+
+**Full-text screening**: For full text screening, we first selected five variables (`label`, `title`, `journal`, `year`  and `doi`) from the included abstracts. Then, we manually  screened articles based on the full-text of every article. This process excluded 71 more articles and we left with only 40 studies (@fig-a).
+
+### Data extraction
+
+We developed a search string based on the DOI (digital object identifier) and title (if DOI is not available) of included studies to extract bibliometric metadata from the Scopus database. We retrieved bibliometric information for 39 articles on 09 May 2021. However, we could not extract metadata for an article because it was not available in Scopus; therefore, we excluded it from the final systematic map and narrative synthesis (@fig-a). This bibliometric data had several missing values (marked as `NA`); these values were manually added from the full text, if available. 
+
+```{r eval=FALSE}
+## read the screened fulltext and filter the selected articles
+included_articles <- read.csv("./data/screened_fulltext.csv") |>
+    filter(screened_fulltext == "selected") |> 
+    dplyr::select(-c(X, screened_fulltext))
+
+## write the selected articles for data extraction
+#write.csv(x = included_articles, "./data/included_articles.csv")
+```
+
+Considering the questions posed, we looked for the following information (if available) for each article:
+
+- geographic location (latitude and longitude) to estimate the geographical distribution of studies. If it is not available in the study, we estimate the approximate location using Google Maps and Google Earth. We also recorded the Indian state in which the study was conducted.
+- year of the study to evaluate the temporal distribution of studies. We further estimated the decadal frequency of publications (1980–1989, 1990–1999, 2000–2009, 2010–2019, 2020–2021).
+- the domain of plant ecology for each study. Adopting a single unique classification system for ecological studies is difficult as study areas often overlap. However, we adhered to a previously proposed comprehensive classification system for the present study (@tbl-c).
+
+```{r}
+#| label: tbl-c
+#| tbl-cap: "Classification scheme for included studies"
+data.frame(
+    Domain = c("Organismal ecology", "Physiological ecology", 
+               "Population ecology", "Species interactions", 
+               "Community ecology", "Ecosystem ecology",
+               "Palaeoecology", "Landscape ecology", "Applied ecology"),
+    
+    Description = c("Population genetics, natural selection, behaviour",
+                    "Adaptations to abiotic factors like temperature, light",
+                    "Population growth, demography, age structure",
+                    "Competition, facilitation, parasitism, symbiosis",
+                    "Species diversity, succession, biogeography",
+                    "Food web, biomass production, nutrient cycling, soil",
+                    "Fossil records, palaeo-vegetation",
+                    "Land use and land cover, ecological modelling, spatial and global ecology",
+                    "Conservation, management and restoration ecology")
+) |>
+    gt() |> 
+    tab_theme()
+```
+
+Next, we manually assigned an ecological domain according the above classification system (@tbl-c).
+
+### Data analysis
+
+The bibliometric data analysis was conducted using the package `bibliometrix`  version `r packageVersion("bibliometrix")`[@bibliometrix2017] in the `R` programming environment [@R2020]. The attributes of manuscript (e.g. title, authors, citations, keywords) are connected with manuscript itself, such connections can be represented as rectangular matrices (Manuscripts $\times$ Attributes). For example, consider a rectangular binary matrix $A$, where rows represent the manuscripts and columns represent the authors. The generic element $A_{ij}$ is 1 if the manuscript $i$ has author $j$ and 0 otherwise. The $j^{th}$ column sum $A_j$ is the number of manuscripts authored by author $j$. This rectangular matrix represents as a bipartite network of Manuscripts $\times$ Authors [@bibliometrix2017; @Glanzel2004]. The authors' collaboration network was calculated 
+by multiplying the bipartite matrix by its transpose (the same matrix flipped 
+along its diagonal).
+
+$$AC = A^T \times A$$
+
+where, $A$ is a bipartite network of Manuscripts × Authors and $A^T$ is the transpose of $A$. The diagonal element $AC_i$ is the number of manuscripts authored or co-authored by the $i$^th^ researcher.
+
+The authors’ collaboration network helps identify the groups of researchers or teams, which is why scientific collaboration is frequently represented as the author collaboration network [@Glanzel2004]. In a collaboration network of authors, each node (or vertex) represents an author, and the edges between the nodes reflect the collaborative relationships among the authors. The weight of the edge reflects the number of manuscripts in which the connected authors have appeared (i.e., the number of manuscripts authored by both researchers).
+
+Similarly, the keyword co-occurrence network was estimated from the bipartite network of Manuscripts × Keywords [@bibliometrix2017]. These keywords can be either provided by authors (‘Author Keywords’) or chosen by database third parties (‘Indexed Keywords’ in Scopus and ‘Keywords Plus’ in the case of Web of Science). We considered ‘Indexed Keywords’ for keyword co-occurrence because these are standardised by taking additional considerations such as synonyms, spelling variants, and plurals.
+
+## Results
+
+
+```{r results='hide'}
+## convert bibliometric data to data frame
+M <- convert2df(file = "./data/scopus_trimmed.bib", dbsource = "scopus", 
+                format = "bibtex")
+
+## analyse the bibliometric data
+results <- biblioAnalysis(M, sep = ";") |> summary()
+
+## save the dataframe
+#write.csv(M, "./data/bibdata.csv")
+
+## save main information
+#write.csv(x = results$MainInformationDF, "./data/main_information.csv",
+          #row.names = FALSE)
+
+## save total citations
+# results$MostCitedPapers[, c(1, 3)] |>
+#   rename("Paper" = 1) |> 
+#   write.csv("./data/MostCitedArticles.csv", row.names = F)
+```
+
+Our systematic literature search yielded a total of 2,888 documents from both Scopus and Web of Science Core Collection. After de-duplication and article screening, these records were reduced to 40 studies (@fig-a). However, only 39 studies were included in the final synthesis as bibliographic metadata was not available for a study (@fig-a). Thus, this synthesis is based on 39 studies published in 26 sources (journals) from 1988 to 2021. The results of descriptive analysis of bibliometric indicators for selected studies are presented in @tbl-d.
+
+```{r}
+#| label: tbl-d
+#| tbl-cap: "General description of extracted bibliometric indicators from Scopus"
+
+read.csv("./data/main_information.csv") |>
+    dplyr::filter(!Results == "") |>
+    mutate(category = c(rep("Main information about data", 7),
+                        rep("Document types", 1), 
+                        rep("Document contents", 2),
+                        rep("Authors", 4),
+                        rep("Authors collaboration", 5))
+           ) |>
+    group_by(category) |>
+    gt() |>
+    tab_theme()
+```
+
+The studies identified for the present review were published in 26 different journals. Further, only nine journals had represented more than one study identified in this article (@fig-b). These nine journals (about 34.6%) represented about 56.4% of the total studies (n = 22) included. The maximum number of studies (n = 4) were published in 'International Journal of Remote Sensing' (@fig-b).
+
+```{r fig.height=6, fig.width=8}
+#| label: fig-b
+#| fig-cap: "Publication sources (journals) representing at least two studies identified in the present article. The number of publications in a particular journal is represented in parenthesis"
+
+
+set.seed(254)
+library(ggwordcloud)
+
+read.csv("data/extracted_data.csv", fileEncoding = "UTF-8-BOM") |>
+    dplyr::select(journal) |> table() |> as.data.frame() |>
+    filter(Freq > 1) |> 
+    mutate(journal = paste0(journal, " (", Freq, ")")) |>
+    
+    ggplot(aes(label = journal, size = Freq, color = as.factor(Freq))) +
+    geom_text_wordcloud() +
+    scale_radius(range = c(2, 9), limits = c(0, NA)) +
+	scale_color_manual(values = c("#abdda4", "#66c2a5", "#3288bd")) +
+	theme_void()
+```
+
+Citations of an article usually related with its impact and influence on a specific research field. Highly cited articles are considered to have substantially contributed to the advancement of the field. The articles identified in this review exhibited about 20 citations per article at the average rate of about two citations per article per year (@tbl-d). The present analysis found that the article by @Yang2013 had the highest citation (n = 236) in which they used MaxEnt modelling to predict the distribution of *Justicia adhatoda* (@fig-c). Other highly cited articles with their respective citations are represented in @fig-c.
+
+```{r fig.height=7, fig.width=6}
+#| label: fig-c
+#| fig-cap: "Most cited articles (with at least 25 citations) from idenitfied peer-reviewed publications"
+
+read.csv("data/MostCitedArticles.csv") |>
+  ggplot(aes(x = TC, y = reorder(Paper, TC))) +
+	geom_segment(aes(x = 0, xend = TC, y = reorder(Paper, TC), 
+			     yend = reorder(Paper, TC)), size = 1.2, color = "grey") +
+	geom_point(aes(size = TC, color = TC), show.legend = F) +
+	geom_text(aes(label = TC), color = "white", size = 4.5) +
+	geom_vline(xintercept = 0) +
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+	scale_size(range = c(10, 20)) +
+	lims(x = c(0, 255)) +
+	expand_limits(y = c(10, 10)) +
+	theme_minimal(base_size = 12) +
+	theme(axis.title = element_blank(), 
+		axis.text.y = element_text(),
+		axis.text.x = element_blank(),
+		panel.grid.major.y = element_blank())
+
+```
+
+A total of 368 'indexed keywords' and 160 'author's keywords' were identified from  selected studies (@tbl-d). The connections among keywords were analysed using a keyword co-occurrence network of 'indexed keyword' which revealed three distinct patterns about the research field (@fig-d). The keyword 'India' and 'himalayas' were most dominant as suggested by largest nodes (@fig-d).
+
+```{r fig.height=8, fig.width=8}
+#| label: fig-d
+#| fig-cap: "Co-occurrence network of indexed keywords (n = 25) from Scopus. The size of each vertex is proportional to its degree (i.e. the frequency of keywords)"
+
+
+NetMatrix <- read.csv("./data/bibdata.csv") |>
+    biblioNetwork(analysis = "co-occurrences", 
+                  network = "keywords", 
+                  sep = ";")
+# Plot the network
+set.seed(1111)
+net <- networkPlot(NetMatrix, normalize="association", weighted=T, 
+			 n = 25, Title = NA, type = "fruchterman", 
+			 # labels
+			 label = TRUE, labelsize = 1.2, label.cex = F, label.color = F,
+			 # clustering
+			 halo = F, cluster = "optimal",
+			 # vertices
+			 size = T, size.cex = T, remove.isolates = T,
+			 # edges
+			 curved = F, noloops = T, remove.multiple = F,
+			 edgesize = 5, edges.min = 1)
+```
+
+Our study identified a total of 111 distinct authors (@tbl-d). An analysis of the authors' collaboration network suggested that authors form  five distinct research groups working in different domains of plant ecology (@fig-e). The largest node for author 'padalia h' suggests that this researcher is highly productive and has published highest number of documents. Further, high weight of edges among the authors 'padalia h', 'nandy s', 'chauhan p' and 'srinet r' manifests that these authors frequently appear together i.e., they work as a team (@fig-e).
+
+```{r fig.height=8, fig.width=8}
+#| label: fig-e
+#| fig-cap: "Collaboration network of authors (n = 25) from the selected studies. The size of each vertex is proportional to its degree (i.e. the frequency of authors appearance)"
+
+
+NetMatrix <- read.csv("./data/bibdata.csv") |>
+    biblioNetwork(analysis = "collaboration", 
+                  network = "authors",
+                  sep = ";")
+
+net <- networkPlot(NetMatrix,  normalize = NULL, n = 25, weighted = NULL, 
+			 Title = NA, type = "circle",
+			 # labels
+			 label = TRUE, labelsize = 1, label.cex = F, label.color = TRUE,
+			 # clustering
+			 halo = F, cluster = "optimal",
+			 # vertices
+			 size = T, size.cex = T, remove.isolates = T, alpha = 0.5,
+			 # edges
+			 curved = F, noloops = T, remove.multiple = F,
+			 edgesize = 5, edges.min = 0)
+```
+
+### Geographical distribution of the studies
+
+The distribution of estimated study sites is depicted in @fig-f. The spatial distribution of studies suggest a high density around Uttarakhand state followed by Haryana (@fig-f). Our selected studies represented three states (Himachal Pradesh, Haryana, and Uttarakhand) and two union territories (Jammu and Kashmir and Chandigarh) of India (excluding studies conducted in multiple regions or whole region) and only five studies covered the whole region. Among the geographical regions, about 59% of total studies were featured from the Uttarakhand (n = 23) only (@fig-f). On the other hand, not a single study was identified from the Siwalik region of Punjab and Uttar Pradesh.
+
+```{r eval=FALSE}
+## prepare state labs with number of studies
+labs <- read.csv("./data/extracted_data.csv") |> 
+    left_join(count(ex_data, location, name = "loc_n")) |>
+    mutate(stname = toupper(location)) |>
+    mutate(location = recode(location,
+                             "Chandigarh" = "CH",
+                             "Haryana" = "HR",
+                             "Himachal Pradesh" = "HP",
+                             "Jammu and Kashmir" = "JK",
+                             "Uttarakhand" = "UK",
+                             "Whole Region" = "WR")) |>
+    mutate(labs = paste0(location, " (", loc_n, ")")) |>
+    dplyr::select(stname, labs)
+
+## bounding box for area of interest
+sw_box <- st_bbox(obj = c(xmin = 73.5, xmax = 80.4, ymin = 28.4, ymax = 34.2),
+                  crs = st_crs(4326)) |> 
+    st_as_sfc()
+
+## clipped Indian states
+#ind1 <- st_read("D:/spatial-data/admin/ind_adm1.gpkg")
+#ind1.clipped <- st_intersection(ind1, sw_box)
+#st_write(ind1.clipped, "./data/ind1_clipped.gpkg")
+
+## join labs with spatial data
+ind1_clipped <- st_read("./data/ind1_clipped.gpkg") |>
+    # replace JK name to match
+    mutate(stname = replace(stname, 
+                            stname == "JAMMU & KASHMIR",
+                            "JAMMU AND KASHMIR")) |>
+    left_join(labs)
+				     )
+## read the boundary for India
+ind0 <- st_read("./data/ind_adm0.gpkg")
+
+## extract countries for Asia
+asia <- rnaturalearth::ne_countries(scale = "medium", type = "countries",
+						 continent = "Asia", returnclass = "sf")
+
+indsub.bbox <- st_bbox(obj = c(xmin = 67, xmax = 98, ymin = 5, ymax = 38),
+                    crs = st_crs(4326)) %>% st_as_sfc()
+
+indsub.clipped <- st_intersection(asia, indsub.bbox)
+
+## shaded relief for the area
+#indsr <- raster("D:/spatial-data/Themes/SR_LR/SR_LR/SR_LR.tif") %>% 
+	#crop(extent(73.5, 80.4, 28.4, 34.2))
+#writeRaster(indsr, "./data/shaded-relief.tif")
+indsr <- raster("./data/shaded-relief.tif")
+
+## elevation data for area
+#indem <- raster("D:/spatial-data/dem/india-dem/gt30e060n40.tif") %>%
+	#crop(extent(73.5, 80.4, 28.4, 34.2))
+#writeRaster(indem, "./data/dem.tif")
+indem <- raster("./data/dem.tif")
+
+## India mask to highlight the region
+ind_mask <- st_difference(sw_box, ind0)
+
+## study points
+study_points <- ex_data %>% filter(!is.na(lat)) %>% 
+	st_as_sf(coords = c("lon", "lat"), crs = 4326)
+
+## read the boundary for siwalik 
+sw <- st_read("./data/siwalik.shp")
+
+## prepare the map
+inset_map <- tm_shape(indsub.clipped, bbox = ind0) + tm_fill(col = "grey95") + 
+	tm_borders(col = "grey85") +
+      tm_shape(ind0) + tm_fill(col = "grey92") + 
+	tm_borders(col = "grey80") +
+      tm_shape(sw_box) + tm_borders(col = "red", lwd = 1) +
+      tm_layout(bg.color = "#9bbff4", frame = "grey85")
+
+main_map <- tm_shape(indsr, bbox = sw_box) + tm_raster(palette = "-Greys", 
+									 legend.show = F) +
+	tm_graticules(col = "grey80") + # graticule
+	tm_shape(indem) + tm_raster(alpha = 0.6, palette = "Greys", style = "cont", 
+					    title = "Elevation (m)") + 
+	tm_shape(ind0) + tm_borders(lwd = 2.5, col = "white") +
+	tm_shape(ind_mask) + tm_fill(col = "white", alpha = 0.3) +
+	
+	tm_shape(ind1.clipped) + tm_borders(col = "white") + 
+	tm_text("label", col = "black", bg.color = "white", xmod = -0.5, ymod = -1) +
+	
+	tm_shape(sw) + tm_fill(col = "yellow", alpha = 0.3) + tm_borders() +
+	tm_shape(study_points) + tm_symbols(col = "red", border.col = "white", 
+							alpha = 0.6) +
+	tm_compass(position = c(0.35, 0.015)) + # North Arrow
+      tm_scale_bar(position = c(0.5, 0.015), text.size = 0.75) + # scale
+      tm_add_legend(type = "fill", labels = "Siwaliks", col = "yellow", 
+      		  alpha = 0.3) + 
+      tm_add_legend(type = "line", labels = "International Boundary", 
+      		  col = "white", lwd = 2.5) + # road legend
+      tm_add_legend(type = "symbol", labels = "Study Sites", col = "red", 
+      		  border.col = "white",
+      		  alpha = 0.6) +
+      tm_layout(legend.position = c(0.0035, 0.01),
+                legend.bg.color = "grey90", legend.bg.alpha = 0.5,
+                legend.text.size = 0.75, legend.frame = "grey85")
+## arrange map
+# aspect ratios for inset map
+in_bb <- st_bbox(ind0)
+aspin <- (in_bb$ymax - in_bb$ymin)/(in_bb$xmax - in_bb$xmin)
+# aspect ratios for main map
+mn_bb <- st_bbox(indsr)
+aspmain <- (mn_bb$ymax - mn_bb$ymin)/(mn_bb$xmax - mn_bb$xmin)
+## create a viewport for inset map
+vp <- grid::viewport(x = 0.925, y = 0.98, width = grid::unit(2.5, "inches"), 
+               height = grid::unit(2.5*aspin, "inches"), 
+		   just = c("right", "top"))
+## save the map
+tmap_save(main_map, filename = "map.png", insets_tm = inset_map, 
+          insets_vp = vp, height = aspmain*7, width = 7, units = "in", dpi = 600)
+rm(list = ls())
+```
+
+```{r out.width="100%"}
+#| label: fig-f
+#| fig-cap: "Geographic distribution of the study sites (reported or estimated from publications) across the study region (JK = Jammu and Kashmir, HP = Himachal Pradesh, CH = Chandigarh, HR = Haryana, UK = Uttarakhand). The number of studies per region is indicated in parenthesis"
+
+
+## include in the document
+knitr::include_graphics("map.png")
+```
+
+### Temporal distribution of studies
+
+The number of publications has shown an overall increasing trend and exhibited  an annual growth rate of about 4.3% (@fig-g). During 2010s  annual production of scientific publications observed a steep rise and the year  2020 recorded highest number of publications (n = 6) within a single year  (@fig-g). Further, the decadal frequency of publications was six during 1990s, which dipped to only two publication per decade during 2000s. However, it so steeply increased during 2010s that it became double of all studies published from 1980s to 2000s (@fig-g). 
+
+```{r fig.height=6, fig.width=8}
+#| label: fig-g
+#| fig-cap: "Annual frequency of scientific publications included in this synthesis. The trend line is fitted using 80% LOESS (y ~ x) smoothening. Inset shows the decadal frequency of publications"
+
+
+## inset decadal plot
+p1 <- read.csv("./data/extracted_data.csv") |> 
+    dplyr::select(year) |> 
+    mutate(decade = case_when(
+        year <= 1989 ~ "'80s",
+        year >= 1990 & year <= 1999 ~ "'90s",
+        year >= 2000 & year <= 2009 ~ "'00s", 
+        year >= 2010 & year <= 2019 ~ "'10s",
+        year >= 2020 ~  "'20s"
+    )) |>
+    count(decade) |>
+    mutate(
+        decade = factor(decade, levels = c("'80s",  "'90s", "'00s", 
+                                           "'10s", "'20s"))
+    ) |>
+    
+    ggplot(aes(x = n, y = decade)) + 
+	geom_bar(stat = "identity", width = 0.65, fill = "#69b3a2") +
+	geom_text(aes(label = paste0("n=", n)), 
+	          color = "#69b3a2", size = 4, vjust = 0.5, hjust = -0.25) +
+	geom_text(aes(label = decade, x = 0.5), 
+	          color = "white", size = 4, hjust = 0.1) +
+	xlim(0, 25) +
+	theme_void() +
+	theme(plot.background = element_rect(color = "#69b3a210"))
+
+## main plot
+read.csv("./data/extracted_data.csv") |> 
+    count(year) |>
+    
+    ggplot(aes(x = year, y = n)) + 
+	geom_area(fill = "#69b3a2", alpha = 0.1) +
+	geom_line(color = "#69b3a2", linewidth = 1) +
+	geom_point(size = 4, col = "#69b3a2") +
+	geom_smooth(color = "red", se = FALSE, span = 0.8, linewidth = 1.2) +
+	labs(x = "Year of Publication", y = "Number of Publications") +
+	theme_classic() +
+	theme(axis.title = element_text(size = 14), 
+		axis.text = element_text(size = 12),
+		axis.line = element_line(size = unit(1, "cm")),
+		axis.ticks.length = unit(1.5, "mm"),
+		panel.grid.major.y = element_line(color = "grey80")
+		) +
+	annotation_custom(ggplotGrob(p1), xmin = 1988, xmax = 2006, 
+                       ymin = 2.25, ymax = 6)
+#rm(list = ls())
+```
+
+### Domains of ecology
+
+We found three distinct study types, six distinct study region and seven distinct domains of plant ecology (@fig-h). Among the selected 39 studies, experimental studies were under-represented, accounting for just about 5% of total studies. On the other hand, observational and modelling studies were heavily dominated constituting about 95% of all the studies (@fig-h).
+
+```{r out.width="100%"}
+#| label: fig-h
+#| fig-cap: "Breakdown of selected studies by study type (EX, experimental; MO, modelling; OB, observational); region (CH, Chandigarh; HR, Haryana; HP, Himachal Pradesh; JK, Jammu and Kashmir; UK, Uttarakhand; WR, whole region) and domains of ecology (AE, applied ecology; CE, community ecology; EE, ecosystem ecology; LE, landscape ecology; PL, palaeoecology; PE, physiological ecology; SI, species interactions). The number of publications within each category is indicated in parenthesis"
+
+
+## recode the values
+df <- read.csv("data/extracted_data.csv", fileEncoding = "UTF-8-BOM") |>
+    dplyr::select(study_type, location, domain) |>
+    
+    mutate(study_type = recode(study_type, 
+                               "modelling" = "MO",
+                               "observational" = "OB",
+                               "experimental" = "EX"),
+           location = recode(location,
+                             "Chandigarh" = "CH",
+                             "Haryana" = "HR",
+                             "Himachal Pradesh" = "HP",
+                             "Jammu and Kashmir" = "JK",
+                             "Uttarakhand" = "UK",
+                             "Whole Region" = "WR"),
+           domain = recode(domain,
+                           "Community Ecology" = "CE",
+                           "Ecosystem Ecology" = "EE",
+                           "Landscape Ecology" = "LE",
+                           "Palaeoecology" = "PL",
+                           "Physiological Ecology" = "PE",
+                           "Species Interactions" = "SI"))
+
+## prepare the data and labels
+df |> 
+    left_join(count(df, study_type, name = "study_n")) |>
+    left_join(count(df, location, name = "location_n")) |>
+    left_join(count(df, domain, name = "domain_n")) |>
+    mutate(study = paste0(study_type, " (", study_n, ")"),
+           location = paste0(location, " (", location_n, ")"),
+           domain = paste0(domain, " (", domain_n, ")")) |>
+    dplyr::select(study, location, domain) |>
+    
+    ggforce::gather_set_data(1:3) |>
+    mutate(x = as.factor(x),
+        x = factor(x, labels = c("1" = "Study type", 
+                                 "2" = "Region", 
+                                 "3" = "Domain"),
+                   levels = c("1", "2", "3"))
+    ) |>
+    
+    ## make the parallel plot
+    ggplot(aes(x, id = id, split = y, value = 1))  +
+	geom_parallel_sets(aes(fill = study), 
+	                   alpha = 0.3, axis.width = 0.18, 
+	                   show.legend = FALSE) +
+	geom_parallel_sets_axes(axis.width = 0.15, fill = "grey90") +
+	geom_parallel_sets_labels(color = "black", angle = 0, size = 4) +
+	scale_x_discrete(expand = c(0.06, 0)) +
+	theme_classic() +
+	theme(axis.title = element_blank(),
+	      axis.text.y = element_blank(),
+		  axis.ticks = element_blank(),
+		  axis.line = element_blank(),
+		  axis.text.x = element_text(size = 14))
+
+```
+
+We identified seven distinct (not mutually exclusive) domains under plant ecology (@fig-h). Among these assigned domains, about 38.5% studies belonged to landscape ecology and 30.77% studies belonged to ecosystem ecology; thus, together constituting about 70% of total studies (@fig-h).
+
+## Discussion
+
+Our systematic map and bibliometric review, which is the first of its kind to our knowledge, identified several patterns and gaps in the literature. The methodological framework increases its reproducibility, which is a significant positive for this article. Our results showed that the plant ecology of the region is relatively unexplored and still in its infancy, as suggested by fewer peer-reviewed studies about the subject. However, the rapid growth of publications during the past decade indicates that ecological studies in the Indian Siwalik region are gaining importance among the various stakeholders. Our systematic map revealed that ‘landscape ecology’ and ‘ecosystem ecology’ have been primarily focused, whereas ‘applied ecology’, ‘organismal ecology’ and ‘population ecology’ were neglected in the Indian Siwaliks. The growing number of studies under ‘landscape ecology’ can be attributed to advancements in computation and availability of remote sensing data, allowing forest characterisation, species distribution modelling, land use, land cover analysis, ecological modelling, and prediction over a large area.
+
+The geographical distribution of studies revealed a more significant bias towards the Siwaliks of Uttarakhand. This extreme bias can be attributed to research institutes in the region dedicated to ecology and environment (Forest Research Institute, Indian Institute of Remote Sensing, and Wildlife Institute of India). It seems that the number of studies is loosely associated with the number of institutes that are closer to the Siwalik region.
+
+### State of plant ecology in Indian Siwaliks
+
+Under ‘physiological ecology’, we considered studies involving the effects of the environment on the physiology of plants. In this regard, Sharma et al. [-@Sharma2018] studied the effects of elevated CO~2~ concentrations on the physiology of *Withania somnifera* (L.) Dunal [@Sharma2018]. This study showed that elevated CO~2~ increases photosynthetic rates and biomass production [@Sharma2018]. Another study observed the phenology of plants belonging to the family Anacardiaceae and found that environmental factors regulate various phases [@Singh2020]. Although species interactions have not been exclusively studied, an experimental study showed the higher competitive ability of exotic *Leucaena leucocephala* (Lam.) de Wit against the native *Acacia nilotica* (L.) Willd. ex Delile plant species [@Bhatnagar1993].
+
+Several researchers analysed the forest structure and vegetation dynamics in the Indian Siwaliks [@Rout1989; @Singh1995; @Rawat1999; @Mandal2015; @Bhat2017]. This region’s vegetation is considered subtropical deciduous forests, and the dominant plant species include *Pinus roxburghii* Sarg., *Shorea robusta* C.F.Gaertn., *Anogeissus latifolia* (Roxb. ex DC.) Wall. ex Guill. & Perr., *Lannea coromandelica* (Houtt.) Merr., and *Flacourtia indica* (Burm.f.) Merr. [@Rout1989; @Singh1995; @Rawat1999]. The vegetation associations or community composition are suggested to be affected by soil properties [@Mandal2015] and seasonal variations [@Bhat2017]. The vegetation association patterns were analysed using dominance-diversity curves [@Rout1989], detrended correspondence analysis [@Singh1995], and TWINSPAN [@Rawat1999; @Bhat2017].
+
+Studies concerning ecosystem ecology of the Indian Siwaliks have primarily focused on soil characterisation [@Bargali1993; @Gupta2010; @Sharma2017; @Hussain2019; @Dinesh2020], biomass production [@Rana1988; @Lodhiyal2003; @Singh2019], carbon stock and nutrient cycling [@Rout1990a; @Rout1990b; @Sharma2010; @Watham2020]. Soil physicochemical properties, primarily organic carbon and nutrients, decreased with time as natural forests were replaced by Eucalypt plantations [@Bargali1993]. Further, soil properties are shown to vary along with the soil depth in different geomorphic units [@Dinesh2020]. The soil depth and the soil properties varied among other land uses [@Gupta2010; @Hussain2019]; forest lands have better physicochemical parameters than barren lands [@Gupta2010]. Furthermore, the soils of the Siwaliks are highly susceptible to erosion, and the highly susceptible regions are often identified using geo-statistical techniques [@Sharma2017].
+
+Chir pine (*Pinus roxburghii* Sarg.) is one of the dominant tree species of the Siwalik region, and it forms pine forests or mixed pine forests. A study found that the estimated total biomass was 199 t ha^−1^, whereas the net primary production was 12.4 t ha^−1^ yr^−1^ for a mixed pine forest [@Rana1988]. Another study showed that biomass and net primary production increase with age in a planted forest of *Dalbergia sissoo* Roxb. [@Lodhiyal2003]. Further, biomass production was observed to vary among land-use types, decreasing with elevation [@Singh2019]. The herbaceous biomass varied due to season and was highest during the rainy season under pine forests [@Rout1990b]. Since Siwalik forests are subtropical deciduous types, the litterfall, litter mass, and litter nutrients also varied seasonally [@Rout1990b]. The litterfall showed two distinct peaks during the winter and summer months. Nutrient turnover also displayed differences due to season and forest types [@Rout1990a]. The nutrient turnover rate was higher in mixed forests than the pine or scrub forests [@Rout1990a]. Recently, a study showed that the Siwalik forests act as a concrete sink to the atmospheric CO~2~, and this carbon exchange is affected by the monsoon [@Watham2020].
+
+Remote sensing satellite data and modelling techniques are valuable tools to infer ecosystem structure and processes’ spatial and temporal patterns. Several researchers used these tools for vegetation characterisation [@Kimothi2010; @Munsi2010; @Padalia2013; @Srinet2020a; @Mishra2021], forest dynamics [@Joshi2011; @Joshi2012; @Munsi2012; @Areendran2017; @Kumar2021), species distribution modelling [@Yang2013; @Lamsal2018], spatial heterogeneity [@Kumar2019], atmospheric CO~2~ dynamics [@Watham2021], gross primary productivity modelling [@Mishra2015; @Srinet2020b], and foliar nutrients modelling [@Vasudeva2021] in the Indian Siwalik region.
+
+Indian satellite IRS-LISS [@Kimothi2010; @Munsi2010] and Cartosat-1 [@Kimothi2010] as well as global satellite Landsat [@Munsi2010], EO-1 [@Padalia2013], MODIS [@Srinet2020a] and Sentinel-2 [@Mishra2021] data were used to map and characterise the vegetation. Not only the satellite data but also different classification algorithms like supervised maximum likelihood classifier [@Kimothi2010; @Munsi2010], spectral unmixing technique [@Padalia2013], and random forest classifier [@Srinet2020a; @Mishra2021] were used. These studies mapped the extent of invasive plants [@Kimothi2010; @Padalia2013] and characterised forests at the landscape [@Munsi2010], functional types [@Srinet2020a], and community levels [@Mishra2021].
+
+Land use and land cover (LULC) analysis allow observing landscapes’ spatial and temporal changes [@Joshi2011; @Munsi2012; @Areendran2017]. Using LULC and ‘land change modeller’, it has been shown that the forested landscapes tended to decrease whereas non-forested areas increased over time [@Joshi2011; @Munsi2012; @Areendran2017]. These dynamics of forested landscapes have emerged as a challenge for the management of protected areas [@Joshi2011; @Areendran2017]. Although human activities are significant drivers of landscape change, climate change is also projected to shift all the forest types except subtropical conifer forests [@Joshi2012]. Further, multi-criteria forest vulnerability assessment suggested that forests at low elevations are more vulnerable than the high elevation forests types [@Kumar2021].
+
+Ecological modelling is not only limited to species distribution modelling [@Yang2013; @Lamsal2018], but it has expanded to model various ecosystem processes like productivity and foliar nutrients. MaxEnt modelling was used to predict the distribution of *Justicia adhatoda* L. [@Yang2013] and some invasive plants [@Lamsal2018]. Further, it has been suggested that the spread of invasive plants is affected by spatial heterogeneity [@Kumar2019].
+
+The dynamics of atmospheric CO~2~ suggested that its concentrations peak from midnight to morning in July over the forests of Indian Siwaliks, and the seasonal variations of CO~2~ is influenced by rainfall patterns [@Watham2021]. Similarly, the spatio-temporal patterns of productivity also showed seasonal variations [@Mishra2015; @Srinet2020b]. Further, temporal trends in productivity suggested that the forests of the Siwalik region have experienced more browning than the greening [@Mishra2015]. The temperature-greenness model with MODIS satellite data was used to estimate the Siwalik forests’ gross primary productivity (GPP). GPP ranged from 0.20 to 18.57 g C m^−2^ day^−1^, and it was higher for moist deciduous forests than the dry deciduous forests [@Srinet2020b]. Further, the machine learning algorithms were applied to Sentinel-2 satellite data to map spatial variability of foliar carbon and nitrogen [@Vasudeva2021].
+
+The evolutionary history of vegetation is often discerned with fossil evidence and palaeoecological studies. A study based on the carbon isotope ratio suggested that C3 type vegetation dominated before 9 Ma (Mega-annum). However, C3–C4 mixed vegetation existed during 9 to 8 Ma, which became C4 dominated after 7.3 Ma [@Sanyal2005]. Carbon and oxygen isotopic studies in the Siwaliks indicated that the evolution of C4 was not synchronous [@Sanyal2005; @Ghosh2018]. This asynchronous expansion of C4 plants suggests that their abundance is affected by regional factors like substrate quality [@Ghosh2018].
+
+### Knowledge gaps and future research
+
+Our systematic map identified several gaps in the current knowledge about plant ecology in the Indian Siwaliks. The scarce peer-reviewed literature indicates that little is known about the plant ecology of the region. Although the field is proliferating, many aspects remained unexplored. Experimental studies, specifically studies using manipulative experiments, were under-represented, indicating a need to complement the observational and modelling studies. We were unable to identify a single peer-reviewed study regarding ‘organismal ecology’, which considers population genetics, natural selection, behavioural patterns of plants exclusively in the Indian Siwaliks. Similarly, applied ecological studies, including management of invasive species and restoration ecology, have not been prioritised yet. Further, there is a need to study the population growth, demography, and age structure of dominant plant species in the region; however, the age structure of some plants has been previously characterised [@Rout1989].
+
+Our review indicates that very little work has been undertaken about plant ecology in the Indian Siwaliks. The Indian Siwaliks are facing significant stressors, including climate change, invasive species, industrialisation, urbanisation, landslides, and soil erosion, to our knowledge and experience. These stressors threaten the ecosystem structure and functions, promoting biodiversity development and ecosystem services that eventually affect the well-being of society. Therefore, we urge the scientific community to prioritise these ecological challenges and guide informed decisions for the sustainable management of natural resources in the Indian Siwaliks. Next, we suggest non-exhaustive broad research themes for the Indian Siwaliks for upcoming decades. We suggest developing a database by cataloguing a whole region’s exclusive flora with geographic information on species occurrences. This catalogue will help to map and project the species distributions. Furthermore, it will form the basis to develop and test biogeographical hypotheses. After identifying dominant plant species, we suggest assessing the physiological responses of these plants to various abiotic (light, temperature, water, and nutrients) and biotic stressors (pathogens, competition, herbivory, and allelopathy). Next, we suggest characterising ecosystem structure and functions in response to local stressors like climate change, invasibility, and disturbance. Finally, we need to prepare the plans and policies to restore the already degraded ecosystems in the region.
+
+Although the present study attempted to provide a comprehensive state of plant ecology in Indian Siwaliks, we acknowledge that it suffers from several limitations.
+
+- Firstly, the initial conceptualisation of plant ecology might be cloudy; because there are no clear-cut boundaries between sub-disciplines as they are often interconnected and overlapping. This overlapping is also true for our proposed classification system, and some studies can be put into multiple categories leading to different results.
+
+- Further, we considered only peer-reviewed literature indexed in Scopus and Web of Science Core Collections. It does not mean anyway that studies published in local sources (journals, books, and other sources) are of less importance or compromised quality.
+
+- In addition to this, we excluded studies whose full text was non-retrievable or metadata was not available, and the inclusion of such studies have produced different results.
+
+- As with any systematic exercise, any alteration or modifications in the protocol (search string and eligibility criteria) will lead to different results. Further, pre-registration of protocol and other stakeholders’ engagement might have helped produce a less biased systematic map.
+
+Thus, the present article acknowledges the present limitations and recommends incorporating these parameters in scoping reviews based on a systematic methodological framework.
+
+## Conclusion
+
+The present systematic map assessed the state of plant ecology in Indian Siwaliks and provided a methodological framework for transparent and reproducible reviews. The proportion of studies focusing on plant ecology is disproportionately more petite than the demand for ecological understanding about the region. Despite the proliferation of ecological studies during the past decade, increased understanding is required about the ecological structure and functions of the Siwalik landscape. The evidence base is often very scarce and scattered that too suffers from geographic and discipline-specific bias. Therefore, we urge researchers to carry out scientific investigations focusing on the ecological problems of the region. These investigations will help make evidence-based decisions and policies for future research lines to sustain this fragile ecosystem.
