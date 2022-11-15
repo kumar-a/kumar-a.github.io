@@ -49,7 +49,7 @@ citation:
   issue: 3
   page: 338-350
   
-image: "map.png"
+image: thumbnail.png
 ---
 
 
@@ -754,7 +754,7 @@ rm(list = ls())
 
 
 ## include in the document
-knitr::include_graphics("map.png")
+knitr::include_graphics("data/map.png")
 ```
 
 ### Temporal distribution of studies
@@ -899,7 +899,7 @@ Studies concerning ecosystem ecology of the Indian Siwaliks have primarily focus
 
 Chir pine (*Pinus roxburghii* Sarg.) is one of the dominant tree species of the Siwalik region, and it forms pine forests or mixed pine forests. A study found that the estimated total biomass was 199 t ha^−1^, whereas the net primary production was 12.4 t ha^−1^ yr^−1^ for a mixed pine forest [@Rana1988]. Another study showed that biomass and net primary production increase with age in a planted forest of *Dalbergia sissoo* Roxb. [@Lodhiyal2003]. Further, biomass production was observed to vary among land-use types, decreasing with elevation [@Singh2019]. The herbaceous biomass varied due to season and was highest during the rainy season under pine forests [@Rout1990b]. Since Siwalik forests are subtropical deciduous types, the litterfall, litter mass, and litter nutrients also varied seasonally [@Rout1990b]. The litterfall showed two distinct peaks during the winter and summer months. Nutrient turnover also displayed differences due to season and forest types [@Rout1990a]. The nutrient turnover rate was higher in mixed forests than the pine or scrub forests [@Rout1990a]. Recently, a study showed that the Siwalik forests act as a concrete sink to the atmospheric CO~2~, and this carbon exchange is affected by the monsoon [@Watham2020].
 
-Remote sensing satellite data and modelling techniques are valuable tools to infer ecosystem structure and processes’ spatial and temporal patterns. Several researchers used these tools for vegetation characterisation [@Kimothi2010; @Munsi2010; @Padalia2013; @Srinet2020a; @Mishra2021], forest dynamics [@Joshi2011; @Joshi2012; @Munsi2012; @Areendran2017; @Kumar2021), species distribution modelling [@Yang2013; @Lamsal2018], spatial heterogeneity [@Kumar2019], atmospheric CO~2~ dynamics [@Watham2021], gross primary productivity modelling [@Mishra2015; @Srinet2020b], and foliar nutrients modelling [@Vasudeva2021] in the Indian Siwalik region.
+Remote sensing satellite data and modelling techniques are valuable tools to infer ecosystem structure and processes’ spatial and temporal patterns. Several researchers used these tools for vegetation characterisation [@Kimothi2010; @Munsi2010; @Padalia2013; @Srinet2020a; @Mishra2021], forest dynamics [@Joshi2011; @Joshi2012; @Munsi2012; @Areendran2017; @Kumar2021], species distribution modelling [@Yang2013; @Lamsal2018], spatial heterogeneity [@Kumar2019], atmospheric CO~2~ dynamics [@Watham2021], gross primary productivity modelling [@Mishra2015; @Srinet2020b], and foliar nutrients modelling [@Vasudeva2021] in the Indian Siwalik region.
 
 Indian satellite IRS-LISS [@Kimothi2010; @Munsi2010] and Cartosat-1 [@Kimothi2010] as well as global satellite Landsat [@Munsi2010], EO-1 [@Padalia2013], MODIS [@Srinet2020a] and Sentinel-2 [@Mishra2021] data were used to map and characterise the vegetation. Not only the satellite data but also different classification algorithms like supervised maximum likelihood classifier [@Kimothi2010; @Munsi2010], spectral unmixing technique [@Padalia2013], and random forest classifier [@Srinet2020a; @Mishra2021] were used. These studies mapped the extent of invasive plants [@Kimothi2010; @Padalia2013] and characterised forests at the landscape [@Munsi2010], functional types [@Srinet2020a], and community levels [@Mishra2021].
 

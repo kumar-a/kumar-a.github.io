@@ -271,8 +271,8 @@ Note
 <div class="cell" data-layout-align="center">
 <div id="fig-a" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<div id="htmlwidget-a6de825b08a8fcf417ff" style="width:100%;height:693px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a6de825b08a8fcf417ff">{"x":{"diagram":"digraph G{\n\t\t\t\n\tgraph[ranksep=0.35, newrank=true, nodesep=0.25, splines=ortho]\n\t\t\t\n\tsubgraph cluster_searching{\n\tlabel=\"\"; style=filled; color=mintcream; fontsize=18\n\tnode[label=\"Scopus\n(n = 1,876)\", shape=box, width=1.25, \n\tfillcolor=grey95]searching_A;\n\tnode[label=\"Web of Science\n(n = 1,013)\", shape=box, width=1.25]searching_B;\n\tnode[label=\"Total records\n(n = 2,888)\", shape=box, width=3]searching_C;\n\tsearching_A -> searching_C\n\tsearching_B -> searching_C\n\t{rank=same;searching_A;searching_B}\n\t}\n\t\n\tsubgraph cluster_screening{\n\tlabel=\"\"; style=filled; color=lightyellow; shape=box; fontsize=18\n\tnode[label=\"Records after duplicates removed \n (n = 2,171)\", shape=box, \n\twidth=3]screening_1\n\tnode[label=\"Records after title screening \n (n = 375)\", shape=box, \n\twidth=3]screening_2\n\tnode[label=\"Records after abstract screening \n (n = 111)\",shape=box, \n\twidth=3]screening_3\n\tnode[label=\"Articles retrieved at full text \n (n = 100)\",shape=box, \n\twidth=3]screening_4\n\tnode[label=\"Articles after full text screening \n (n = 40)\",shape=box, \n\twidth=3]screening_5\n\tsearching_C -> screening_1[minlen=1, label=\"    Screening\"]\n\tscreening_1 -> screening_2 -> screening_3 -> screening_4 -> screening_5\n\t}\n\t\n\tnode[label=\"Duplicates \n (n = 717)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_a\n\tnode[label=\"Excluded titles \n (n = 1,796)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_b\n\tnode[label=\"Excluded abstracts \n (n = 264)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_c\n\tnode[label=\"Unretrievable full text \n (n = 11)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_d\n\tnode[label=\"Excluded articles \n (n = 71)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_e\n\t\n\tscreening_1 -> screening_a\n\tscreening_2 -> screening_b\n\tscreening_3 -> screening_c\n\tscreening_4 -> screening_d\n\tscreening_5 -> screening_e\n\t\n\t{rank=same;screening_1;screening_a;}\n\t{rank=same;screening_2;screening_b;}\n\t{rank=same;screening_3;screening_c;}\n\t{rank=same;screening_4;screening_d;}\n\t{rank=same;screening_5;screening_e;}\n\t\n\tsubgraph cluster_articles{\n\tlabel=\"\"; style=filled; color=grey95;\n\tnode[label=\"Studies after full text screening \n (n = 40)\", shape=box, width=3, \n\tstyle=filled, fillcolor=grey95]articles_A\n\tnode[label=\"Studies included in synthesis \n (n = 39)\", shape=box, width=3, \n\tstyle=filled, fillcolor=grey40, color=grey20, fontcolor=white]articles_B\n\tscreening_5 -> articles_A[minlen=1, label=\"    Synthesis\"]\n\tarticles_A -> articles_B\n\t}\n\t\n\tnode[label=\"Excluded studies \n (n = 1)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]studies_e\n\tarticles_A -> studies_e\n\t{rank=same;articles_A;studies_e}\t\n\t\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-904affe616f5d5a19f19" style="width:100%;height:693px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-904affe616f5d5a19f19">{"x":{"diagram":"digraph G{\n\t\t\t\n\tgraph[ranksep=0.35, newrank=true, nodesep=0.25, splines=ortho]\n\t\t\t\n\tsubgraph cluster_searching{\n\tlabel=\"\"; style=filled; color=mintcream; fontsize=18\n\tnode[label=\"Scopus\n(n = 1,876)\", shape=box, width=1.25, \n\tfillcolor=grey95]searching_A;\n\tnode[label=\"Web of Science\n(n = 1,013)\", shape=box, width=1.25]searching_B;\n\tnode[label=\"Total records\n(n = 2,888)\", shape=box, width=3]searching_C;\n\tsearching_A -> searching_C\n\tsearching_B -> searching_C\n\t{rank=same;searching_A;searching_B}\n\t}\n\t\n\tsubgraph cluster_screening{\n\tlabel=\"\"; style=filled; color=lightyellow; shape=box; fontsize=18\n\tnode[label=\"Records after duplicates removed \n (n = 2,171)\", shape=box, \n\twidth=3]screening_1\n\tnode[label=\"Records after title screening \n (n = 375)\", shape=box, \n\twidth=3]screening_2\n\tnode[label=\"Records after abstract screening \n (n = 111)\",shape=box, \n\twidth=3]screening_3\n\tnode[label=\"Articles retrieved at full text \n (n = 100)\",shape=box, \n\twidth=3]screening_4\n\tnode[label=\"Articles after full text screening \n (n = 40)\",shape=box, \n\twidth=3]screening_5\n\tsearching_C -> screening_1[minlen=1, label=\"    Screening\"]\n\tscreening_1 -> screening_2 -> screening_3 -> screening_4 -> screening_5\n\t}\n\t\n\tnode[label=\"Duplicates \n (n = 717)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_a\n\tnode[label=\"Excluded titles \n (n = 1,796)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_b\n\tnode[label=\"Excluded abstracts \n (n = 264)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_c\n\tnode[label=\"Unretrievable full text \n (n = 11)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_d\n\tnode[label=\"Excluded articles \n (n = 71)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]screening_e\n\t\n\tscreening_1 -> screening_a\n\tscreening_2 -> screening_b\n\tscreening_3 -> screening_c\n\tscreening_4 -> screening_d\n\tscreening_5 -> screening_e\n\t\n\t{rank=same;screening_1;screening_a;}\n\t{rank=same;screening_2;screening_b;}\n\t{rank=same;screening_3;screening_c;}\n\t{rank=same;screening_4;screening_d;}\n\t{rank=same;screening_5;screening_e;}\n\t\n\tsubgraph cluster_articles{\n\tlabel=\"\"; style=filled; color=grey95;\n\tnode[label=\"Studies after full text screening \n (n = 40)\", shape=box, width=3, \n\tstyle=filled, fillcolor=grey95]articles_A\n\tnode[label=\"Studies included in synthesis \n (n = 39)\", shape=box, width=3, \n\tstyle=filled, fillcolor=grey40, color=grey20, fontcolor=white]articles_B\n\tscreening_5 -> articles_A[minlen=1, label=\"    Synthesis\"]\n\tarticles_A -> articles_B\n\t}\n\t\n\tnode[label=\"Excluded studies \n (n = 1)\", shape=box, width=2, style=filled,\n\tfillcolor=seashell]studies_e\n\tarticles_A -> studies_e\n\t{rank=same;articles_A;studies_e}\t\n\t\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1: Schematic flow diagram for literature search, screening and inclusion process <span class="citation" data-cites="Haddaway2017">(modified from <a href="#ref-Haddaway2017" role="doc-biblioref">Haddaway et al. 2017</a>)</span></figcaption><p></p>
 </figure>
 </div>
@@ -289,12 +289,12 @@ Note
 <div class="cell-output-display">
 <div id="tbl-a" class="anchored">
 
-<div id="gciiuxmzjr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="qkgwvvbzcg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#gciiuxmzjr) .gt_table {
+:where(#qkgwvvbzcg) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -319,7 +319,7 @@ Note
   border-left-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_heading {
+:where(#qkgwvvbzcg) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -331,7 +331,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_title {
+:where(#qkgwvvbzcg) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -343,7 +343,7 @@ Note
   border-bottom-width: 0;
 }
 
-:where(#gciiuxmzjr) .gt_subtitle {
+:where(#qkgwvvbzcg) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -355,13 +355,13 @@ Note
   border-top-width: 0;
 }
 
-:where(#gciiuxmzjr) .gt_bottom_border {
+:where(#qkgwvvbzcg) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_col_headings {
+:where(#qkgwvvbzcg) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #000000;
@@ -376,7 +376,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_col_heading {
+:where(#qkgwvvbzcg) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -396,7 +396,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#gciiuxmzjr) .gt_column_spanner_outer {
+:where(#qkgwvvbzcg) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -408,15 +408,15 @@ Note
   padding-right: 4px;
 }
 
-:where(#gciiuxmzjr) .gt_column_spanner_outer:first-child {
+:where(#qkgwvvbzcg) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#gciiuxmzjr) .gt_column_spanner_outer:last-child {
+:where(#qkgwvvbzcg) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#gciiuxmzjr) .gt_column_spanner {
+:where(#qkgwvvbzcg) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -428,7 +428,7 @@ Note
   width: 100%;
 }
 
-:where(#gciiuxmzjr) .gt_group_heading {
+:where(#qkgwvvbzcg) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -453,7 +453,7 @@ Note
   vertical-align: middle;
 }
 
-:where(#gciiuxmzjr) .gt_empty_group_heading {
+:where(#qkgwvvbzcg) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -468,15 +468,15 @@ Note
   vertical-align: middle;
 }
 
-:where(#gciiuxmzjr) .gt_from_md > :first-child {
+:where(#qkgwvvbzcg) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#gciiuxmzjr) .gt_from_md > :last-child {
+:where(#qkgwvvbzcg) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#gciiuxmzjr) .gt_row {
+:where(#qkgwvvbzcg) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -495,7 +495,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#gciiuxmzjr) .gt_stub {
+:where(#qkgwvvbzcg) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -508,7 +508,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#gciiuxmzjr) .gt_stub_row_group {
+:where(#qkgwvvbzcg) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -522,11 +522,11 @@ Note
   vertical-align: top;
 }
 
-:where(#gciiuxmzjr) .gt_row_group_first td {
+:where(#qkgwvvbzcg) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#gciiuxmzjr) .gt_summary_row {
+:where(#qkgwvvbzcg) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -536,16 +536,16 @@ Note
   padding-right: 5px;
 }
 
-:where(#gciiuxmzjr) .gt_first_summary_row {
+:where(#qkgwvvbzcg) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_first_summary_row.thick {
+:where(#qkgwvvbzcg) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#gciiuxmzjr) .gt_last_summary_row {
+:where(#qkgwvvbzcg) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -555,7 +555,7 @@ Note
   border-bottom-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_grand_summary_row {
+:where(#qkgwvvbzcg) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -565,7 +565,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#gciiuxmzjr) .gt_first_grand_summary_row {
+:where(#qkgwvvbzcg) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -575,11 +575,11 @@ Note
   border-top-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_striped {
+:where(#qkgwvvbzcg) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#gciiuxmzjr) .gt_table_body {
+:where(#qkgwvvbzcg) .gt_table_body {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: #000000;
@@ -588,7 +588,7 @@ Note
   border-bottom-color: #000000;
 }
 
-:where(#gciiuxmzjr) .gt_footnotes {
+:where(#qkgwvvbzcg) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -602,7 +602,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_footnote {
+:where(#qkgwvvbzcg) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -611,7 +611,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#gciiuxmzjr) .gt_sourcenotes {
+:where(#qkgwvvbzcg) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -625,7 +625,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#gciiuxmzjr) .gt_sourcenote {
+:where(#qkgwvvbzcg) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -633,64 +633,64 @@ Note
   padding-right: 5px;
 }
 
-:where(#gciiuxmzjr) .gt_left {
+:where(#qkgwvvbzcg) .gt_left {
   text-align: left;
 }
 
-:where(#gciiuxmzjr) .gt_center {
+:where(#qkgwvvbzcg) .gt_center {
   text-align: center;
 }
 
-:where(#gciiuxmzjr) .gt_right {
+:where(#qkgwvvbzcg) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#gciiuxmzjr) .gt_font_normal {
+:where(#qkgwvvbzcg) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#gciiuxmzjr) .gt_font_bold {
+:where(#qkgwvvbzcg) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#gciiuxmzjr) .gt_font_italic {
+:where(#qkgwvvbzcg) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#gciiuxmzjr) .gt_super {
+:where(#qkgwvvbzcg) .gt_super {
   font-size: 65%;
 }
 
-:where(#gciiuxmzjr) .gt_footnote_marks {
+:where(#qkgwvvbzcg) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#gciiuxmzjr) .gt_asterisk {
+:where(#qkgwvvbzcg) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#gciiuxmzjr) .gt_indent_1 {
+:where(#qkgwvvbzcg) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#gciiuxmzjr) .gt_indent_2 {
+:where(#qkgwvvbzcg) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#gciiuxmzjr) .gt_indent_3 {
+:where(#qkgwvvbzcg) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#gciiuxmzjr) .gt_indent_4 {
+:where(#qkgwvvbzcg) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#gciiuxmzjr) .gt_indent_5 {
+:where(#qkgwvvbzcg) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -748,12 +748,12 @@ Note
 <div class="cell-output-display">
 <div id="tbl-b" class="anchored">
 
-<div id="dshvdvehaa" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="xvumclwchw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#dshvdvehaa) .gt_table {
+:where(#xvumclwchw) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -778,7 +778,7 @@ Note
   border-left-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_heading {
+:where(#xvumclwchw) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -790,7 +790,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_title {
+:where(#xvumclwchw) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -802,7 +802,7 @@ Note
   border-bottom-width: 0;
 }
 
-:where(#dshvdvehaa) .gt_subtitle {
+:where(#xvumclwchw) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -814,13 +814,13 @@ Note
   border-top-width: 0;
 }
 
-:where(#dshvdvehaa) .gt_bottom_border {
+:where(#xvumclwchw) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_col_headings {
+:where(#xvumclwchw) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #000000;
@@ -835,7 +835,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_col_heading {
+:where(#xvumclwchw) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -855,7 +855,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#dshvdvehaa) .gt_column_spanner_outer {
+:where(#xvumclwchw) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -867,15 +867,15 @@ Note
   padding-right: 4px;
 }
 
-:where(#dshvdvehaa) .gt_column_spanner_outer:first-child {
+:where(#xvumclwchw) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#dshvdvehaa) .gt_column_spanner_outer:last-child {
+:where(#xvumclwchw) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#dshvdvehaa) .gt_column_spanner {
+:where(#xvumclwchw) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -887,7 +887,7 @@ Note
   width: 100%;
 }
 
-:where(#dshvdvehaa) .gt_group_heading {
+:where(#xvumclwchw) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -912,7 +912,7 @@ Note
   vertical-align: middle;
 }
 
-:where(#dshvdvehaa) .gt_empty_group_heading {
+:where(#xvumclwchw) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -927,15 +927,15 @@ Note
   vertical-align: middle;
 }
 
-:where(#dshvdvehaa) .gt_from_md > :first-child {
+:where(#xvumclwchw) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#dshvdvehaa) .gt_from_md > :last-child {
+:where(#xvumclwchw) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#dshvdvehaa) .gt_row {
+:where(#xvumclwchw) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -954,7 +954,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#dshvdvehaa) .gt_stub {
+:where(#xvumclwchw) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -967,7 +967,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#dshvdvehaa) .gt_stub_row_group {
+:where(#xvumclwchw) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -981,11 +981,11 @@ Note
   vertical-align: top;
 }
 
-:where(#dshvdvehaa) .gt_row_group_first td {
+:where(#xvumclwchw) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#dshvdvehaa) .gt_summary_row {
+:where(#xvumclwchw) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -995,16 +995,16 @@ Note
   padding-right: 5px;
 }
 
-:where(#dshvdvehaa) .gt_first_summary_row {
+:where(#xvumclwchw) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_first_summary_row.thick {
+:where(#xvumclwchw) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#dshvdvehaa) .gt_last_summary_row {
+:where(#xvumclwchw) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1014,7 +1014,7 @@ Note
   border-bottom-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_grand_summary_row {
+:where(#xvumclwchw) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1024,7 +1024,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#dshvdvehaa) .gt_first_grand_summary_row {
+:where(#xvumclwchw) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1034,11 +1034,11 @@ Note
   border-top-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_striped {
+:where(#xvumclwchw) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#dshvdvehaa) .gt_table_body {
+:where(#xvumclwchw) .gt_table_body {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: #000000;
@@ -1047,7 +1047,7 @@ Note
   border-bottom-color: #000000;
 }
 
-:where(#dshvdvehaa) .gt_footnotes {
+:where(#xvumclwchw) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1061,7 +1061,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_footnote {
+:where(#xvumclwchw) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1070,7 +1070,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#dshvdvehaa) .gt_sourcenotes {
+:where(#xvumclwchw) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1084,7 +1084,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#dshvdvehaa) .gt_sourcenote {
+:where(#xvumclwchw) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1092,64 +1092,64 @@ Note
   padding-right: 5px;
 }
 
-:where(#dshvdvehaa) .gt_left {
+:where(#xvumclwchw) .gt_left {
   text-align: left;
 }
 
-:where(#dshvdvehaa) .gt_center {
+:where(#xvumclwchw) .gt_center {
   text-align: center;
 }
 
-:where(#dshvdvehaa) .gt_right {
+:where(#xvumclwchw) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#dshvdvehaa) .gt_font_normal {
+:where(#xvumclwchw) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#dshvdvehaa) .gt_font_bold {
+:where(#xvumclwchw) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#dshvdvehaa) .gt_font_italic {
+:where(#xvumclwchw) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#dshvdvehaa) .gt_super {
+:where(#xvumclwchw) .gt_super {
   font-size: 65%;
 }
 
-:where(#dshvdvehaa) .gt_footnote_marks {
+:where(#xvumclwchw) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#dshvdvehaa) .gt_asterisk {
+:where(#xvumclwchw) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#dshvdvehaa) .gt_indent_1 {
+:where(#xvumclwchw) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#dshvdvehaa) .gt_indent_2 {
+:where(#xvumclwchw) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#dshvdvehaa) .gt_indent_3 {
+:where(#xvumclwchw) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#dshvdvehaa) .gt_indent_4 {
+:where(#xvumclwchw) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#dshvdvehaa) .gt_indent_5 {
+:where(#xvumclwchw) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1237,12 +1237,12 @@ Note
 <div class="cell-output-display">
 <div id="tbl-c" class="anchored">
 
-<div id="vvymsfsuis" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="eldujlsxxd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#vvymsfsuis) .gt_table {
+:where(#eldujlsxxd) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1267,7 +1267,7 @@ Note
   border-left-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_heading {
+:where(#eldujlsxxd) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1279,7 +1279,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_title {
+:where(#eldujlsxxd) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1291,7 +1291,7 @@ Note
   border-bottom-width: 0;
 }
 
-:where(#vvymsfsuis) .gt_subtitle {
+:where(#eldujlsxxd) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1303,13 +1303,13 @@ Note
   border-top-width: 0;
 }
 
-:where(#vvymsfsuis) .gt_bottom_border {
+:where(#eldujlsxxd) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_col_headings {
+:where(#eldujlsxxd) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #000000;
@@ -1324,7 +1324,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_col_heading {
+:where(#eldujlsxxd) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1344,7 +1344,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#vvymsfsuis) .gt_column_spanner_outer {
+:where(#eldujlsxxd) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1356,15 +1356,15 @@ Note
   padding-right: 4px;
 }
 
-:where(#vvymsfsuis) .gt_column_spanner_outer:first-child {
+:where(#eldujlsxxd) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#vvymsfsuis) .gt_column_spanner_outer:last-child {
+:where(#eldujlsxxd) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#vvymsfsuis) .gt_column_spanner {
+:where(#eldujlsxxd) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1376,7 +1376,7 @@ Note
   width: 100%;
 }
 
-:where(#vvymsfsuis) .gt_group_heading {
+:where(#eldujlsxxd) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1401,7 +1401,7 @@ Note
   vertical-align: middle;
 }
 
-:where(#vvymsfsuis) .gt_empty_group_heading {
+:where(#eldujlsxxd) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1416,15 +1416,15 @@ Note
   vertical-align: middle;
 }
 
-:where(#vvymsfsuis) .gt_from_md > :first-child {
+:where(#eldujlsxxd) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#vvymsfsuis) .gt_from_md > :last-child {
+:where(#eldujlsxxd) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#vvymsfsuis) .gt_row {
+:where(#eldujlsxxd) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1443,7 +1443,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#vvymsfsuis) .gt_stub {
+:where(#eldujlsxxd) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1456,7 +1456,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#vvymsfsuis) .gt_stub_row_group {
+:where(#eldujlsxxd) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1470,11 +1470,11 @@ Note
   vertical-align: top;
 }
 
-:where(#vvymsfsuis) .gt_row_group_first td {
+:where(#eldujlsxxd) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#vvymsfsuis) .gt_summary_row {
+:where(#eldujlsxxd) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1484,16 +1484,16 @@ Note
   padding-right: 5px;
 }
 
-:where(#vvymsfsuis) .gt_first_summary_row {
+:where(#eldujlsxxd) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_first_summary_row.thick {
+:where(#eldujlsxxd) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#vvymsfsuis) .gt_last_summary_row {
+:where(#eldujlsxxd) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1503,7 +1503,7 @@ Note
   border-bottom-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_grand_summary_row {
+:where(#eldujlsxxd) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1513,7 +1513,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#vvymsfsuis) .gt_first_grand_summary_row {
+:where(#eldujlsxxd) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1523,11 +1523,11 @@ Note
   border-top-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_striped {
+:where(#eldujlsxxd) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#vvymsfsuis) .gt_table_body {
+:where(#eldujlsxxd) .gt_table_body {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: #000000;
@@ -1536,7 +1536,7 @@ Note
   border-bottom-color: #000000;
 }
 
-:where(#vvymsfsuis) .gt_footnotes {
+:where(#eldujlsxxd) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1550,7 +1550,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_footnote {
+:where(#eldujlsxxd) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1559,7 +1559,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#vvymsfsuis) .gt_sourcenotes {
+:where(#eldujlsxxd) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1573,7 +1573,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#vvymsfsuis) .gt_sourcenote {
+:where(#eldujlsxxd) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1581,64 +1581,64 @@ Note
   padding-right: 5px;
 }
 
-:where(#vvymsfsuis) .gt_left {
+:where(#eldujlsxxd) .gt_left {
   text-align: left;
 }
 
-:where(#vvymsfsuis) .gt_center {
+:where(#eldujlsxxd) .gt_center {
   text-align: center;
 }
 
-:where(#vvymsfsuis) .gt_right {
+:where(#eldujlsxxd) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#vvymsfsuis) .gt_font_normal {
+:where(#eldujlsxxd) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#vvymsfsuis) .gt_font_bold {
+:where(#eldujlsxxd) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#vvymsfsuis) .gt_font_italic {
+:where(#eldujlsxxd) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#vvymsfsuis) .gt_super {
+:where(#eldujlsxxd) .gt_super {
   font-size: 65%;
 }
 
-:where(#vvymsfsuis) .gt_footnote_marks {
+:where(#eldujlsxxd) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#vvymsfsuis) .gt_asterisk {
+:where(#eldujlsxxd) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#vvymsfsuis) .gt_indent_1 {
+:where(#eldujlsxxd) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#vvymsfsuis) .gt_indent_2 {
+:where(#eldujlsxxd) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#vvymsfsuis) .gt_indent_3 {
+:where(#eldujlsxxd) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#vvymsfsuis) .gt_indent_4 {
+:where(#eldujlsxxd) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#vvymsfsuis) .gt_indent_5 {
+:where(#eldujlsxxd) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1698,12 +1698,12 @@ Note
 <div class="cell-output-display">
 <div id="tbl-d" class="anchored">
 
-<div id="pbiuqeclwh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="armgjnakno" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#pbiuqeclwh) .gt_table {
+:where(#armgjnakno) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1728,7 +1728,7 @@ Note
   border-left-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_heading {
+:where(#armgjnakno) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1740,7 +1740,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_title {
+:where(#armgjnakno) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1752,7 +1752,7 @@ Note
   border-bottom-width: 0;
 }
 
-:where(#pbiuqeclwh) .gt_subtitle {
+:where(#armgjnakno) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1764,13 +1764,13 @@ Note
   border-top-width: 0;
 }
 
-:where(#pbiuqeclwh) .gt_bottom_border {
+:where(#armgjnakno) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_col_headings {
+:where(#armgjnakno) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #000000;
@@ -1785,7 +1785,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_col_heading {
+:where(#armgjnakno) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1805,7 +1805,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#pbiuqeclwh) .gt_column_spanner_outer {
+:where(#armgjnakno) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1817,15 +1817,15 @@ Note
   padding-right: 4px;
 }
 
-:where(#pbiuqeclwh) .gt_column_spanner_outer:first-child {
+:where(#armgjnakno) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#pbiuqeclwh) .gt_column_spanner_outer:last-child {
+:where(#armgjnakno) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#pbiuqeclwh) .gt_column_spanner {
+:where(#armgjnakno) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1837,7 +1837,7 @@ Note
   width: 100%;
 }
 
-:where(#pbiuqeclwh) .gt_group_heading {
+:where(#armgjnakno) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1862,7 +1862,7 @@ Note
   vertical-align: middle;
 }
 
-:where(#pbiuqeclwh) .gt_empty_group_heading {
+:where(#armgjnakno) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1877,15 +1877,15 @@ Note
   vertical-align: middle;
 }
 
-:where(#pbiuqeclwh) .gt_from_md > :first-child {
+:where(#armgjnakno) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#pbiuqeclwh) .gt_from_md > :last-child {
+:where(#armgjnakno) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#pbiuqeclwh) .gt_row {
+:where(#armgjnakno) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1904,7 +1904,7 @@ Note
   overflow-x: hidden;
 }
 
-:where(#pbiuqeclwh) .gt_stub {
+:where(#armgjnakno) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1917,7 +1917,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#pbiuqeclwh) .gt_stub_row_group {
+:where(#armgjnakno) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1931,11 +1931,11 @@ Note
   vertical-align: top;
 }
 
-:where(#pbiuqeclwh) .gt_row_group_first td {
+:where(#armgjnakno) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#pbiuqeclwh) .gt_summary_row {
+:where(#armgjnakno) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1945,16 +1945,16 @@ Note
   padding-right: 5px;
 }
 
-:where(#pbiuqeclwh) .gt_first_summary_row {
+:where(#armgjnakno) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_first_summary_row.thick {
+:where(#armgjnakno) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#pbiuqeclwh) .gt_last_summary_row {
+:where(#armgjnakno) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1964,7 +1964,7 @@ Note
   border-bottom-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_grand_summary_row {
+:where(#armgjnakno) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1974,7 +1974,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#pbiuqeclwh) .gt_first_grand_summary_row {
+:where(#armgjnakno) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1984,11 +1984,11 @@ Note
   border-top-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_striped {
+:where(#armgjnakno) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#pbiuqeclwh) .gt_table_body {
+:where(#armgjnakno) .gt_table_body {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: #000000;
@@ -1997,7 +1997,7 @@ Note
   border-bottom-color: #000000;
 }
 
-:where(#pbiuqeclwh) .gt_footnotes {
+:where(#armgjnakno) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2011,7 +2011,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_footnote {
+:where(#armgjnakno) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -2020,7 +2020,7 @@ Note
   padding-right: 5px;
 }
 
-:where(#pbiuqeclwh) .gt_sourcenotes {
+:where(#armgjnakno) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2034,7 +2034,7 @@ Note
   border-right-color: #D3D3D3;
 }
 
-:where(#pbiuqeclwh) .gt_sourcenote {
+:where(#armgjnakno) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2042,64 +2042,64 @@ Note
   padding-right: 5px;
 }
 
-:where(#pbiuqeclwh) .gt_left {
+:where(#armgjnakno) .gt_left {
   text-align: left;
 }
 
-:where(#pbiuqeclwh) .gt_center {
+:where(#armgjnakno) .gt_center {
   text-align: center;
 }
 
-:where(#pbiuqeclwh) .gt_right {
+:where(#armgjnakno) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#pbiuqeclwh) .gt_font_normal {
+:where(#armgjnakno) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#pbiuqeclwh) .gt_font_bold {
+:where(#armgjnakno) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#pbiuqeclwh) .gt_font_italic {
+:where(#armgjnakno) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#pbiuqeclwh) .gt_super {
+:where(#armgjnakno) .gt_super {
   font-size: 65%;
 }
 
-:where(#pbiuqeclwh) .gt_footnote_marks {
+:where(#armgjnakno) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#pbiuqeclwh) .gt_asterisk {
+:where(#armgjnakno) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#pbiuqeclwh) .gt_indent_1 {
+:where(#armgjnakno) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#pbiuqeclwh) .gt_indent_2 {
+:where(#armgjnakno) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#pbiuqeclwh) .gt_indent_3 {
+:where(#armgjnakno) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#pbiuqeclwh) .gt_indent_4 {
+:where(#armgjnakno) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#pbiuqeclwh) .gt_indent_5 {
+:where(#armgjnakno) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2227,7 +2227,7 @@ Note
 <div class="cell-output-display">
 <div id="fig-f" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="map.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="data/map.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;6: Geographic distribution of the study sites (reported or estimated from publications) across the study region (JK = Jammu and Kashmir, HP = Himachal Pradesh, CH = Chandigarh, HR = Haryana, UK = Uttarakhand). The number of studies per region is indicated in parenthesis</figcaption><p></p>
 </figure>
 </div>
@@ -2274,7 +2274,7 @@ Note
 <p>Several researchers analysed the forest structure and vegetation dynamics in the Indian Siwaliks <span class="citation" data-cites="Rout1989 Singh1995 Rawat1999 Mandal2015 Bhat2017">(<a href="#ref-Rout1989" role="doc-biblioref">Rout and Gupta 1989</a>; <a href="#ref-Singh1995" role="doc-biblioref">A. Singh, Reddy, and Singh 1995</a>; <a href="#ref-Rawat1999" role="doc-biblioref">Rawat and Bhainsora 1999</a>; <a href="#ref-Mandal2015" role="doc-biblioref">Mandal and Joshi 2015</a>; <a href="#ref-Bhat2017" role="doc-biblioref">Bhat et al. 2017</a>)</span>. This region’s vegetation is considered subtropical deciduous forests, and the dominant plant species include <em>Pinus roxburghii</em> Sarg., <em>Shorea robusta</em> C.F.Gaertn., <em>Anogeissus latifolia</em> (Roxb. ex DC.) Wall. ex Guill. &amp; Perr., <em>Lannea coromandelica</em> (Houtt.) Merr., and <em>Flacourtia indica</em> (Burm.f.) Merr. <span class="citation" data-cites="Rout1989 Singh1995 Rawat1999">(<a href="#ref-Rout1989" role="doc-biblioref">Rout and Gupta 1989</a>; <a href="#ref-Singh1995" role="doc-biblioref">A. Singh, Reddy, and Singh 1995</a>; <a href="#ref-Rawat1999" role="doc-biblioref">Rawat and Bhainsora 1999</a>)</span>. The vegetation associations or community composition are suggested to be affected by soil properties <span class="citation" data-cites="Mandal2015">(<a href="#ref-Mandal2015" role="doc-biblioref">Mandal and Joshi 2015</a>)</span> and seasonal variations <span class="citation" data-cites="Bhat2017">(<a href="#ref-Bhat2017" role="doc-biblioref">Bhat et al. 2017</a>)</span>. The vegetation association patterns were analysed using dominance-diversity curves <span class="citation" data-cites="Rout1989">(<a href="#ref-Rout1989" role="doc-biblioref">Rout and Gupta 1989</a>)</span>, detrended correspondence analysis <span class="citation" data-cites="Singh1995">(<a href="#ref-Singh1995" role="doc-biblioref">A. Singh, Reddy, and Singh 1995</a>)</span>, and TWINSPAN <span class="citation" data-cites="Rawat1999 Bhat2017">(<a href="#ref-Rawat1999" role="doc-biblioref">Rawat and Bhainsora 1999</a>; <a href="#ref-Bhat2017" role="doc-biblioref">Bhat et al. 2017</a>)</span>.</p>
 <p>Studies concerning ecosystem ecology of the Indian Siwaliks have primarily focused on soil characterisation <span class="citation" data-cites="Bargali1993 Gupta2010 Sharma2017 Hussain2019 Dinesh2020">(<a href="#ref-Bargali1993" role="doc-biblioref">Bargali, Singh, and Joshi 1993</a>; <a href="#ref-Gupta2010" role="doc-biblioref">Gupta et al. 2010</a>; <a href="#ref-Sharma2017" role="doc-biblioref">T. Sharma and Singh 2017</a>; <a href="#ref-Hussain2019" role="doc-biblioref">Hussain et al. 2019</a>; <a href="#ref-Dinesh2020" role="doc-biblioref">Dinesh et al. 2020</a>)</span>, biomass production <span class="citation" data-cites="Rana1988 Lodhiyal2003 Singh2019">(<a href="#ref-Rana1988" role="doc-biblioref">Rana, Singh, and Singh 1988</a>; <a href="#ref-Lodhiyal2003" role="doc-biblioref">Lodhiyal and Lodhiyal 2003</a>; <a href="#ref-Singh2019" role="doc-biblioref">Rahul Singh et al. 2019</a>)</span>, carbon stock and nutrient cycling <span class="citation" data-cites="Rout1990a Rout1990b Sharma2010 Watham2020">(<a href="#ref-Rout1990a" role="doc-biblioref">Rout and Gupta 1990b</a>, <a href="#ref-Rout1990b" role="doc-biblioref">1990a</a>; <a href="#ref-Sharma2010" role="doc-biblioref">C. M. Sharma et al. 2010</a>; <a href="#ref-Watham2020" role="doc-biblioref">Taibanganba Watham et al. 2020</a>)</span>. Soil physicochemical properties, primarily organic carbon and nutrients, decreased with time as natural forests were replaced by Eucalypt plantations <span class="citation" data-cites="Bargali1993">(<a href="#ref-Bargali1993" role="doc-biblioref">Bargali, Singh, and Joshi 1993</a>)</span>. Further, soil properties are shown to vary along with the soil depth in different geomorphic units <span class="citation" data-cites="Dinesh2020">(<a href="#ref-Dinesh2020" role="doc-biblioref">Dinesh et al. 2020</a>)</span>. The soil depth and the soil properties varied among other land uses <span class="citation" data-cites="Gupta2010 Hussain2019">(<a href="#ref-Gupta2010" role="doc-biblioref">Gupta et al. 2010</a>; <a href="#ref-Hussain2019" role="doc-biblioref">Hussain et al. 2019</a>)</span>; forest lands have better physicochemical parameters than barren lands <span class="citation" data-cites="Gupta2010">(<a href="#ref-Gupta2010" role="doc-biblioref">Gupta et al. 2010</a>)</span>. Furthermore, the soils of the Siwaliks are highly susceptible to erosion, and the highly susceptible regions are often identified using geo-statistical techniques <span class="citation" data-cites="Sharma2017">(<a href="#ref-Sharma2017" role="doc-biblioref">T. Sharma and Singh 2017</a>)</span>.</p>
 <p>Chir pine (<em>Pinus roxburghii</em> Sarg.) is one of the dominant tree species of the Siwalik region, and it forms pine forests or mixed pine forests. A study found that the estimated total biomass was 199 t ha<sup>−1</sup>, whereas the net primary production was 12.4 t ha<sup>−1</sup> yr<sup>−1</sup> for a mixed pine forest <span class="citation" data-cites="Rana1988">(<a href="#ref-Rana1988" role="doc-biblioref">Rana, Singh, and Singh 1988</a>)</span>. Another study showed that biomass and net primary production increase with age in a planted forest of <em>Dalbergia sissoo</em> Roxb. <span class="citation" data-cites="Lodhiyal2003">(<a href="#ref-Lodhiyal2003" role="doc-biblioref">Lodhiyal and Lodhiyal 2003</a>)</span>. Further, biomass production was observed to vary among land-use types, decreasing with elevation <span class="citation" data-cites="Singh2019">(<a href="#ref-Singh2019" role="doc-biblioref">Rahul Singh et al. 2019</a>)</span>. The herbaceous biomass varied due to season and was highest during the rainy season under pine forests <span class="citation" data-cites="Rout1990b">(<a href="#ref-Rout1990b" role="doc-biblioref">Rout and Gupta 1990a</a>)</span>. Since Siwalik forests are subtropical deciduous types, the litterfall, litter mass, and litter nutrients also varied seasonally <span class="citation" data-cites="Rout1990b">(<a href="#ref-Rout1990b" role="doc-biblioref">Rout and Gupta 1990a</a>)</span>. The litterfall showed two distinct peaks during the winter and summer months. Nutrient turnover also displayed differences due to season and forest types <span class="citation" data-cites="Rout1990a">(<a href="#ref-Rout1990a" role="doc-biblioref">Rout and Gupta 1990b</a>)</span>. The nutrient turnover rate was higher in mixed forests than the pine or scrub forests <span class="citation" data-cites="Rout1990a">(<a href="#ref-Rout1990a" role="doc-biblioref">Rout and Gupta 1990b</a>)</span>. Recently, a study showed that the Siwalik forests act as a concrete sink to the atmospheric CO<sub>2</sub>, and this carbon exchange is affected by the monsoon <span class="citation" data-cites="Watham2020">(<a href="#ref-Watham2020" role="doc-biblioref">Taibanganba Watham et al. 2020</a>)</span>.</p>
-<p>Remote sensing satellite data and modelling techniques are valuable tools to infer ecosystem structure and processes’ spatial and temporal patterns. Several researchers used these tools for vegetation characterisation <span class="citation" data-cites="Kimothi2010 Munsi2010 Padalia2013 Srinet2020a Mishra2021">(<a href="#ref-Kimothi2010" role="doc-biblioref">Kimothi and Dasari 2010</a>; <a href="#ref-Munsi2010" role="doc-biblioref">M. Munsi et al. 2010</a>; <a href="#ref-Padalia2013" role="doc-biblioref">Padalia, Kudrat, and Sharma 2013</a>; <a href="#ref-Srinet2020a" role="doc-biblioref">Srinet, Nandy, Padalia, et al. 2020</a>; <a href="#ref-Mishra2021" role="doc-biblioref">A. P. Mishra et al. 2021</a>)</span>, forest dynamics [<span class="citation" data-cites="Joshi2011">Joshi, Yadav, and Sinha (<a href="#ref-Joshi2011" role="doc-biblioref">2011</a>)</span>; <span class="citation" data-cites="Joshi2012">Joshi et al. (<a href="#ref-Joshi2012" role="doc-biblioref">2012</a>)</span>; <span class="citation" data-cites="Munsi2012">Madhushree Munsi, Areendran, and Joshi (<a href="#ref-Munsi2012" role="doc-biblioref">2012</a>)</span>; <span class="citation" data-cites="Areendran2017">Areendran et al. (<a href="#ref-Areendran2017" role="doc-biblioref">2017</a>)</span>; <span class="citation" data-cites="Kumar2021">M. Kumar et al. (<a href="#ref-Kumar2021" role="doc-biblioref">2021</a>)</span>), species distribution modelling <span class="citation" data-cites="Yang2013 Lamsal2018">(<a href="#ref-Yang2013" role="doc-biblioref">Yang et al. 2013</a>; <a href="#ref-Lamsal2018" role="doc-biblioref">Lamsal et al. 2018</a>)</span>, spatial heterogeneity <span class="citation" data-cites="Kumar2019">(<a href="#ref-Kumar2019" role="doc-biblioref">M. Kumar et al. 2019</a>)</span>, atmospheric CO<sub>2</sub> dynamics <span class="citation" data-cites="Watham2021">(<a href="#ref-Watham2021" role="doc-biblioref">T. Watham et al. 2021</a>)</span>, gross primary productivity modelling <span class="citation" data-cites="Mishra2015 Srinet2020b">(<a href="#ref-Mishra2015" role="doc-biblioref">N. B. Mishra and Chaudhuri 2015</a>; <a href="#ref-Srinet2020b" role="doc-biblioref">Srinet, Nandy, Watham, et al. 2020</a>)</span>, and foliar nutrients modelling <span class="citation" data-cites="Vasudeva2021">(<a href="#ref-Vasudeva2021" role="doc-biblioref">Vasudeva et al. 2021</a>)</span> in the Indian Siwalik region.</p>
+<p>Remote sensing satellite data and modelling techniques are valuable tools to infer ecosystem structure and processes’ spatial and temporal patterns. Several researchers used these tools for vegetation characterisation <span class="citation" data-cites="Kimothi2010 Munsi2010 Padalia2013 Srinet2020a Mishra2021">(<a href="#ref-Kimothi2010" role="doc-biblioref">Kimothi and Dasari 2010</a>; <a href="#ref-Munsi2010" role="doc-biblioref">M. Munsi et al. 2010</a>; <a href="#ref-Padalia2013" role="doc-biblioref">Padalia, Kudrat, and Sharma 2013</a>; <a href="#ref-Srinet2020a" role="doc-biblioref">Srinet, Nandy, Padalia, et al. 2020</a>; <a href="#ref-Mishra2021" role="doc-biblioref">A. P. Mishra et al. 2021</a>)</span>, forest dynamics <span class="citation" data-cites="Joshi2011 Joshi2012 Munsi2012 Areendran2017 Kumar2021">(<a href="#ref-Joshi2011" role="doc-biblioref">Joshi, Yadav, and Sinha 2011</a>; <a href="#ref-Joshi2012" role="doc-biblioref">Joshi et al. 2012</a>; <a href="#ref-Munsi2012" role="doc-biblioref">Madhushree Munsi, Areendran, and Joshi 2012</a>; <a href="#ref-Areendran2017" role="doc-biblioref">Areendran et al. 2017</a>; <a href="#ref-Kumar2021" role="doc-biblioref">M. Kumar et al. 2021</a>)</span>, species distribution modelling <span class="citation" data-cites="Yang2013 Lamsal2018">(<a href="#ref-Yang2013" role="doc-biblioref">Yang et al. 2013</a>; <a href="#ref-Lamsal2018" role="doc-biblioref">Lamsal et al. 2018</a>)</span>, spatial heterogeneity <span class="citation" data-cites="Kumar2019">(<a href="#ref-Kumar2019" role="doc-biblioref">M. Kumar et al. 2019</a>)</span>, atmospheric CO<sub>2</sub> dynamics <span class="citation" data-cites="Watham2021">(<a href="#ref-Watham2021" role="doc-biblioref">T. Watham et al. 2021</a>)</span>, gross primary productivity modelling <span class="citation" data-cites="Mishra2015 Srinet2020b">(<a href="#ref-Mishra2015" role="doc-biblioref">N. B. Mishra and Chaudhuri 2015</a>; <a href="#ref-Srinet2020b" role="doc-biblioref">Srinet, Nandy, Watham, et al. 2020</a>)</span>, and foliar nutrients modelling <span class="citation" data-cites="Vasudeva2021">(<a href="#ref-Vasudeva2021" role="doc-biblioref">Vasudeva et al. 2021</a>)</span> in the Indian Siwalik region.</p>
 <p>Indian satellite IRS-LISS <span class="citation" data-cites="Kimothi2010 Munsi2010">(<a href="#ref-Kimothi2010" role="doc-biblioref">Kimothi and Dasari 2010</a>; <a href="#ref-Munsi2010" role="doc-biblioref">M. Munsi et al. 2010</a>)</span> and Cartosat-1 <span class="citation" data-cites="Kimothi2010">(<a href="#ref-Kimothi2010" role="doc-biblioref">Kimothi and Dasari 2010</a>)</span> as well as global satellite Landsat <span class="citation" data-cites="Munsi2010">(<a href="#ref-Munsi2010" role="doc-biblioref">M. Munsi et al. 2010</a>)</span>, EO-1 <span class="citation" data-cites="Padalia2013">(<a href="#ref-Padalia2013" role="doc-biblioref">Padalia, Kudrat, and Sharma 2013</a>)</span>, MODIS <span class="citation" data-cites="Srinet2020a">(<a href="#ref-Srinet2020a" role="doc-biblioref">Srinet, Nandy, Padalia, et al. 2020</a>)</span> and Sentinel-2 <span class="citation" data-cites="Mishra2021">(<a href="#ref-Mishra2021" role="doc-biblioref">A. P. Mishra et al. 2021</a>)</span> data were used to map and characterise the vegetation. Not only the satellite data but also different classification algorithms like supervised maximum likelihood classifier <span class="citation" data-cites="Kimothi2010 Munsi2010">(<a href="#ref-Kimothi2010" role="doc-biblioref">Kimothi and Dasari 2010</a>; <a href="#ref-Munsi2010" role="doc-biblioref">M. Munsi et al. 2010</a>)</span>, spectral unmixing technique <span class="citation" data-cites="Padalia2013">(<a href="#ref-Padalia2013" role="doc-biblioref">Padalia, Kudrat, and Sharma 2013</a>)</span>, and random forest classifier <span class="citation" data-cites="Srinet2020a Mishra2021">(<a href="#ref-Srinet2020a" role="doc-biblioref">Srinet, Nandy, Padalia, et al. 2020</a>; <a href="#ref-Mishra2021" role="doc-biblioref">A. P. Mishra et al. 2021</a>)</span> were used. These studies mapped the extent of invasive plants <span class="citation" data-cites="Kimothi2010 Padalia2013">(<a href="#ref-Kimothi2010" role="doc-biblioref">Kimothi and Dasari 2010</a>; <a href="#ref-Padalia2013" role="doc-biblioref">Padalia, Kudrat, and Sharma 2013</a>)</span> and characterised forests at the landscape <span class="citation" data-cites="Munsi2010">(<a href="#ref-Munsi2010" role="doc-biblioref">M. Munsi et al. 2010</a>)</span>, functional types <span class="citation" data-cites="Srinet2020a">(<a href="#ref-Srinet2020a" role="doc-biblioref">Srinet, Nandy, Padalia, et al. 2020</a>)</span>, and community levels <span class="citation" data-cites="Mishra2021">(<a href="#ref-Mishra2021" role="doc-biblioref">A. P. Mishra et al. 2021</a>)</span>.</p>
 <p>Land use and land cover (LULC) analysis allow observing landscapes’ spatial and temporal changes <span class="citation" data-cites="Joshi2011 Munsi2012 Areendran2017">(<a href="#ref-Joshi2011" role="doc-biblioref">Joshi, Yadav, and Sinha 2011</a>; <a href="#ref-Munsi2012" role="doc-biblioref">Madhushree Munsi, Areendran, and Joshi 2012</a>; <a href="#ref-Areendran2017" role="doc-biblioref">Areendran et al. 2017</a>)</span>. Using LULC and ‘land change modeller’, it has been shown that the forested landscapes tended to decrease whereas non-forested areas increased over time <span class="citation" data-cites="Joshi2011 Munsi2012 Areendran2017">(<a href="#ref-Joshi2011" role="doc-biblioref">Joshi, Yadav, and Sinha 2011</a>; <a href="#ref-Munsi2012" role="doc-biblioref">Madhushree Munsi, Areendran, and Joshi 2012</a>; <a href="#ref-Areendran2017" role="doc-biblioref">Areendran et al. 2017</a>)</span>. These dynamics of forested landscapes have emerged as a challenge for the management of protected areas <span class="citation" data-cites="Joshi2011 Areendran2017">(<a href="#ref-Joshi2011" role="doc-biblioref">Joshi, Yadav, and Sinha 2011</a>; <a href="#ref-Areendran2017" role="doc-biblioref">Areendran et al. 2017</a>)</span>. Although human activities are significant drivers of landscape change, climate change is also projected to shift all the forest types except subtropical conifer forests <span class="citation" data-cites="Joshi2012">(<a href="#ref-Joshi2012" role="doc-biblioref">Joshi et al. 2012</a>)</span>. Further, multi-criteria forest vulnerability assessment suggested that forests at low elevations are more vulnerable than the high elevation forests types <span class="citation" data-cites="Kumar2021">(<a href="#ref-Kumar2021" role="doc-biblioref">M. Kumar et al. 2021</a>)</span>.</p>
 <p>Ecological modelling is not only limited to species distribution modelling <span class="citation" data-cites="Yang2013 Lamsal2018">(<a href="#ref-Yang2013" role="doc-biblioref">Yang et al. 2013</a>; <a href="#ref-Lamsal2018" role="doc-biblioref">Lamsal et al. 2018</a>)</span>, but it has expanded to model various ecosystem processes like productivity and foliar nutrients. MaxEnt modelling was used to predict the distribution of <em>Justicia adhatoda</em> L. <span class="citation" data-cites="Yang2013">(<a href="#ref-Yang2013" role="doc-biblioref">Yang et al. 2013</a>)</span> and some invasive plants <span class="citation" data-cites="Lamsal2018">(<a href="#ref-Lamsal2018" role="doc-biblioref">Lamsal et al. 2018</a>)</span>. Further, it has been suggested that the spread of invasive plants is affected by spatial heterogeneity <span class="citation" data-cites="Kumar2019">(<a href="#ref-Kumar2019" role="doc-biblioref">M. Kumar et al. 2019</a>)</span>.</p>
@@ -2308,7 +2308,7 @@ Note
 Areendran, G, K Raj, S Mazumdar, and A Sharma. 2017. <span>“<span class="nocase">Land use and land cover change analysis for Kosi river wildlife corridor in Terai Arc landscape of Northern India: Implications for future management</span>.”</span> <em>Tropical Ecology</em> 58: 139–49.
 </div>
 <div id="ref-bibliometrix2017" class="csl-entry" role="doc-biblioentry">
-Aria, Massimo, and Corrado Cuccurullo. 2017. <span>“Bibliometrix : An r-Tool for Comprehensive Science Mapping Analysis.”</span> <em>Journal of Informetrics</em> 11 (4): 959–75. <a href="https://doi.org/10.1016/j.joi.2017.08.007">https://doi.org/10.1016/j.joi.2017.08.007</a>.
+Aria, Massimo, and Corrado Cuccurullo. 2017. <span>“Bibliometrix : An <span class="nocase">R-tool</span> for Comprehensive Science Mapping Analysis.”</span> <em>Journal of Informetrics</em> 11 (4): 959–75. <a href="https://doi.org/10.1016/j.joi.2017.08.007">https://doi.org/10.1016/j.joi.2017.08.007</a>.
 </div>
 <div id="ref-Bargali1993" class="csl-entry" role="doc-biblioentry">
 Bargali, S. S., R. P. Singh, and Mukesh Joshi. 1993. <span>“<span class="nocase">Changes in soil characteristics in eucalypt plantations replacing natural broad-leaved forests</span>.”</span> <em>Journal of Vegetation Science</em> 4 (1): 25–28. <a href="https://doi.org/10.2307/3235730">https://doi.org/10.2307/3235730</a>.
@@ -2431,7 +2431,7 @@ Sanyal, P, S K Bhattacharya, R Kumar, S K Ghosh, and S J Sangode. 2005. <span>�
 Schulze, Ernst-Detlef, Erwin Beck, Nina Buchmann, Stephan Clemens, Klaus Müller-Hohenstein, and Michael Scherer-Lorenzen. 2019. <em><span>Plant Ecology</span></em>. 2nd ed. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-662-56233-8">https://doi.org/10.1007/978-3-662-56233-8</a>.
 </div>
 <div id="ref-Scott1993" class="csl-entry" role="doc-biblioentry">
-Scott, Christopher Anand, and Michael F. Walter. 1993. <span>“<span class="nocase">Local knowledge and conventional soil science approaches to erosional processes in the Shivalik Himalaya</span>.”</span> <em>Mountain Research and Development</em> 13 (1): 61. <a href="https://doi.org/10.2307/3673644">https://doi.org/10.2307/3673644</a>.
+Scott, Christopher Anand, and Michael F. Walter. 1993. <span>“<span class="nocase">Local knowledge and conventional soil science approaches to erosional processes in the Shivalik Himalaya</span>.”</span> <em>Mountain Research and Development</em> 13 (1): 61–72. <a href="https://doi.org/10.2307/3673644">https://doi.org/10.2307/3673644</a>.
 </div>
 <div id="ref-Semwal2017" class="csl-entry" role="doc-biblioentry">
 Semwal, P., S. D. Khobragade, and H. C. Nainwal. 2017. <span>“<span class="nocase">Modelling of recent erosion rates in a lake catchment in the North-Western Siwalik Himalayas</span>.”</span> <em>Environmental Processes</em> 4 (2): 355–74. <a href="https://doi.org/10.1007/s40710-017-0234-y">https://doi.org/10.1007/s40710-017-0234-y</a>.
@@ -2476,7 +2476,7 @@ Vasudeva, Vaishali, Subrata Nandy, Hitendra Padalia, Ritika Srinet, and Prakash 
 Verma, Pramit, Tanu Kumari, and Akhilesh Singh Raghubanshi. 2021. <span>“<span class="nocase">Energy emissions, consumption and impact of urban households: A review</span>.”</span> <em>Renewable and Sustainable Energy Reviews</em> 147 (September): 111210. <a href="https://doi.org/10.1016/j.rser.2021.111210">https://doi.org/10.1016/j.rser.2021.111210</a>.
 </div>
 <div id="ref-Wadia1944" class="csl-entry" role="doc-biblioentry">
-Wadia, D. N. 1944. <em><span class="nocase">Geology of India</span></em>. 2nd ed. London: MacMillan; Co., Limited. <a href="https://archive.org/details/in.ernet.dli.2015.15029/page/n5">https://archive.org/details/in.ernet.dli.2015.15029/page/n5</a>.
+Wadia, D. N. 1944. <em><span class="nocase">Geology of India</span></em>. 2nd ed. London: MacMillan. <a href="https://archive.org/details/in.ernet.dli.2015.15029/page/n5">https://archive.org/details/in.ernet.dli.2015.15029/page/n5</a>.
 </div>
 <div id="ref-Watham2020" class="csl-entry" role="doc-biblioentry">
 Watham, Taibanganba, Ritika Srinet, Subrata Nandy, Hitendra Padalia, Sanjiv K. Sinha, N. R. Patel, and Prakash Chauhan. 2020. <span>“<span class="nocase">Environmental control on carbon exchange of natural and planted forests in Western Himalayan foothills of India</span>.”</span> <em>Biogeochemistry</em> 151 (2-3): 291–311. <a href="https://doi.org/10.1007/s10533-020-00727-x">https://doi.org/10.1007/s10533-020-00727-x</a>.
@@ -2494,7 +2494,7 @@ Xie, Hualin, Yanwei Zhang, Xiaoji Zeng, and Yafen He. 2020. <span>“<span class
 Yadav, R. P., Pankaj Panwar, Swarn Lata Arya, and P. K. Mishra. 2015. <span>“<span class="nocase">Revisit of Shivalik region in different states of northwestern India</span>.”</span> <em>Journal of the Geological Society of India</em> 86 (3): 351–60. <a href="https://doi.org/10.1007/s12594-015-0322-4">https://doi.org/10.1007/s12594-015-0322-4</a>.
 </div>
 <div id="ref-Yang2013" class="csl-entry" role="doc-biblioentry">
-Yang, Xue-Qing, S. P. S. Kushwaha, S. Saran, Jianchu Xu, and P. S. Roy. 2013. <span>“<span class="nocase">Maxent modeling for predicting the potential distribution of medicinal plant, Justicia adhatoda L. in Lesser Himalayan foothills</span>.”</span> <em>Ecological Engineering</em> 51 (February): 83–87. <a href="https://doi.org/10.1016/j.ecoleng.2012.12.004">https://doi.org/10.1016/j.ecoleng.2012.12.004</a>.
+Yang, Xue-Qing, S. P. S. Kushwaha, S. Saran, Jianchu Xu, and P. S. Roy. 2013. <span>“<span class="nocase">Maxent modeling for predicting the potential distribution of medicinal plant, <span class="nocase">Justicia adhatoda L.</span> in Lesser Himalayan foothills</span>.”</span> <em>Ecological Engineering</em> 51 (February): 83–87. <a href="https://doi.org/10.1016/j.ecoleng.2012.12.004">https://doi.org/10.1016/j.ecoleng.2012.12.004</a>.
 </div>
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{kumar2022,
   author = {Abhishek Kumar and Meenu Patil and Pardeep Kumar and Manoj
