@@ -8,25 +8,25 @@
 
 | File name	                                                     | Description |  
 |----------------------------------------------------------------|-------------|
-| [credit_author.csv](/credit_author.csv)                        | Documentation of each authors' contribution in CRediT (Contributor Roles Taxonomy) author statement |
-| [gs-md.bib](/data/bib/gs-md.bib)                               | Bibliographic records obtained from Google Scholar after searching *“mycorrhiza decomposition”* |  
-| [gs-mna.bib](/data/bib/gs-mna.bib)	                         | Bibliographic records obtained from Google Scholar after searching *“mycorrhiza nutrient acquisition”* |
-| [scopus.bib](/data/bib/scopus.bib)	                         | Bibliographic records obtained from Scopus using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
-| [uniqueref.ris](/data/bib/uniqueref.ris)	                     | Unique records after de-duplication |
-| [wos1.bib](/data/bib/wos1.bib)	                             | Bibliographic records (1-500) obtained from Web of Science Core Collection using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
-| [wos2.bib](/data/bib/wos2.bib)	                             | Bibliographic records (501-1,000) obtained from Web of Science Core Collection using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
-| [wos3.bib](/data/bib/wos3.bib)	                             | Bibliographic records (1,001-1,293) obtained from Web of Science Core Collection using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
-| [data/article_screening.gv](/data/article_screening.gv)        | [Graphviz](https://graphviz.org/) codes for reproducing [fig1.svg](/data/fig1.svg) |
-| [fig1.svg](/data/fig1.svg)                                     | Schematic flow diagram for literature search, screening and inclusion process |
-| [mass_remaining.csv](/data/mass_remaining.csv)                 | Extracted raw mass remaining data from eligible studies (See codebook for details) |
-| [phylo.tre](/data/phylo.tre)                                   | Phylogenetic tree for plant species included in eligible studies |
-| [raw_entry1991.csv](/data/raw_entry1991.csv)                   | Extracted raw data for litter decomposition rates from Entry et al 1991 | 
-| [species_classification.csv](/data/species_classification.csv) | Taxonomic classification of plant species included |
-| [study_metadata.csv](/data/study_metadata.csv)                 | Study characteristics such as number of experiments, duration of experiment, mycorrhizal type, forest type, etc. |
-| [patil_et_al-2023.qmd](/patil_et_al-2023.qmd)	                 | Quarto markdown file with embedded `R` codes to reproduce the initial draft of manuscript |
-| [refs.bib](/refs.bib)                                          | Bibliographic entries for literature cited in the manuscript |
+| [credit_author.csv](/publications/2023-patil/credit_author.csv)| Documentation of each authors' contribution in CRediT (Contributor Roles Taxonomy) author statement |
+| [gs-md.bib](/publications/2023-patil/data/bib/gs-md.bib)                               | Bibliographic records obtained from Google Scholar after searching *“mycorrhiza decomposition”* |  
+| [gs-mna.bib](/publications/2023-patil/data/bib/gs-mna.bib)	                         | Bibliographic records obtained from Google Scholar after searching *“mycorrhiza nutrient acquisition”* |
+| [scopus.bib](/publications/2023-patil/data/bib/scopus.bib)	                         | Bibliographic records obtained from Scopus using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
+| [uniqueref.ris](/publications/2023-patil/data/bib/uniqueref.ris)	                     | Unique records after de-duplication |
+| [wos1.bib](/publications/2023-patil/data/bib/wos1.bib)	                             | Bibliographic records (1-500) obtained from Web of Science Core Collection using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
+| [wos2.bib](/publications/2023-patil/data/bib/wos2.bib)	                             | Bibliographic records (501-1,000) obtained from Web of Science Core Collection using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
+| [wos3.bib](/publications/2023-patil/data/bib/wos3.bib)	                             | Bibliographic records (1,001-1,293) obtained from Web of Science Core Collection using the search string: *(mycorrhiza\* OR ectomycorrhiza\* OR "saprotrophic fungi" OR plant-fung\*) AND (litter OR "litter decay" OR (litter AND decompos\*) OR decomposition OR "nutrient acquisition") AND (forest)* |
+| [data/article_screening.gv](/publications/2023-patil/data/article_screening.gv)        | [Graphviz](https://graphviz.org/) codes for reproducing [fig1.svg](/publications/2023-patil/data/fig1.svg) |
+| [fig1.svg](/publications/2023-patil/data/fig1.svg)                                     | Schematic flow diagram for literature search, screening and inclusion process |
+| [mass_remaining.csv](/publications/2023-patil/data/mass_remaining.csv)                 | Extracted raw mass remaining data from eligible studies (See codebook for details) |
+| [phylo.tre](/publications/2023-patil/data/phylo.tre)                                   | Phylogenetic tree for plant species included in eligible studies |
+| [raw_entry1991.csv](/publications/2023-patil/data/raw_entry1991.csv)                   | Extracted raw data for litter decomposition rates from Entry et al 1991 | 
+| [species_classification.csv](/publications/2023-patil/data/species_classification.csv) | Taxonomic classification of plant species included |
+| [study_metadata.csv](/publications/2023-patil/data/study_metadata.csv)                 | Study characteristics such as number of experiments, duration of experiment, mycorrhizal type, forest type, etc. |
+| [index.qmd](/publications/2023-patil/index.qmd)	                 | Quarto markdown file with embedded `R` codes to reproduce the initial draft of manuscript |
+| [refs.bib](/publications/2023-patil/refs.bib)                                          | Bibliographic entries for literature cited in the manuscript |
 
-## Codebook for [mass_remaining.csv](/data/mass_remaining.csv)
+## Codebook for [mass_remaining.csv](/publications/2023-patil/data/mass_remaining.csv)
 
 | Column  | Description | Units  |
 |---------|-------------|--------|
@@ -44,7 +44,7 @@
 
 <sup>**a**</sup> % of initial litter weight
 
-## Codebook for [raw_entry1991.csv](/data/raw_entry1991.csv)
+## Codebook for [raw_entry1991.csv](/publications/2023-patil/data/raw_entry1991.csv)
 
 | Column  | Description | Units  |
 |---------|-------------|--------|

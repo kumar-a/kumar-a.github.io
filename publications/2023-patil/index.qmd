@@ -22,6 +22,8 @@ author:
     affiliation: Panjab University, Chandigarh
     affiliation-url: https://puchd.ac.in
     orcid: 0000-0002-0148-8680
+    
+date: 2023-07-17
 
 bibliography: refs.bib 
 
@@ -31,6 +33,14 @@ format:
     toc-depth: 3
     number-sections: false
     default-image-extension: svg
+    
+# citation:
+#   type: article-journal
+#   container-title: "Land Degradation & Development"
+#   doi: "10.1002/ldr.4286"
+#   volume: 33
+#   issue: 12
+#   page: 1971-1984
 ---
 
 ```{r setup, include=FALSE}
@@ -956,7 +966,7 @@ auth.cont <- function(author){
 
 ## Data availability {.appendix}
 
-All data and codes are currently available from <https://github.com/kumar-a/patil_et_al-2023>. After acceptance, we will publish all datasets and `R` codes with a DOI in Zenodo or FigShare repository.
+All data and codes are currently available from <https://github.com/kumar-a/kumar-a.github.io/tree/main/publications/2023-patil>. After acceptance, we will publish all datasets and `R` codes with a DOI in Zenodo or FigShare repository.
 
 ## Funding {.appendix}
 
