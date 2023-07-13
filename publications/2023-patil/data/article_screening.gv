@@ -1,0 +1,32 @@
+digraph G {
+    layout=neato
+    node[fontname=Helvetica, shape=Mrecord, style="filled"]
+
+    GS[label="Google Scholar\n(n = 14)" , color="#00598b", fillcolor="#edf8ff", pos=" 3.0,5!",  width=2]
+    SC[label="Scopus\n(n = 1293)"       , color="#00598b", fillcolor="#edf8ff", pos="-1.0,6!", width=1]
+    WS[label="Web of Science\n(n = 789)", color="#00598b", fillcolor="#edf8ff", pos=" 0.7,6!", width=1]
+    TT[label="Total records\n(n = 2096)", color="#00598b", fillcolor="#edf8ff", pos=" 0.0,5!",  width=3]
+    {WS SC GS} -> TT
+    
+    
+    radr[label="Records after duplicates removed\n(n = 1455)",           color="#e69f00", fillcolor="#fff7e6", pos="0,4!", width=3]
+	rats[label="Records after title and abstract\nscreening\n(n = 190)", color="#e69f00", fillcolor="#fff7e6", pos="0,3!", width=3]
+	arft[label="Articles retrieved at full-text\n(n = 184)" ,            color="#e69f00", fillcolor="#fff7e6", pos="0,2!", width=3]
+	afts[label="Articles after full-text screening\n(n = 3)",            color="#e69f00", fillcolor="#fff7e6", pos="0,1!", width=3]
+    fsis[label="Studies included in synthesis \n (n = 5)",               color="#007756", fontcolor="#ecfffa", pos="0,0!", width=3]
+    
+    TT -> radr -> rats -> arft -> afts -> fsis
+    
+    dups[label="Excluded duplicates\n(n = 641)",             color="#a43f77", fillcolor="#f7ebf2", pos="3,4!", width=2]
+    exta[label="Excluded titles and\nabstracts\n(n = 1265)", color="#a43f77", fillcolor="#f7ebf2", pos="3,3!", width=2]
+    unft[label="Unretrievable full-text\n(n = 6)",           color="#a43f77", fillcolor="#f7ebf2", pos="3,2!", width=2]
+    exft[label="Excluded full-text\n(n = 181)",              color="#a43f77", fillcolor="#f7ebf2", pos="3,1!", width=2]
+    sfts[label="Pre-screened studies\n (n = 2)",             color="#007756", fillcolor="#edf7f8", pos="3,0!", width=2]
+    
+    radr -> dups
+    rats -> exta
+    arft -> unft
+    afts -> exft
+    
+    sfts -> fsis
+}

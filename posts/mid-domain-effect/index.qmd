@@ -1,0 +1,127 @@
+---
+title: "Mid-domain Effect"
+
+author:
+  - name: Abhishek Kumar
+    url: https://akumar.netlify.app
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in
+    orcid: 0000-0003-2252-7623
+
+date: 2023-03-21
+
+bibliography: refs.bib
+
+draft: true
+
+google-scholar: true
+  
+format: 
+  html: 
+    default-image-extension: svg
+---
+
+## Introduction
+
+```{r}
+min.elev <- 300
+max.elev <- 1500
+domain <- c(min.elev, max.elev)
+
+plot(domain, c(0, domain[2]-domain[1]), 
+     ylab="Range Size", xlab="Range Midpoint", type="n")
+
+pool.distris <-runif(200, 0, domain[2]-domain[1])
+hist(pool.distris)
+
+plot(domain, c(0,domain[2]-domain[1]), type="n", 
+     ylab="Range Size", xlab="Range Midpoint")
+polygon(x=c(domain[1], domain[1]+(domain[2]-domain[1])/2, domain[2]), 
+        y=c(0, domain[2]-domain[1], 0), col="grey90", border="grey80")
+```
+
+```{r}
+first.range.size <-pool.distris[1]
+first.range.size
+
+first.midpoint <-runif(1, domain[1]+( first.range.size/2), 
+                       domain[2]-( first.range.size/2))
+first.midpoint
+```
+
+```{r}
+midpoints <- lapply(
+  1:length(pool.distris),
+  function(x, pool.distris, domain){
+    runif(1, domain[1] + (pool.distris[x]/2), domain[2] - (pool.distris[x]/2))
+  },
+  pool.distris=pool.distris, domain=domain
+)
+
+midpoints <- unlist(midpoints)
+hist(midpoints)
+```
+
+```{r}
+current.distris <- t(apply(
+  cbind(midpoints, pool.distris), 1,
+  function(x){
+    c(x[1] - (x[2]/2), x[1] + (x[2]/2))
+  }
+))
+
+
+colnames(current.distris) <- c("lower_distri_limit", "upper_distri_limit")
+head(current.distris)
+```
+
+```{r}
+plot(domain, c(0, domain[2] - domain[1]), type="n", 
+     ylab = "Range Size", xlab = "Range Midpoint")
+polygon(x=c(domain[1], domain[1]+(domain[2]-domain[1])/2, domain[2]), 
+        y=c(0, domain[2]-domain[1], 0), col="grey90", border="grey80")
+
+apply(
+  current.distris, 1, 
+  function(x){
+    lines(x = c(x[1], x[2]), y = rep(x[2] - x[1], 2), col="darkorange", lwd=2)
+  }
+)
+points(pool.distris ~ midpoints, cex=1, col="darkorange3", pch=16)
+
+```
+
+```{r}
+# The number of cells to be used
+domain.cells <-20  
+
+# this will create a matrix with the upper and lower limits that define the cells 
+
+cells.limits <- seq(domain[1], domain[2], length.out = domain.cells + 1)
+cells <- matrix(0, domain.cells, 3)
+colnames(cells) <- c("lower_cell_limit", "upper_cell_limit", "richness")
+cells[,1] <- cells.limits[1:domain.cells]
+cells[,2] <- cells.limits[2:(domain.cells + 1)]
+
+# this will create a composition matrix where rows are cells and columns are species. A 1 means the species is present in the cell, a 0 means it is absent.
+final.composition <- matrix(0, domain.cells, length(pool.distris))
+colnames(final.composition) <- rownames(current.distris)
+rownames(final.composition) <- 1:domain.cells
+
+for (j in 1:nrow(current.distris)) {
+  WhichCells <- intersect(which(cells[,1] < current.distris[j,2]), 
+                          which(cells[,2] > current.distris[j,1]))
+  final.composition[WhichCells, j] <- 1
+}
+
+# this calculates the number of species in each cell
+cells[,3] <- rowSums(final.composition)
+```
+
+```{r}
+cell.midpoints <- cells[,1] + ((cells[,2]-cells[,1])/2)
+plot(cells[,"richness"] ~ cell.midpoints, ylim=c(0, max(cells[,3])), 
+     ylab="Species Richness", xlab="Domain", 
+     pch=21, bg="grey60", col="grey30", cex=1.5)
+```
+

@@ -1,1 +1,29 @@
 /* css styles */
+
+/* ---- REFERENCES ---- */
+/* justify references */
+#refs{
+  text-align: justify;
+}
+
+/* space between references */
+.csl-entry{
+  margin-bottom: 1em;
+}
+
+/* ---- METADATA ---- */
+
+/*-- colour for date of listing --*/
+.quarto-post .metadata .listing-date {
+  color: #ca225e;
+}
+
+/*-- metadata heading --*/
+.quarto-title-block.default .quarto-title-meta-heading {
+  text-transform: uppercase;
+  margin-top: 1em;
+  font-size: .8em;
+  opacity: .8;
+  font-weight: 400;
+  color: #ca225e;
+}

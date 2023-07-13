@@ -1,0 +1,16 @@
+---
+title: "Alien Flora of Indian Siwaliks"
+author: "Abhishek Kumar"
+---
+
+
+```{r}
+#| echo: false
+
+
+library(DT)
+
+read.csv("data.csv") |>
+  DT::datatable()
+```
+

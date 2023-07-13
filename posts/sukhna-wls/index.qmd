@@ -1,0 +1,41 @@
+---
+title: Sukhna Wildlife Sanctuary
+
+author:
+  - name: Abhishek Kumar
+    url: https://akumar.netlify.app
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in
+    orcid: 0000-0003-2252-7623
+
+date: 2023-04-26
+
+bibliography: refs.bib
+
+draft: true
+
+google-scholar: true
+  
+format: 
+  html: 
+    default-image-extension: svg
+---
+
+## Introduction
+
+Sukhna Wildlife Sanctuary is located in the Siwalik foothills of Chandigarh city near Sukhna lake and is spread over an area of 2600 hectares. The Siwalik region along with the adjoining plains have come under heavy thrust of human pressure due to commercial, industrial and economic activities.
+
+
+## Climate
+
+
+
+## Flora
+
+@Naithani2010
+
+## Fauna
+
+
+
+## References

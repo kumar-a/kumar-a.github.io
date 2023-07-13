@@ -1,0 +1,167 @@
+﻿Species,Density,Frequency,Abundance,IVI,Habit,Distance,BasalArea
+Achyranthes aspera L.,0.13,13.33,1,3.76,Herbs,Low,
+Ageratum conyzoides L.,0.73,40,1.83,11.23,Herbs,Low,
+Alternanthera philoxeroides Griseb.,0.4,6.66,6,12.16,Herbs,Low,
+Anagallis arvensis L. ,0.06,20,0.33,2.83,Herbs,Low,
+Andrographis paniculata (Burm.f.) Wall.ex Nees.,0.06,13.33,0.5,2.43,Herbs,Low,
+Anethum graveolens L.,0.06,6.66,1,2.43,Herbs,Low,
+Argemon Mexicana L.,0.06,13.33,0.5,2.67,Herbs,Low,
+Arundo donax L.,0.06,6.66,1,NA,Herbs,Low,
+Asphodelus ramosus L.,0.06,6.66,1,NA,Herbs,Low,
+Blepharis maderaspatensis (L.) Heyne ex Roth.,0.06,6.66,1,2.67,Herbs,Low,
+Cleome viscose L.,0.13,20,0.66,3.76,Herbs,Low,
+Cynodon dactylon (L.) Pers.,1.06,40,2.66,14.52,Herbs,Low,
+Dicliptera paniculata (Forssk.) I. Darbysh.,0.37,46.6,0.71,7.96,Herbs,Low,
+Dicanthium annulatum (Forssk.) Stapf,1.13,40,2.83,12.56,Herbs,Low,
+Eclipta alba (L.) L.,0.06,13.3,0.5,2.43,Herbs,Low,
+Euphorbia dracunculoides Lam.,0.06,6.66,1,2.67,Herbs,Low,
+Euphorbia helioscopia L.,0.06,40,0.16,4.56,Herbs,Low,
+Euphorbia thymifolia L.,0.06,33.3,0.2,3.96,Herbs,Low,
+Evolvulus nummularis (L) L.,0.53,33.3,1.6,8.99,Herbs,Low,
+Fumaria indica (Hausskn.) Pugsley.,0.13,13.3,1,3.76,Herbs,Low,
+Geranium lucidum L.,0.06,6.66,1,2.67,Herbs,Low,
+Gomphrena globosa L.,0.13,26.6,0.5,4.18,Herbs,Low,
+Malvastrum coromandelianum (L.) Garcke.,0.46,26.6,1.75,8.15,Herbs,Low,
+Mazus japonicas (Thunb.) Ktze.,0.06,6.66,1,2.67,Herbs,Low,
+Najas marina L.,2.4,73.3,3.27,26.94,Herbs,Low,
+Oxalis corniculata L.,0.13,20,0.66,3.76,Herbs,Low,
+Panicum maxima Jacq.,0.13,6.66,2,3.86,Herbs,Low,
+Parthenium hysterophorus L.,0.33,13.3,2.5,7.12,Herbs,Low,
+Paspalum distichum L.,0.13,13.3,1,3.33,Herbs,Low,
+Pennisetum ciliare L.,0.06,6.66,1,2.67,Herbs,Low,
+Phyla nodiflora (L.) Greene.,0.4,33.3,1.2,7.56,Herbs,Low,
+Phyllanthus virgatus Forst.f.,0.13,20,0.66,3.76,Herbs,Low,
+Poa annua L.,0.13,13.3,1,3.76,Herbs,Low,
+Polygonum glabrum Willd.,0.6,46.6,1.28,6.9,Herbs,Low,
+Polygonum capitatum (Buch.-Ham. ex D.Don)H. Gross,0.2,20,1,4.85,Herbs,Low,
+Polygonum lapathifolium (L.) Delarbre,0.06,6.6,1,3.99,Herbs,Low,
+Polypogon sp.Desf,0.06,6.66,1,2.67,Herbs,Low,
+Ranunculus sceleratus L.,0.53,13.3,4,10.62,Herbs,Low,
+Rivina humilis L.,0.2,20,1,4.85,Herbs,Low,
+Saccharum munja Roxb.,1.73,60,2.88,20.97,Herbs,Low,
+Saccharum spontaneum L.,2.26,73.3,3.09,25.89,Herbs,Low,
+Saussurea candicans (DC.) Sch.Bip.,0.06,6.66,1,2.67,Herbs,Low,
+Sida acuta Burm.f.,0.06,6.66,1,2.67,Herbs,Low,
+Spergula arvensis L.,0.26,13.3,2,5.92,Herbs,Low,
+Tinospora cordifolia (Thunb.) Miers.,0.06,6.66,1,2.67,Herbs,Low,
+Trianthema portulacastrum L.,0.06,6.66,1,2.67,Herbs,Low,
+Tridax procumbens L.,0.13,13.33,1,4.42,Herbs,Low,
+Calotropis procera (Aiton) W. T. Aiton,0.06,6.66,1,25.88,Shrubs,Low,
+Desmodium gangeticum (L.) DC,0.06,6.66,1,10.78,Shrubs,Low,
+Ipomea carnea Jace.,1.4,60,2.33,182.9,Shrubs,Low,
+Solanum viarum Dunal.,0.13,13.33,1,37.13,Shrubs,Low,
+Tephrosia purpurea (L.) Pers.,0.06,6.6,1,25.88,Shrubs,Low,
+Acacia nilotica (L.) P.J.H.Hurter & Mabb.,140,,,59.57,Trees,Low,72
+Albizzia procera (Roxb.) Benth.,13,,,44.25,Trees,Low,265
+Bauhinia variegata L.,6,,,19.45,Trees,Low,113
+Leucaena leucocephala (Lam.) de Wit,133,,,57.2,Trees,Low,113
+Prosopis juliflora (Sw.) DC.,186,,,83.01,Trees,Low,132
+Ricinus communis L.,6,,,8.15,Trees,Low,28
+Syzygium cumini (L.) Skeels,40,,,21.73,Trees,Low,31
+Achyranthes aspera L.,0.46,33.33,1.4,8.81,Herbs,Medium,
+Aerva lanata (L.) Juss.ex.Schult.,0.06,6.66,1,3.13,Herbs,Medium,
+Ageratum conyzoides L.,1.13,60,1.88,16.15,Herbs,Medium,
+Argemon Mexicana L.,0.26,20,1.33,6.25,Herbs,Medium,
+Arundo donax L.,0.2,20,1,5.21,Herbs,Medium,
+Boerhavia diffusa L,0.13,13.33,1,4.17,Herbs,Medium,
+Chenopodium vulgare,0.4,33.3,1.2,8.05,Herbs,Medium,
+Cissampelos pareira L.var.hirsuta (DC.) Forman,0.73,40,1.83,9.55,Herbs,Medium,
+Cynodon dactylon (L.) Pers.,2.2,40,6.66,29.39,Herbs,Medium,
+Dicliptera paniculata (Forssk.) I. Darbysh.,0.73,60,1.22,12.56,Herbs,Medium,
+Dicanthium annulatum (Forssk.) Stapf,0.13,13.33,1,4.17,Herbs,Medium,
+Eclipta alba (L.) L.,0.4,20,2,8.46,Herbs,Medium,
+Euphorbia helioscopia L.,0.66,40,1.66,11.14,Herbs,Medium,
+Evolvulus nummularis (L) L.,0.93,73.33,1.27,15.06,Herbs,Medium,
+Gamochaeta sp. (Wedd.) Gren.,0.93,66.6,1.4,14.67,Herbs,Medium,
+Malvastrum coromandelianum (L.) Garcke.,1.4,66.6,2.1,18.74,Herbs,Medium,
+Oxalis corniculata L.,0.53,40,1.33,9.71,Herbs,Medium,
+Panicum maxima Jacq.,0.06,6.66,1,3.13,Herbs,Medium,
+Parthenium hysterophorus L.,0.6,26.66,2.25,10.75,Herbs,Medium,
+Paspalum distichum L.,0.2,6.66,3,8.21,Herbs,Medium,
+Pennisetum ciliare L.,0.33,26.66,1.25,7.1,Herbs,Medium,
+Phyla nodiflora (L.) Greene.,0.53,20,1.33,7.72,Herbs,Medium,
+Phyllanthus virgatus Forst.f.,0.06,6.66,1,3.13,Herbs,Medium,
+Poa annua L.,0.6,46.6,1.28,12.74,Herbs,Medium,
+Rivina humilis L.,2.33,80,2.91,26.88,Herbs,Medium,
+Sida acuta Burm.f.,0.93,53.33,1.75,14.61,Herbs,Medium,
+Tridax procumbens L.,1.13,60,1.88,16.15,Herbs,Medium,
+Urena lobata L.,0.13,13.33,1,4.55,Herbs,Medium,
+Justicia adhatoda L.,2.7,26.6,10.25,113.15,Shrubs,Medium,
+Calotropis procera (Aiton) W. T. Aiton,0.13,13.33,1,14.95,Shrubs,Medium,
+Carissa spinarum L.,0.4,33.33,1.2,33.88,Shrubs,Medium,
+Datura anoxia Mill.,0.06,6.66,1,5.33,Shrubs,Medium,
+Desmodium gangeticum (L.) DC.,0.06,6.66,1,5.33,Shrubs,Medium,
+Ipomea carnea Jace.,0.53,26.66,2,35.52,Shrubs,Medium,
+Lantana camara L.,0.66,33.33,5,54.23,Shrubs,Medium,
+Solanum viarum Dunal.,0.06,6.66,1,21.83,Shrubs,Medium,
+Zizyphus jujube Mill.,0.2,6.66,3,20.1,Shrubs,Medium,
+Acacia nilotica (L.) P.J.H.Hurter & Mabb.,120,,,22.44,Trees,Medium,150
+Albizzia procera (Roxb.) Benth.,20,,,6.61,Trees,Medium,73
+Bauhinia variegata L.,6,,,4.25,Trees,Medium,94
+Bombax ceiba L.,6,,,13.16,Trees,Medium,323
+Broussonetia papyrifera (L.) Her.exVent,53,,,10.87,Trees,Medium,28
+Butea monosperma (Lam.) Taub.,46,,,14.04,Trees,Medium,124
+Cassia fistula L.,13,,,6.65,Trees,Medium,86
+Chukrasia tabularis A. Juss.,46,,,12.95,Trees,Medium,160
+Cordia dichotoma G. Forst.,6,,,6.75,Trees,Medium,132
+Dalbergia sissoo Roxb.,33,,,8.24,Trees,Medium,63
+Diospyros Montana Roxb.,6,,,4.07,Trees,Medium,63
+Emblica officinalis L.,60,,,14.76,Trees,Medium,117
+Lannea grandis (Dennst.) Engl.,13,,,6.96,Trees,Medium,94
+Leucaena leucocephala (Lam.) de Wit,66,,,17.86,Trees,Medium,173
+Morus alba L.,13,,,7.47,Trees,Medium,107
+Murraya koenigii (L.) Sprengel,106,,,5.45,Trees,Medium,57
+Phoenix sylvestris (L.) Roxb.,13,,,8.44,Trees,Medium,132
+Millettia  pinnata (L.) Panigrahi,13,,,7.21,Trees,Medium,132
+Prosopis juliflora (Sw.) DC.,660,,,63.85,Trees,Medium,65
+Rhamnus purshiana DC,6,,,4.06,Trees,Medium,63
+Syzygium cumini (L.) Skeels,153,,,23.43,Trees,Medium,88
+Toona ciliate M. Roem.,6,,,9.77,Trees,Medium,210
+Vitex negundo L.,6,,,5.26,Trees,Medium,94
+Adhatoda vasica,0.93,20,4.66,97.22,Shrubs,High,
+Calotropis procera,0.13,13.33,1,24.1,Shrubs,High,
+Carissa spinarum,0.53,40,1.33,60.38,Shrubs,High,
+Lantana camara,0.66,46.6,1.42,70.23,Shrubs,High,
+Tephrosia purpurea,0.13,13.33,0.1,14.64,Shrubs,High,
+Zizyphus jujube,0.2,20,1,30.58,Shrubs,High,
+Achyranthes aspera L.,1.33,60,2.22,24.81,Herbs,High,
+Aerva lanata (L.) Juss. ex Schult.,0.06,6.66,1,2.6,Herbs,High,
+Ageratum conyzoides L.,1.13,60,1.88,22.42,Herbs,High,
+Argemon Mexicana L.,0.66,53.3,1.25,15.98,Herbs,High,
+Cassia tora (L.) Roxb.,0.13,13.33,1,4.32,Herbs,High,
+Chenopodium vulgare Gueldenst. ex Ledeb.,0.53,40,1.33,12.74,Herbs,High,
+Cissampelos pareira L.var.hirsuta (DC.) Forman,0.46,33.3,1.4,11.08,Herbs,High,
+Dicliptera paniculata (Forssk.),0.93,73.3,1.27,21.76,Herbs,High,
+Eclipta alba (L.) L.,0.26,26.6,1,7.64,Herbs,High,
+Euphorbia helioscopia L,0.46,26.6,1.75,10.41,Herbs,High,
+Gamochaeta sp. (Wedd.) Gren.,0.4,26.6,1.5,9.57,Herbs,High,
+Malvastrum coromandelianum (L.) Garcke.,0.4,40,1,11.08,Herbs,High,
+Oxalis corniculata L,0.13,13.33,1,4.32,Herbs,High,
+Parthenium hysterophorus L.,0.33,20,1.66,8.04,Herbs,High,
+Phyllanthus virgatus Forst.f.,0.13,13.33,1,4.32,Herbs,High,
+Poa annua L.,0.2,20,1,6.04,Herbs,High,
+Rivina humilis L.,1.53,73.3,2.09,18.69,Herbs,High,
+Sida acuta Burm.f.,0.33,26.66,1.25,8.62,Herbs,High,
+Tridax procumbens L.,0.26,26.66,1,7.65,Herbs,High,
+Urena lobata L.,0.13,13.33,1,4.32,Herbs,High,
+Acacia catechu (L.f.) P.J.H.Hurter & Mabb.,40,,,6.07,Trees,High,30
+Acacia nilotica (L.) P.J.H.Hurter & Mabb.,473,,,33.69,Trees,High,55
+Albizzia procera (Roxb.) Benth.,6,,,3.6,Trees,High,73
+Alstonia scholaris (L.) R.Br.,6,,,7.41,Trees,High,131
+Bombax ceiba L.,40,,,9.62,Trees,High,102
+Broussonetia papyrifera (L.) Her.exVent,60,,,10.86,Trees,High,70
+Butea monosperma (Lam.) Taub.,33,,,11.96,Trees,High,176
+Cassia fistula L.,6,,,4.83,Trees,High,78
+Dalbergia sissoo Roxb.,86,,,14.45,Trees,High,101
+Diospyros Montana Roxb.,13,,,5.26,Trees,High,56
+Emblica officinalis L.,133,,,16.77,Trees,High,89
+Eucalyptus sp.,53,,,10.97,Trees,High,99
+Ficus racemosa L.,13,,,17.91,Trees,High,314
+Ficus religiosa L. Forssk.,13,,,6.19,Trees,High,75
+Leucaena leucocephala (Lam.) de Wit,346,,,30.98,Trees,High,122
+Morus alba L.,20,,,6.88,Trees,High,63
+Murraya koenigii (L.) Sprengel,20,,,3.14,Trees,High,38
+Prosopis juliflora (Sw.) DC.,820,,,52.5,Trees,High,113
+Psidium guajava L.,13,,,3.54,Trees,High,165
+Syzygium cumini (L.) Skeels,193,,,18.81,Trees,High,42
+Toona ciliata M. Roem.,20,,,11.42,Trees,High,176

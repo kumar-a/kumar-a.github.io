@@ -4,6 +4,15 @@ image: abhi.jpg
 about:
   template: jolla
   links:
+    - icon: envelope
+      text: Email
+      href: abhikumar.pu@gmail.com
+    - icon: r-square-fill
+      text: ResearcherID
+      href: http://www.researcherid.com/rid/T-1462-2018
+    - icon: mortarboard-fill
+      text: GoogleScholar
+      href: https://scholar.google.co.in/citations?user=ugmCylsAAAAJ&hl=en
     - icon: twitter
       text: Twitter
       href: https://twitter.com/abkumar_

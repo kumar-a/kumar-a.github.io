@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/siwalik-alien-flora/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
@@ -9,10 +10,11 @@
   {
     "listing": "/publications.html",
     "items": [
-      "/publications/2022-kumar-troe/2022-kumar-troe.html",
-      "/publications/2022-singh-ldd/2022-singh-ldd.html",
-      "/publications/2022-singh-ee/2022-singh-ee.html",
-      "/publications/2020-kumar-jsr/2020-kumar-jsr.html"
+      "/publications/2023-patil/index.html",
+      "/publications/2022-kumar-troe/index.html",
+      "/publications/2022-singh-ldd/index.html",
+      "/publications/2022-singh-ee/index.html",
+      "/publications/2020-kumar-jsr/index.html"
     ]
   }
 ]

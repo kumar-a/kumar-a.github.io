@@ -1,0 +1,18 @@
+{
+  "hash": "ad34e652f2cae7da8ba7a7641dd28be9",
+  "result": {
+    "markdown": "---\ntitle: \"Alien Flora of Indian Siwaliks\"\nauthor: \"Abhishek Kumar\"\n---\n\n::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<div id=\"htmlwidget-e5161a653e726e9100f2\" style=\"width:100%;height:auto;\" class=\"datatables html-widget\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-e5161a653e726e9100f2\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"1\",\"2\",\"3\",\"4\",\"5\"],[\"Ageratum conyzoides\",\"Lantana camara\",\"Parthenium hysterophorus\",\"Chromolaena odorata\",\"Tagetes minuta\"],[\"Invasive\",\"Invasive\",\"Invasive\",\"Invasive\",\"Invasive\"],[null,null,null,null,null]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th> <\\/th>\\n      <th>Search<\\/th>\\n      <th>InvasionStatus<\\/th>\\n      <th>Origin<\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"columnDefs\":[{\"orderable\":false,\"targets\":0}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.5.4/htmlwidgets.js\"></script>\r\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\r\n<script src=\"../../site_libs/datatables-binding-0.26/datatables.js\"></script>\r\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\r\n<link href=\"../../site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\r\n<link href=\"../../site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\r\n<script src=\"../../site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js\"></script>\r\n<link href=\"../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css\" rel=\"stylesheet\" />\r\n<script src=\"../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js\"></script>\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
