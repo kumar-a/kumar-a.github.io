@@ -1,0 +1,14 @@
+{
+  "hash": "6c96df88516f97235d094e3e55e8d3dd",
+  "result": {
+    "markdown": "---\ntitle: \"Species distribution modelling studies for Plants in Western Himalayas\"\n\nauthor:\n  - name: Abhishek Kumar\n    url: https://akumar.netlify.app\n    affiliation: Panjab University, Chandigarh\n    affiliation_url: https://puchd.ac.in\n    orcid: 0000-0003-2252-7623\n    \nbibliography: refs.bib\n\nformat: \n  html: default\n\n---\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n|Species                      |Reference      |\n|:----------------------------|:--------------|\n|*Abies densa*                |@Malik2022     |\n|*Abies pindrow*              |@Malik2022     |\n|*Abies spectabilis*          |@Malik2022     |\n|*Aconitum heterophyllum*     |@Wani2022      |\n|*Betula utilis*              |@Mohapatra2019 |\n|*Betula utilis*              |@Singh2021b    |\n|*Boehmeria clidemioides*     |@Gupta2023     |\n|*Buxus wallichiana*          |@Wani2023      |\n|*Dactylorhiza hatagirea*     |@Chandra2022   |\n|*Dactylorhiza hatagirea*     |@Sharma2023    |\n|*Dactylorhiza hatagirea*     |@Thakur2021    |\n|*Drepanostachyum falcatum*   |@Meena2023     |\n|*Fritillaria roylei*         |@Chandora2023  |\n|*Incarvillea altissima*      |@Rana2021      |\n|*Incarvillea arguta*         |@Rana2021      |\n|*Incarvillea beresowskii*    |@Rana2021      |\n|*Incarvillea compacta*       |@Rana2021      |\n|*Incarvillea delavayi*       |@Rana2021      |\n|*Incarvillea emodi*          |@Rana2021      |\n|*Incarvillea forrestii*      |@Rana2021      |\n|*Incarvillea lutea*          |@Rana2021      |\n|*Incarvillea mairei*         |@Rana2021      |\n|*Incarvillea olgae*          |@Rana2021      |\n|*Incarvillea potaninii*      |@Rana2021      |\n|*Incarvillea sinensis*       |@Rana2021      |\n|*Incarvillea younghusbandii* |@Rana2021      |\n|*Incarvillea zhongdianensis* |@Rana2021      |\n|*Lagotis cashmeriana*        |@Salam2022     |\n|*Picrorhiza kurroa*          |@Rawat2022     |\n|*Pinus gerardiana*           |@Paul2023b     |\n|*Pittosporum eriocarpum*     |@Paul2023a     |\n|*Quercus oblongata*          |@Barman2023    |\n|*Quercus semecarpifolia*     |@Saran2010     |\n|*Quercus semecarpifolia*     |@Singh2021a    |\n|*Rheum webbianum*            |@Wani2021      |\n|*Shorea robusta*             |@Kaur2023      |\n|*Taxus contorta*             |@Chauhan2022   |\n|*Trillium govanianum*        |@Rather2022    |\n|*Valeriana wallichii*        |@Kumari2022    |\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

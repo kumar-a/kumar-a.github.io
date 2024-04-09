@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/index.html",
+      "/posts/sdm-himalaya/index.html",
       "/posts/siwalik-alien-flora/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"

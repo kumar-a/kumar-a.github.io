@@ -76,7 +76,7 @@ Tropical forests are the most productive and most vulnerable terrestrial ecosyst
 
 Tropical forests cover more than 50% of the global forest area, which are usually restricted to the tropic of Cancer in the north (23.5&deg;N), and the tropic of Capricorn in the south (23.5&deg;S) of the equator. Brazil represents one-third of the global tropical forest area, and about 75% of the total is limited to just ten countries (@fig-distribution). These forests are usually distinguished by hot and humid climatic conditions comprising an average temperature range of 25--30 &deg;C, but not less than 18 &deg;C, while the annual precipitation remains greater than 120 cm. Depending on the amount of precipitation and seasonality, these forests can be further divided into dry deciduous, and moist evergreen forests [@Singh2017]. However, the moist evergreen or rainforests usually experience higher precipitation (greater than 230 cm year^--1^), whereas the dry deciduous forests account precipitation ranging from 120 cm to 280 cm year^--1^. The latter is characterized by a distinct dry season ranging from 2-8 months [@Singh2017]. They occur on lowlands, hills, and mountains with different ranges of rainfall gradients. Geographically, tropical forests cover an area of about 6% of the global land area but support rich biodiversity; for example, more than half of all the known species of plants and animals are native residents of tropical forests [@Smith2015]. Therefore, these dominant forests have a large influence on the regulation of global ecological processes such as climate regulation, nutrient cycling, productivity, and energy flow.
 
-```{r}
+```{r fig.width=7, fig.height=4}
 #| label: fig-distribution
 #| fig-cap: Global Distribution of Tropical Forests which include the Tropical and Subtropical Coniferous Forests, Tropical and Subtropical Dry Broadleaf Forests, and Tropical and Subtropical Moist Broadleaf Forests [Data from @TNC2019].
 
@@ -84,8 +84,13 @@ Tropical forests cover more than 50% of the global forest area, which are usuall
 sf_use_s2(FALSE)
 
 ## filter out tropical forests from TNC ecoregions
-tropical_forests <- st_read("E:/spatial-data/boundaries/tnc_terr_ecoregions/tnc_terr_ecoregions.shp", quiet = TRUE) |>
-  filter(WWF_MHTNUM < 4)
+# st_read("E:/spatial-data/boundaries/tnc_terr_ecoregions/tnc_terr_ecoregions.shp", 
+#         quiet = TRUE) |>
+#   filter(WWF_MHTNUM < 4) |>
+#   summarise() |>
+#   st_write("data/tnc_tropical_forests.gpkg")
+
+tropical_forests <- st_read("data/tnc_tropical_forests.gpkg", quiet = TRUE)
 
 ## load world shapefile from tmap package
 data("World")
@@ -99,6 +104,7 @@ tm_shape(World) + tm_fill(col = "grey95") +
             outer.margins = c(0.02, 0.02, 0.02, 0.02)) +
   tm_graticules(alpha = 0.2, labels.size = 0.8)
 ```
+
 
 Global environmental change is an everlasting phenomenon that cannot be immediately controlled, and its possible effects are expected to alter the pace of structure and functioning behavior of a natural ecosystem. Therefore, it is not a surprising fact for ecology, but specifically, the ongoing climate change and the current rate of deforestation are bringing major threats to the sustainability of tropical forest ecosystems at unprecedented rates. These alterations can potentially compromise the ecosystem services leading to high uncertainty about the sustainability of life on the planet. Therefore, increased understanding of the ecosystem processes is highly warranted to reduce their fragility, and develop management strategies for sustaining life on earth.
 

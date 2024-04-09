@@ -1,0 +1,14 @@
+---
+title: "Species distribution modelling studies in Himalayas"
+author: "Abhishek Kumar"
+---
+
+```{r}
+library(tidyverse)
+
+tribble(
+  ~Species, ~Latitude, ~Longitude, ~Reference,
+  
+)
+```
+

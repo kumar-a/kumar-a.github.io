@@ -27,6 +27,8 @@ date: 2023-07-17
 
 bibliography: refs.bib 
 
+draft: true
+
 format: 
   html:
     toc: true

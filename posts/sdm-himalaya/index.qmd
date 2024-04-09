@@ -1,0 +1,78 @@
+---
+title: "Species distribution modelling studies for Plants in Western Himalayas"
+
+author:
+  - name: Abhishek Kumar
+    url: https://akumar.netlify.app
+    affiliation: Panjab University, Chandigarh
+    affiliation_url: https://puchd.ac.in
+    orcid: 0000-0003-2252-7623
+    
+bibliography: refs.bib
+
+format: 
+  html: default
+
+---
+
+
+```{r setup, include=FALSE}
+## global chunk options
+knitr::opts_chunk$set(echo = FALSE, comment = "#>",
+                      fig.align = "center",
+                      warning = FALSE, message = FALSE)
+
+## packages
+library(tidyverse)
+```
+
+
+```{r}
+tribble(
+  ~Species,                     ~Reference,
+  "Abies densa",                "Malik2022",
+  "Abies pindrow",              "Malik2022",
+  "Abies spectabilis",          "Malik2022",
+  "Aconitum heterophyllum",     "Wani2022",
+  "Betula utilis",              "Singh2021b",
+  "Betula utilis",              "Mohapatra2019",
+  "Boehmeria clidemioides",     "Gupta2023",
+  "Buxus wallichiana",          "Wani2023",
+  "Dactylorhiza hatagirea",     "Sharma2023",
+  "Dactylorhiza hatagirea",     "Thakur2021",
+  "Dactylorhiza hatagirea",     "Chandra2022",
+  "Drepanostachyum falcatum",   "Meena2023",
+  "Fritillaria roylei",         "Chandora2023",
+  "Incarvillea arguta",         "Rana2021",
+  "Incarvillea emodi",          "Rana2021",
+  "Incarvillea potaninii",      "Rana2021",
+  "Incarvillea sinensis",       "Rana2021",
+  "Incarvillea olgae",          "Rana2021",
+  "Incarvillea altissima",      "Rana2021",
+  "Incarvillea beresowskii",    "Rana2021",
+  "Incarvillea compacta",       "Rana2021",
+  "Incarvillea delavayi",       "Rana2021",
+  "Incarvillea forrestii",      "Rana2021",
+  "Incarvillea lutea",          "Rana2021",
+  "Incarvillea mairei",         "Rana2021",
+  "Incarvillea younghusbandii", "Rana2021",
+  "Incarvillea zhongdianensis", "Rana2021",
+  "Lagotis cashmeriana",        "Salam2022",
+  "Picrorhiza kurroa",          "Rawat2022",
+  "Pinus gerardiana",           "Paul2023b",
+  "Pittosporum eriocarpum",     "Paul2023a",
+  "Quercus oblongata",          "Barman2023",
+  "Quercus semecarpifolia",     "Saran2010",
+  "Quercus semecarpifolia",     "Singh2021a",
+  "Rheum webbianum",            "Wani2021",
+  "Shorea robusta",             "Kaur2023",
+  "Taxus contorta",             "Chauhan2022",
+  "Trillium govanianum",        "Rather2022",
+  "Valeriana wallichii",        "Kumari2022"
+) |>
+  mutate(Species = paste0("*", Species, "*"),
+         Reference = paste0("@", Reference)) |>
+  arrange(Species, Reference) |>
+  knitr::kable()
+```
+
