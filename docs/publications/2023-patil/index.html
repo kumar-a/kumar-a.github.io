@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -69,7 +70,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -78,6 +85,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -87,6 +95,33 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
@@ -94,9 +129,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Abhishek Kumar</span>
     </a>
@@ -108,40 +143,48 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../accomplishments.html"> <i class="bi bi-trophy" role="img">
+</i> 
+<span class="menu-text">Accomplishments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog.html"> <i class="bi bi-pen" role="img">
+</i> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../../publications.html"> <i class="bi bi-journals" role="img">
+</i> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> <i class="bi bi-mic" role="img">
+</i> 
+<span class="menu-text">Talks</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/kumar-a" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/kumar-a"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/abkumar_" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/abkumar_"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
@@ -176,7 +219,7 @@ div.csl-indent {
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -196,44 +239,44 @@ div.csl-indent {
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Meenu-Patil">Meenu Patil</a> <a href="https://orcid.org/0000-0002-7664-7877" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
             </a>
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://akumar.netlify.app">Abhishek Kumar</a> <a href="https://orcid.org/0000-0003-2252-7623" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
             </a>
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Pardeep-Kumar-22">Pardeep Kumar</a> <a href="https://orcid.org/0000-0001-6707-1485" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
             </a>
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Anand-Singh-15">Anand Narain Singh</a> <a href="https://orcid.org/0000-0002-0148-8680" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
             </a>
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -249,7 +292,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
@@ -287,18 +332,22 @@ div.csl-indent {
 </section>
 <section id="article-screening" class="level3">
 <h3 class="anchored" data-anchor-id="article-screening">Article screening</h3>
-<p>Our article screening involved de-duplication, title and abstract screening, and full-text screening. We left 1,455 records after de-duplication, and 641 duplicates were removed (<a href="#fig-fig1">Figure&nbsp;1</a>). All these records were imported to freely available Mendeley reference management software for further screening. We manually screened titles and abstracts of each document following a pre-defined criterion (see Supplementary information). Based on the title and abstract screening, we excluded 1,265 articles and left with 190 articles (<a href="#fig-fig1">Figure&nbsp;1</a>). We could not retrieve the full-text of six articles (see Supplementary information Table S2) and, therefore, excluded these six articles. Next, the full text of each article was screened based on PICO inclusion and exclusion criteria (Supplementary information Table S3). Full-text screening resulted in the exclusion of 181 articles based on PICO criteria (<a href="#fig-fig1">Figure&nbsp;1</a>). Thus, we were finally left with only three eligible studies <span class="citation" data-cites="Entry1991 Zhu1996 Lang2021">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>; <a href="#ref-Zhu1996" role="doc-biblioref">Zhu and Ehrenfeld 1996</a>; <a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>. We further employed snowballing method to identify related eligible studies. We could not identify any suitable related study based on references of selected studies (backward snowballing). However, two more eligible articles <span class="citation" data-cites="Mayor2006 Fernandez2020">(<a href="#ref-Mayor2006" role="doc-biblioref">Mayor and Henkel 2006</a>; <a href="#ref-Fernandez2020" role="doc-biblioref">Fernandez, See, and Kennedy 2020</a>)</span> were identified through forward snowballing (citation tracking). Thus, five studies were included after article screening and snowballing.</p>
-<div id="fig-fig1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="data/fig1.svg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Schematic flow diagram for literature search, screening and inclusion process <span class="citation" data-cites="Haddaway2018">(modified from <a href="#ref-Haddaway2018" role="doc-biblioref">Haddaway et al. 2018</a>)</span></figcaption>
+<p>Our article screening involved de-duplication, title and abstract screening, and full-text screening. We left 1,455 records after de-duplication, and 641 duplicates were removed (<a href="#fig-fig1" class="quarto-xref">Figure&nbsp;1</a>). All these records were imported to freely available Mendeley reference management software for further screening. We manually screened titles and abstracts of each document following a pre-defined criterion (see Supplementary information). Based on the title and abstract screening, we excluded 1,265 articles and left with 190 articles (<a href="#fig-fig1" class="quarto-xref">Figure&nbsp;1</a>). We could not retrieve the full-text of six articles (see Supplementary information Table S2) and, therefore, excluded these six articles. Next, the full text of each article was screened based on PICO inclusion and exclusion criteria (Supplementary information Table S3). Full-text screening resulted in the exclusion of 181 articles based on PICO criteria (<a href="#fig-fig1" class="quarto-xref">Figure&nbsp;1</a>). Thus, we were finally left with only three eligible studies <span class="citation" data-cites="Entry1991 Zhu1996 Lang2021">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>; <a href="#ref-Zhu1996" role="doc-biblioref">Zhu and Ehrenfeld 1996</a>; <a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>. We further employed snowballing method to identify related eligible studies. We could not identify any suitable related study based on references of selected studies (backward snowballing). However, two more eligible articles <span class="citation" data-cites="Mayor2006 Fernandez2020">(<a href="#ref-Mayor2006" role="doc-biblioref">Mayor and Henkel 2006</a>; <a href="#ref-Fernandez2020" role="doc-biblioref">Fernandez, See, and Kennedy 2020</a>)</span> were identified through forward snowballing (citation tracking). Thus, five studies were included after article screening and snowballing.</p>
+<div id="fig-fig1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="data/fig1.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Schematic flow diagram for literature search, screening and inclusion process <span class="citation" data-cites="Haddaway2018">(modified from <a href="#ref-Haddaway2018" role="doc-biblioref">Haddaway et al. 2018</a>)</span>
+</figcaption>
 </figure>
 </div>
 </section>
 <section id="data-extraction" class="level3">
 <h3 class="anchored" data-anchor-id="data-extraction">Data extraction</h3>
 <p>We needed data on litter decomposition rates in the presence and absence of mycorrhizal fungi to test our hypothesis. The litter decomposition rate is often expressed as annual decay constant usually estimated from Olson’s single exponential model <span class="citation" data-cites="Olson1963">(<a href="#ref-Olson1963" role="doc-biblioref">Olson 1963</a>)</span>. Therefore, we aimed to extract the decay constant (<span class="math inline">\(\kappa\)</span>) and associated standard error (SE) or standard deviation (SD) for each study to establish consistency in our analysis. Unfortunately, only a single study <span class="citation" data-cites="Entry1991">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>)</span> reported the data in required form. All other studies have represented litter decomposition rates as mass remaining at different time intervals <span class="citation" data-cites="Zhu1996 Mayor2006 Fernandez2020 Lang2021">(<a href="#ref-Zhu1996" role="doc-biblioref">Zhu and Ehrenfeld 1996</a>; <a href="#ref-Mayor2006" role="doc-biblioref">Mayor and Henkel 2006</a>; <a href="#ref-Fernandez2020" role="doc-biblioref">Fernandez, See, and Kennedy 2020</a>; <a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>. In such cases, we extracted each remaining mass value in triplicate (one mean value and two standard error of mean values) at each given time interval using the WebPlotDigitizer (<a href="https://automeris.io/WebPlotDigitizer/" class="uri">https://automeris.io/WebPlotDigitizer/</a>). Thus, the actual number of replicates of litterbags at each sampling time was not taken into account; instead, we considered each data point as a sample to obtain a more uniform and comparable measure of litter mass remaining. In case of any ambiguity in timings, we considered the time stated in the methodology section of the published article <span class="citation" data-cites="Lang2021">(<a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>.</p>
-<p>When the mass remaining data was available, the decay constant (<span class="math inline">\(\kappa\)</span>) and its associated standard error (SE) was estimated by fitting a linearised form of Olson’s single exponential decay model <span class="citation" data-cites="Olson1963">(<a href="#ref-Olson1963" role="doc-biblioref">Olson 1963</a>)</span> as represented in (<a href="#eq-olson">Equation&nbsp;1</a>).</p>
+<p>When the mass remaining data was available, the decay constant (<span class="math inline">\(\kappa\)</span>) and its associated standard error (SE) was estimated by fitting a linearised form of Olson’s single exponential decay model <span class="citation" data-cites="Olson1963">(<a href="#ref-Olson1963" role="doc-biblioref">Olson 1963</a>)</span> as represented in (<a href="#eq-olson" class="quarto-xref">Equation&nbsp;1</a>).</p>
 <p><span id="eq-olson"><span class="math display">\[
 \log(M_t) = -\kappa~t + \log(M_0)
 \tag{1}\]</span></span></p>
@@ -311,12 +360,12 @@ div.csl-indent {
 <section id="effect-size-and-variance" class="level3">
 <h3 class="anchored" data-anchor-id="effect-size-and-variance">Effect size and variance</h3>
 <p>Various effect sizes are used to summarize the magnitude and direction of the relationship between two variables <span class="citation" data-cites="Cooper2019 Harrer2021">(<a href="#ref-Cooper2019" role="doc-biblioref">Cooper, Hedges, and Valentine 2019</a>; <a href="#ref-Harrer2021" role="doc-biblioref">Harrer et al. 2021</a>)</span>. Among available effect sizes, response ratios (also called as Ratio of Means) and standardised mean differences have been frequently used to compare the means between two groups (i.e., experimental and control) in ecology and evolution <span class="citation" data-cites="Nakagawa2012 Koricheva2014">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>; <a href="#ref-Koricheva2014" role="doc-biblioref">Koricheva and Gurevitch 2014</a>)</span>. The response ratio or ratio of means is recommended when the mean of control group is not very small as compared to experimental group and both groups have estimates of same sign either positive or negative <span class="citation" data-cites="Hedges1999 Lajeunesse2015">(<a href="#ref-Hedges1999" role="doc-biblioref">Hedges, Gurevitch, and Curtis 1999</a>; <a href="#ref-Lajeunesse2015" role="doc-biblioref">Lajeunesse 2015</a>)</span>. The log transformation of response ratio (<span class="math inline">\(\text{lnRR}\)</span>) makes the metric equally sensitive to changes in both numerator and denominator, apart from making the metric nearly normal. Thus, it measures the actual difference in responses scaled to mean in control groups. However, <span class="math inline">\(\text{lnRR}\)</span> is considered to be slightly biased towards null effects and usually estimate high heterogeneity than other effect size measures <span class="citation" data-cites="Lajeunesse2015">(<a href="#ref-Lajeunesse2015" role="doc-biblioref">Lajeunesse 2015</a>)</span>.</p>
-<p>Since the rate of litter decomposition is influenced by time (i.e., greater weight loss during initial phase than the later phases), we decided to compare decay constant rather than the weight loss. The log transformed response ratio (<span class="math inline">\(\text{lnRR}\)</span>) and associated variance was calculated using the (<a href="#eq-lnrr">Equation&nbsp;2</a>).</p>
+<p>Since the rate of litter decomposition is influenced by time (i.e., greater weight loss during initial phase than the later phases), we decided to compare decay constant rather than the weight loss. The log transformed response ratio (<span class="math inline">\(\text{lnRR}\)</span>) and associated variance was calculated using the (<a href="#eq-lnrr" class="quarto-xref">Equation&nbsp;2</a>).</p>
 <p><span id="eq-lnrr"><span class="math display">\[
 \text{lnRR} = \ln \left( \frac{\bar X_E}{\bar X_C} \right); \quad
 \text{Var(lnRR)} = \frac {SD_E^2}{n_E \bar X_E^2} + \frac {SD_C^2}{n_C \bar X_C^2}
 \tag{2}\]</span></span></p>
-<p>where, <span class="math inline">\(\bar X_E\)</span> and <span class="math inline">\(\bar X_C\)</span> represents the absolute litter decay constant (<span class="math inline">\(\kappa\)</span>) for experimental (presence of mycorrhizal fungi) and control (absence of mycorrhizal fungi) groups, respectively. The large-sample approximation was used to compute the sampling variances (<a href="#eq-lnrr">Equation&nbsp;2</a>) associated with the effect size <span class="math inline">\(\text{lnRR}\)</span> <span class="citation" data-cites="Hedges1999">(<a href="#ref-Hedges1999" role="doc-biblioref">Hedges, Gurevitch, and Curtis 1999</a>)</span>. The accuracy of <span class="math inline">\(\text{lnRR}\)</span> was ensured with with Geary’s test (<a href="#eq-geary">Equation&nbsp;3</a>) for both control and experimental group <span class="citation" data-cites="Lajeunesse2015">(<a href="#ref-Lajeunesse2015" role="doc-biblioref">Lajeunesse 2015</a>)</span>.</p>
+<p>where, <span class="math inline">\(\bar X_E\)</span> and <span class="math inline">\(\bar X_C\)</span> represents the absolute litter decay constant (<span class="math inline">\(\kappa\)</span>) for experimental (presence of mycorrhizal fungi) and control (absence of mycorrhizal fungi) groups, respectively. The large-sample approximation was used to compute the sampling variances (<a href="#eq-lnrr" class="quarto-xref">Equation&nbsp;2</a>) associated with the effect size <span class="math inline">\(\text{lnRR}\)</span> <span class="citation" data-cites="Hedges1999">(<a href="#ref-Hedges1999" role="doc-biblioref">Hedges, Gurevitch, and Curtis 1999</a>)</span>. The accuracy of <span class="math inline">\(\text{lnRR}\)</span> was ensured with with Geary’s test (<a href="#eq-geary" class="quarto-xref">Equation&nbsp;3</a>) for both control and experimental group <span class="citation" data-cites="Lajeunesse2015">(<a href="#ref-Lajeunesse2015" role="doc-biblioref">Lajeunesse 2015</a>)</span>.</p>
 <p><span id="eq-geary"><span class="math display">\[
 \frac{\bar X}{SD} \sqrt{N} \geq 3
 \tag{3}\]</span></span></p>
@@ -324,7 +373,7 @@ div.csl-indent {
 </section>
 <section id="meta-analytic-model" class="level3">
 <h3 class="anchored" data-anchor-id="meta-analytic-model">Meta-analytic model</h3>
-<p>The overall aim of meta-analyses is to combine the effects or observations from different studies. There are three main types of meta-analytic models i.e., fixed-effect model (FEM), random-effects model (REM), and multilevel model (MLM), which are commonly used to compute the overall effect estimate in meta-analysis. The most basic fixed-effect or common-effect model assumes a common overall mean for all studies. Since it assumes homogeneity between studies, it is far from the reality, at least for ecological studies. In contrary to the fixed effect model, the assumptions of random-effects model are more realistic as it considers between-study heterogeneity. This model assumes that there is not only one actual effect size but a distribution of true effect sizes <span class="citation" data-cites="Borenstein2010 Harrer2021">(<a href="#ref-Borenstein2010" role="doc-biblioref">Borenstein et al. 2010</a>; <a href="#ref-Harrer2021" role="doc-biblioref">Harrer et al. 2021</a>)</span>. According to this model, the observed effect size <span class="math inline">\(y_i\)</span> with variance <span class="math inline">\(v_i\)</span> deviates from the mean true effect size <span class="math inline">\(\mu\)</span> for a single study <span class="math inline">\(i\)</span> (with <span class="math inline">\(i = 1, \ldots , N_{studies}\)</span>) by two error terms <span class="math inline">\(u_i\)</span> (between-study heterogeneity) and <span class="math inline">\(e_i\)</span> (sampling error). Thus, the random effects model can be expressed as (<a href="#eq-rem">Equation&nbsp;4</a>)</p>
+<p>The overall aim of meta-analyses is to combine the effects or observations from different studies. There are three main types of meta-analytic models i.e., fixed-effect model (FEM), random-effects model (REM), and multilevel model (MLM), which are commonly used to compute the overall effect estimate in meta-analysis. The most basic fixed-effect or common-effect model assumes a common overall mean for all studies. Since it assumes homogeneity between studies, it is far from the reality, at least for ecological studies. In contrary to the fixed effect model, the assumptions of random-effects model are more realistic as it considers between-study heterogeneity. This model assumes that there is not only one actual effect size but a distribution of true effect sizes <span class="citation" data-cites="Borenstein2010 Harrer2021">(<a href="#ref-Borenstein2010" role="doc-biblioref">Borenstein et al. 2010</a>; <a href="#ref-Harrer2021" role="doc-biblioref">Harrer et al. 2021</a>)</span>. According to this model, the observed effect size <span class="math inline">\(y_i\)</span> with variance <span class="math inline">\(v_i\)</span> deviates from the mean true effect size <span class="math inline">\(\mu\)</span> for a single study <span class="math inline">\(i\)</span> (with <span class="math inline">\(i = 1, \ldots , N_{studies}\)</span>) by two error terms <span class="math inline">\(u_i\)</span> (between-study heterogeneity) and <span class="math inline">\(e_i\)</span> (sampling error). Thus, the random effects model can be expressed as (<a href="#eq-rem" class="quarto-xref">Equation&nbsp;4</a>)</p>
 <p><span id="eq-rem"><span class="math display">\[
 \begin{align}
 y_i &amp;= \mu + u_i + e_i\\
@@ -333,7 +382,7 @@ y_i &amp;= \mu + u_i + e_i\\
 \end{align}
 \tag{4}\]</span></span></p>
 <p>where, <span class="math inline">\(u_i\)</span> is the random effect corresponding to the <span class="math inline">\(i^{th}\)</span> study, <span class="math inline">\(\textbf{u}\)</span> is a <span class="math inline">\(1 \times N_{studies}\)</span> column vector with the <span class="math inline">\(u_i\)</span> values (which are assumed to be normally distributed with mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(\sigma_u^2\)</span>) and <span class="math inline">\(\textbf{I}_u\)</span> is an <span class="math inline">\(N_{studies} \times N_{studies}\)</span> identity matrix, <span class="math inline">\(\textbf{e}\)</span> is a <span class="math inline">\(1 \times N_{studies}\)</span> column vector with the <span class="math inline">\(e_{i}\)</span> values (which are assumed to be normally distributed with mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(v_i\)</span>), <span class="math inline">\(0\)</span> is a column vector of zeros and <span class="math inline">\(\textbf{V}\)</span> is an <span class="math inline">\(N_{studies} \times N_{studies}\)</span> matrix with the <span class="math inline">\(v_i\)</span> values along the diagonal.</p>
-<p>Although the random-effects model is commonly used in ecology, it did not take into consideration the non-independence among effect sizes <span class="citation" data-cites="Nakagawa2012">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>)</span>. The non-independence can arise when the effect sizes are shared by studies (i.e., multiple effect sizes from the same study). Further, phylogenetic relatedness among species can also introduce non-independence among the effect size estimates <span class="citation" data-cites="Cinar2021">(<a href="#ref-Cinar2021" role="doc-biblioref">Cinar, Nakagawa, and Viechtbauer 2021</a>)</span>. This issue of non-independence can be addressed by using a multilevel (hierarchical) meta-analytic model, which considers a random effect at each level of variability in effect sizes. Among the several factors for non-independence of effect sizes, we specifically assessed the dependence due to studies, species and phylogenetic relatedness among species as described recently <span class="citation" data-cites="Cinar2021">(<a href="#ref-Cinar2021" role="doc-biblioref">Cinar, Nakagawa, and Viechtbauer 2021</a>)</span>. We used a complex multilevel meta-analytic model mathematically expressed in (<a href="#eq-mlm">Equation&nbsp;5</a>)</p>
+<p>Although the random-effects model is commonly used in ecology, it did not take into consideration the non-independence among effect sizes <span class="citation" data-cites="Nakagawa2012">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>)</span>. The non-independence can arise when the effect sizes are shared by studies (i.e., multiple effect sizes from the same study). Further, phylogenetic relatedness among species can also introduce non-independence among the effect size estimates <span class="citation" data-cites="Cinar2021">(<a href="#ref-Cinar2021" role="doc-biblioref">Cinar, Nakagawa, and Viechtbauer 2021</a>)</span>. This issue of non-independence can be addressed by using a multilevel (hierarchical) meta-analytic model, which considers a random effect at each level of variability in effect sizes. Among the several factors for non-independence of effect sizes, we specifically assessed the dependence due to studies, species and phylogenetic relatedness among species as described recently <span class="citation" data-cites="Cinar2021">(<a href="#ref-Cinar2021" role="doc-biblioref">Cinar, Nakagawa, and Viechtbauer 2021</a>)</span>. We used a complex multilevel meta-analytic model mathematically expressed in (<a href="#eq-mlm" class="quarto-xref">Equation&nbsp;5</a>)</p>
 <p><span id="eq-mlm"><span class="math display">\[
 \begin{align}
 y_{ijk} &amp;= \mu + u_{ij} + s_i + n_k + p_k + e_{ij} \\
@@ -359,24 +408,24 @@ y_{ijk} &amp;= \mu + u_{ij} + s_i + n_k + p_k + e_{ij} \\
 <li><span class="math inline">\(\textbf{p}\)</span> is a <span class="math inline">\(1 \times N_{species}\)</span> column vector with the <span class="math inline">\(p_k\)</span> values (which are assumed to follow a multivariate normal distribution with mean <span class="math inline">\(0\)</span> and variance–covariance matrix <span class="math inline">\(\sigma_p^2 \textbf{A}\)</span>, where <span class="math inline">\(\sigma_p^2\)</span> denotes between-species variance due to the phylogeny, and <span class="math inline">\(\textbf{A}\)</span> is the <span class="math inline">\(N_{species} \times N_{species}\)</span> phylogenetic correlation matrix), and</li>
 <li><span class="math inline">\(\textbf{e}\)</span> is a <span class="math inline">\(1 \times N_{total}\)</span> column vector with the <span class="math inline">\(e_{ij}\)</span> values and <span class="math inline">\(\textbf{V}\)</span> is the corresponding (diagonal) variance–covariance matrix with dimensions <span class="math inline">\(N_{total} \times N_{total}\)</span>.</li>
 </ul>
-<p>The random-effects model was fitted using the <code>rma()</code> function whereas the complex multilevel meta-analytic model was fitted using the <code>rma.mv()</code> function from the <code>metafor</code> package <span class="citation" data-cites="R-metafor">(<a href="#ref-R-metafor" role="doc-biblioref">Viechtbauer 2010</a>)</span>. The amount of heterogeneity under the both models were estimated using the less biased restricted maximum likelihood (REML) estimator <span class="citation" data-cites="Viechtbauer2005">(<a href="#ref-Viechtbauer2005" role="doc-biblioref">Viechtbauer 2005</a>)</span>. The phylogenetic correlation matrix, denoted as <span class="math inline">\(\textbf{A}\)</span> in (<a href="#eq-mlm">Equation&nbsp;5</a>), was computed under the Brownian model using the function <code>vcv()</code> from the <code>ape</code> package version 5.7.1 <span class="citation" data-cites="R-ape">(<a href="#ref-R-ape" role="doc-biblioref">Paradis and Schliep 2019</a>)</span>. The branch lengths for each species was computed with the Grafen’s method <span class="citation" data-cites="Grafen1989">(<a href="#ref-Grafen1989" role="doc-biblioref">Grafen 1989</a>)</span> using the function <code>compute.brlen()</code> from the same package <span class="citation" data-cites="R-ape">(<a href="#ref-R-ape" role="doc-biblioref">Paradis and Schliep 2019</a>)</span>.</p>
+<p>The random-effects model was fitted using the <code>rma()</code> function whereas the complex multilevel meta-analytic model was fitted using the <code>rma.mv()</code> function from the <code>metafor</code> package <span class="citation" data-cites="R-metafor">(<a href="#ref-R-metafor" role="doc-biblioref">Viechtbauer 2010</a>)</span>. The amount of heterogeneity under the both models were estimated using the less biased restricted maximum likelihood (REML) estimator <span class="citation" data-cites="Viechtbauer2005">(<a href="#ref-Viechtbauer2005" role="doc-biblioref">Viechtbauer 2005</a>)</span>. The phylogenetic correlation matrix, denoted as <span class="math inline">\(\textbf{A}\)</span> in (<a href="#eq-mlm" class="quarto-xref">Equation&nbsp;5</a>), was computed under the Brownian model using the function <code>vcv()</code> from the <code>ape</code> package version 5.7.1 <span class="citation" data-cites="R-ape">(<a href="#ref-R-ape" role="doc-biblioref">Paradis and Schliep 2019</a>)</span>. The branch lengths for each species was computed with the Grafen’s method <span class="citation" data-cites="Grafen1989">(<a href="#ref-Grafen1989" role="doc-biblioref">Grafen 1989</a>)</span> using the function <code>compute.brlen()</code> from the same package <span class="citation" data-cites="R-ape">(<a href="#ref-R-ape" role="doc-biblioref">Paradis and Schliep 2019</a>)</span>.</p>
 </section>
 <section id="heterogeneity" class="level3">
 <h3 class="anchored" data-anchor-id="heterogeneity">Heterogeneity</h3>
-<p>The heterogeneity reflects the variations in true effect sizes, which is not accounted by the sampling error variance within the meta-analysis. Cochran’s <span class="math inline">\(Q\)</span> is traditionally used in meta-analysis to assess the heterogeneity in meta-analysis <span class="citation" data-cites="Cochran1954">(<a href="#ref-Cochran1954" role="doc-biblioref">Cochran 1954</a>)</span>. It is the inverse variance weighted sum of squares, which can be mathematically represented by (<a href="#eq-cochran">Equation&nbsp;6</a>)</p>
+<p>The heterogeneity reflects the variations in true effect sizes, which is not accounted by the sampling error variance within the meta-analysis. Cochran’s <span class="math inline">\(Q\)</span> is traditionally used in meta-analysis to assess the heterogeneity in meta-analysis <span class="citation" data-cites="Cochran1954">(<a href="#ref-Cochran1954" role="doc-biblioref">Cochran 1954</a>)</span>. It is the inverse variance weighted sum of squares, which can be mathematically represented by (<a href="#eq-cochran" class="quarto-xref">Equation&nbsp;6</a>)</p>
 <p><span id="eq-cochran"><span class="math display">\[
 Q = \sum_{i=1}^{N_{studies}} w_i (y_i - \mu)^2;
 \quad w_i = \frac{1}{v_i}
 \tag{6}\]</span></span></p>
 <p>where <span class="math inline">\(y_i\)</span> is the observed effect for each study <span class="math inline">\(i^{th}\)</span>; <span class="math inline">\(\mu\)</span> is the overall summary effect, <span class="math inline">\(w_i\)</span> is the weight defined as inverse of variance (<span class="math inline">\(1/v_i\)</span>) for <span class="math inline">\(i^{th}\)</span> study.</p>
-<p>Although Cochran’s <span class="math inline">\(Q\)</span> has been widely used to test heterogeneity in meta-analyses <span class="citation" data-cites="Nakagawa2012 Koricheva2014">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>; <a href="#ref-Koricheva2014" role="doc-biblioref">Koricheva and Gurevitch 2014</a>)</span>, it is sensitive to size and precision of studies included meta-analysis <span class="citation" data-cites="Borenstein2009 Harrer2021">(<a href="#ref-Borenstein2009" role="doc-biblioref">Borenstein et al. 2009</a>; <a href="#ref-Harrer2021" role="doc-biblioref">Harrer et al. 2021</a>)</span>. Higgins and Thompson’s <span class="math inline">\(I^2\)</span> statistic presents the more standardized form to estimate the between-study heterogeneity. It is defined as the percentage of variability in the effect size that is not caused by sampling error <span class="citation" data-cites="Higgins2002">(<a href="#ref-Higgins2002" role="doc-biblioref">Higgins and Thompson 2002</a>)</span>. Similarly, the <span class="math inline">\(H^2\)</span> statistic is used to describe the variance in observed effect sizes due to sampling error <span class="citation" data-cites="Higgins2002">(<a href="#ref-Higgins2002" role="doc-biblioref">Higgins and Thompson 2002</a>)</span>. It is estimated as the ratio of observed variation to the expected variance due to sampling error. Although both <span class="math inline">\(I^2\)</span> and <span class="math inline">\(H^2\)</span> are measured based on the Cochran’s <span class="math inline">\(Q\)</span>, the Higgins and Thompson’s <span class="math inline">\(I^2\)</span> and <span class="math inline">\(H^2\)</span> were calculated based on more general definitions using the (<a href="#eq-i2rem">Equation&nbsp;7</a>).</p>
+<p>Although Cochran’s <span class="math inline">\(Q\)</span> has been widely used to test heterogeneity in meta-analyses <span class="citation" data-cites="Nakagawa2012 Koricheva2014">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>; <a href="#ref-Koricheva2014" role="doc-biblioref">Koricheva and Gurevitch 2014</a>)</span>, it is sensitive to size and precision of studies included meta-analysis <span class="citation" data-cites="Borenstein2009 Harrer2021">(<a href="#ref-Borenstein2009" role="doc-biblioref">Borenstein et al. 2009</a>; <a href="#ref-Harrer2021" role="doc-biblioref">Harrer et al. 2021</a>)</span>. Higgins and Thompson’s <span class="math inline">\(I^2\)</span> statistic presents the more standardized form to estimate the between-study heterogeneity. It is defined as the percentage of variability in the effect size that is not caused by sampling error <span class="citation" data-cites="Higgins2002">(<a href="#ref-Higgins2002" role="doc-biblioref">Higgins and Thompson 2002</a>)</span>. Similarly, the <span class="math inline">\(H^2\)</span> statistic is used to describe the variance in observed effect sizes due to sampling error <span class="citation" data-cites="Higgins2002">(<a href="#ref-Higgins2002" role="doc-biblioref">Higgins and Thompson 2002</a>)</span>. It is estimated as the ratio of observed variation to the expected variance due to sampling error. Although both <span class="math inline">\(I^2\)</span> and <span class="math inline">\(H^2\)</span> are measured based on the Cochran’s <span class="math inline">\(Q\)</span>, the Higgins and Thompson’s <span class="math inline">\(I^2\)</span> and <span class="math inline">\(H^2\)</span> were calculated based on more general definitions using the (<a href="#eq-i2rem" class="quarto-xref">Equation&nbsp;7</a>).</p>
 <p><span id="eq-i2rem"><span class="math display">\[
 I^2 = \frac{\sigma_u^2}{\sigma_u^2 + \sigma_e^2} \times 100; \quad
 H^2 = \frac{\sigma_u^2 + \sigma_e^2}{\sigma_e^2}; \quad
 \sigma_e^2 =\frac{(N_{studies}-1)\sum w_i}{(\sum w_i)^2 - \sum w_i^2}
 \tag{7}\]</span></span></p>
 <p>where <span class="math inline">\(\sigma_u^2\)</span> is the between-study variance (also referred as <span class="math inline">\(\tau^2\)</span>), <span class="math inline">\(\sigma_e^2\)</span> is the typical within-study variance, <span class="math inline">\(N_{studies}\)</span> is the total number of studies, <span class="math inline">\(w_i\)</span> is the weight defined as inverse of variance (<span class="math inline">\(1/v_i\)</span>) for <span class="math inline">\(i^{th}\)</span> study. We also included a prediction interval for the true overall summary effect (<span class="math inline">\(\mu\)</span>) because high heterogeneity is expected for ecological studies <span class="citation" data-cites="Senior2016">(<a href="#ref-Senior2016" role="doc-biblioref">Senior et al. 2016</a>)</span>.</p>
-<p>Since <span class="math inline">\(Q\)</span> and <span class="math inline">\(I^2\)</span> are not designed to assess between-study heterogeneity for multilevel models <span class="citation" data-cites="Nakagawa2012">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>)</span>, we computed heterogeneity <span class="math inline">\(I^2\)</span> for our multilevel model as suggested earlier <span class="citation" data-cites="Nakagawa2012">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>)</span>. Following the previous mathematical notations, the within-study heterogeneity <span class="math inline">\(I_u^2\)</span> can be represented as (<a href="#eq-i2mlm">Equation&nbsp;8</a>) whereas <span class="math inline">\(H^2\)</span> or phylogenetic heritability can be represented by (<a href="#eq-h2mlm">Equation&nbsp;9</a>). The values of <span class="math inline">\(H^2\)</span> can range from 0 to 1, which corresponds to no phylogenetic relatedness to exact proportional to phylogenetic relatedness among effect sizes.</p>
+<p>Since <span class="math inline">\(Q\)</span> and <span class="math inline">\(I^2\)</span> are not designed to assess between-study heterogeneity for multilevel models <span class="citation" data-cites="Nakagawa2012">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>)</span>, we computed heterogeneity <span class="math inline">\(I^2\)</span> for our multilevel model as suggested earlier <span class="citation" data-cites="Nakagawa2012">(<a href="#ref-Nakagawa2012" role="doc-biblioref">Nakagawa and Santos 2012</a>)</span>. Following the previous mathematical notations, the within-study heterogeneity <span class="math inline">\(I_u^2\)</span> can be represented as (<a href="#eq-i2mlm" class="quarto-xref">Equation&nbsp;8</a>) whereas <span class="math inline">\(H^2\)</span> or phylogenetic heritability can be represented by (<a href="#eq-h2mlm" class="quarto-xref">Equation&nbsp;9</a>). The values of <span class="math inline">\(H^2\)</span> can range from 0 to 1, which corresponds to no phylogenetic relatedness to exact proportional to phylogenetic relatedness among effect sizes.</p>
 <p><span id="eq-i2mlm"><span class="math display">\[
 I_u^2 = \frac {\sigma_u^2} {\sigma_u^2 + \sigma_s^2 + \sigma_n^2 + \sigma_p^2 + \sigma_e^2}
 \tag{8}\]</span></span></p>
@@ -397,12 +446,16 @@ H^2 = \frac{\sigma_p^2}{\sigma_u^2 + \sigma_s^2 + \sigma_n^2 + \sigma_p^2}
 <h2 class="anchored" data-anchor-id="results">Results</h2>
 <section id="overview-of-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="overview-of-dataset">Overview of dataset</h3>
-<p>Our systematic literature search and screening found five eligible studies for the present analysis (<a href="#fig-fig1">Figure&nbsp;1</a>). Studies in our dataset differed in numerous ways, including experimental duration, sampling frequency, initial litter mass, litter species, mycorrhizal type, and forest type (<a href="#tbl-tab1">Table&nbsp;1</a>).</p>
+<p>Our systematic literature search and screening found five eligible studies for the present analysis (<a href="#fig-fig1" class="quarto-xref">Figure&nbsp;1</a>). Studies in our dataset differed in numerous ways, including experimental duration, sampling frequency, initial litter mass, litter species, mycorrhizal type, and forest type (<a href="#tbl-tab1" class="quarto-xref">Table&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-tab1" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Overview of selected studies included in the meta-analysis
+</figcaption>
+<div aria-describedby="tbl-tab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tbl-tab1" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;1: Overview of selected studies included in the meta-analysis</caption>
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 10%">
@@ -480,15 +533,21 @@ H^2 = \frac{\sigma_p^2}{\sigma_u^2 + \sigma_s^2 + \sigma_n^2 + \sigma_p^2}
 </table>
 </div>
 </div>
+</figure>
 </div>
-<p>These studies conducted total 14 experiments for nine different species. The leaf litter of nine plant species (<em>Acer saccharum</em> Marshall, <em>Betula alleghaniensis</em> Britton, <em>Dicymbe corymbosa</em> Benth., <em>Fagus grandifolia</em> Ehrh., <em>Fraxinus americana</em> L., <em>Pinus rigida</em> Mill., <em>Pinus strobus</em> L., <em>Pseudotsuga menziesii</em> (Mirbel) Franco <em>Quercus ellipsoidalis</em> E. J. Hill) was used during the experiments (<a href="#fig-fig2">Figure&nbsp;2</a> a). The duration of experiments is also differed among studies and ranged from one year to 2.4 years. The initial leaf litter mass varied from 1.0 g to 17.0 g, and three studies used up to 2.0 g of leaf litter, whereas two studies used more than 2.0 g of leaf litter <span class="citation" data-cites="Entry1991 Mayor2006">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>; <a href="#ref-Mayor2006" role="doc-biblioref">Mayor and Henkel 2006</a>)</span>. Further, most of the studies involved ectomycorrhizal fungi <span class="citation" data-cites="Entry1991 Zhu1996 Mayor2006 Fernandez2020">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>; <a href="#ref-Zhu1996" role="doc-biblioref">Zhu and Ehrenfeld 1996</a>; <a href="#ref-Mayor2006" role="doc-biblioref">Mayor and Henkel 2006</a>; <a href="#ref-Fernandez2020" role="doc-biblioref">Fernandez, See, and Kennedy 2020</a>)</span>, while one study showed the involvement of both ectomycorrhizal and arbuscular mycorrhizal fungi <span class="citation" data-cites="Lang2021">(<a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>. All the studies assured mycorrhizal exclusion by trenching to 30 cm soil depth.</p>
-<p>Further, our dataset revealed that most studies were conducted in the temperate deciduous forest of North America (n = 4), and only one study was conducted in the tropical forest of Guyana of South America’s North Atlantic Coast (<a href="#fig-fig2">Figure&nbsp;2</a> b). The earliest study included was from 1991 <span class="citation" data-cites="Entry1991">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>)</span>, whereas the latest study was published in 2021 <span class="citation" data-cites="Lang2021">(<a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>.</p>
+</div>
+<p>These studies conducted total 14 experiments for nine different species. The leaf litter of nine plant species (<em>Acer saccharum</em> Marshall, <em>Betula alleghaniensis</em> Britton, <em>Dicymbe corymbosa</em> Benth., <em>Fagus grandifolia</em> Ehrh., <em>Fraxinus americana</em> L., <em>Pinus rigida</em> Mill., <em>Pinus strobus</em> L., <em>Pseudotsuga menziesii</em> (Mirbel) Franco <em>Quercus ellipsoidalis</em> E. J. Hill) was used during the experiments (<a href="#fig-fig2" class="quarto-xref">Figure&nbsp;2</a> a). The duration of experiments is also differed among studies and ranged from one year to 2.4 years. The initial leaf litter mass varied from 1.0 g to 17.0 g, and three studies used up to 2.0 g of leaf litter, whereas two studies used more than 2.0 g of leaf litter <span class="citation" data-cites="Entry1991 Mayor2006">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>; <a href="#ref-Mayor2006" role="doc-biblioref">Mayor and Henkel 2006</a>)</span>. Further, most of the studies involved ectomycorrhizal fungi <span class="citation" data-cites="Entry1991 Zhu1996 Mayor2006 Fernandez2020">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>; <a href="#ref-Zhu1996" role="doc-biblioref">Zhu and Ehrenfeld 1996</a>; <a href="#ref-Mayor2006" role="doc-biblioref">Mayor and Henkel 2006</a>; <a href="#ref-Fernandez2020" role="doc-biblioref">Fernandez, See, and Kennedy 2020</a>)</span>, while one study showed the involvement of both ectomycorrhizal and arbuscular mycorrhizal fungi <span class="citation" data-cites="Lang2021">(<a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>. All the studies assured mycorrhizal exclusion by trenching to 30 cm soil depth.</p>
+<p>Further, our dataset revealed that most studies were conducted in the temperate deciduous forest of North America (n = 4), and only one study was conducted in the tropical forest of Guyana of South America’s North Atlantic Coast (<a href="#fig-fig2" class="quarto-xref">Figure&nbsp;2</a> b). The earliest study included was from 1991 <span class="citation" data-cites="Entry1991">(<a href="#ref-Entry1991" role="doc-biblioref">Entry, Rose, and Cromack 1991</a>)</span>, whereas the latest study was published in 2021 <span class="citation" data-cites="Lang2021">(<a href="#ref-Lang2021" role="doc-biblioref">Lang et al. 2021</a>)</span>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-fig2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-fig2-1.png" class="img-fluid figure-img" width="960"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: (a) Phylogenetic relationship among the species used for litter decomposition. The symbols represents the studies to which a species belong. (b) Geographical distribution of studies included in our dataset</figcaption>
+<div id="fig-fig2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-fig2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: (a) Phylogenetic relationship among the species used for litter decomposition. The symbols represents the studies to which a species belong. (b) Geographical distribution of studies included in our dataset
+</figcaption>
 </figure>
 </div>
 </div>
@@ -496,38 +555,50 @@ H^2 = \frac{\sigma_p^2}{\sigma_u^2 + \sigma_s^2 + \sigma_n^2 + \sigma_p^2}
 </section>
 <section id="overall-effect-estimate" class="level3">
 <h3 class="anchored" data-anchor-id="overall-effect-estimate">Overall effect estimate</h3>
-<p>A total of 14 estimates of litter decomposition (<span class="math inline">\(\kappa\)</span>) were included in the meta-analysis (<a href="#fig-fig3">Figure&nbsp;3</a>). The observed response ratios (<span class="math inline">\(\text{RR}\)</span>) ranged from 0.74 to 1.58, with the majority of estimates being positive (71%). Thus, the decomposition rate is also expected to be higher in the presence of mycorrhizal fungi on average (<a href="#fig-fig3">Figure&nbsp;3</a>). Further, a strong positive relationship was observed between annual decay constants for the presence and absence of mycorrhizal fungi (<em>R<sup>2</sup></em> = 0.94, <em>p</em> &lt; 0.001), indicating that our dataset does not include extreme effect estimates.</p>
+<p>A total of 14 estimates of litter decomposition (<span class="math inline">\(\kappa\)</span>) were included in the meta-analysis (<a href="#fig-fig3" class="quarto-xref">Figure&nbsp;3</a>). The observed response ratios (<span class="math inline">\(\text{RR}\)</span>) ranged from 0.74 to 1.58, with the majority of estimates being positive (71%). Thus, the decomposition rate is also expected to be higher in the presence of mycorrhizal fungi on average (<a href="#fig-fig3" class="quarto-xref">Figure&nbsp;3</a>). Further, a strong positive relationship was observed between annual decay constants for the presence and absence of mycorrhizal fungi (<em>R<sup>2</sup></em> = 0.94, <em>p</em> &lt; 0.001), indicating that our dataset does not include extreme effect estimates.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-fig3" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-fig3-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Effects of mycorrhizal fungi on annual litter decay constant (<span class="math inline">\(\kappa\)</span>). Each point represents a single comparison of <span class="math inline">\(\kappa\)</span>. The color of each point denotes the change in <span class="math inline">\(\kappa\)</span> due to the presence of mycorrhizal fungi. Values above and below the 1:1 line represents the stimulation and inhibition of litter decomposition rate in presence of mycorrhizal fungi, respectively. The values falling on the 1:1 line represent the neutral or no effect</figcaption>
+<div id="fig-fig3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-fig3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Effects of mycorrhizal fungi on annual litter decay constant (<span class="math inline">\(\kappa\)</span>). Each point represents a single comparison of <span class="math inline">\(\kappa\)</span>. The color of each point denotes the change in <span class="math inline">\(\kappa\)</span> due to the presence of mycorrhizal fungi. Values above and below the 1:1 line represents the stimulation and inhibition of litter decomposition rate in presence of mycorrhizal fungi, respectively. The values falling on the 1:1 line represent the neutral or no effect
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Consistent with our expectations, both meta-analytic models also suggested an overall positive effect of mycorrhizal fungi on litter decomposition rates. The overall average effect estimate (<span class="math inline">\(\hat \mu\)</span>) was 1.07 (<em>95% CI</em>: 1.03, 1.11) for the random effects model whereas the same was 1.08 (<em>95% CI</em>: 1, 1.18) for the multilevel model. The wider confidence intervals are expected in the latter model as it included additional sources of variations (number of levels, i.e., id, study, species). In ecological sense, these models indicated that on average the annual decay constant for leaf litter was 7-8% higher in presence of mycorrhizal fungi (<a href="#fig-fig4">Figure&nbsp;4</a>). The random-effects model found strong statistical evidence (<em>Z</em> = 3.58, <em>p</em> &lt; 0.001) whereas the multilevel model showed moderate statistical evidence (<em>Z</em> = 1.96, <em>p</em> = 0.05) for the accelerated decomposition rates. This positive effect is also evident in the forest plot, where the right-side position of the diamond demonstrates that litter decomposition rate increased in the presence of mycorrhizal fungi (<a href="#fig-fig4">Figure&nbsp;4</a>).</p>
+<p>Consistent with our expectations, both meta-analytic models also suggested an overall positive effect of mycorrhizal fungi on litter decomposition rates. The overall average effect estimate (<span class="math inline">\(\hat \mu\)</span>) was 1.07 (<em>95% CI</em>: 1.03, 1.11) for the random effects model whereas the same was 1.08 (<em>95% CI</em>: 1, 1.18) for the multilevel model. The wider confidence intervals are expected in the latter model as it included additional sources of variations (number of levels, i.e., id, study, species). In ecological sense, these models indicated that on average the annual decay constant for leaf litter was 7-8% higher in presence of mycorrhizal fungi (<a href="#fig-fig4" class="quarto-xref">Figure&nbsp;4</a>). The random-effects model found strong statistical evidence (<em>Z</em> = 3.58, <em>p</em> &lt; 0.001) whereas the multilevel model showed moderate statistical evidence (<em>Z</em> = 1.96, <em>p</em> = 0.05) for the accelerated decomposition rates. This positive effect is also evident in the forest plot, where the right-side position of the diamond demonstrates that litter decomposition rate increased in the presence of mycorrhizal fungi (<a href="#fig-fig4" class="quarto-xref">Figure&nbsp;4</a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-fig4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-fig4-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Forest plot showing the observed effects of mycorrhizal fungi on litter decomposition rates for each experiment (n = 14). The size of each square is proportional to the weight of each study, and the associated bars represent the 95% confidence interval associated with individual effect size. The diamonds at the bottom represent the overall average effect estimated from meta-analytic models. The length of diamond denotes the 95% confidence intervals whereas associated dotted lines indicate the 95% prediction intervals</figcaption>
+<div id="fig-fig4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-fig4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Forest plot showing the observed effects of mycorrhizal fungi on litter decomposition rates for each experiment (n = 14). The size of each square is proportional to the weight of each study, and the associated bars represent the 95% confidence interval associated with individual effect size. The diamonds at the bottom represent the overall average effect estimated from meta-analytic models. The length of diamond denotes the 95% confidence intervals whereas associated dotted lines indicate the 95% prediction intervals
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>The Cochran’s <span class="math inline">\(Q\)</span> test for heterogeneity revealed significant variations (<span class="math inline">\(Q\)</span> = 259.45, <em>df</em> = 13, <em>p</em> &lt; 0.001) in true outcomes. Further, very high value of Higgins &amp; Thompson’s statistic (<span class="math inline">\(I^2\)</span> = 97.85%; <em>95% CI</em>: 97.77, 99.94) suggest that most of the observed variations captured the real differences in true effects (<span class="math inline">\(\tau^2\)</span> = 0.002). Similarly, the within-study variations in observed estimates were larger than the sampling error as indicated by <span class="math inline">\(H^2\)</span> statistic (<span class="math inline">\(H^2\)</span> = 46.43).</p>
 <p>Consistent with random-effects model, the multilevel model also indicated very high heterogeneity (<span class="math inline">\(I_t^2\)</span> = 99.5%) in true outcomes. The main advantage of multilevel model is that it allows us to estimate the heterogeneity in true outcomes at different levels of meta-analytic model. This model suggested that the heterogeneity due to species-specific effects was very large (<span class="math inline">\(\sigma_n^2\)</span> = 0.007; <span class="math inline">\(I_n^2\)</span> = 84.32%) followed by the within-study heterogeneity (<span class="math inline">\(\sigma_u^2\)</span> = 0.001; <span class="math inline">\(I_u^2\)</span> = 15.22%). Interestingly, neither between-study heterogeneity (<span class="math inline">\(\sigma_s^2\)</span> = 0; <span class="math inline">\(I_s^2\)</span> = 0) nor phylogeny-specific heterogeneity (<span class="math inline">\(\sigma_p^2\)</span> = 0; <span class="math inline">\(I_p^2\)</span> = 0) was detected by our multilevel model. Since no phylogenetic effects were observed, the phylogenetic heritability (<span class="math inline">\(H^2\)</span> = 0) was also absent.</p>
-<p>Given the high heterogeneity in true outcomes, the 95% prediction interval ranged from 0.97 to 1.17 as computed by the random effects model. However, the multilevel model suggested a much wider 95% prediction interval ranging from as low as 0.89 to as high as 1.33. Since the predicted values of average estimate included values both lesser and greater than one, we can expect slower decomposition rates in some experiments, though the presence of mycorrhizal fungi enhanced the litter decomposition on average (<a href="#fig-fig4">Figure&nbsp;4</a>).</p>
-<p>The meta-regression model with clade (Angiosperm vs Gymnosperm) as categorical moderator suggested that experiments using litter of gymnosperm species obtained on average smaller effect (<span class="math inline">\(\beta_1\)</span> = -0.03, <em>SE</em> = 0.05) as compared to angiosperms, though this difference was not statistically significant (<span class="math inline">\(Q_M\)</span> = 0.31, <em>df</em> = 1, <em>p</em> = 0.578). Thus, inclusion of clade as moderator variable did not explained any variation in true effects. While the mixed-effects model with species as moderator reflected the variations of effect estimates among species (<a href="#fig-fig5">Figure&nbsp;5</a>). This meta-regression model indicated that at least one species had significantly different (higher or lower) response ratio than the response ratio for the reference level (<em>Acer saccharum</em> in our case). Thus, this model provided moderate statistical evidence that some amount of variations in true effects are indeed due to species (<span class="math inline">\(Q_M\)</span> = 16.96, <em>df</em> = 8, <em>p</em> = 0.031). It appeared that about 29% of the total variations in the true outcomes were due to species. Although species explained some proportion of the total variations, there still exist variations in true effects that are not attributable to species. These unexplained variations are evident from the test for residual heterogeneity (<span class="math inline">\(Q\)</span> = 239.52, <em>df</em> = 5, <em>p</em> &lt; 0.001), which suggested large amount of unexplained variations in true effects. Further, this unexplained heterogeneity has large variance (<span class="math inline">\(\tau^2\)</span> = 0.001) and it reflects the real variations that are not explained by species as suggested by high value of <span class="math inline">\(I^2\)</span> = 98.8%.</p>
+<p>Given the high heterogeneity in true outcomes, the 95% prediction interval ranged from 0.97 to 1.17 as computed by the random effects model. However, the multilevel model suggested a much wider 95% prediction interval ranging from as low as 0.89 to as high as 1.33. Since the predicted values of average estimate included values both lesser and greater than one, we can expect slower decomposition rates in some experiments, though the presence of mycorrhizal fungi enhanced the litter decomposition on average (<a href="#fig-fig4" class="quarto-xref">Figure&nbsp;4</a>).</p>
+<p>The meta-regression model with clade (Angiosperm vs Gymnosperm) as categorical moderator suggested that experiments using litter of gymnosperm species obtained on average smaller effect (<span class="math inline">\(\beta_1\)</span> = -0.03, <em>SE</em> = 0.05) as compared to angiosperms, though this difference was not statistically significant (<span class="math inline">\(Q_M\)</span> = 0.31, <em>df</em> = 1, <em>p</em> = 0.578). Thus, inclusion of clade as moderator variable did not explained any variation in true effects. While the mixed-effects model with species as moderator reflected the variations of effect estimates among species (<a href="#fig-fig5" class="quarto-xref">Figure&nbsp;5</a>). This meta-regression model indicated that at least one species had significantly different (higher or lower) response ratio than the response ratio for the reference level (<em>Acer saccharum</em> in our case). Thus, this model provided moderate statistical evidence that some amount of variations in true effects are indeed due to species (<span class="math inline">\(Q_M\)</span> = 16.96, <em>df</em> = 8, <em>p</em> = 0.031). It appeared that about 29% of the total variations in the true outcomes were due to species. Although species explained some proportion of the total variations, there still exist variations in true effects that are not attributable to species. These unexplained variations are evident from the test for residual heterogeneity (<span class="math inline">\(Q\)</span> = 239.52, <em>df</em> = 5, <em>p</em> &lt; 0.001), which suggested large amount of unexplained variations in true effects. Further, this unexplained heterogeneity has large variance (<span class="math inline">\(\tau^2\)</span> = 0.001) and it reflects the real variations that are not explained by species as suggested by high value of <span class="math inline">\(I^2\)</span> = 98.8%.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-fig5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-fig5-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: The average effect of mycorrhizal association on litter decomposition rate for each species included in the meta-analysis. The values represent the average difference in response ratios compared to the reference species (<em>Acer saccharum</em>) and the associated bars denote the 95% confidence intervals</figcaption>
+<div id="fig-fig5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-fig5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The average effect of mycorrhizal association on litter decomposition rate for each species included in the meta-analysis. The values represent the average difference in response ratios compared to the reference species (<em>Acer saccharum</em>) and the associated bars denote the 95% confidence intervals
+</figcaption>
 </figure>
 </div>
 </div>
@@ -536,18 +607,22 @@ H^2 = \frac{\sigma_p^2}{\sigma_u^2 + \sigma_s^2 + \sigma_n^2 + \sigma_p^2}
 </section>
 <section id="publication-bias-1" class="level3">
 <h3 class="anchored" data-anchor-id="publication-bias-1">Publication bias</h3>
-<p>The visual inspection of the funnel plot did not indicate the publication bias as the outcomes appeared to be symmetrically distributed around the average effect estimate (<a href="#fig-fig6">Figure&nbsp;6</a>). The outcomes were well-fitted within the funnel as larger outcomes (with higher precision) were closely clustered at top whereas smaller outcomes (with lower precision) were dispersed around the average effect at bottom. Further, the funnel plot included nearly half outcomes in the non-significant region again suggesting absence of publication bias due to null findings of studies.</p>
+<p>The visual inspection of the funnel plot did not indicate the publication bias as the outcomes appeared to be symmetrically distributed around the average effect estimate (<a href="#fig-fig6" class="quarto-xref">Figure&nbsp;6</a>). The outcomes were well-fitted within the funnel as larger outcomes (with higher precision) were closely clustered at top whereas smaller outcomes (with lower precision) were dispersed around the average effect at bottom. Further, the funnel plot included nearly half outcomes in the non-significant region again suggesting absence of publication bias due to null findings of studies.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-fig6" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-fig6-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption">Figure&nbsp;6: The contour-enhanced funnel plot shows the effect size of each study (expressed as the response ratio) on the x-axis against a measure of their standard error (from large to small) on the y-axis. The vertical lines in the middle of the funnel show the average effect estimate and associated 95% confidence interval. The shaded region indicates the different significance levels for the estimated effect size for each outcome</figcaption>
+<div id="fig-fig6" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-fig6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: The contour-enhanced funnel plot shows the effect size of each study (expressed as the response ratio) on the x-axis against a measure of their standard error (from large to small) on the y-axis. The vertical lines in the middle of the funnel show the average effect estimate and associated 95% confidence interval. The shaded region indicates the different significance levels for the estimated effect size for each outcome
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The intercept estimated from the regression test (<span class="math inline">\(\beta_0\)</span> = 0.06; <em>95% CI</em>: 0.016, 0.104) was not significantly higher than zero (<em>Z</em> = 0.51, <em>p</em> = 0.609). Also, there was non-significant low rank correlation (Kendall’s <span class="math inline">\(\tau\)</span> = -0.27, <em>p</em> = 0.193) between standard error and response ratio of outcomes. Thus, both the statistical tests for funnel asymmetry also corroborated our initial visual observations of funnel plot symmetry, which can be considered as indication of negligible or no evidence of publication bias for the present meta-analysis. (<a href="#fig-fig6">Figure&nbsp;6</a>).</p>
+<p>The intercept estimated from the regression test (<span class="math inline">\(\beta_0\)</span> = 0.06; <em>95% CI</em>: 0.016, 0.104) was not significantly higher than zero (<em>Z</em> = 0.51, <em>p</em> = 0.609). Also, there was non-significant low rank correlation (Kendall’s <span class="math inline">\(\tau\)</span> = -0.27, <em>p</em> = 0.193) between standard error and response ratio of outcomes. Thus, both the statistical tests for funnel asymmetry also corroborated our initial visual observations of funnel plot symmetry, which can be considered as indication of negligible or no evidence of publication bias for the present meta-analysis. (<a href="#fig-fig6" class="quarto-xref">Figure&nbsp;6</a>).</p>
 <p>The Rosenthal’s <em>fail-safe N</em> of 2107 suggested that over 2,000 outcomes with average response ratio of 1.0 need to be added to make the average effect non-significant (<em>p</em> = 0.05). Similarly, the Rosenberg’s <em>fail-safe N</em> was 4019, indicating that there would need to be over 4,000 outcomes with a mean response ratio of 1.0 added to the analysis, before the cumulative effect would become statistically non-significant (<em>p</em> = 0.05). Considering that we were able to identify only 14 relevant outcomes, it is unlikely that we missed over 4,000 or over 2,000 outcomes. Thus, although it may be possible that we might have estimated biased effect, it is unlikely that the actual overall effect is zero. However, we acknowledge that it is just one form of publication bias among the several other sources of bias in the estimate.</p>
 </section>
 </section>
@@ -587,7 +662,7 @@ H^2 = \frac{\sigma_p^2}{\sigma_u^2 + \sigma_s^2 + \sigma_n^2 + \sigma_p^2}
 </div></section><section id="funding" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Funding</h2><div class="quarto-appendix-contents">
 
 <p>University Grants Commission, Government of India, New Delhi is acknowledged for financial support in the form of Senior Research Fellowships to <em>Meenu Patil</em> [(492/ (CSIR-UGC NET JUNE 2017)], <em>Abhishek Kumar</em> [507/ (OBC) (CSIR-UGC NET DEC. 2016)], and <em>Pardeep Kumar</em> [443/ (CSIR-UGC NET DEC. 2017)].</p>
-</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Averill2014" class="csl-entry" role="listitem">
 Averill, Colin, Benjamin L. Turner, and Adrien C. Finzi. 2014. <span>“Mycorrhiza-Mediated Competition Between Plants and Decomposers Drives Soil Carbon Storage.”</span> <em>Nature</em> 505 (7484): 543–45. <a href="https://doi.org/10.1038/nature12901">https://doi.org/10.1038/nature12901</a>.
 </div>
@@ -902,10 +977,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -915,8 +1007,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -928,7 +1029,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -972,6 +1196,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -997,6 +1222,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1057,6 +1308,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

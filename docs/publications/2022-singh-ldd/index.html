@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -28,6 +28,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -68,7 +69,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -77,6 +84,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -91,9 +99,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Abhishek Kumar</span>
     </a>
@@ -105,40 +113,48 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../accomplishments.html"> <i class="bi bi-trophy" role="img">
+</i> 
+<span class="menu-text">Accomplishments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog.html"> <i class="bi bi-pen" role="img">
+</i> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../../publications.html"> <i class="bi bi-journals" role="img">
+</i> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> <i class="bi bi-mic" role="img">
+</i> 
+<span class="menu-text">Talks</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/kumar-a" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/kumar-a"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/abkumar_" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/abkumar_"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
@@ -154,7 +170,7 @@ div.csl-indent {
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -185,20 +201,20 @@ div.csl-indent {
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Anand-Singh-15">Anand Narain Singh</a> <a href="https://orcid.org/0000-0002-0148-8680" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://akumar.netlify.app">Abhishek Kumar</a> <a href="https://orcid.org/0000-0003-2252-7623" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -222,7 +238,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -282,10 +300,15 @@ Note
 <h2 class="anchored" data-anchor-id="results">Results</h2>
 <section id="effect-of-plantations-on-spoil-physicochemical-properties" class="level3">
 <h3 class="anchored" data-anchor-id="effect-of-plantations-on-spoil-physicochemical-properties">Effect of plantations on spoil physicochemical properties</h3>
-<p>The primary aim of this paper was to investigate the effects of species and origin on coal mine spoil restoration. Among the spoil physical properties, soil texture parameters (clay, silt and sand content) was significantly differed due to species (<a href="#tbl-a">Table&nbsp;1</a>). However, bulk density, pH and water holding capacity were found similar under all species plantations (<a href="#tbl-a">Table&nbsp;1</a>).</p>
+<p>The primary aim of this paper was to investigate the effects of species and origin on coal mine spoil restoration. Among the spoil physical properties, soil texture parameters (clay, silt and sand content) was significantly differed due to species (<a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a>). However, bulk density, pH and water holding capacity were found similar under all species plantations (<a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-a" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of Kruskal-Wallis test (n = 24; 3 replicates × 8 species) with effect size (<i>η<sup>2</sup></i>) for the influence of species on physicochemical properties of mine spoil after five years
+</figcaption>
+<div aria-describedby="tbl-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="acozhhufly" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -698,9 +721,7 @@ Note
 }
 </style>
 
-<div id="tbl-a" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;1: Summary of Kruskal-Wallis test (n = 24; 3 replicates × 8 species) with effect size (<i>η<sup>2</sup></i>) for the influence of species on physicochemical properties of mine spoil after five years</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -968,15 +989,22 @@ Note
 </tr>
 </tbody>
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>The present study found that coal mine spoil had almost similar bulk density and neutral pH under both native and exotic plantations (<a href="#tbl-a">Table&nbsp;1</a> &amp; <a href="#fig-a">Figure&nbsp;1</a>).</p>
+</figure>
+</div>
+</div>
+<p>The present study found that coal mine spoil had almost similar bulk density and neutral pH under both native and exotic plantations (<a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a> &amp; <a href="#fig-a" class="quarto-xref">Figure&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-b" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Physical properties of coal mine spoil under 5-year old plantations of native and exotic woody species
+</figcaption>
+<div aria-describedby="tbl-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="rafmnnccuf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -1389,9 +1417,7 @@ Note
 }
 </style>
 
-<div id="tbl-b" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;2: Physical properties of coal mine spoil under 5-year old plantations of native and exotic woody species</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead class="gt_col_headings">
 <tr class="header">
 <th rowspan="2" id="Species" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Species</th>
@@ -1613,27 +1639,38 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>However, spoil water holding capacity was found significantly higher under exotic plantations than the native plantations (<a href="#fig-a">Figure&nbsp;1</a>).</p>
+</figure>
+</div>
+</div>
+<p>However, spoil water holding capacity was found significantly higher under exotic plantations than the native plantations (<a href="#fig-a" class="quarto-xref">Figure&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-a" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-a-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Spoil physical properties (median ± iqr) under exotic and native plantation after 5-years establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code>, and <code>ns</code>, respectively</figcaption>
+<div id="fig-a" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-a-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Spoil physical properties (median ± iqr) under exotic and native plantation after 5-years establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code>, and <code>ns</code>, respectively
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Similarly, it appeared that silt and sand was significantly higher spoil under exotic plantations as compared to native plantations. But the clay content showed opposite pattern and was found to be significantly higher under native plantations than the exotic plantations. However, ANOVA showed non-significant differences due to species’ effect except soil texture (Tables <a href="#tbl-a">Table&nbsp;1</a> &amp; <a href="#tbl-b">Table&nbsp;2</a>).</p>
-<p>Available nutrients such as ammonium-N (NH<sub>4</sub>-N), nitrate-N (NO<sub>3</sub>-N), mineral-N (NH<sub>4</sub>-N + NO<sub>3</sub>-N) and inorganic-P (PO<sub>4</sub>-P) content indicated significant differences due to species (<a href="#tbl-a">Table&nbsp;1</a> &amp; <a href="#tbl-c">Table&nbsp;3</a>).</p>
+<p>Similarly, it appeared that silt and sand was significantly higher spoil under exotic plantations as compared to native plantations. But the clay content showed opposite pattern and was found to be significantly higher under native plantations than the exotic plantations. However, ANOVA showed non-significant differences due to species’ effect except soil texture (Tables <a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a> &amp; <a href="#tbl-b" class="quarto-xref">Table&nbsp;2</a>).</p>
+<p>Available nutrients such as ammonium-N (NH<sub>4</sub>-N), nitrate-N (NO<sub>3</sub>-N), mineral-N (NH<sub>4</sub>-N + NO<sub>3</sub>-N) and inorganic-P (PO<sub>4</sub>-P) content indicated significant differences due to species (<a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a> &amp; <a href="#tbl-c" class="quarto-xref">Table&nbsp;3</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-c" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Available nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species
+</figcaption>
+<div aria-describedby="tbl-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="xrqjbuyvqr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -2046,21 +2083,19 @@ Note
 }
 </style>
 
-<div id="tbl-c" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;3: Available nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead class="gt_col_headings">
 <tr class="header">
 <th id="Species <br></br>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Species<br>
 </th>
 <th id="NH<sub>4</sub>-N <br>(mg/kg)</br>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">NH<sub>4</sub>-N<br>
-(mg/kg)</th>
+(mg/kg)<br></th>
 <th id="Mineral-N <br>(mg/kg)</br>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Mineral-N<br>
-(mg/kg)</th>
+(mg/kg)<br></th>
 <th id="NO<sub>3</sub>-N <br>(mg/kg)</br>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">NO<sub>3</sub>-N<br>
-(mg/kg)</th>
+(mg/kg)<br></th>
 <th id="PO<sub>4</sub>-P <br>(mg/kg)</br>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">PO<sub>4</sub>-P<br>
-(mg/kg)</th>
+(mg/kg)<br></th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -2219,26 +2254,37 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>A comparison between exotic and native species plantations revealed that NH<sub>4</sub>-N was significantly higher whereas NO<sub>3</sub>-N was significantly lower under native plantations as compared to exotic plantations (<a href="#fig-b">Figure&nbsp;2</a>). Since mineral-N is the sum of NH<sub>4</sub>-N and NO<sub>3</sub>-N, no significant differences were observed for mineral-N under exotic and native species plantations (<a href="#fig-b">Figure&nbsp;2</a>). However, inorganic phosphorus (PO<sub>4</sub>-P) was found significantly higher under native plantations than the exotic plantations (<a href="#fig-b">Figure&nbsp;2</a>).</p>
+</figure>
+</div>
+</div>
+<p>A comparison between exotic and native species plantations revealed that NH<sub>4</sub>-N was significantly higher whereas NO<sub>3</sub>-N was significantly lower under native plantations as compared to exotic plantations (<a href="#fig-b" class="quarto-xref">Figure&nbsp;2</a>). Since mineral-N is the sum of NH<sub>4</sub>-N and NO<sub>3</sub>-N, no significant differences were observed for mineral-N under exotic and native species plantations (<a href="#fig-b" class="quarto-xref">Figure&nbsp;2</a>). However, inorganic phosphorus (PO<sub>4</sub>-P) was found significantly higher under native plantations than the exotic plantations (<a href="#fig-b" class="quarto-xref">Figure&nbsp;2</a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-b" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-b-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: Available nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates of each 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code> and <code>ns</code>, respectively</figcaption>
+<div id="fig-b" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-b-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Available nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates of each 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code> and <code>ns</code>, respectively
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The concentration of total soil nutrients (C, N, and P) was also significantly varied due to species as indicated by ANOVA (<a href="#tbl-a">Table&nbsp;1</a> &amp; <a href="#tbl-d">Table&nbsp;4</a>).</p>
+<p>The concentration of total soil nutrients (C, N, and P) was also significantly varied due to species as indicated by ANOVA (<a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a> &amp; <a href="#tbl-d" class="quarto-xref">Table&nbsp;4</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-d" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Total soil nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species
+</figcaption>
+<div aria-describedby="tbl-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="skiyfcgrrv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -2651,9 +2697,7 @@ Note
 }
 </style>
 
-<div id="tbl-d" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;4: Total soil nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead class="gt_col_headings">
 <tr class="header">
 <th id="Species" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Species</th>
@@ -2872,27 +2916,38 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>The maximum concentration for soil organic carbon (SOC) and total kjeldahl nitrogen (TKN) was found in <em>Albizia lebbeck</em> (a native species) followed by <em>Dendrocalamus strictus</em> (<a href="#tbl-d">Table&nbsp;4</a>). Although native plantations (<em>A. lebbeck</em>, <em>A. procera</em> and <em>D. strictus</em>), except <em>T. grandis</em> plantation, showed a higher SOC and TKN than exotic plantations, these differences were not found to be statistically significant. The comparison between exotic and native plantations indicated that differences in SOC, TKN and their ratio (SOC: TKN) were non-significant, whereas. total Total phosphorus (TP) was significantly lower, and whereas SOC:TP and TKN:TP ratio were significantly higher under exotic plantations than the native plantations after 5-years of establishment (<a href="#fig-c">Figure&nbsp;3</a>).</p>
+</figure>
+</div>
+</div>
+<p>The maximum concentration for soil organic carbon (SOC) and total kjeldahl nitrogen (TKN) was found in <em>Albizia lebbeck</em> (a native species) followed by <em>Dendrocalamus strictus</em> (<a href="#tbl-d" class="quarto-xref">Table&nbsp;4</a>). Although native plantations (<em>A. lebbeck</em>, <em>A. procera</em> and <em>D. strictus</em>), except <em>T. grandis</em> plantation, showed a higher SOC and TKN than exotic plantations, these differences were not found to be statistically significant. The comparison between exotic and native plantations indicated that differences in SOC, TKN and their ratio (SOC: TKN) were non-significant, whereas. total Total phosphorus (TP) was significantly lower, and whereas SOC:TP and TKN:TP ratio were significantly higher under exotic plantations than the native plantations after 5-years of establishment (<a href="#fig-c" class="quarto-xref">Figure&nbsp;3</a>).</p>
 <div class="cell" data-layout-align="center">
 <pre><code>#&gt; [1] FALSE</code></pre>
 <div class="cell-output-display">
-<div id="fig-c" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-c-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Total soil nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The central white diamond represents the mean of each variable. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code>, and <code>ns</code>, respectively</figcaption>
+<div id="fig-c" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-c-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Total soil nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The central white diamond represents the mean of each variable. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code>, and <code>ns</code>, respectively
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>In this study, soil microbial biomass carbon (MB-C), microbial biomass nitrogen (MB-N), and microbial biomass phosphorus (MB-P) were found to be significantly varied due to the effect of species (<a href="#tbl-e">Table&nbsp;5</a>). This was evident from the results of ANOVA which showed highly significant differences in MB-C, MB-N, MB-P, and their ratios due to species (<a href="#tbl-a">Table&nbsp;1</a>).</p>
+<p>In this study, soil microbial biomass carbon (MB-C), microbial biomass nitrogen (MB-N), and microbial biomass phosphorus (MB-P) were found to be significantly varied due to the effect of species (<a href="#tbl-e" class="quarto-xref">Table&nbsp;5</a>). This was evident from the results of ANOVA which showed highly significant differences in MB-C, MB-N, MB-P, and their ratios due to species (<a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-e" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Microbial biomass nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species
+</figcaption>
+<div aria-describedby="tbl-e-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="utnlpmpaji" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -3305,9 +3360,7 @@ Note
 }
 </style>
 
-<div id="tbl-e" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;5: Microbial biomass nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead class="gt_col_headings">
 <tr class="header">
 <th id="Species" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Species</th>
@@ -3526,27 +3579,38 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>Further, all the microbial biomass nutrients analysed in this study were found to be significantly higher under native plantations as compared to exotic plantations after 5-years of their establishment (<a href="#fig-d">Figure&nbsp;4</a>). As a result the ratios of microbial biomass nutrients were also found to be significantly varied among exotic and native species and MB-C:MB-N, MB-C:MB-P, and MB-N:MB-P are found to be significantly lower in native species as compared to the exotic species (<a href="#fig-d">Figure&nbsp;4</a>).</p>
+</figure>
+</div>
+</div>
+<p>Further, all the microbial biomass nutrients analysed in this study were found to be significantly higher under native plantations as compared to exotic plantations after 5-years of their establishment (<a href="#fig-d" class="quarto-xref">Figure&nbsp;4</a>). As a result the ratios of microbial biomass nutrients were also found to be significantly varied among exotic and native species and MB-C:MB-N, MB-C:MB-P, and MB-N:MB-P are found to be significantly lower in native species as compared to the exotic species (<a href="#fig-d" class="quarto-xref">Figure&nbsp;4</a>).</p>
 <div class="cell" data-layout-align="center">
 <pre><code>#&gt; [1] FALSE</code></pre>
 <div class="cell-output-display">
-<div id="fig-d" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-d-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Soil microbial biomass nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code> and <code>ns</code>, respectively</figcaption>
+<div id="fig-d" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-d-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Soil microbial biomass nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code> and <code>ns</code>, respectively
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>When we analysed the microbial biomass nutrients as the fraction of total soil nutrients, we found similar results. The proportional microbial biomass nutrients were also found to be significantly varied due to the effect of species (<a href="#tbl-b">Table&nbsp;2</a>). The microbial biomass carbon (MB-C) accounted for 3.73–7.49% under native and 2.43–2.61% under exotic plantations of the total soil organic carbon (SOC) in the respective plantations. Similarly, the microbial biomass nitrogen (MB-N) was 4.76–10.84% under native plantations and 2.12–3.02% of total Kjeldahl nitrogen (TKN) was in the exotic plantations (<a href="#tbl-f">Table&nbsp;6</a>).</p>
+<p>When we analysed the microbial biomass nutrients as the fraction of total soil nutrients, we found similar results. The proportional microbial biomass nutrients were also found to be significantly varied due to the effect of species (<a href="#tbl-b" class="quarto-xref">Table&nbsp;2</a>). The microbial biomass carbon (MB-C) accounted for 3.73–7.49% under native and 2.43–2.61% under exotic plantations of the total soil organic carbon (SOC) in the respective plantations. Similarly, the microbial biomass nitrogen (MB-N) was 4.76–10.84% under native plantations and 2.12–3.02% of total Kjeldahl nitrogen (TKN) was in the exotic plantations (<a href="#tbl-f" class="quarto-xref">Table&nbsp;6</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-f" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-f-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Microbial biomass nutrients relative to total nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species
+</figcaption>
+<div aria-describedby="tbl-f-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="gmtiuieyna" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -3959,9 +4023,7 @@ Note
 }
 </style>
 
-<div id="tbl-f" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;6: Microbial biomass nutrients relative to total nutrients in coal mine spoil under 5-year old plantations of native and exotic woody species</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead class="gt_col_headings">
 <tr class="header">
 <th id="Species" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Species</th>
@@ -4155,27 +4217,38 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>The comparison between exotic and native species suggested that the relative proportion of microbial nutrients to the total soil nutrients was higher under native plantations than the exotic plantations (<a href="#fig-e">Figure&nbsp;5</a>).</p>
+</figure>
+</div>
+</div>
+<p>The comparison between exotic and native species suggested that the relative proportion of microbial nutrients to the total soil nutrients was higher under native plantations than the exotic plantations (<a href="#fig-e" class="quarto-xref">Figure&nbsp;5</a>).</p>
 <div class="cell" data-layout-align="center">
 <pre><code>#&gt; [1] FALSE</code></pre>
 <div class="cell-output-display">
-<div id="fig-e" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-e-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: Soil microbial biomass nutrients relative to total nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code> and <code>ns</code>, respectively.</figcaption>
+<div id="fig-e" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-e-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-e-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Soil microbial biomass nutrients relative to total nutrients in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Wilcoxon’s rank sum test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>. <code>*</code> and <code>ns</code>, respectively.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The estimated nitrification and nitrogen mineralization rates indicated significant variations due to species (<a href="#tbl-a">Table&nbsp;1</a>).</p>
+<p>The estimated nitrification and nitrogen mineralization rates indicated significant variations due to species (<a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-g" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-g-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: Nitrification and nitrogen mineralisation in coal mine spoil under 5-year old plantations of native and exotic woody species.
+</figcaption>
+<div aria-describedby="tbl-g-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="tqbyszzxcc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -4588,16 +4661,14 @@ Note
 }
 </style>
 
-<div id="tbl-g" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;7: Nitrification and nitrogen mineralisation in coal mine spoil under 5-year old plantations of native and exotic woody species.</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead class="gt_col_headings">
 <tr class="header">
 <th id="Species" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Species</th>
 <th id="Nitrification rate <br>(mg kg<sup>-1</sup> month<sup>-1</sup>)</br>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Nitrification rate<br>
-(mg kg<sup>-1</sup> month<sup>-1</sup>)</th>
+(mg kg<sup>-1</sup> month<sup>-1</sup>)<br></th>
 <th id="N-mineralization rate <br>(mg kg<sup>-1</sup> month<sup>-1</sup>)</br>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">N-mineralization rate<br>
-(mg kg<sup>-1</sup> month<sup>-1</sup>)</th>
+(mg kg<sup>-1</sup> month<sup>-1</sup>)<br></th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -4708,19 +4779,25 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>Nitrification rates were found significantly higher under exotic plantations as compared to native plantations (<a href="#fig-f">Figure&nbsp;6</a>). But no significant differences were observed for nitrogen mineralization rates under exotic and native plantations (<a href="#fig-f">Figure&nbsp;6</a>). However, it showed high variability under native plantations (3.62–8.59 mg kg<sup>-1</sup> month<sup>-1</sup>) as compared to exotic plantations (5.01–5.35 mg kg<sup>-1</sup> month<sup>-1</sup>).</p>
+</figure>
+</div>
+</div>
+<p>Nitrification rates were found significantly higher under exotic plantations as compared to native plantations (<a href="#fig-f" class="quarto-xref">Figure&nbsp;6</a>). But no significant differences were observed for nitrogen mineralization rates under exotic and native plantations (<a href="#fig-f" class="quarto-xref">Figure&nbsp;6</a>). However, it showed high variability under native plantations (3.62–8.59 mg kg<sup>-1</sup> month<sup>-1</sup>) as compared to exotic plantations (5.01–5.35 mg kg<sup>-1</sup> month<sup>-1</sup>).</p>
 <div class="cell" data-layout-align="center">
 <pre><code>#&gt; [1] FALSE</code></pre>
 <div class="cell-output-display">
-<div id="fig-f" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-f-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;6: Nitrification and N-mineralisation rates in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Student’s t-test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>, <code>*</code> and <code>ns</code>, respectively</figcaption>
+<div id="fig-f" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-f-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-f-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-f-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Nitrification and N-mineralisation rates in coal mine spoil under exotic and native plantation after 5-years of the establishment. The significance of difference was determined with Student’s t-test (n = 12; 3 replicates × 4 species) and p-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>, <code>*</code> and <code>ns</code>, respectively
+</figcaption>
 </figure>
 </div>
 </div>
@@ -4728,46 +4805,62 @@ Note
 </section>
 <section id="inter-relationship-in-soil-vegetation-redevelopment-under-exotic-and-native-plantations" class="level3">
 <h3 class="anchored" data-anchor-id="inter-relationship-in-soil-vegetation-redevelopment-under-exotic-and-native-plantations">Inter-relationship in soil vegetation redevelopment under exotic and native plantations</h3>
-<p>This study found a non-significant positive relationship between microbial biomass carbon and soil organic carbon (<a href="#fig-g">Figure&nbsp;7</a>). However, this relationship was significant under native species plantations but non-significant under exotic plantations (<a href="#fig-g">Figure&nbsp;7</a>).</p>
+<p>This study found a non-significant positive relationship between microbial biomass carbon and soil organic carbon (<a href="#fig-g" class="quarto-xref">Figure&nbsp;7</a>). However, this relationship was significant under native species plantations but non-significant under exotic plantations (<a href="#fig-g" class="quarto-xref">Figure&nbsp;7</a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-g" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-g-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;7: Relationship between microbial biomass carbon (MB-C) and soil organic carbon (SOC). The strength of the relationship is tested using the linear Pearson’s correlation coefficient (represented as <em>r</em>) at a 0.05 significance level.</figcaption>
+<div id="fig-g" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-g-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Relationship between microbial biomass carbon (MB-C) and soil organic carbon (SOC). The strength of the relationship is tested using the linear Pearson’s correlation coefficient (represented as <em>r</em>) at a 0.05 significance level.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Further, microbial biomass nutrients were found to be associated with soil texture. All the microbial biomass nutrients exhibited a significant positive relationship with soil clay content and a significant negative relationship with soil sand content (<a href="#fig-h">Figure&nbsp;8</a>). Although the soil silt content was showed a non-significant negative association with microbial biomass carbon and microbial biomass phosphorus, it displayed a significant negative relation with microbial biomass nitrogen (<a href="#fig-h">Figure&nbsp;8</a>). However, most of these relationships were not found to be significant under exotic and native plantations, when analysed separately.</p>
+<p>Further, microbial biomass nutrients were found to be associated with soil texture. All the microbial biomass nutrients exhibited a significant positive relationship with soil clay content and a significant negative relationship with soil sand content (<a href="#fig-h" class="quarto-xref">Figure&nbsp;8</a>). Although the soil silt content was showed a non-significant negative association with microbial biomass carbon and microbial biomass phosphorus, it displayed a significant negative relation with microbial biomass nitrogen (<a href="#fig-h" class="quarto-xref">Figure&nbsp;8</a>). However, most of these relationships were not found to be significant under exotic and native plantations, when analysed separately.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-h" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-h-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;8: Relationship between microbial biomass nutrients and soil texture. The strength of relationship is tested using the linear Pearson’s correlation coefficient (represented as <em>r</em>) at 0.05 significance level.</figcaption>
+<div id="fig-h" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-h-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-h-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-h-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Relationship between microbial biomass nutrients and soil texture. The strength of relationship is tested using the linear Pearson’s correlation coefficient (represented as <em>r</em>) at 0.05 significance level.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Similarly, the nitrification rates were significantly negatively associated whereas the nitrogen mineralization rates were significantly positively associated with microbial biomass nutrients (<a href="#fig-i">Figure&nbsp;9</a>). However, these relationships were also not found to be significant under exotic and native plantations, when analysed separately.</p>
+<p>Similarly, the nitrification rates were significantly negatively associated whereas the nitrogen mineralization rates were significantly positively associated with microbial biomass nutrients (<a href="#fig-i" class="quarto-xref">Figure&nbsp;9</a>). However, these relationships were also not found to be significant under exotic and native plantations, when analysed separately.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-i" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-i-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;9: Relationship of microbial biomass nutrients with nitrification and nitrogen mineralisation rates. The strength of relationship is tested using the linear Pearson’s correlation coefficient (represented as <em>r</em>) at 0.05 significance level.</figcaption>
+<div id="fig-i" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-i-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-i-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-i-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Relationship of microbial biomass nutrients with nitrification and nitrogen mineralisation rates. The strength of relationship is tested using the linear Pearson’s correlation coefficient (represented as <em>r</em>) at 0.05 significance level.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Principal Component Analysis (PCA) correlation biplot suggests that some soil properties can be grouped on the basis of their strong associations. The first two principal axes explained about 70% of total variation in the data (<a href="#fig-j">Figure&nbsp;10</a>). The soil sand content is negatively correlated with ammonium nitrogen, soil organic carbon (soc) and microbial biomass nutrients (mbc, mbn, mbp) whereas positively correlated with nitrification rates. Similarly, the silt content is positively associated with nitrate-nitrogen, nitrification rates and soil organic carbon, whereas it was negatively associated with clay content, inorganic phosphorus (PO<sub>4</sub>-P) and microbial biomass nitrogen. Thus, the PCA correlation biplot also supports the above derived relationships of soil texture with microbial biomass nutrients and nitrogen cycling, in addition to the relation of SOC and MBC.</p>
+<p>Principal Component Analysis (PCA) correlation biplot suggests that some soil properties can be grouped on the basis of their strong associations. The first two principal axes explained about 70% of total variation in the data (<a href="#fig-j" class="quarto-xref">Figure&nbsp;10</a>). The soil sand content is negatively correlated with ammonium nitrogen, soil organic carbon (soc) and microbial biomass nutrients (mbc, mbn, mbp) whereas positively correlated with nitrification rates. Similarly, the silt content is positively associated with nitrate-nitrogen, nitrification rates and soil organic carbon, whereas it was negatively associated with clay content, inorganic phosphorus (PO<sub>4</sub>-P) and microbial biomass nitrogen. Thus, the PCA correlation biplot also supports the above derived relationships of soil texture with microbial biomass nutrients and nitrogen cycling, in addition to the relation of SOC and MBC.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-j" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-j-1.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10: Principal Component Analysis correlation biplot for the soil properties under the 5-year plantations of exotic and native species on coal mine spoil. The points represent the plantation species and arrows display the soil properties variables. Each eigenvector is scaled to the square root of its eigenvalue. The angles between variables in the biplot reflect their correlations. Angles close to zero degrees reflects a strong positive, whereas angles close to 180 degrees reflect the strong negative correlation between the variables. Very low or no correlation is represented by an angle close to 90 degrees.</figcaption>
+<div id="fig-j" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-j-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-j-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-j-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Principal Component Analysis correlation biplot for the soil properties under the 5-year plantations of exotic and native species on coal mine spoil. The points represent the plantation species and arrows display the soil properties variables. Each eigenvector is scaled to the square root of its eigenvalue. The angles between variables in the biplot reflect their correlations. Angles close to zero degrees reflects a strong positive, whereas angles close to 180 degrees reflect the strong negative correlation between the variables. Very low or no correlation is represented by an angle close to 90 degrees.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -4806,7 +4899,7 @@ Note
 
 
 
-</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Allen1986" class="csl-entry" role="listitem">
 Allen, S. E., H. M. Grimshaw, and A. P. Rowland. 1986. <span>“Chemical Analysis.”</span> In <em>Methods in Plant Ecology</em>, edited by P. D. Moore and S. B. Chapman, 2nd ed., 285–344. Oxford: Blackwell Scientific Publications.
 </div>
@@ -4927,7 +5020,7 @@ Waring, Bonnie G., Leonor Álvarez-Cansino, Kathryn E. Barry, Kristen K. Becklun
 <div id="ref-Wickham2019" class="csl-entry" role="listitem">
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“<span class="nocase">Welcome to the Tidyverse</span>.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{narain singh2022,
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{narain singh2022,
   author = {Narain Singh, Anand and Kumar, Abhishek},
   title = {Comparative Soil Restoration Potential of Exotic and Native
     Woody Plantations on Coal Mine Spoil in a Dry Tropical Environment
@@ -5025,10 +5118,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -5038,8 +5148,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -5051,7 +5170,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -5095,6 +5337,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -5120,6 +5363,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -5180,6 +5449,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

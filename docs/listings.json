@@ -1,7 +1,14 @@
 [
   {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/2024-iwec-ncbs/index.html"
+    ]
+  },
+  {
     "listing": "/publications.html",
     "items": [
+      "/publications/2024-kumar-ema/index.html",
       "/publications/2022-kumar-troe/index.html",
       "/publications/2022-singh-ldd/index.html",
       "/publications/2022-singh-ee/index.html",
@@ -9,10 +16,8 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
-      "/posts/index.html",
-      "/posts/sdm-himalaya/index.html",
       "/posts/siwalik-alien-flora/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"

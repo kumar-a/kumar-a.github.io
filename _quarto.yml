@@ -6,12 +6,19 @@ website:
   title: "Abhishek Kumar"
   navbar:
     left:
-      - text: About
-        href: about.qmd
-      - text: Blog
-        href: index.qmd
-      - text: Publications
+      - icon: trophy
+        text: Accomplishments
+        href: accomplishments.qmd
+      - icon: pen
+        text: Blog
+        href: blog.qmd
+      - icon: journals
+        text: Publications
         href: publications.qmd
+      - icon: mic
+        text: Talks
+        href: talks.qmd
+        
     right: 
       - icon: github
         href: https://github.com/kumar-a

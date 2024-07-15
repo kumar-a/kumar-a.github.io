@@ -1,14 +1,38 @@
 ---
-title: "Blog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "Abhishek Kumar"
+subtitle: "[Panjab University, Chandigarh](https://www.puchd.ac.in/)"
+image: abhi.jpg
+about:
+  template: trestles
+  links:
+    - icon: envelope-fill
+      href: abhikumar.pu@gmail.com
+      
+    - icon: r-square-fill
+      href: https://www.webofscience.com/wos/author/record/T-1462-2018
+      
+    - icon: mortarboard-fill
+      href: https://scholar.google.co.in/citations?user=ugmCylsAAAAJ&hl=en
+      
+    - icon: twitter-x
+      href: https://twitter.com/abkumar_
+      
+    - icon: github
+      href: https://github.com/kumar-a
+
 ---
 
+# Bio
 
+[Abhishek Kumar](https://akumar.netlify.app/) is working as Senior Research Fellow at Panjab University, Chandigarh. He is interested in studying the responses of ecosystem structure and functions to environmental change across various ecological, spatial and temporal scales. 
+
+# Education
+
+**PhD in Botany (Plant Ecology)** 2017 - Present  
+Panjab University, Chandigarh
+
+**MSc in Botany** 2015 - 2017  
+Panjab University, Chandigarh
+
+**BSc in Medical Science** 2012 - 2015  
+Kurukshetra University, Kurukshetra

@@ -2,14 +2,15 @@
 title: "Disturbance and vegetation structure in an urban forest of Indian Siwaliks"
 
 categories:
-- Disturbance
-- Remote Sensing
-- Taxonomic Diversity
-- Phylogenetic Diversity
-- Journal Article
+  - Disturbance
+  - Remote Sensing
+  - Phylogenetic Diversity
+  - Journal Article
+  - Siwalik
+  - Taxonomic Diversity
+  - Urban Forest
 
-description: |
-  We compared the soil restoration potential of exotic and native plant species on coal mine. Our results suggested that native species are more beneficial for soil restoration than the exotic species.
+description: ""
 
 author:
   - name: Abhishek Kumar
@@ -21,31 +22,53 @@ author:
     
   - name: Pardeep Kumar
     affiliation: Panjab University, Chandigarh
-    affiliation-url: https://puchd.ac.in
     
   - name: Meenu Patil
     affiliation: Panjab University, Chandigarh
-    affiliation-url: https://puchd.ac.in
+    
+  - name: Sabir Hussain
+    affiliation: Panjab University, Chandigarh
+    
+  - name: Rajni Yadav
+    affiliation: Panjab University, Chandigarh
     
   - name: Sheenu Sharma
     affiliation: Panjab University, Chandigarh
-    affiliation-url: https://puchd.ac.in
+    
+  - name: Diksha Tokas
+    affiliation: Panjab University, Chandigarh
+    
+  - name: Siril Singh
+    affiliation: Panjab University, Chandigarh
     
   - name: Anand Narain Singh
-    url: https://www.researchgate.net/profile/Anand-Singh-15
     affiliation: Panjab University, Chandigarh
-    affiliation-url: https://puchd.ac.in
-    orcid: 0000-0002-0148-8680
     attributes: 
       corresponding: true
+      
+doi: "10.1007/s10661-024-12801-0"
             
-date: 2023-06-17
+date: 2024-07-04
 
-draft: true
+draft: false
 
 bibliography: refs.bib
 
 reuse: false
+
+citation:
+  type: article-journal
+  container-title: "Environmental Monitoring and Assessment"
+  doi: "10.1007/s10661-024-12801-0"
+  volume: 196
+  issue: 8
+  page: 691
+  
+image: thumbnail.jpg
+
+format: 
+  html: 
+    default-image-extension: "svg"
 ---
 
 ```{r setup, include=FALSE}
@@ -82,6 +105,10 @@ theme_set(
 ## Abstract
 
 Urban forests are facing multiple human-mediated pressures leading to compromised ecosystem structure and functioning. Therefore, understanding ecosystem structure in response to ongoing pressures is crucial for sustaining ecological integrity and human well-being. We aim to assess the disturbance and its effects on vegetation structure of urban forest in Chandigarh using a combination of remote sensing techniques and vegetation survey. The disturbance was assessed as change in NDVI (Normalised Difference Vegetation Index) from 2001 to 2021 by applying the BFAST (Breaks For Additive Season and Trend) algorithm to the MODIS satellite imagery data. A vegetation survey was conducted to compare the species composition, taxonomic and phylogenetic diversity as measures of vegetation structure. While signals of disturbance were evident, the changes in vegetation structure were not well established from our study. Further, vegetation analysis indicated no significant differences in vegetation composition due to disturbance (*F~1,12~* = 0.91, *p* = 0.575). However, the phylogenetic diversity was substantially lower for disturbed plots as compare to undisturbed plots, though the taxonomic diversity was similar among the disturbed and undisturbed plots. Our results suggests that the effects of disturbance are more prominent on phylogenetic diversity than the taxonomic diversity. These findings can be considered as early signals of disturbance and its effects on vegetation structure of urban forest and contribute to the knowledge base on urban ecology. Our study has implications for facilitating evidence-based decision-making and the development of sustainable management strategies for urban forest ecosystems in Chandigarh.
+
+:::{.callout-note}
+This is the original draft, which may differ from published manuscript. Please refer to <https://doi.org/10.1007/s10661-024-12801-0>
+:::
 
 ## Introduction
 
@@ -1329,6 +1356,6 @@ Authors are thankful to Forest and Wildlife Department, Chandigarh for providing
 
 ## Data availability {.appendix}
 
-A reproducible preprint with all data and `R` codes used for analysis is currently available from <https://github.com/kumar-a>. We will be deposit our all data and code to suitable free repository after acceptance of article.
+The data and R codes that support the findings of this study are openly available in figshare at <https://doi.org/10.6084/m9.figshare.24531031>
 
 ## References

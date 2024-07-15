@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -69,7 +70,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -78,6 +85,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -86,6 +94,33 @@ div.csl-indent {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="citation_title" content="Phosphorus and litter decomposability traits in tropical forest ecosystems under changing environment: a synthesis">
@@ -122,21 +157,30 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=Plant species traits are the predominant control on litter decomposition rates within biomes worldwide;,citation_author=William K. Cornwell;,citation_author=Johannes H. C. Cornelissen;,citation_author=Kathryn Amatangelo;,citation_author=Ellen Dorrepaal;,citation_author=Valerie T. Eviner;,citation_author=Oscar Godoy;,citation_author=Sarah E. Hobbie;,citation_author=Bart Hoorens;,citation_author=Hiroko Kurokawa;,citation_author=Natalia Pérez-Harguindeguy;,citation_author=Helen M. Quested;,citation_author=Louis S. Santiago;,citation_author=David A. Wardle;,citation_author=Ian J. Wright;,citation_author=Rien Aerts;,citation_author=Steven D. Allison;,citation_author=Peter Bodegom;,citation_author=Victor Brovkin;,citation_author=Alex Chatain;,citation_author=Terry V. Callaghan;,citation_author=Sandra Dı́az;,citation_author=Eric Garnier;,citation_author=Diego E. Gurvich;,citation_author=Elena Kazakou;,citation_author=Julia A. Klein;,citation_author=Jenny Read;,citation_author=Peter B. Reich;,citation_author=Nadejda A. Soudzilovskaia;,citation_author=M. Victoria Vaieretti;,citation_author=Mark Westoby;,citation_publication_date=2008-10;,citation_cover_date=2008-10;,citation_year=2008;,citation_fulltext_html_url=https://doi.org/10.1111/j.1461-0248.2008.01219.x;,citation_issue=10;,citation_doi=10.1111/j.1461-0248.2008.01219.x;,citation_volume=11;,citation_journal_title=Ecology Letters;,citation_publisher=Wiley;">
 <meta name="citation_reference" content="citation_title=Nutrient availability in tropical rain forests: The paradigm of phosphorus limitation;,citation_author=James W. Dalling;,citation_author=Katherine Heineman;,citation_author=Omar R. Lopez;,citation_author=S. Joseph Wright;,citation_author=Benjamin L. Turner;,citation_editor=Guillermo Goldstein;,citation_editor=Louis S. Santiago;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_fulltext_html_url=https://doi.org/10.1007/978-3-319-27422-5_12;,citation_doi=10.1007/978-3-319-27422-5_12;,citation_inbook_title=Tropical tree physiology;">
 <meta name="citation_reference" content="citation_title=Nutrient addition modifies phosphatase activities along an altitudinal gradient in a tropical montane forest in southern ecuador;,citation_author=Karla Dietrich;,citation_author=Elena Spoeri;,citation_author=Yvonne Oelmann;,citation_publication_date=2016-02;,citation_cover_date=2016-02;,citation_year=2016;,citation_fulltext_html_url=https://doi.org/10.3389/feart.2016.00012;,citation_doi=10.3389/feart.2016.00012;,citation_issn=2296-6463;,citation_volume=4;,citation_journal_title=Frontiers in Earth Science;,citation_publisher=Frontiers Media SA;">
+<meta name="citation_reference" content="citation_title=A global database of litterfall mass and litter pool carbon and nutrients;,citation_author=E. A. Holland;,citation_author=M. W. Post;,citation_author=E. Matthews;,citation_author=J. Sulzman;,citation_author=R. Staufer;,citation_author=O. Krankina;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1244;,citation_doi=10.3334/ornldaac/1244;">
 <meta name="citation_reference" content="citation_title=Litter decomposition in forest ecosystems: A review;,citation_author=M. P. Krishna;,citation_author=Mahesh Mohan;,citation_publication_date=2017-07;,citation_cover_date=2017-07;,citation_year=2017;,citation_fulltext_html_url=https://doi.org/10.1007/s40974-017-0064-9;,citation_issue=4;,citation_doi=10.1007/s40974-017-0064-9;,citation_volume=2;,citation_journal_title=Energy, Ecology and Environment;,citation_publisher=Springer Science; Business Media LLC;">
+<meta name="citation_reference" content="citation_title=Response of plant nutrient stoichiometry to fertilization varied with plant tissues in a tropical forest;,citation_author=Qifeng Mo;,citation_author=Bi Zou;,citation_author=Yingwen Li;,citation_author=Yao Chen;,citation_author=Weixin Zhang;,citation_author=Rong Mao;,citation_author=Yongzhen Ding;,citation_author=Jun Wang;,citation_author=Xiankai Lu;,citation_author=Xiaobo Li;,citation_author=Jianwu Tang;,citation_author=Zhian Li;,citation_author=Faming Wang;,citation_publication_date=2015-09;,citation_cover_date=2015-09;,citation_year=2015;,citation_fulltext_html_url=http://doi.org/10.1038/srep14605;,citation_doi=10.1038/srep14605;,citation_issn=2045-2322;,citation_volume=5;,citation_journal_title=Scientific Reports;,citation_publisher=Springer Science; Business Media LLC;">
+<meta name="citation_reference" content="citation_title=Foliar phosphorus fractions reveal how tropical plants maintain photosynthetic rates despite low soil phosphorus availability;,citation_author=Qifeng Mo;,citation_author=Zhi’an Li;,citation_author=Emma J. Sayer;,citation_author=Hans Lambers;,citation_author=Yingwen Li;,citation_author=Bi Zou;,citation_author=Jianwu Tang;,citation_author=Mary Heskel;,citation_author=Yongzhen Ding;,citation_author=Faming Wang;,citation_publication_date=2019-01;,citation_cover_date=2019-01;,citation_year=2019;,citation_fulltext_html_url=http://dx.doi.org/10.1111/1365-2435.13252;,citation_issue=3;,citation_doi=10.1111/1365-2435.13252;,citation_volume=33;,citation_journal_title=Functional Ecology;,citation_publisher=Wiley;">
+<meta name="citation_reference" content="citation_title=Energy storage and the balance of producers and decomposers in ecological systems;,citation_author=Jerry S. Olson;,citation_publication_date=1963-04;,citation_cover_date=1963-04;,citation_year=1963;,citation_fulltext_html_url=http://dx.doi.org/10.2307/1932179;,citation_issue=2;,citation_doi=10.2307/1932179;,citation_issn=1939-9170;,citation_volume=44;,citation_journal_title=Ecology;,citation_publisher=Wiley;">
 <meta name="citation_reference" content="citation_title=Terrestrial ecoregions of the world;,citation_author=undefined TNC;,citation_publication_date=2019-10;,citation_cover_date=2019-10;,citation_year=2019;,citation_fulltext_html_url=https://geospatial.tnc.org/datasets/b1636d640ede4d6ca8f5e369f2dc368b;">
+<meta name="citation_reference" content="citation_title=Estimations of global terrestrial productivity: Converging toward a single number?;,citation_author=Bernard Saugier;,citation_author=Jacques Roy;,citation_author=Harold A. Mooney;,citation_editor=Jacques Roy;,citation_editor=Bernard Saugier;,citation_editor=Harold A. Mooney;,citation_publication_date=2001;,citation_cover_date=2001;,citation_year=2001;,citation_doi=10.1016/b978-012505290-0/50024-7;,citation_inbook_title=Terrestrial global productivity;">
 <meta name="citation_reference" content="citation_title=Tropical dry deciduous forest: Research trends and emerging features;,citation_author=J. S. Singh;,citation_author=R. K. Chaturvedi;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://link.springer.com/book/9789811072598;,citation_doi=10.1007/978-981-10-7260-4;">
 <meta name="citation_reference" content="citation_title=Elements of ecology;,citation_author=Thomas M. Smith;,citation_author=Robert Leo Smith;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;">
+<meta name="citation_reference" content="citation_title=Effects of light availability on leaf attributes and seedling growth of four tree species in tropical dry forest;,citation_author=Sachchidanand Tripathi;,citation_author=Rahul Bhadouria;,citation_author=Pratap Srivastava;,citation_author=Rajkumari S. Devi;,citation_author=Ravikant Chaturvedi;,citation_author=A. S. Raghubanshi;,citation_publication_date=2020-01;,citation_cover_date=2020-01;,citation_year=2020;,citation_fulltext_html_url=http://doi.org/10.1186/s13717-019-0206-4;,citation_doi=10.1186/s13717-019-0206-4;,citation_issn=2192-1709;,citation_volume=9;,citation_journal_title=Ecological Processes;,citation_publisher=Springer Science; Business Media LLC;">
+<meta name="citation_reference" content="citation_title=Seasonal changes in soil organic matter after a decade of nutrient addition in a lowland tropical forest;,citation_author=Benjamin L. Turner;,citation_author=Joseph B. Yavitt;,citation_author=Kyle E. Harms;,citation_author=Milton N. Garcia;,citation_author=S. Joseph Wright;,citation_publication_date=2015-01;,citation_cover_date=2015-01;,citation_year=2015;,citation_fulltext_html_url=http://dx.doi.org/10.1007/s10533-014-0064-1;,citation_issue=1–2;,citation_doi=10.1007/s10533-014-0064-1;,citation_issn=1573-515X;,citation_volume=123;,citation_journal_title=Biogeochemistry;,citation_publisher=Springer Science; Business Media LLC;">
 <meta name="citation_reference" content="citation_title=Decomposition drives convergence of forest litter nutrient stoichiometry following phosphorus addition;,citation_author=Tiff L. Huysen;,citation_author=Steven S. Perakis;,citation_author=Mark E. Harmon;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://doi.org/10.1007/s11104-016-2857-6;,citation_issue=1-2;,citation_doi=10.1007/s11104-016-2857-6;,citation_volume=406;,citation_journal_title=Plant and Soil;,citation_publisher=Springer Science; Business Media LLC;">
+<meta name="citation_reference" content="citation_title=A global database of carbon and nutrient concentrations of green and senesced leaves;,citation_author=L. Vergutz;,citation_author=S. Manzoni;,citation_author=A. Porporato;,citation_author=R. F. Novais;,citation_author=R. B. Jackson;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1106;,citation_doi=10.3334/ornldaac/1106;">
 <meta name="citation_reference" content="citation_title=Global gridded soil phosphorus distribution maps at 0.5-degree resolution;,citation_author=X. Yang;,citation_author=W. M. Post;,citation_author=P. E. Thornton;,citation_author=A. K. Jain;,citation_publication_date=2014;,citation_cover_date=2014;,citation_year=2014;,citation_fulltext_html_url=http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1223;,citation_doi=10.3334/ornldaac/1223;">
+<meta name="citation_reference" content="citation_title=Rates of litter decomposition in terrestrial ecosystems: Global patterns and controlling factors;,citation_author=Deqiang Zhang;,citation_author=Dafeng Hui;,citation_author=Yiqi Luo;,citation_author=Guoyi Zhou;,citation_publication_date=2008-03;,citation_cover_date=2008-03;,citation_year=2008;,citation_fulltext_html_url=http://dx.doi.org/10.1093/jpe/rtn002;,citation_issue=2;,citation_doi=10.1093/jpe/rtn002;,citation_issn=1752-9921;,citation_volume=1;,citation_journal_title=Journal of Plant Ecology;,citation_publisher=Oxford University Press (OUP);">
 </head>
 
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Abhishek Kumar</span>
     </a>
@@ -148,40 +192,48 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../accomplishments.html"> <i class="bi bi-trophy" role="img">
+</i> 
+<span class="menu-text">Accomplishments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog.html"> <i class="bi bi-pen" role="img">
+</i> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../../publications.html"> <i class="bi bi-journals" role="img">
+</i> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> <i class="bi bi-mic" role="img">
+</i> 
+<span class="menu-text">Talks</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/kumar-a" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/kumar-a"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/abkumar_" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/abkumar_"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
@@ -197,7 +249,7 @@ div.csl-indent {
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -222,36 +274,36 @@ div.csl-indent {
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://akumar.netlify.app">Abhishek Kumar</a> <a href="https://orcid.org/0000-0003-2252-7623" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Meenu-Patil">Meenu Patil</a> <a href="https://orcid.org/0000-0002-7664-7877" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Pardeep-Kumar-22">Pardeep Kumar</a> </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Anand-Singh-15">Anand Narain Singh</a> <a href="https://orcid.org/0000-0002-0148-8680" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -267,7 +319,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
@@ -275,25 +329,33 @@ div.csl-indent {
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Tropical forests cover more than 50% of the global forest area, which are usually restricted to the tropic of Cancer in the north (23.5°N), and the tropic of Capricorn in the south (23.5°S) of the equator. Brazil represents one-third of the global tropical forest area, and about 75% of the total is limited to just ten countries (<a href="#fig-distribution">Figure&nbsp;1</a>). These forests are usually distinguished by hot and humid climatic conditions comprising an average temperature range of 25–30 °C, but not less than 18 °C, while the annual precipitation remains greater than 120 cm. Depending on the amount of precipitation and seasonality, these forests can be further divided into dry deciduous, and moist evergreen forests <span class="citation" data-cites="Singh2017">(<a href="#ref-Singh2017" role="doc-biblioref">Singh and Chaturvedi 2017</a>)</span>. However, the moist evergreen or rainforests usually experience higher precipitation (greater than 230 cm year<sup>–1</sup>), whereas the dry deciduous forests account precipitation ranging from 120 cm to 280 cm year<sup>–1</sup>. The latter is characterized by a distinct dry season ranging from 2-8 months <span class="citation" data-cites="Singh2017">(<a href="#ref-Singh2017" role="doc-biblioref">Singh and Chaturvedi 2017</a>)</span>. They occur on lowlands, hills, and mountains with different ranges of rainfall gradients. Geographically, tropical forests cover an area of about 6% of the global land area but support rich biodiversity; for example, more than half of all the known species of plants and animals are native residents of tropical forests <span class="citation" data-cites="Smith2015">(<a href="#ref-Smith2015" role="doc-biblioref">Smith and Smith 2015</a>)</span>. Therefore, these dominant forests have a large influence on the regulation of global ecological processes such as climate regulation, nutrient cycling, productivity, and energy flow.</p>
+<p>Tropical forests cover more than 50% of the global forest area, which are usually restricted to the tropic of Cancer in the north (23.5°N), and the tropic of Capricorn in the south (23.5°S) of the equator. Brazil represents one-third of the global tropical forest area, and about 75% of the total is limited to just ten countries (<a href="#fig-distribution" class="quarto-xref">Figure&nbsp;1</a>). These forests are usually distinguished by hot and humid climatic conditions comprising an average temperature range of 25–30 °C, but not less than 18 °C, while the annual precipitation remains greater than 120 cm. Depending on the amount of precipitation and seasonality, these forests can be further divided into dry deciduous, and moist evergreen forests <span class="citation" data-cites="Singh2017">(<a href="#ref-Singh2017" role="doc-biblioref">Singh and Chaturvedi 2017</a>)</span>. However, the moist evergreen or rainforests usually experience higher precipitation (greater than 230 cm year<sup>–1</sup>), whereas the dry deciduous forests account precipitation ranging from 120 cm to 280 cm year<sup>–1</sup>. The latter is characterized by a distinct dry season ranging from 2-8 months <span class="citation" data-cites="Singh2017">(<a href="#ref-Singh2017" role="doc-biblioref">Singh and Chaturvedi 2017</a>)</span>. They occur on lowlands, hills, and mountains with different ranges of rainfall gradients. Geographically, tropical forests cover an area of about 6% of the global land area but support rich biodiversity; for example, more than half of all the known species of plants and animals are native residents of tropical forests <span class="citation" data-cites="Smith2015">(<a href="#ref-Smith2015" role="doc-biblioref">Smith and Smith 2015</a>)</span>. Therefore, these dominant forests have a large influence on the regulation of global ecological processes such as climate regulation, nutrient cycling, productivity, and energy flow.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-distribution" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-distribution-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Global Distribution of Tropical Forests which include the Tropical and Subtropical Coniferous Forests, Tropical and Subtropical Dry Broadleaf Forests, and Tropical and Subtropical Moist Broadleaf Forests <span class="citation" data-cites="TNC2019">(Data from <a href="#ref-TNC2019" role="doc-biblioref">TNC 2019</a>)</span>.</figcaption>
+<div id="fig-distribution" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-distribution-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Global Distribution of Tropical Forests which include the Tropical and Subtropical Coniferous Forests, Tropical and Subtropical Dry Broadleaf Forests, and Tropical and Subtropical Moist Broadleaf Forests <span class="citation" data-cites="TNC2019">(Data from <a href="#ref-TNC2019" role="doc-biblioref">TNC 2019</a>)</span>.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Global environmental change is an everlasting phenomenon that cannot be immediately controlled, and its possible effects are expected to alter the pace of structure and functioning behavior of a natural ecosystem. Therefore, it is not a surprising fact for ecology, but specifically, the ongoing climate change and the current rate of deforestation are bringing major threats to the sustainability of tropical forest ecosystems at unprecedented rates. These alterations can potentially compromise the ecosystem services leading to high uncertainty about the sustainability of life on the planet. Therefore, increased understanding of the ecosystem processes is highly warranted to reduce their fragility, and develop management strategies for sustaining life on earth.</p>
-<p>Nutrient cycling is probably a very critical ecological process that shapes the structure and functions of an ecosystem <span class="citation" data-cites="Krishna2017">(<a href="#ref-Krishna2017" role="doc-biblioref">Krishna and Mohan 2017</a>)</span>. All biotic component (organisms) requires certain essential nutrients (C, N, and P) for their growth and metabolism. These nutrients are often acquired by organisms from the environment or by consuming other organisms. When these organisms die, nutrients are returned to the ecosystem again in a cyclic manner called bio-geo-chemical cycles. In tropical forests, plants absorb the available nutrients from the soil and then allocate them into various plant parts in the form of standing state of biomass. These mineralized nutrients are again returned to the ecosystem when the plant parts fall on the forest floor and get decomposed. The atmosphere and weathering rocks are the sources for nutrient input to the ecosystem, whereas run-off and leaching cause the loss of nutrients. Rainfall plays an important role in balancing the nutrients in tropical rainforests as it adds dissolved nutrients to the forest ecosystems and removes the deposited nutrients as water run-off (<a href="#fig-cycle">Figure&nbsp;2</a>). Since environmental conditions substantially regulate the nutrient cycling processes such as nutrient supply, availability, and cycling, it is expected that climate change will potentially alter these cycles and threaten the natural balance of the forest ecosystems. Therefore, understanding the role of controlling factors in nutrient cycling is important for developing a sustainable strategy for effectively managing natural forest ecosystems.</p>
+<p>Nutrient cycling is probably a very critical ecological process that shapes the structure and functions of an ecosystem <span class="citation" data-cites="Krishna2017">(<a href="#ref-Krishna2017" role="doc-biblioref">Krishna and Mohan 2017</a>)</span>. All biotic component (organisms) requires certain essential nutrients (C, N, and P) for their growth and metabolism. These nutrients are often acquired by organisms from the environment or by consuming other organisms. When these organisms die, nutrients are returned to the ecosystem again in a cyclic manner called bio-geo-chemical cycles. In tropical forests, plants absorb the available nutrients from the soil and then allocate them into various plant parts in the form of standing state of biomass. These mineralized nutrients are again returned to the ecosystem when the plant parts fall on the forest floor and get decomposed. The atmosphere and weathering rocks are the sources for nutrient input to the ecosystem, whereas run-off and leaching cause the loss of nutrients. Rainfall plays an important role in balancing the nutrients in tropical rainforests as it adds dissolved nutrients to the forest ecosystems and removes the deposited nutrients as water run-off (<a href="#fig-cycle" class="quarto-xref">Figure&nbsp;2</a>). Since environmental conditions substantially regulate the nutrient cycling processes such as nutrient supply, availability, and cycling, it is expected that climate change will potentially alter these cycles and threaten the natural balance of the forest ecosystems. Therefore, understanding the role of controlling factors in nutrient cycling is important for developing a sustainable strategy for effectively managing natural forest ecosystems.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-cycle" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/nutrient_cycling.svg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: A Simplified Pictorial representation of Nutrient Cycling in a Tropical Forest Ecosystem.</figcaption>
+<div id="fig-cycle" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/nutrient_cycling.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A Simplified Pictorial representation of Nutrient Cycling in a Tropical Forest Ecosystem.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -303,28 +365,50 @@ div.csl-indent {
 <section id="biomass-production-in-tropical-forests" class="level2">
 <h2 class="anchored" data-anchor-id="biomass-production-in-tropical-forests">Biomass Production in Tropical Forests</h2>
 <p>Plants take nutrients from the soil and incorporate them into organic compounds, which together constitute the dry matter of plants called biomass, while the new organic matter or biomass produced during a given time per unit area is called productivity. In terrestrial ecosystems, biomass production by producers is commonly referred to as primary production, whereas biomass production by herbivores is called secondary productivity. Plants produce biomass by fixing light energy into organic matter through photosynthesis; however, not all plants fix the light energy equally. For example, coniferous trees fix light energy much more efficiently than deciduous trees due to the higher surface area of the evergreen needles. The net primary productivity (NPP) is the net amount of biomass produced, i.e., gross primary productivity (GPP) minus the energy lost during respiration (R) (i.e., GPP–R = NPP). Therefore, NPP is often used to express the biomass production of an ecosystem (also termed direct function). The NPP may vary among ecosystems because it is regulated by several factors such as temperature, moisture, nutrients and life span too <span class="citation" data-cites="Smith2015">(<a href="#ref-Smith2015" role="doc-biblioref">Smith and Smith 2015</a>)</span>.</p>
-<p>Despite the limited availability of nutrients, tropical forests have the highest NPP among the terrestrial ecosystems (<a href="#fig-npp">Figure&nbsp;3</a>). The high NPP of tropical forests can be attributed to warm and moist environments due to the suitable temperature range (25 to 30 °C) and high rainfall (&gt;120 cm). Apart from climatic conditions, soil nutrient availability plays an important role in regulating biomass production, especially in tropical forests, as nutrient capitals, particularly C, N, and P, are in a limited range. It has been observed that biomass production is first limited by nitrogen availability and then phosphorus availability in terrestrial ecosystems <span class="citation" data-cites="Smith2015">(<a href="#ref-Smith2015" role="doc-biblioref">Smith and Smith 2015</a>)</span>. Generally, the soils of tropical forests are poor in available phosphorus, and phosphorus is the limiting nutrient to productivity; therefore, tropical plants must adopt some specific mechanisms to capture phosphorus by any possible means. Thus, tropical plants may either efficiently function in limited phosphorus availability or they need to efficiently recycle phosphorus. Regarding the former case, plant tissues should have low concentrations of phosphorus, while for the latter case, plants must exhibit high resorption efficiency for phosphorus <span class="citation" data-cites="Dalling2016">(<a href="#ref-Dalling2016" role="doc-biblioref">Dalling et al. 2016</a>)</span>. Various evidence supports the former hypothesis that tropical plants are probably well-adapted to function in phosphorus-poor environments because their tissues usually have limited concentrations of phosphorus. Moreover, some recent studies have suggested that external addition of phosphorus to tropical soils significantly increase the phosphorus concentration in plant tissues, e.g., leaf <span class="citation" data-cites="Turner2015 Mo2019">(<a href="#ref-Turner2015" role="doc-biblioref"><strong>Turner2015?</strong></a>; <a href="#ref-Mo2019" role="doc-biblioref"><strong>Mo2019?</strong></a>)</span>, stem <span class="citation" data-cites="Mo2015">(<a href="#ref-Mo2015" role="doc-biblioref"><strong>Mo2015?</strong></a>)</span>, and roots <span class="citation" data-cites="van_Huysen2016">(<a href="#ref-van_Huysen2016" role="doc-biblioref">van Huysen, Perakis, and Harmon 2016</a>)</span>.</p>
+<p>Despite the limited availability of nutrients, tropical forests have the highest NPP among the terrestrial ecosystems (<a href="#fig-npp" class="quarto-xref">Figure&nbsp;3</a>). The high NPP of tropical forests can be attributed to warm and moist environments due to the suitable temperature range (25 to 30 °C) and high rainfall (&gt;120 cm). Apart from climatic conditions, soil nutrient availability plays an important role in regulating biomass production, especially in tropical forests, as nutrient capitals, particularly C, N, and P, are in a limited range. It has been observed that biomass production is first limited by nitrogen availability and then phosphorus availability in terrestrial ecosystems <span class="citation" data-cites="Smith2015">(<a href="#ref-Smith2015" role="doc-biblioref">Smith and Smith 2015</a>)</span>. Generally, the soils of tropical forests are poor in available phosphorus, and phosphorus is the limiting nutrient to productivity; therefore, tropical plants must adopt some specific mechanisms to capture phosphorus by any possible means. Thus, tropical plants may either efficiently function in limited phosphorus availability or they need to efficiently recycle phosphorus. Regarding the former case, plant tissues should have low concentrations of phosphorus, while for the latter case, plants must exhibit high resorption efficiency for phosphorus <span class="citation" data-cites="Dalling2016">(<a href="#ref-Dalling2016" role="doc-biblioref">Dalling et al. 2016</a>)</span>. Various evidence supports the former hypothesis that tropical plants are probably well-adapted to function in phosphorus-poor environments because their tissues usually have limited concentrations of phosphorus. Moreover, some recent studies have suggested that external addition of phosphorus to tropical soils significantly increase the phosphorus concentration in plant tissues, e.g., leaf <span class="citation" data-cites="Turner2015 Mo2019">(<a href="#ref-Turner2015" role="doc-biblioref">Turner et al. 2015</a>; <a href="#ref-Mo2019" role="doc-biblioref">Mo et al. 2019</a>)</span>, stem <span class="citation" data-cites="Mo2015">(<a href="#ref-Mo2015" role="doc-biblioref">Mo et al. 2015</a>)</span>, and roots <span class="citation" data-cites="van_Huysen2016">(<a href="#ref-van_Huysen2016" role="doc-biblioref">van Huysen, Perakis, and Harmon 2016</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-npp" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-npp-1.svg" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Total Net Primary Productivity (NPP) across Terrestrial Ecosystems Tropical Ecosystems are responsible for about 60% of the Total Terrestrial NPP. (1 Pg = 1e15 g). Data from <span class="citation" data-cites="Saugier2001">(<a href="#ref-Saugier2001" role="doc-biblioref"><strong>Saugier2001?</strong></a>)</span>.</figcaption>
+<div id="fig-npp" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-npp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-npp-1.svg" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-npp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Total Net Primary Productivity (NPP) across Terrestrial Ecosystems Tropical Ecosystems are responsible for about 60% of the Total Terrestrial NPP. (1 Pg = 10<sup>15</sup> g). Data from <span class="citation" data-cites="Saugier2001">Saugier, Roy, and Mooney (<a href="#ref-Saugier2001" role="doc-biblioref">2001</a>)</span>.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Various nutrients absorbed from the soil are incorporated into plant tissues. The allocation of nutrients to different plant tissues depends on the physiology and adaptation of plant species. In general, tropical plants tend to invest more in above-ground components for overcoming light limitations <span class="citation" data-cites="Tripathi2020">(<a href="#ref-Tripathi2020" role="doc-biblioref"><strong>Tripathi2020?</strong></a>)</span>. Thus, most of the nutrients are locked up in above-ground components, especially the canopy in tropical forests. These nutrients return to the soil via litterfall and release through the decomposition process. It has been observed that the nutrient concentrations in the litter are the legacy of nutrients in live components. For example, phosphorus concentrations are found to be substantially lower (20 to 55%) in senesced leaves compared to the green leaves (<strong>?@fig-d</strong>).</p>
+<p>Various nutrients absorbed from the soil are incorporated into plant tissues. The allocation of nutrients to different plant tissues depends on the physiology and adaptation of plant species. In general, tropical plants tend to invest more in above-ground components for overcoming light limitations <span class="citation" data-cites="Tripathi2020">(<a href="#ref-Tripathi2020" role="doc-biblioref">Tripathi et al. 2020</a>)</span>. Thus, most of the nutrients are locked up in above-ground components, especially the canopy in tropical forests. These nutrients return to the soil via litterfall and release through the decomposition process. It has been observed that the nutrient concentrations in the litter are the legacy of nutrients in live components. For example, phosphorus concentrations are found to be substantially lower (20 to 55%) in senesced leaves compared to the green leaves (<a href="#fig-d" class="quarto-xref">Figure&nbsp;4</a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-d" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-d-1.svg" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: The Senesced Leaf Phosphorus concentrations are associated with Green Leaf Phosphorus concentrations in both Tropical and Temperate Forests <span class="citation" data-cites="Vergutz2012">(<a href="#ref-Vergutz2012" role="doc-biblioref">Vergutz et al. 2012</a>)</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="litter-fall-and-litter-pool-in-tropical-forests" class="level2">
 <h2 class="anchored" data-anchor-id="litter-fall-and-litter-pool-in-tropical-forests">Litter-Fall and Litter Pool in Tropical Forests</h2>
-<p>Litter consists of plant parts that are broken down from plants and fall on the ground or forest floor. The total amount of litter accumulated on the forest floor per unit area is called the litter pool; whereas, the total amount of litter accumulated on the forest floor per unit area per unit time is referred to as litterfall. The hot and humid climate of tropical rainforests supports high energy fixation augmenting in higher primary productivity (<strong>?@fig-c</strong>). Thus, higher primary production eventually leads to a high amount of litterfall in tropical forests as compared to cooler and dry temperate forests (<a href="#fig-litterfall">Figure&nbsp;4</a> a). On the other hand, this pattern is roughly reversed for the litter pool, which is the amount of accumulated litter on the soil surface. The litter layer is much thicker in temperate forests than the tropical forests. This may be attributed to the cooler climate of temperate forests, which slow down the activity of decomposers. Among tropical forests, the tropical deciduous forests are characterized by a distinct dry season of varying lengths. Most of the trees in such forests shed their leaves during the dry season, and thus, tropical deciduous forests have a thicker layer of litter than tropical rain forests. In tropical rainforests, the litter pool is much smaller due to the higher activity of decomposers and leaching, and thus, the litter is consumed as soon as it falls, leading to a much thinner litter layer (<a href="#fig-litterfall">Figure&nbsp;4</a> b).</p>
+<p>Litter consists of plant parts that are broken down from plants and fall on the ground or forest floor. The total amount of litter accumulated on the forest floor per unit area is called the litter pool; whereas, the total amount of litter accumulated on the forest floor per unit area per unit time is referred to as litterfall. The hot and humid climate of tropical rainforests supports high energy fixation augmenting in higher primary productivity (<a href="#fig-npp" class="quarto-xref">Figure&nbsp;3</a>). Thus, higher primary production eventually leads to a high amount of litterfall in tropical forests as compared to cooler and dry temperate forests (<a href="#fig-litterfall" class="quarto-xref">Figure&nbsp;5</a> a). On the other hand, this pattern is roughly reversed for the litter pool, which is the amount of accumulated litter on the soil surface. The litter layer is much thicker in temperate forests than the tropical forests. This may be attributed to the cooler climate of temperate forests, which slow down the activity of decomposers. Among tropical forests, the tropical deciduous forests are characterized by a distinct dry season of varying lengths. Most of the trees in such forests shed their leaves during the dry season, and thus, tropical deciduous forests have a thicker layer of litter than tropical rain forests. In tropical rainforests, the litter pool is much smaller due to the higher activity of decomposers and leaching, and thus, the litter is consumed as soon as it falls, leading to a much thinner litter layer (<a href="#fig-litterfall" class="quarto-xref">Figure&nbsp;5</a> b).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-litterfall" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-litterfall-1.svg" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Global Litterfall (a) and Litter Pool (b) across Forest Ecosystems. Tropical Forests have higher Litterfall and lower Litter Pool as compared to the Temperate Forests. Data from <span class="citation" data-cites="Holland2015">(<a href="#ref-Holland2015" role="doc-biblioref"><strong>Holland2015?</strong></a>)</span></figcaption>
+<div id="fig-litterfall" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-litterfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-litterfall-1.svg" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-litterfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Global Litterfall (a) and Litter Pool (b) across Forest Ecosystems. Tropical Forests have higher Litterfall and lower Litter Pool as compared to the Temperate Forests. Data from <span class="citation" data-cites="Holland2015">Holland et al. (<a href="#ref-Holland2015" role="doc-biblioref">2015</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -332,20 +416,24 @@ div.csl-indent {
 </section>
 <section id="litter-decomposition-in-tropical-forests" class="level2">
 <h2 class="anchored" data-anchor-id="litter-decomposition-in-tropical-forests">Litter Decomposition in Tropical Forests</h2>
-<p>The dead plant parts, including leaves, branches, flowers, fruits, and woods, fell on the ground and all together constitute the litter. This litter is the source of nutrients for soil and a source of energy for decomposer organisms. The nutrients locked up in litter are released by the process of decomposition. A higher decomposition rate results in the quick release of nutrients and therefore increases the nutrient availability in soils. The rate of litter decomposition is often estimated by tracking the mass loss with respect to time. In most terrestrial ecosystems, the mass loss of litter follows an exponential pattern, and a constant amount of mass is lost per unit of time <span class="citation" data-cites="Olson1963">(<a href="#ref-Olson1963" role="doc-biblioref"><strong>Olson1963?</strong></a>)</span>. If <em>M<sub>0</sub></em> is the mass of initial litter, and <em>M<sub>t</sub></em> is the remaining mass of litter at a given time <em>t</em>, then this rate can be represented as:</p>
+<p>The dead plant parts, including leaves, branches, flowers, fruits, and woods, fell on the ground and all together constitute the litter. This litter is the source of nutrients for soil and a source of energy for decomposer organisms. The nutrients locked up in litter are released by the process of decomposition. A higher decomposition rate results in the quick release of nutrients and therefore increases the nutrient availability in soils. The rate of litter decomposition is often estimated by tracking the mass loss with respect to time. In most terrestrial ecosystems, the mass loss of litter follows an exponential pattern, and a constant amount of mass is lost per unit of time <span class="citation" data-cites="Olson1963">(<a href="#ref-Olson1963" role="doc-biblioref">Olson 1963</a>)</span>. If <em>M<sub>0</sub></em> is the mass of initial litter, and <em>M<sub>t</sub></em> is the remaining mass of litter at a given time <em>t</em>, then this rate can be represented as:</p>
 <p><span class="math display">\[
 M_t = M_0 ~ e^{-k~t}
 \]</span> where, <em>k</em> is an exponential constant that characterizes the decomposition rate under specified conditions. Since this <em>k</em> represents the rate of decomposition, it is also known as decomposition constant or decay constant. At a larger scale, the decomposition rate is estimated as the mean residence time of the litter, i.e., the average time required for litter to decompose in given environmental conditions. The mean residence time is estimated as the ratio of litter pool to litterfall in a particular ecosystem, which corresponds to the inverse of decomposition rate constant (<em>k</em>).</p>
 <p><span class="math display">\[
 \text{Residence time} = \frac{\text{Litter pool}}{\text{Litterfall}} = \frac{1}{k}
 \]</span></p>
-<p>The decomposition rate of litter is influenced by several factors, including climate, physico-chemical properties of litter, and micro-organisms. Thus, the decomposition rate of the litter varies across ecosystems, being highest for tropical rainforests (<a href="#fig-k">Figure&nbsp;5</a>) and lowest for boreal forests <span class="citation" data-cites="Olson1963 Zhang2008">(<a href="#ref-Olson1963" role="doc-biblioref"><strong>Olson1963?</strong></a>; <a href="#ref-Zhang2008" role="doc-biblioref"><strong>Zhang2008?</strong></a>)</span>. Tropical forests have unusually high productivity and therefore produce a large amount of litter. However, warm and moist conditions of rainforests also cause rapid decomposition of litter; consequently, the litter layer is very thin, and the litter pool is very small. Tropical deciduous forests are characterized by a distinct dry season and many plants shed their leaves during the dry season. During this season, the decomposition is very slow, and therefore litter layer is much thicker than in tropical rain forests. On the other hand, temperate forests are often characterized by cooler climates, which slow down the decomposition rate resulting in thick layers of litter. Thus, the warm and humid climate of tropical forests results in a smaller litter pool as compared to temperate forests (<a href="#fig-litterfall">Figure&nbsp;4</a> b).</p>
+<p>The decomposition rate of litter is influenced by several factors, including climate, physico-chemical properties of litter, and micro-organisms. Thus, the decomposition rate of the litter varies across ecosystems, being highest for tropical rainforests (<a href="#fig-k" class="quarto-xref">Figure&nbsp;6</a>) and lowest for boreal forests <span class="citation" data-cites="Olson1963 Zhang2008">(<a href="#ref-Olson1963" role="doc-biblioref">Olson 1963</a>; <a href="#ref-Zhang2008" role="doc-biblioref">Zhang et al. 2008</a>)</span>. Tropical forests have unusually high productivity and therefore produce a large amount of litter. However, warm and moist conditions of rainforests also cause rapid decomposition of litter; consequently, the litter layer is very thin, and the litter pool is very small. Tropical deciduous forests are characterized by a distinct dry season and many plants shed their leaves during the dry season. During this season, the decomposition is very slow, and therefore litter layer is much thicker than in tropical rain forests. On the other hand, temperate forests are often characterized by cooler climates, which slow down the decomposition rate resulting in thick layers of litter. Thus, the warm and humid climate of tropical forests results in a smaller litter pool as compared to temperate forests (<a href="#fig-litterfall" class="quarto-xref">Figure&nbsp;5</a> b).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-k" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-k-1.svg" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: Litter Decomposition Rates estimated as the ratio of above-ground Litterfall to Litter pool across Forests-types. The Rate of Litter Decomposition tends to be much faster in Tropical Forests than Temperate Forests. Data from <span class="citation" data-cites="Holland2015">(<a href="#ref-Holland2015" role="doc-biblioref"><strong>Holland2015?</strong></a>)</span></figcaption>
+<div id="fig-k" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-k-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-k-1.svg" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-k-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Litter Decomposition Rates estimated as the ratio of above-ground Litterfall to Litter pool across Forests-types. The Rate of Litter Decomposition tends to be much faster in Tropical Forests than Temperate Forests. Data from <span class="citation" data-cites="Holland2015">Holland et al. (<a href="#ref-Holland2015" role="doc-biblioref">2015</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -354,13 +442,13 @@ M_t = M_0 ~ e^{-k~t}
 </section>
 <section id="initial-phosphorus-and-litter-decomposition" class="level2">
 <h2 class="anchored" data-anchor-id="initial-phosphorus-and-litter-decomposition">Initial phosphorus and litter decomposition</h2>
-<p>In tropical forests, nutrients are returned to the soil and made available to plants by the process of litter decomposition. Thus, litter decomposition chiefly regulates nutrient availability and nutrient cycling in terrestrial ecosystems. The rate of litter decomposition is primarily regulated by the climatic conditions, physico-chemical traits of litter, and the activity of decomposer organisms <span class="citation" data-cites="Aerts1997 Bradford2016 Cornwell2008">(<a href="#ref-Aerts1997" role="doc-biblioref">Aerts 1997</a>; <a href="#ref-Bradford2016" role="doc-biblioref"><strong>Bradford2016?</strong></a>; <a href="#ref-Cornwell2008" role="doc-biblioref">Cornwell et al. 2008</a>)</span>. Among physico-chemical traits, the chemical quality of litter, such as lignin to nitrogen ratio, carbon to nitrogen ratio, and nutrient concentrations, are suggested as dominant controllers of decomposition rates across biomes <span class="citation" data-cites="Cornwell2008 Zhang2008">(<a href="#ref-Cornwell2008" role="doc-biblioref">Cornwell et al. 2008</a>; <a href="#ref-Zhang2008" role="doc-biblioref"><strong>Zhang2008?</strong></a>)</span>. Further, some studies also advocated that litter nutrients such as nitrogen and phosphorus are strongly correlated with decomposition rates suggesting the role of nutrients in regulating the decomposition rates <span class="citation" data-cites="Patil2020">(<a href="#ref-Patil2020" role="doc-biblioref"><strong>Patil2020?</strong></a>)</span>.</p>
+<p>In tropical forests, nutrients are returned to the soil and made available to plants by the process of litter decomposition. Thus, litter decomposition chiefly regulates nutrient availability and nutrient cycling in terrestrial ecosystems. The rate of litter decomposition is primarily regulated by the climatic conditions, physico-chemical traits of litter, and the activity of decomposer organisms <span class="citation" data-cites="Aerts1997 Bradford2016 Cornwell2008">(<a href="#ref-Aerts1997" role="doc-biblioref">Aerts 1997</a>; <a href="#ref-Bradford2016" role="doc-biblioref"><strong>Bradford2016?</strong></a>; <a href="#ref-Cornwell2008" role="doc-biblioref">Cornwell et al. 2008</a>)</span>. Among physico-chemical traits, the chemical quality of litter, such as lignin to nitrogen ratio, carbon to nitrogen ratio, and nutrient concentrations, are suggested as dominant controllers of decomposition rates across biomes <span class="citation" data-cites="Cornwell2008 Zhang2008">(<a href="#ref-Cornwell2008" role="doc-biblioref">Cornwell et al. 2008</a>; <a href="#ref-Zhang2008" role="doc-biblioref">Zhang et al. 2008</a>)</span>. Further, some studies also advocated that litter nutrients such as nitrogen and phosphorus are strongly correlated with decomposition rates suggesting the role of nutrients in regulating the decomposition rates <span class="citation" data-cites="Patil2020">(<a href="#ref-Patil2020" role="doc-biblioref"><strong>Patil2020?</strong></a>)</span>.</p>
 <p>The initial phosphorus concentration of leaf litter is the good controller of decomposition rate, and litter with high phosphorus concentration tends to decompose at much faster rates <span class="citation" data-cites="Cassart2020">(<a href="#ref-Cassart2020" role="doc-biblioref">Cassart et al. 2020</a>)</span>. Previous studies have suggested that the leaf litter with high initial phosphorus exhibited faster decomposition rates in tropical forests (<span class="citation" data-cites="figure-initialp">(<a href="#ref-figure-initialp" role="doc-biblioref"><strong>figure-initialp?</strong></a>)</span>). Similarly, the woody debris from tropical forests with higher phosphorus concentration decomposed at a faster rate than the woody debris with lower phosphorus concentrations <span class="citation" data-cites="Chen2016">(<a href="#ref-Chen2016" role="doc-biblioref">Y. Chen et al. 2016</a>)</span>. However, the rate of root decomposition is not found to be associated with its initial phosphorus concentration in tropical forests <span class="citation" data-cites="See2019">(<a href="#ref-See2019" role="doc-biblioref"><strong>See2019?</strong></a>)</span>.</p>
 <p>Studies investigating litter decomposition in ecosystems often determine the fate of individual nutrients during litter decomposition. The concentration of different chemical constituents of the litter varies as the decomposition progresses. In tropical forests, the total phosphorus concentration tends to increase in residual litter during decomposition, and even the final concentration of phosphorus can reach almost twice the initial phosphorus concentration in the litter <span class="citation" data-cites="Bargali2015">(<a href="#ref-Bargali2015" role="doc-biblioref">Bargali et al. 2015</a>)</span>. It has been suggested that this increased phosphorus concentration may be contributed by microbial biomass <span class="citation" data-cites="Turner2014 Yokoyama2017">(<a href="#ref-Turner2014" role="doc-biblioref"><strong>Turner2014?</strong></a>; <a href="#ref-Yokoyama2017" role="doc-biblioref"><strong>Yokoyama2017?</strong></a>)</span>.</p>
 </section>
 <section id="effects-of-phosphorus-addition" class="level2">
 <h2 class="anchored" data-anchor-id="effects-of-phosphorus-addition">Effects of phosphorus addition</h2>
-<p>The external addition of phosphorus to the tropical soils tends to enhance the phosphorus cycling in tropical forests. The fertilization of tropical soils increases the phosphorus availability in the soil, which in turn results in the production of tissues with high phosphorus concentrations <span class="citation" data-cites="Santiago2012">(<a href="#ref-Santiago2012" role="doc-biblioref"><strong>Santiago2012?</strong></a>)</span>. This is supported by the results of fertilization experiments, where the external addition of phosphorus resulted in increased phosphorus concentrations in leaves <span class="citation" data-cites="Turner2015 Mo2019">(<a href="#ref-Turner2015" role="doc-biblioref"><strong>Turner2015?</strong></a>; <a href="#ref-Mo2019" role="doc-biblioref"><strong>Mo2019?</strong></a>)</span>, roots <span class="citation" data-cites="Wurzburger2015 van_Huysen2016">(<a href="#ref-Wurzburger2015" role="doc-biblioref"><strong>Wurzburger2015?</strong></a>; <a href="#ref-van_Huysen2016" role="doc-biblioref">van Huysen, Perakis, and Harmon 2016</a>)</span>, and stem <span class="citation" data-cites="Mo2015 van_Huysen2016">(<a href="#ref-Mo2015" role="doc-biblioref"><strong>Mo2015?</strong></a>; <a href="#ref-van_Huysen2016" role="doc-biblioref">van Huysen, Perakis, and Harmon 2016</a>)</span> of tropical plants. Further, it has been observed that phosphorus concentrations of the stem also increase by the external addition of phosphorus, followed by older leaves and younger leaves <span class="citation" data-cites="Mo2015">(<a href="#ref-Mo2015" role="doc-biblioref"><strong>Mo2015?</strong></a>)</span>. When plant parts with high phosphorus fall on the ground, they are quickly decomposed by micro-organisms and release the phosphorus locked up in plant tissues. Thus, faster decomposition again increases the phosphorus availability <span class="citation" data-cites="Mayor2014 Feng2019">(<a href="#ref-Mayor2014" role="doc-biblioref"><strong>Mayor2014?</strong></a>; <a href="#ref-Feng2019" role="doc-biblioref"><strong>Feng2019?</strong></a>)</span> and soil microbial phosphorus <span class="citation" data-cites="Turner2014 Yokoyama2017">(<a href="#ref-Turner2014" role="doc-biblioref"><strong>Turner2014?</strong></a>; <a href="#ref-Yokoyama2017" role="doc-biblioref"><strong>Yokoyama2017?</strong></a>)</span> in tropical soils. However, some phosphorus in soils is always lost through run-off and leaching, which results in phosphorus limitation again with time. This is supported by the observations of a few studies where the old-growth forests accounted for lower soil pH and available phosphorus than the younger forests <span class="citation" data-cites="Fujii2014 Zhu2015">(<a href="#ref-Fujii2014" role="doc-biblioref"><strong>Fujii2014?</strong></a>; <a href="#ref-Zhu2015" role="doc-biblioref"><strong>Zhu2015?</strong></a>)</span>.</p>
+<p>The external addition of phosphorus to the tropical soils tends to enhance the phosphorus cycling in tropical forests. The fertilization of tropical soils increases the phosphorus availability in the soil, which in turn results in the production of tissues with high phosphorus concentrations <span class="citation" data-cites="Santiago2012">(<a href="#ref-Santiago2012" role="doc-biblioref"><strong>Santiago2012?</strong></a>)</span>. This is supported by the results of fertilization experiments, where the external addition of phosphorus resulted in increased phosphorus concentrations in leaves <span class="citation" data-cites="Turner2015 Mo2019">(<a href="#ref-Turner2015" role="doc-biblioref">Turner et al. 2015</a>; <a href="#ref-Mo2019" role="doc-biblioref">Mo et al. 2019</a>)</span>, roots <span class="citation" data-cites="Wurzburger2015 van_Huysen2016">(<a href="#ref-Wurzburger2015" role="doc-biblioref"><strong>Wurzburger2015?</strong></a>; <a href="#ref-van_Huysen2016" role="doc-biblioref">van Huysen, Perakis, and Harmon 2016</a>)</span>, and stem <span class="citation" data-cites="Mo2015 van_Huysen2016">(<a href="#ref-Mo2015" role="doc-biblioref">Mo et al. 2015</a>; <a href="#ref-van_Huysen2016" role="doc-biblioref">van Huysen, Perakis, and Harmon 2016</a>)</span> of tropical plants. Further, it has been observed that phosphorus concentrations of the stem also increase by the external addition of phosphorus, followed by older leaves and younger leaves <span class="citation" data-cites="Mo2015">(<a href="#ref-Mo2015" role="doc-biblioref">Mo et al. 2015</a>)</span>. When plant parts with high phosphorus fall on the ground, they are quickly decomposed by micro-organisms and release the phosphorus locked up in plant tissues. Thus, faster decomposition again increases the phosphorus availability <span class="citation" data-cites="Mayor2014 Feng2019">(<a href="#ref-Mayor2014" role="doc-biblioref"><strong>Mayor2014?</strong></a>; <a href="#ref-Feng2019" role="doc-biblioref"><strong>Feng2019?</strong></a>)</span> and soil microbial phosphorus <span class="citation" data-cites="Turner2014 Yokoyama2017">(<a href="#ref-Turner2014" role="doc-biblioref"><strong>Turner2014?</strong></a>; <a href="#ref-Yokoyama2017" role="doc-biblioref"><strong>Yokoyama2017?</strong></a>)</span> in tropical soils. However, some phosphorus in soils is always lost through run-off and leaching, which results in phosphorus limitation again with time. This is supported by the observations of a few studies where the old-growth forests accounted for lower soil pH and available phosphorus than the younger forests <span class="citation" data-cites="Fujii2014 Zhu2015">(<a href="#ref-Fujii2014" role="doc-biblioref"><strong>Fujii2014?</strong></a>; <a href="#ref-Zhu2015" role="doc-biblioref"><strong>Zhu2015?</strong></a>)</span>.</p>
 <p>The litter decomposition rates in terrestrial ecosystems are highly inclined with nutrient availability. For example, phosphorus is an essential nutrient that can potentially regulate the litter decomposition rates since the growth and activity of many organisms are limited by phosphorus availability (<strong>?@fig-paddition</strong>). Thus, soil phosphorus concentration can substantially impact the decay patterns of litter in tropical ecosystems <span class="citation" data-cites="Parsons2014">(<a href="#ref-Parsons2014" role="doc-biblioref"><strong>Parsons2014?</strong></a>)</span>. Plenty of available evidence suggests that external addition of phosphorus tends to accelerate the litter decomposition rates <span class="citation" data-cites="Barantal2012 Camenzind2018 Mori2018">(<a href="#ref-Barantal2012" role="doc-biblioref">Barantal et al. 2012</a>; <a href="#ref-Camenzind2018" role="doc-biblioref"><strong>Camenzind2018?</strong></a>; <a href="#ref-Mori2018" role="doc-biblioref"><strong>Mori2018?</strong></a>)</span>, though may also either retard or did not affect the litter decomposition rates. Moreover, the results of phosphorus fertilization experiments have indicated that litter decomposition rates in tropical forests are constrained by the phosphorus limitation <span class="citation" data-cites="Vitousek2010">(<a href="#ref-Vitousek2010" role="doc-biblioref"><strong>Vitousek2010?</strong></a>)</span>.</p>
 <p>The litter decomposition rates are accelerated when the litter is supplied with external phosphorus sources <span class="citation" data-cites="Barantal2012">(<a href="#ref-Barantal2012" role="doc-biblioref">Barantal et al. 2012</a>)</span>. This enhanced decomposition rate may be due to the increased activity of decomposer organisms because their growth and activity are also limited by phosphorus availability <span class="citation" data-cites="Camenzind2018 Mori2018">(<a href="#ref-Camenzind2018" role="doc-biblioref"><strong>Camenzind2018?</strong></a>; <a href="#ref-Mori2018" role="doc-biblioref"><strong>Mori2018?</strong></a>)</span>. The phosphorus limitation of microbial growth has been evaluated by experiments where the external supply of phosphorus significantly increased microbial growth and their activity <span class="citation" data-cites="Fanin2015 Camenzind2018">(<a href="#ref-Fanin2015" role="doc-biblioref"><strong>Fanin2015?</strong></a>; <a href="#ref-Camenzind2018" role="doc-biblioref"><strong>Camenzind2018?</strong></a>)</span>.</p>
 <p><strong>Figure 8.</strong> Graphical representation of Phosphorus Addition effects on Phosphorus Cycling in the Tropical Forests. The abbreviations are P = Phosphorus, Po = Organic Phosphorus, Pi = Inorganic Phosphorus.</p>
@@ -370,10 +458,14 @@ M_t = M_0 ~ e^{-k~t}
 <p>Soils are major and perhaps the only source of nutrients for plants in tropical ecosystems <span class="citation" data-cites="Janssens2015">(<a href="#ref-Janssens2015" role="doc-biblioref"><strong>Janssens2015?</strong></a>)</span>. In soils, phosphorus occurs in several forms, and all forms are not available to plants for uptake and metabolism. The organic phosphorus comprises phosphate monoesters, phosphate diesters, organic polyphosphates, phosphonates, and phytates <span class="citation" data-cites="Turner2011">(<a href="#ref-Turner2011" role="doc-biblioref"><strong>Turner2011?</strong></a>)</span>, whereas the inorganic form mainly comprises orthophosphates. Phosphorus is poorly mobile in the soil; therefore, the soil solution contains a limited amount of inorganic phosphorus, which is available for uptake to the plants in the form of phosphate-pi (PO<sub>4</sub>-Pi) <span class="citation" data-cites="Vitousek2010">(<a href="#ref-Vitousek2010" role="doc-biblioref"><strong>Vitousek2010?</strong></a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-pdist" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-pdist-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption">Figure&nbsp;6: Soil Phosphorus distribution in Tropical Forests. Soils of Tropical Forests are poorer in Total Phosphorus and even poorer in Available Phosphorus. Data from <span class="citation" data-cites="Yang2014">Yang et al. (<a href="#ref-Yang2014" role="doc-biblioref">2014</a>)</span></figcaption>
+<div id="fig-pdist" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pdist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-pdist-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pdist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Soil Phosphorus distribution in Tropical Forests. Soils of Tropical Forests are poorer in Total Phosphorus and even poorer in Available Phosphorus. Data from <span class="citation" data-cites="Yang2014">Yang et al. (<a href="#ref-Yang2014" role="doc-biblioref">2014</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -401,7 +493,7 @@ M_t = M_0 ~ e^{-k~t}
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Aerts1997" class="csl-entry" role="listitem">
 Aerts, Rien. 1997. <span>“Climate, Leaf Litter Chemistry and Leaf Litter Decomposition in Terrestrial Ecosystems: A Triangular Relationship.”</span> <em>Oikos</em> 79 (3): 439–49. <a href="https://doi.org/10.2307/3546886">https://doi.org/10.2307/3546886</a>.
 </div>
@@ -444,8 +536,23 @@ Dalling, James W., Katherine Heineman, Omar R. Lopez, S. Joseph Wright, and Benj
 <div id="ref-Dietrich2016" class="csl-entry" role="listitem">
 Dietrich, Karla, Elena Spoeri, and Yvonne Oelmann. 2016. <span>“Nutrient Addition Modifies Phosphatase Activities Along an Altitudinal Gradient in a Tropical Montane Forest in Southern Ecuador.”</span> <em>Frontiers in Earth Science</em> 4 (February): 12. <a href="https://doi.org/10.3389/feart.2016.00012">https://doi.org/10.3389/feart.2016.00012</a>.
 </div>
+<div id="ref-Holland2015" class="csl-entry" role="listitem">
+Holland, E. A., M. W. Post, E. Matthews, J. Sulzman, R. Staufer, and O. Krankina. 2015. <em>A Global Database of Litterfall Mass and Litter Pool Carbon and Nutrients</em>. Tennessee, USA: Oak Ridge National Laboratory (ORNL) Distributed Active Archive Center. <a href="https://doi.org/10.3334/ornldaac/1244">https://doi.org/10.3334/ornldaac/1244</a>.
+</div>
 <div id="ref-Krishna2017" class="csl-entry" role="listitem">
 Krishna, M. P., and Mahesh Mohan. 2017. <span>“Litter Decomposition in Forest Ecosystems: A Review.”</span> <em>Energy, Ecology and Environment</em> 2 (4): 236–49. <a href="https://doi.org/10.1007/s40974-017-0064-9">https://doi.org/10.1007/s40974-017-0064-9</a>.
+</div>
+<div id="ref-Mo2019" class="csl-entry" role="listitem">
+Mo, Qifeng, Zhi’an Li, Emma J. Sayer, Hans Lambers, Yingwen Li, Bi Zou, Jianwu Tang, Mary Heskel, Yongzhen Ding, and Faming Wang. 2019. <span>“Foliar Phosphorus Fractions Reveal How Tropical Plants Maintain Photosynthetic Rates Despite Low Soil Phosphorus Availability.”</span> <em>Functional Ecology</em> 33 (3): 503–13. <a href="https://doi.org/10.1111/1365-2435.13252">https://doi.org/10.1111/1365-2435.13252</a>.
+</div>
+<div id="ref-Mo2015" class="csl-entry" role="listitem">
+Mo, Qifeng, Bi Zou, Yingwen Li, Yao Chen, Weixin Zhang, Rong Mao, Yongzhen Ding, et al. 2015. <span>“Response of Plant Nutrient Stoichiometry to Fertilization Varied with Plant Tissues in a Tropical Forest.”</span> <em>Scientific Reports</em> 5 (September): 14605. <a href="https://doi.org/10.1038/srep14605">https://doi.org/10.1038/srep14605</a>.
+</div>
+<div id="ref-Olson1963" class="csl-entry" role="listitem">
+Olson, Jerry S. 1963. <span>“Energy Storage and the Balance of Producers and Decomposers in Ecological Systems.”</span> <em>Ecology</em> 44 (2): 322–31. <a href="https://doi.org/10.2307/1932179">https://doi.org/10.2307/1932179</a>.
+</div>
+<div id="ref-Saugier2001" class="csl-entry" role="listitem">
+Saugier, Bernard, Jacques Roy, and Harold A. Mooney. 2001. <span>“Estimations of Global Terrestrial Productivity: Converging Toward a Single Number?”</span> In <em>Terrestrial Global Productivity</em>, edited by Jacques Roy, Bernard Saugier, and Harold A. Mooney, 1st ed., 543–57. San Diego, CA: Academic Press. <a href="https://doi.org/10.1016/b978-012505290-0/50024-7">https://doi.org/10.1016/b978-012505290-0/50024-7</a>.
 </div>
 <div id="ref-Singh2017" class="csl-entry" role="listitem">
 Singh, J. S., and R. K. Chaturvedi. 2017. <em>Tropical Dry Deciduous Forest: Research Trends and Emerging Features</em>. 1st ed. Singapore: Springer. <a href="https://doi.org/10.1007/978-981-10-7260-4">https://doi.org/10.1007/978-981-10-7260-4</a>.
@@ -456,13 +563,25 @@ Smith, Thomas M., and Robert Leo Smith. 2015. <em>Elements of Ecology</em>. 9th 
 <div id="ref-TNC2019" class="csl-entry" role="listitem">
 TNC. 2019. <em>Terrestrial Ecoregions of the World</em>. Virginia, USA: The Nature Conservancy. <a href="https://geospatial.tnc.org/datasets/b1636d640ede4d6ca8f5e369f2dc368b">https://geospatial.tnc.org/datasets/b1636d640ede4d6ca8f5e369f2dc368b</a>.
 </div>
+<div id="ref-Tripathi2020" class="csl-entry" role="listitem">
+Tripathi, Sachchidanand, Rahul Bhadouria, Pratap Srivastava, Rajkumari S. Devi, Ravikant Chaturvedi, and A. S. Raghubanshi. 2020. <span>“Effects of Light Availability on Leaf Attributes and Seedling Growth of Four Tree Species in Tropical Dry Forest.”</span> <em>Ecological Processes</em> 9 (January): 2. <a href="https://doi.org/10.1186/s13717-019-0206-4">https://doi.org/10.1186/s13717-019-0206-4</a>.
+</div>
+<div id="ref-Turner2015" class="csl-entry" role="listitem">
+Turner, Benjamin L., Joseph B. Yavitt, Kyle E. Harms, Milton N. Garcia, and S. Joseph Wright. 2015. <span>“Seasonal Changes in Soil Organic Matter After a Decade of Nutrient Addition in a Lowland Tropical Forest.”</span> <em>Biogeochemistry</em> 123 (1–2): 221–35. <a href="https://doi.org/10.1007/s10533-014-0064-1">https://doi.org/10.1007/s10533-014-0064-1</a>.
+</div>
 <div id="ref-van_Huysen2016" class="csl-entry" role="listitem">
 van Huysen, Tiff L., Steven S. Perakis, and Mark E. Harmon. 2016. <span>“Decomposition Drives Convergence of Forest Litter Nutrient Stoichiometry Following Phosphorus Addition.”</span> <em>Plant and Soil</em> 406 (1-2): 1–14. <a href="https://doi.org/10.1007/s11104-016-2857-6">https://doi.org/10.1007/s11104-016-2857-6</a>.
+</div>
+<div id="ref-Vergutz2012" class="csl-entry" role="listitem">
+Vergutz, L., S. Manzoni, A. Porporato, R. F. Novais, and R. B. Jackson. 2012. <em>A Global Database of Carbon and Nutrient Concentrations of Green and Senesced Leaves</em>. Tennessee, USA: Oak Ridge National Laboratory (ORNL) Distributed Active Archive Center. <a href="https://doi.org/10.3334/ornldaac/1106">https://doi.org/10.3334/ornldaac/1106</a>.
 </div>
 <div id="ref-Yang2014" class="csl-entry" role="listitem">
 Yang, X., W. M. Post, P. E. Thornton, and A. K. Jain. 2014. <em>Global Gridded Soil Phosphorus Distribution Maps at 0.5-Degree Resolution</em>. Tennessee, USA: ORNL Distributed Active Archive Center. <a href="https://doi.org/10.3334/ornldaac/1223">https://doi.org/10.3334/ornldaac/1223</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@incollection{kumar2021,
+<div id="ref-Zhang2008" class="csl-entry" role="listitem">
+Zhang, Deqiang, Dafeng Hui, Yiqi Luo, and Guoyi Zhou. 2008. <span>“Rates of Litter Decomposition in Terrestrial Ecosystems: Global Patterns and Controlling Factors.”</span> <em>Journal of Plant Ecology</em> 1 (2): 85–93. <a href="https://doi.org/10.1093/jpe/rtn002">https://doi.org/10.1093/jpe/rtn002</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@incollection{kumar2021,
   author = {Kumar, Abhishek and Patil, Meenu and Kumar, Pardeep and
     Narain Singh, Anand},
   editor = {K. Chaturvedi, R. and Singh, Rishikesh and Bhadouria, Rahul},
@@ -564,10 +683,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -577,8 +713,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -590,7 +735,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -634,6 +902,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -659,6 +928,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -719,6 +1014,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

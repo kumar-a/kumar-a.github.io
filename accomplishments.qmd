@@ -1,0 +1,35 @@
+---
+title: "Accomplishments"
+---
+
+- **Quantitative Thinking in Ecology** (2022, Jul 11-17). Centre for Ecological Sciences - Indian Institute of Science, Bengaluru, India. This workshop included several sessions on foundations of for study design and statistical analysis in ecology. It also illustrated the applications of `R` programming for analysis and visualisation of ecological data.
+
+- **Species Distribution Modeling with Remote Sensing** (2021, Aug 12-19). NASA - Applied Remote Sensing Training Program (ARSET). This training included three 1.5-hour sessions on overview and tools for species distribution modelling.
+
+- **Data Science** (2020, Nov 25). Coursera - John Hopkins University, USA. This 10‑course online specialization covered the foundational concepts and tools for the data science pipeline. The course is divided into (i) The Data Scientist’s Toolbox, (ii) `R` Programming, (iii) Getting and Cleaning Data, (iv) Exploratory Data Analysis, (v) Reproducible Research, (vi) Statistical Inference, (vii) Regression Models, (viii) Practical Machine Learning, (ix) Developing Data Products, and (x) Data Science capstone project. 
+
+- **Statistics with `R`** (2020, Nov 06). Coursera - Duke University, USA. This 5-course online specialization covered how to analyse and visualize data in `R`, create reproducible data analysis reports, perform frequentist and Bayesian statistical inference, model data to understand natural phenomena, make data-based decisions and communicate statistical results effectively.
+
+- **The Sustainable Development Goals – A Global, Transdisciplinary Vision for the Future** (2020, Oct 05). University of Copenhagen, Denmark. This 3-week online course covered a thorough introduction to the Sustainable Development Goals (SDGs), specifically what they are, how progress can be measured, and how the SDGs are relevant for the management of the global systems supporting humanity.
+
+- **Introduction to Algae** (2020, Jul 26). University of California, San Diego, USA. This 5-week online course covered what algae are, why they are important, and why we are interested in them for both their environmental benefit, as well as their use for products.
+
+- **Mountains 101** (2020, Jul 15). University of Alberta, Canada. This 12-lesson online course covered an interdisciplinary field of study focusing on the physical, biological, and human dimensions of mountains.
+
+- **Introduction to Systematic Review and Meta-Analysis** (2020, Jul 06). John Hopkins University, USA. This 6-week online course covered introductory methods to perform systematic reviews and meta-analyses, particularly for clinical trials.
+
+- **Ecosystem Services: A Method for Sustainable Development** (2020, Jul 05). University of Geneva, Switzerland. This 5-week online course covered scientific (technical), economic, and socio-political dimensions of the ecosystem services concept through a mix of theory, case-studies, interviews with specialists and a serious-game.
+
+- **Understanding Research Methods** (2020, Jun 18). University of London -- SOAS University of London, England. This 4-week online course outlined the fundamentals of doing research.
+
+- **Ecology: Ecosystem Dynamics and Conservation** (2020, Jun 17). American Museum of Natural History (AMNH) -- Howard Hughes Medical Institute (HHMI), USA. This 5-week online course covered how scientists study ecosystems, and investigate the complex array of factors that inform management efforts using a system thinking lens through a case study on Mozambique's Gorongosa National Park.
+
+- **Biological Diversity (Theories, Measures and Data sampling techniques)** (2020, Jun 13). National Research Tomsk State University, Russia. This 6-week online course covered the theories behind biological diversity evolution and dynamics, methods for diversity calculation and estimation, and data sampling techniques.
+
+- **Academic Information Seeking** (2020, Jun 09). University of Copenhagen -- Technical University of Denmark, Denmark. This 21-lecture online course covered the basic methods and techniques for carrying out a comprehensive literature including search strategies, evaluation techniques, documentation of search process and citation of sources.
+
+- **Botanical Nomenclature Course** (2020, Jan 27-31). Botanical Survey of India, Shillong, India. This 5-day training course covered the rules and regulations described in the International Code of Nomenclature for algae, fungi, and plants (Shenzhen Code 2018).
+
+- **Hands-on training Program on Basic and Advanced Analytical Instrumentation in Plant Physiology** (2019, Jan 10-11). CCS Hisar Agricultural University, Hisar, India. This 2-day training program demonstrated the handling of various instruments like leaf area meter, weather station, chlorophyll meter, pH meter, hygrometer and other instruments.
+
+- **Classical and Modern Methods in Plant Taxonomy and Biosystematics** (2018, Dec 14-21). CSIR - National Botanical Research Institute (NBRI), Lucknow, India. This 8-day training course covered various methods of identification of plant groups including lichens, algae, bryophytes, pteridophytes, gymnosperms, and angiosperms.

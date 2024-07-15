@@ -1,0 +1,41 @@
+---
+title: "Patterns and determinants of plant species richness along elevational gradient in Western Himalayas"
+
+categories: 
+  - Elevational gradient
+  - Himalayas
+  - Macroecology
+  - Plant distribution
+  - Species richness
+
+author:
+  - name: Abhishek Kumar
+    url: https://akumar.netlify.app/
+    orcid: 0000-0003-2252-7623
+    affiliation: Panjab University, Chandigarh
+    affiliation-url: https://puchd.ac.in
+    
+  - name: Meenu Patil
+    affiliation: Panjab University, Chandigarh
+    
+  - name: Pardeep Kumar
+    affiliation: Panjab University, Chandigarh
+    
+  - name: Anand Narain Singh
+    affiliation: Panjab University, Chandigarh
+    attributes: 
+      corresponding: true
+      
+date: 2024-06-26
+date-meta: 2024-06-15
+---
+
+![](thumbnail.jpg)
+
+# Abstract
+
+Understanding species distribution patterns is crucial for biodiversity conservation and management. This study aimed to investigate patterns and determinants of plant species richness along elevational gradients in the Western Himalayas. We prepared a comprehensive database of the elevational distribution of 1150 plant species by combining information from field visits and published literature. To elucidate species richness patterns along elevational gradients, we used range interpolation and null model simulations. We used the structural equation modelling to identify the direct and indirect effects of climate on species richness. Our study revealed variable linear to non-linear elevational patterns, with substantial deviations from the mid-domain effect null model. Climatic factors, rather than topographic heterogeneity, emerged as primary determinants of elevational species richness. The direct effects of climatic variables were more substantial than their indirect effects. In conclusion, our study suggested that richness patterns may be shaped by climatic tolerances rather than habitat diversity at larger scales.
+
+- **Date**: 15 Jun 2024
+- **Event**: [Indian Wildlife Ecology Conference (IWEC)](https://iwecindia.in/)
+- **Location**: [National Centre for Biological Sciences, Bengaluru](https://www.ncbs.res.in/)

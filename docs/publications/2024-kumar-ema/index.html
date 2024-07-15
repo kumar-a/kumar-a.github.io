@@ -2,17 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Abhishek Kumar">
 <meta name="author" content="Pardeep Kumar">
 <meta name="author" content="Meenu Patil">
+<meta name="author" content="Sabir Hussain">
+<meta name="author" content="Rajni Yadav">
 <meta name="author" content="Sheenu Sharma">
+<meta name="author" content="Diksha Tokas">
+<meta name="author" content="Siril Singh">
 <meta name="author" content="Anand Narain Singh">
-<meta name="dcterms.date" content="2023-06-17">
-<meta name="description" content="We compared the soil restoration potential of exotic and native plant species on coal mine. Our results suggested that native species are more beneficial for soil restoration than the exotic species.">
+<meta name="dcterms.date" content="2024-07-04">
 
 <title>Abhishek Kumar - Disturbance and vegetation structure in an urban forest of Indian Siwaliks</title>
 <style>
@@ -31,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -71,7 +75,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -80,6 +90,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -89,6 +100,33 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
@@ -96,9 +134,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Abhishek Kumar</span>
     </a>
@@ -110,40 +148,48 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../accomplishments.html"> <i class="bi bi-trophy" role="img">
+</i> 
+<span class="menu-text">Accomplishments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog.html"> <i class="bi bi-pen" role="img">
+</i> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../../publications.html"> <i class="bi bi-journals" role="img">
+</i> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> <i class="bi bi-mic" role="img">
+</i> 
+<span class="menu-text">Talks</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/kumar-a" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/kumar-a"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/abkumar_" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/abkumar_"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
@@ -160,7 +206,7 @@ div.csl-indent {
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -173,73 +219,94 @@ div.csl-indent {
   <div class="quarto-categories">
     <div class="quarto-category">Disturbance</div>
     <div class="quarto-category">Remote Sensing</div>
-    <div class="quarto-category">Taxonomic Diversity</div>
     <div class="quarto-category">Phylogenetic Diversity</div>
     <div class="quarto-category">Journal Article</div>
+    <div class="quarto-category">Siwalik</div>
+    <div class="quarto-category">Taxonomic Diversity</div>
+    <div class="quarto-category">Urban Forest</div>
   </div>
   </div>
 
-<div>
-  <div class="description">
-    <p>We compared the soil restoration potential of exotic and native plant species on coal mine. Our results suggested that native species are more beneficial for soil restoration than the exotic species.</p>
-  </div>
-</div>
 
 <div class="quarto-title-meta-author">
   <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://akumar.netlify.app/">Abhishek Kumar</a> <a href="https://orcid.org/0000-0003-2252-7623" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    <p class="author"><a href="https://akumar.netlify.app/">Abhishek Kumar</a> <a href="mailto:abhikumar.pu@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-2252-7623" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
             </a>
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author">Pardeep Kumar </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
-            </a>
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author">Meenu Patil </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
-            </a>
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
+    <p class="author">Sabir Hussain </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Panjab University, Chandigarh
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Rajni Yadav </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Panjab University, Chandigarh
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
     <p class="author">Sheenu Sharma </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
-            </a>
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://www.researchgate.net/profile/Anand-Singh-15">Anand Narain Singh</a> <a href="https://orcid.org/0000-0002-0148-8680" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Diksha Tokas </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            <a href="https://puchd.ac.in">
             Panjab University, Chandigarh
-            </a>
           </p>
       </div>
-    </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Siril Singh </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Panjab University, Chandigarh
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Anand Narain Singh </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Panjab University, Chandigarh
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -247,19 +314,42 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 17, 2023</p>
+      <p class="date">July 4, 2024</p>
     </div>
   </div>
   
     
+    <div>
+    <div class="quarto-title-meta-heading">Doi</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/10.1007/s10661-024-12801-0">10.1007/s10661-024-12801-0</a>
+      </p>
+    </div>
+  </div>
   </div>
   
 
+
 </header>
+
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
 <p>Urban forests are facing multiple human-mediated pressures leading to compromised ecosystem structure and functioning. Therefore, understanding ecosystem structure in response to ongoing pressures is crucial for sustaining ecological integrity and human well-being. We aim to assess the disturbance and its effects on vegetation structure of urban forest in Chandigarh using a combination of remote sensing techniques and vegetation survey. The disturbance was assessed as change in NDVI (Normalised Difference Vegetation Index) from 2001 to 2021 by applying the BFAST (Breaks For Additive Season and Trend) algorithm to the MODIS satellite imagery data. A vegetation survey was conducted to compare the species composition, taxonomic and phylogenetic diversity as measures of vegetation structure. While signals of disturbance were evident, the changes in vegetation structure were not well established from our study. Further, vegetation analysis indicated no significant differences in vegetation composition due to disturbance (<em>F<sub>1,12</sub></em> = 0.91, <em>p</em> = 0.575). However, the phylogenetic diversity was substantially lower for disturbed plots as compare to undisturbed plots, though the taxonomic diversity was similar among the disturbed and undisturbed plots. Our results suggests that the effects of disturbance are more prominent on phylogenetic diversity than the taxonomic diversity. These findings can be considered as early signals of disturbance and its effects on vegetation structure of urban forest and contribute to the knowledge base on urban ecology. Our study has implications for facilitating evidence-based decision-making and the development of sustainable management strategies for urban forest ecosystems in Chandigarh.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is the original draft, which may differ from published manuscript. Please refer to <a href="https://doi.org/10.1007/s10661-024-12801-0" class="uri">https://doi.org/10.1007/s10661-024-12801-0</a></p>
+</div>
+</div>
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -271,46 +361,58 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
 <section id="study-site" class="level3">
 <h3 class="anchored" data-anchor-id="study-site">Study site</h3>
-<p>The present study was conducted in the lake reserve forest of the Sukhna lake catchment area (<a href="#fig-site-map">Figure&nbsp;1</a>). Sukhna lake is a man made reservoir situated in union territory of Chandigarh at Siwalik foothills of lower Himalayas <span class="citation" data-cites="Singh2001">(<a href="#ref-Singh2001" role="doc-biblioref">Y. Singh 2001</a>)</span>. The lake has been declared as a national protective wetland by government of India. The geographical area of Sukhna lake is about 3 km<sup>2</sup> with an average elevation of 350 m above mean sea level (<a href="#fig-site-map">Figure&nbsp;1</a>). The lake reserve forest spreads over an area of 1.5 km<sup>2</sup> lies northern side of the lake, harbour several grazers i.e.&nbsp;Sambhar, Asian antelope and several species of reptiles and birds. The vegetation is similar to Siwalik hills comprising of dry mixed deciduous forests with occasional bamboo brakes <span class="citation" data-cites="Kumar2022">(<a href="#ref-Kumar2022" role="doc-biblioref">Kumar et al. 2022</a>)</span>. Climatic conditions are subtropical monsoon type with annual rainfall of 1110 mm, with maximum temperature of 44°C and minimum 37°C in summer and 14°C during winter as maximum and 3°C as minimum. Soils are alluvial, sandy loam highly susceptible to soil erosion by water run-off action <span class="citation" data-cites="Singh2002">(<a href="#ref-Singh2002" role="doc-biblioref">Y. Singh 2002</a>)</span>.</p>
-<div id="fig-site-map" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Map showing the geographical location of Sukhna Lake and Lake Reserve Forest in Chandigarh. The sampling plots are indicated as red squares. The inset map shows the location of study sites in Chandigarh city.</figcaption>
+<p>The present study was conducted in the lake reserve forest of the Sukhna lake catchment area (<a href="#fig-site-map" class="quarto-xref">Figure&nbsp;1</a>). Sukhna lake is a man made reservoir situated in union territory of Chandigarh at Siwalik foothills of lower Himalayas <span class="citation" data-cites="Singh2001">(<a href="#ref-Singh2001" role="doc-biblioref">Y. Singh 2001</a>)</span>. The lake has been declared as a national protective wetland by government of India. The geographical area of Sukhna lake is about 3 km<sup>2</sup> with an average elevation of 350 m above mean sea level (<a href="#fig-site-map" class="quarto-xref">Figure&nbsp;1</a>). The lake reserve forest spreads over an area of 1.5 km<sup>2</sup> lies northern side of the lake, harbour several grazers i.e.&nbsp;Sambhar, Asian antelope and several species of reptiles and birds. The vegetation is similar to Siwalik hills comprising of dry mixed deciduous forests with occasional bamboo brakes <span class="citation" data-cites="Kumar2022">(<a href="#ref-Kumar2022" role="doc-biblioref">Kumar et al. 2022</a>)</span>. Climatic conditions are subtropical monsoon type with annual rainfall of 1110 mm, with maximum temperature of 44°C and minimum 37°C in summer and 14°C during winter as maximum and 3°C as minimum. Soils are alluvial, sandy loam highly susceptible to soil erosion by water run-off action <span class="citation" data-cites="Singh2002">(<a href="#ref-Singh2002" role="doc-biblioref">Y. Singh 2002</a>)</span>.</p>
+<div id="fig-site-map" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-site-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig1.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-site-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Map showing the geographical location of Sukhna Lake and Lake Reserve Forest in Chandigarh. The sampling plots are indicated as red squares. The inset map shows the location of study sites in Chandigarh city.
+</figcaption>
 </figure>
 </div>
 </section>
 <section id="satellite-data-and-pre-processing" class="level3">
 <h3 class="anchored" data-anchor-id="satellite-data-and-pre-processing">Satellite data and pre-processing</h3>
-<p>Since the normalized difference vegetation index (NDVI) has been regarded as a good proxy for vegetation health and biomass, we selected NDVI to assess forest disturbance. The disturbance induced changes in biomass should be reflected as variations in NDVI values. We downloaded all available NDVI values from 2001 to 2021 from MOD13Q1 (version 061) data product using the <code>R</code> package <code>MODISTools</code> version 1.1.4 <span class="citation" data-cites="R-MODISTools">(<a href="#ref-R-MODISTools" role="doc-biblioref">Hufkens 2023</a>)</span>.</p>
+<p>Since the normalized difference vegetation index (NDVI) has been regarded as a good proxy for vegetation health and biomass, we selected NDVI to assess forest disturbance. The disturbance induced changes in biomass should be reflected as variations in NDVI values. We downloaded all available NDVI values from 2001 to 2021 from MOD13Q1 (version 061) data product using the <code>R</code> package <code>MODISTools</code> version 1.1.5 <span class="citation" data-cites="R-MODISTools">(<a href="#ref-R-MODISTools" role="doc-biblioref">Hufkens 2023</a>)</span>.</p>
 <p>The NDVI values of this product are are derived from atmospherically-corrected reflectance in the red, near infra-red, and blue wavebands from the Moderate Resolution Imaging Spectroradiometer (MODIS) instrument mounted on Terra satellite. This data product provides the NDVI values at a spatial resolution of 250 m generated for every 16 days as a Level 3 product <span class="citation" data-cites="MODIS">(<a href="#ref-MODIS" role="doc-biblioref">Didan 2021</a>)</span>. The algorithm chooses the best available pixel value from all the acquisitions from the 16 day period based on clouds cover, view angle, and the reflectance value. We also downloaded the associated pixel reliability layer to control for pixel values quality. This layer contains simplified ranking of the data that describes overall pixel quality and the good quality data is represented by zero rank <span class="citation" data-cites="MODIS">(<a href="#ref-MODIS" role="doc-biblioref">Didan 2021</a>)</span>.</p>
-<p>We acquired a total of 483 images each for NDVI values and associated pixel reliability values. Clear observations with no sub pixel cloud, low aerosol, and low sensor view angle (&lt;30 degrees) are considered as high quality observations. We selected only reliable good quality pixels by masking out the pixels with no data, marginal data, snow/ice or clouds <span class="citation" data-cites="Didan2015">(see Table 4 in <a href="#ref-Didan2015" role="doc-biblioref">Didan et al. 2015</a>)</span>. This data processing step introduced gaps in our initial NDVI time series and about 6.7% of total pixels had missing values. The missing values were imputed using the <code>na.interp()</code> function from the <code>forecast</code> package version 8.21 <span class="citation" data-cites="R-forecast">(<a href="#ref-R-forecast" role="doc-biblioref">Hyndman and Khandakar 2008</a>)</span>. This approach first calculates a robust STL-decomposition <span class="citation" data-cites="Cleveland1990">(<a href="#ref-Cleveland1990" role="doc-biblioref">Cleveland et al. 1990</a>)</span> followed by a linear interpolation of the seasonally adjusted data, and then, the seasonal component is added back. Next, we used the Savitzky-Golay filter <span class="citation" data-cites="Savitzky1964">(<a href="#ref-Savitzky1964" role="doc-biblioref">Savitzky and Golay 1964</a>)</span> for smoothing the NDVI time series. This filter was applied using the <code>R</code> package <code>signal</code> version 0.7.7 <span class="citation" data-cites="R-signal">(<a href="#ref-R-signal" role="doc-biblioref">Ligges et al. 2022</a>)</span>. Thus, we created a processed NDVI time series for all pixels in the initial dataset.</p>
+<p>We acquired a total of 483 images each for NDVI values and associated pixel reliability values. Clear observations with no sub pixel cloud, low aerosol, and low sensor view angle (&lt;30 degrees) are considered as high quality observations. We selected only reliable good quality pixels by masking out the pixels with no data, marginal data, snow/ice or clouds <span class="citation" data-cites="Didan2015">(see Table 4 in <a href="#ref-Didan2015" role="doc-biblioref">Didan et al. 2015</a>)</span>. This data processing step introduced gaps in our initial NDVI time series and about 6.7% of total pixels had missing values. The missing values were imputed using the <code>na.interp()</code> function from the <code>forecast</code> package version 8.23.0 <span class="citation" data-cites="R-forecast">(<a href="#ref-R-forecast" role="doc-biblioref">Hyndman and Khandakar 2008</a>)</span>. This approach first calculates a robust STL-decomposition <span class="citation" data-cites="Cleveland1990">(<a href="#ref-Cleveland1990" role="doc-biblioref">Cleveland et al. 1990</a>)</span> followed by a linear interpolation of the seasonally adjusted data, and then, the seasonal component is added back. Next, we used the Savitzky-Golay filter <span class="citation" data-cites="Savitzky1964">(<a href="#ref-Savitzky1964" role="doc-biblioref">Savitzky and Golay 1964</a>)</span> for smoothing the NDVI time series. This filter was applied using the <code>R</code> package <code>signal</code> version 1.8.1 <span class="citation" data-cites="R-signal">(<a href="#ref-R-signal" role="doc-biblioref">Ligges et al. 2022</a>)</span>. Thus, we created a processed NDVI time series for all pixels in the initial dataset.</p>
 </section>
 <section id="detection-of-disturbance" class="level3">
 <h3 class="anchored" data-anchor-id="detection-of-disturbance">Detection of disturbance</h3>
 <p>To assess the forest disturbance, we implemented the Breaks for Additive Seasonal Trends (BFAST) algorithm using the function <code>bfastmonitor()</code> function from <code>R</code> package <code>bfast</code> version 1.6.1 <span class="citation" data-cites="R-bfast Verbesselt2010a Verbesselt2010b">(<a href="#ref-R-bfast" role="doc-biblioref">Verbesselt et al. 2021</a>; <a href="#ref-Verbesselt2010a" role="doc-biblioref">Verbesselt, Hyndman, Newnham, et al. 2010</a>; <a href="#ref-Verbesselt2010b" role="doc-biblioref">Verbesselt, Hyndman, Zeileis, et al. 2010</a>)</span>. Basically, this algorithm detects structural changes in both the trend and seasonal components of a STL-decomposed time series. We used the season-trend model to detect the changes in NDVI time series as described earlier <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>. This model assumes a linear trend and harmonic season for <span class="math inline">\(y_t\)</span> observations at time <span class="math inline">\(t\)</span>.</p>
 <p><span id="eq-stm"><span class="math display">\[y_t = \alpha_1 + \alpha_2~t + \sum_{j = 1}^k \gamma_j~ \sin \left( \frac{2 \pi j t} {f} + \delta_j \right) + \epsilon_t \tag{1}\]</span></span></p>
 <p>where the intercept <span class="math inline">\(\alpha_1\)</span>, slope <span class="math inline">\(\alpha_2\)</span> (i.e., trend), amplitudes <span class="math inline">\(\gamma_1 \ldots \gamma_k\)</span>, and phases <span class="math inline">\(\delta_1 \ldots \delta_k\)</span> (season) are the unknown parameters, <span class="math inline">\(f\)</span> is the known frequency (e.g., <span class="math inline">\(f\)</span> = 23 annual observations for a 16-day time series), and <span class="math inline">\(\epsilon_t\)</span> is the unobservable error term at time <span class="math inline">\(t\)</span> (with standard deviation <span class="math inline">\(\sigma\)</span>). To robustly detect disturbances, we used three harmonic terms (i.e., <span class="math inline">\(k\)</span> = 3) to represent a four-month cycle of NDVI <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>. The unknown seasonal and trend parameters can be estimated and tested using ordinary least squares (OLS) method <span class="citation" data-cites="Cryer2008">(<a href="#ref-Cryer2008" role="doc-biblioref">Cryer and Chan 2008</a>)</span>.</p>
-<p>If there is no disturbance, then this season-trend model (<a href="#eq-stm">Equation&nbsp;1</a>) should remain stable for newly added observations. In other words, a disturbance will be detected when the model will no longer remain stable. The stability of model can be estimated using the MOving SUM (MOSUM) test of the OLS residuals (<span class="math inline">\(\hat \epsilon_t\)</span>) in the monitoring period <span class="math inline">\(t = n + 1, \ldots, N\)</span></p>
+<p>If there is no disturbance, then this season-trend model (<a href="#eq-stm" class="quarto-xref">Equation&nbsp;1</a>) should remain stable for newly added observations. In other words, a disturbance will be detected when the model will no longer remain stable. The stability of model can be estimated using the MOving SUM (MOSUM) test of the OLS residuals (<span class="math inline">\(\hat \epsilon_t\)</span>) in the monitoring period <span class="math inline">\(t = n + 1, \ldots, N\)</span></p>
 <p><span id="eq-mosum"><span class="math display">\[MO_t = \frac{1}{\hat \sigma \sqrt{n}} \sum_{s = t - h + 1}^t \left(y_s - x_s^ \top \hat \beta \right) \tag{2}\]</span></span></p>
-<p>where <span class="math inline">\(h\)</span> is the bandwidth of the MOSUM and is typically chosen relative to the size of the history sample (e.g., <span class="math inline">\(h = n/4\)</span>). The OLS-MOSUM test (<a href="#eq-mosum">Equation&nbsp;2</a>) and least squares are used to determine the number and position of the breakpoints in the seasonally adjusted data (<span class="math inline">\(Y_t-S_t\)</span>). The breakpoints are declared if the absolute <span class="math inline">\(|MO_t|\)</span> values fall beyond the 5% probability of structural model stability <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>. On the other hand, the <span class="math inline">\(|MO_t|\)</span> should be close to zero with random fluctuations for a structurally stable model <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>.</p>
-<p>Firstly, we detected changes at the end of NDVI time series using the function <code>bfastmonitor()</code> <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>. This approach first computes the trend, season and other covariates using the STL-decomposition. Then, the data is divided into history and monitoring period. We defined the January 2018 as the start period so that the <em>history period</em> is selected from 2001 to 2018 and <em>monitoring period</em> was defined as 2018 onwards for the present study. The stable history was selected based on a reversed-ordered-cumulative sum (CUSUM) of residuals, or ROC <span class="citation" data-cites="Pesaran2002">(<a href="#ref-Pesaran2002" role="doc-biblioref">Pesaran and Timmermann 2002</a>)</span>. A season-trend model was fitted to this selected stable history period and then, the OLS-MOSUM test was used to detect changes in the monitoring period. If a breakpoint is detected, the timing and magnitude of breakpoint was estimated (<a href="#fig-bfmpx">Figure&nbsp;2</a>). We used the Wilcoxon’s rank sum test (also known as Mann-Whitney U test) to compare the disturbance parameters between forest and lake components. This test compares the difference in medians with relaxed assumption of normality of data. We used the <code>rstatix</code> package (version 0.7.2) to compute the test statistics and associated p-values <span class="citation" data-cites="R-rstatix">(<a href="#ref-R-rstatix" role="doc-biblioref">Kassambara 2022</a>)</span>.</p>
-<div id="fig-bfmpx" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig2.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: Disturbance monitoring for a single location (76.81912<span class="math inline">\(^\circ\)</span>E, 30.74081<span class="math inline">\(^\circ\)</span>N) in lake reserve forest. A break of 0.03 NDVI units was detected around 16 January 2020.</figcaption>
+<p>where <span class="math inline">\(h\)</span> is the bandwidth of the MOSUM and is typically chosen relative to the size of the history sample (e.g., <span class="math inline">\(h = n/4\)</span>). The OLS-MOSUM test (<a href="#eq-mosum" class="quarto-xref">Equation&nbsp;2</a>) and least squares are used to determine the number and position of the breakpoints in the seasonally adjusted data (<span class="math inline">\(Y_t-S_t\)</span>). The breakpoints are declared if the absolute <span class="math inline">\(|MO_t|\)</span> values fall beyond the 5% probability of structural model stability <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>. On the other hand, the <span class="math inline">\(|MO_t|\)</span> should be close to zero with random fluctuations for a structurally stable model <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>.</p>
+<p>Firstly, we detected changes at the end of NDVI time series using the function <code>bfastmonitor()</code> <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>. This approach first computes the trend, season and other covariates using the STL-decomposition. Then, the data is divided into history and monitoring period. We defined the January 2018 as the start period so that the <em>history period</em> is selected from 2001 to 2018 and <em>monitoring period</em> was defined as 2018 onwards for the present study. The stable history was selected based on a reversed-ordered-cumulative sum (CUSUM) of residuals, or ROC <span class="citation" data-cites="Pesaran2002">(<a href="#ref-Pesaran2002" role="doc-biblioref">Pesaran and Timmermann 2002</a>)</span>. A season-trend model was fitted to this selected stable history period and then, the OLS-MOSUM test was used to detect changes in the monitoring period. If a breakpoint is detected, the timing and magnitude of breakpoint was estimated (<a href="#fig-bfmpx" class="quarto-xref">Figure&nbsp;2</a>). We used the Wilcoxon’s rank sum test (also known as Mann-Whitney U test) to compare the disturbance parameters between forest and lake components. This test compares the difference in medians with relaxed assumption of normality of data. We used the <code>rstatix</code> package (version 0.7.2) to compute the test statistics and associated p-values <span class="citation" data-cites="R-rstatix">(<a href="#ref-R-rstatix" role="doc-biblioref">Kassambara 2022</a>)</span>.</p>
+<div id="fig-bfmpx" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bfmpx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig2.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bfmpx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Disturbance monitoring for a single location (76.81912<span class="math inline">\(^\circ\)</span>E, 30.74081<span class="math inline">\(^\circ\)</span>N) in lake reserve forest. A break of 0.03 NDVI units was detected around 16 January 2020.
+</figcaption>
 </figure>
 </div>
-<p>However, this monitoring approach aims to detect breaks at the end of NDVI time series. Further, it assumes a disturbance free stable history period, which often not a case with real data. Considering these limitations, we focused on a major trend shifts within the NDVI time series. We tested for a single large break using the function <code>bfast01()</code> <span class="citation" data-cites="Jong2013">(<a href="#ref-Jong2013" role="doc-biblioref">Jong et al. 2013</a>)</span>. This approach also uses the similar season-trend model and the single breakpoint was estimated by minimising the segmented residual sum of squares. It identifies a single largest break (if MOSUM is significant) for duration 2001-2021 or no break (i.e., MOSUM is not significant). We used a minimum segment size of 69 observations (3 years) to appropriately estimate the regression parameters (2 trend and 6 season parameters) of the season-trend model (<a href="#fig-bf01px">Figure&nbsp;3</a>). These identified breaks or turning points were then characterised using the function <code>bfast01classify()</code> and categorised into different types of ecological trend shifts as described earlier <span class="citation" data-cites="Bernardino2020">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>)</span>.</p>
-<div id="fig-bf01px" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig3.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Detection of single largest break for location (76.81912<span class="math inline">\(^\circ\)</span>E, 30.74081<span class="math inline">\(^\circ\)</span>N) in lake reserve forest. The single largest break was detected around 16 January 2018. The trend shift suggests a monotonic increase with a positive break.</figcaption>
+<p>However, this monitoring approach aims to detect breaks at the end of NDVI time series. Further, it assumes a disturbance free stable history period, which often not a case with real data. Considering these limitations, we focused on a major trend shifts within the NDVI time series. We tested for a single large break using the function <code>bfast01()</code> <span class="citation" data-cites="Jong2013">(<a href="#ref-Jong2013" role="doc-biblioref">Jong et al. 2013</a>)</span>. This approach also uses the similar season-trend model and the single breakpoint was estimated by minimising the segmented residual sum of squares. It identifies a single largest break (if MOSUM is significant) for duration 2001-2021 or no break (i.e., MOSUM is not significant). We used a minimum segment size of 69 observations (3 years) to appropriately estimate the regression parameters (2 trend and 6 season parameters) of the season-trend model (<a href="#fig-bf01px" class="quarto-xref">Figure&nbsp;3</a>). These identified breaks or turning points were then characterised using the function <code>bfast01classify()</code> and categorised into different types of ecological trend shifts as described earlier <span class="citation" data-cites="Bernardino2020">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>)</span>.</p>
+<div id="fig-bf01px" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bf01px-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig3.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bf01px-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Detection of single largest break for location (76.81912<span class="math inline">\(^\circ\)</span>E, 30.74081<span class="math inline">\(^\circ\)</span>N) in lake reserve forest. The single largest break was detected around 16 January 2018. The trend shift suggests a monotonic increase with a positive break.
+</figcaption>
 </figure>
 </div>
 </section>
 <section id="field-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="field-sampling">Field sampling</h3>
-<p>To study vegetation composition and species diversity, we pre-defined 14 locations along the lake catchment in the lake reserve forest (<a href="#fig-site-map">Figure&nbsp;1</a>). This prior selection of sampling plot allowed us to avoid any preferential or selection bias while sampling vegetation. We sampled plant species and their abundances using the quadrat method during the flowering season (August-September). We laid a 10 m <span class="math inline">\(\times\)</span> 10 m quadrat at each selected location and recorded the abundance of all woody plants. Herbaceous species were sampled in three randomly laid 1 m <span class="math inline">\(\times\)</span> 1 m quadrats within each 10 m <span class="math inline">\(\times\)</span> 10 m quadrat. A total of 50 quadrats, 14 quadrats for trees and 36 quadrats for herbaceous species were sampled, since two 10 m <span class="math inline">\(\times\)</span> 10 m quadrats had no herbaceous species. The geographic location of each plot was recorded with a handheld GPS (Garmin eTrex 10). Most of the plant species were identified in field and few unidentified plant specimens were collected and photographed for further identification. For identification of plant specimens, we consulted the Herbarium of Panjab University, Chandigarh (PAN) and on-line database <a href="https://efloraofindia.com/">eFlora of India</a> <span class="citation" data-cites="eFI2022">(<a href="#ref-eFI2022" role="doc-biblioref">eFI 2022</a>)</span>. All the botanical names and their authorities were standardised according to World Checklist of Vascular Plants (WCVP) data version 10 of 27 October 2022 <span class="citation" data-cites="Govaerts2021">(<a href="#ref-Govaerts2021" role="doc-biblioref">Govaerts et al. 2021</a>)</span> using the <code>R</code> package <code>rWCVP</code> version 1.2.4 <span class="citation" data-cites="R-rWCVP">(<a href="#ref-R-rWCVP" role="doc-biblioref">Brown et al. 2023</a>)</span>. Further, all species were broadly categorised into native, introduced and invasive species following the ‘Plants of World Online’ <span class="citation" data-cites="POWO2023">(<a href="#ref-POWO2023" role="doc-biblioref">POWO 2023</a>)</span> and published alien flora of India <span class="citation" data-cites="Khuroo2012">(<a href="#ref-Khuroo2012" role="doc-biblioref">Khuroo et al. 2012</a>)</span>.</p>
+<p>To study vegetation composition and species diversity, we pre-defined 14 locations along the lake catchment in the lake reserve forest (<a href="#fig-site-map" class="quarto-xref">Figure&nbsp;1</a>). This prior selection of sampling plot allowed us to avoid any preferential or selection bias while sampling vegetation. We sampled plant species and their abundances using the quadrat method during the flowering season (August-September). We laid a 10 m <span class="math inline">\(\times\)</span> 10 m quadrat at each selected location and recorded the abundance of all woody plants. Herbaceous species were sampled in three randomly laid 1 m <span class="math inline">\(\times\)</span> 1 m quadrats within each 10 m <span class="math inline">\(\times\)</span> 10 m quadrat. A total of 50 quadrats, 14 quadrats for trees and 36 quadrats for herbaceous species were sampled, since two 10 m <span class="math inline">\(\times\)</span> 10 m quadrats had no herbaceous species. The geographic location of each plot was recorded with a handheld GPS (Garmin eTrex 10). Most of the plant species were identified in field and few unidentified plant specimens were collected and photographed for further identification. For identification of plant specimens, we consulted the Herbarium of Panjab University, Chandigarh (PAN) and on-line database <a href="https://efloraofindia.com/">eFlora of India</a> <span class="citation" data-cites="eFI2022">(<a href="#ref-eFI2022" role="doc-biblioref">eFI 2022</a>)</span>. All the botanical names and their authorities were standardised according to World Checklist of Vascular Plants (WCVP) data version 10 of 27 October 2022 <span class="citation" data-cites="Govaerts2021">(<a href="#ref-Govaerts2021" role="doc-biblioref">Govaerts et al. 2021</a>)</span> using the <code>R</code> package <code>rWCVP</code> version 1.2.4 <span class="citation" data-cites="R-rWCVP">(<a href="#ref-R-rWCVP" role="doc-biblioref">Brown et al. 2023</a>)</span>. Further, all species were broadly categorised into native, introduced and invasive species following the ‘Plants of World Online’ <span class="citation" data-cites="POWO2023">(<a href="#ref-POWO2023" role="doc-biblioref">POWO 2023</a>)</span> and published alien flora of India <span class="citation" data-cites="Khuroo2012">(<a href="#ref-Khuroo2012" role="doc-biblioref">Khuroo et al. 2012</a>)</span>.</p>
 </section>
 <section id="phylogenetic-information" class="level3">
 <h3 class="anchored" data-anchor-id="phylogenetic-information">Phylogenetic information</h3>
@@ -318,12 +420,12 @@ div.csl-indent {
 </section>
 <section id="vegetation-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="vegetation-analysis">Vegetation analysis</h3>
-<p>To assess the effects of disturbance, we divided the selected vegetation plots into disturbed and undisturbed plots based on the magnitude of NDVI change from <code>bfastmonitor()</code> output. If the magnitude of NDVI change was negative, the vegetation plots have been considered as <em>disturbed</em> plots (n = 8), whereas vegetation plots with a positive change in NDVI were considered as <em>undisturbed</em> plots (n = 6). Then, we compared the vegetation composition and species diversity in the disturbed and undisturbed plots. However, the efforts to measure and compare species diversity often suffer from sampling bias due undetected rare species. Therefore, equalising or standardisation of samples become necessary to measure and compare diversity in an unbiased manner. Traditionally, diversity samples have been standardised by equalising sampling effort, sample size and coverage. Equalising coverage is recommended because it considers both the sample diversity and true diversity <span class="citation" data-cites="Roswell2021">(<a href="#ref-Roswell2021" role="doc-biblioref">Roswell, Dushoff, and Winfree 2021</a>)</span>. Therefore, to examine sampling completeness of plant species across vegetation plots, we performed coverage-based rarefaction and extrapolation using the <code>R</code> package <code>iNEXT</code> version 3.0.0 <span class="citation" data-cites="R-iNEXT">(<a href="#ref-R-iNEXT" role="doc-biblioref">Hsieh, Ma, and Chao 2016</a>)</span>.</p>
+<p>To assess the effects of disturbance, we divided the selected vegetation plots into disturbed and undisturbed plots based on the magnitude of NDVI change from <code>bfastmonitor()</code> output. If the magnitude of NDVI change was negative, the vegetation plots have been considered as <em>disturbed</em> plots (n = 8), whereas vegetation plots with a positive change in NDVI were considered as <em>undisturbed</em> plots (n = 6). Then, we compared the vegetation composition and species diversity in the disturbed and undisturbed plots. However, the efforts to measure and compare species diversity often suffer from sampling bias due undetected rare species. Therefore, equalising or standardisation of samples become necessary to measure and compare diversity in an unbiased manner. Traditionally, diversity samples have been standardised by equalising sampling effort, sample size and coverage. Equalising coverage is recommended because it considers both the sample diversity and true diversity <span class="citation" data-cites="Roswell2021">(<a href="#ref-Roswell2021" role="doc-biblioref">Roswell, Dushoff, and Winfree 2021</a>)</span>. Therefore, to examine sampling completeness of plant species across vegetation plots, we performed coverage-based rarefaction and extrapolation using the <code>R</code> package <code>iNEXT</code> version 3.0.1 <span class="citation" data-cites="R-iNEXT">(<a href="#ref-R-iNEXT" role="doc-biblioref">Hsieh, Ma, and Chao 2016</a>)</span>.</p>
 <p>Traditional diversity metrics such as species richness (<span class="math inline">\(S\)</span>) do not incorporate species abundances, and those include species abundances, the Shannon’s index <span class="citation" data-cites="Shannon1948">(<a href="#ref-Shannon1948" role="doc-biblioref">Shannon 1948</a>)</span> and the Simpson’s index <span class="citation" data-cites="Simpson1949">(<a href="#ref-Simpson1949" role="doc-biblioref">Simpson 1949</a>)</span>, do not behave intuitively for subsequent addition or removal of species from a community <span class="citation" data-cites="Chao2014 Roswell2021">(<a href="#ref-Chao2014" role="doc-biblioref">Chao et al. 2014</a>; <a href="#ref-Roswell2021" role="doc-biblioref">Roswell, Dushoff, and Winfree 2021</a>)</span>. To overcome these issues, the use of Hill numbers are recommended <span class="citation" data-cites="Roswell2021">(<a href="#ref-Roswell2021" role="doc-biblioref">Roswell, Dushoff, and Winfree 2021</a>)</span>. Hill numbers are a series of diversity measures that combines species richness and species abundances <span class="citation" data-cites="Hill1973">(<a href="#ref-Hill1973" role="doc-biblioref">Hill 1973</a>)</span>. Hill number for order <span class="math inline">\(q\)</span> can be defined as:</p>
 <p><span id="eq-hill"><span class="math display">\[
 ^qD = \left( \sum_{i = 1}^S p_i^q \right)^{1/(1-q)}
 \tag{3}\]</span></span></p>
-<p>where <span class="math inline">\(p_i\)</span> is the proportion or relative abundance of species <span class="math inline">\(i\)</span>, and <span class="math inline">\(S\)</span> is the number of species so that <span class="math inline">\(\sum_{i = 1}^S p_i = 1\)</span>. If <span class="math inline">\(n_i\)</span> is the total abundance of species <span class="math inline">\(i\)</span>, then the relative abundance can be calculated as <span class="math inline">\(p_i = n_i / \sum_{i = 1}^S n_i\)</span>. Many commonly used diversity measures are special cases of Hill numbers <span class="citation" data-cites="Chao2014">(<a href="#ref-Chao2014" role="doc-biblioref">Chao et al. 2014</a>)</span>. When <span class="math inline">\(q = 0\)</span>, <a href="#eq-hill">Equation&nbsp;3</a> did not considers the relative abundance of species and get reduced to species richness <span class="math inline">\(S\)</span> (<a href="#eq-richness">Equation&nbsp;4</a>). Although <a href="#eq-hill">Equation&nbsp;3</a> becomes undefined for <span class="math inline">\(q = 1\)</span>, its limit as <span class="math inline">\(q\)</span> tends to 1 represents the exponential of Shannon’s entropy (<a href="#eq-shannon">Equation&nbsp;5</a>). Similarly, when <span class="math inline">\(q = 2\)</span>, the <a href="#eq-hill">Equation&nbsp;3</a> represents the inverse of Simpson concentration (<a href="#eq-simpson">Equation&nbsp;6</a>). The logarithm of Hill numbers represent the corresponding Renyi entropies.</p>
+<p>where <span class="math inline">\(p_i\)</span> is the proportion or relative abundance of species <span class="math inline">\(i\)</span>, and <span class="math inline">\(S\)</span> is the number of species so that <span class="math inline">\(\sum_{i = 1}^S p_i = 1\)</span>. If <span class="math inline">\(n_i\)</span> is the total abundance of species <span class="math inline">\(i\)</span>, then the relative abundance can be calculated as <span class="math inline">\(p_i = n_i / \sum_{i = 1}^S n_i\)</span>. Many commonly used diversity measures are special cases of Hill numbers <span class="citation" data-cites="Chao2014">(<a href="#ref-Chao2014" role="doc-biblioref">Chao et al. 2014</a>)</span>. When <span class="math inline">\(q = 0\)</span>, <a href="#eq-hill" class="quarto-xref">Equation&nbsp;3</a> did not considers the relative abundance of species and get reduced to species richness <span class="math inline">\(S\)</span> (<a href="#eq-richness" class="quarto-xref">Equation&nbsp;4</a>). Although <a href="#eq-hill" class="quarto-xref">Equation&nbsp;3</a> becomes undefined for <span class="math inline">\(q = 1\)</span>, its limit as <span class="math inline">\(q\)</span> tends to 1 represents the exponential of Shannon’s entropy (<a href="#eq-shannon" class="quarto-xref">Equation&nbsp;5</a>). Similarly, when <span class="math inline">\(q = 2\)</span>, the <a href="#eq-hill" class="quarto-xref">Equation&nbsp;3</a> represents the inverse of Simpson concentration (<a href="#eq-simpson" class="quarto-xref">Equation&nbsp;6</a>). The logarithm of Hill numbers represent the corresponding Renyi entropies.</p>
 <p><span id="eq-richness"><span class="math display">\[
 ^0D = S
 \tag{4}\]</span></span></p>
@@ -333,91 +435,119 @@ div.csl-indent {
 <p><span id="eq-simpson"><span class="math display">\[
 ^2D = 1 \Big/ \sum_{i = 1}^S p_i^2
 \tag{6}\]</span></span></p>
-<p>Since the Hill number of order <span class="math inline">\(q = 1\)</span> considers relative abundance of each species, <span class="math inline">\(^1D\)</span> can be interpreted as a measure of the effective number of common species in the assemblage. Similarly, <span class="math inline">\(^2D\)</span> can be interpreted as the effective number of dominant species because it weighs more on the abundant species <span class="citation" data-cites="Chao2014">(<a href="#ref-Chao2014" role="doc-biblioref">Chao et al. 2014</a>)</span>. We compared the first three measures of Hill numbers, i.e., species richness (<span class="math inline">\(q = 0\)</span>), Shannon diversity (<span class="math inline">\(q = 1\)</span>) and Simpson diversity (<span class="math inline">\(q = 2\)</span>) for disturbed and undisturbed plots using the <code>R</code> package <code>iNEXT</code> version 3.0.0 <span class="citation" data-cites="R-iNEXT">(<a href="#ref-R-iNEXT" role="doc-biblioref">Hsieh, Ma, and Chao 2016</a>)</span>. We estimated these diversity measures as the mean and 95% confidence intervals of 100 bootstrap replicates for a standardised sample size of 2000 individuals using the <code>iNEXT()</code> function. We determined significance of difference by analysing the overlap of the 95% confidence intervals. Whenever the 95% confidence intervals did not overlap, we considered significant difference in species diversity at p &lt; 0.05 <span class="citation" data-cites="Colwell2012">(<a href="#ref-Colwell2012" role="doc-biblioref">Colwell et al. 2012</a>)</span>.</p>
+<p>Since the Hill number of order <span class="math inline">\(q = 1\)</span> considers relative abundance of each species, <span class="math inline">\(^1D\)</span> can be interpreted as a measure of the effective number of common species in the assemblage. Similarly, <span class="math inline">\(^2D\)</span> can be interpreted as the effective number of dominant species because it weighs more on the abundant species <span class="citation" data-cites="Chao2014">(<a href="#ref-Chao2014" role="doc-biblioref">Chao et al. 2014</a>)</span>. We compared the first three measures of Hill numbers, i.e., species richness (<span class="math inline">\(q = 0\)</span>), Shannon diversity (<span class="math inline">\(q = 1\)</span>) and Simpson diversity (<span class="math inline">\(q = 2\)</span>) for disturbed and undisturbed plots using the <code>R</code> package <code>iNEXT</code> version 3.0.1 <span class="citation" data-cites="R-iNEXT">(<a href="#ref-R-iNEXT" role="doc-biblioref">Hsieh, Ma, and Chao 2016</a>)</span>. We estimated these diversity measures as the mean and 95% confidence intervals of 100 bootstrap replicates for a standardised sample size of 2000 individuals using the <code>iNEXT()</code> function. We determined significance of difference by analysing the overlap of the 95% confidence intervals. Whenever the 95% confidence intervals did not overlap, we considered significant difference in species diversity at p &lt; 0.05 <span class="citation" data-cites="Colwell2012">(<a href="#ref-Colwell2012" role="doc-biblioref">Colwell et al. 2012</a>)</span>.</p>
 <p>Similarly, we compared phylogenetic diversity (PD) among the disturbed and undisturbed plots. We used the phylogenetic diversity measures of order <span class="math inline">\(q\)</span> based on the Hill number framework <span class="citation" data-cites="Chao2010">(<a href="#ref-Chao2010" role="doc-biblioref">Chao, Chiu, and Jost 2010</a>)</span>. If <span class="math inline">\(L_i\)</span> represents the length of branch <span class="math inline">\(i\)</span> and <span class="math inline">\(a_i\)</span> denotes the total relative abundance descended from the <span class="math inline">\(i\)</span>th branch for a phylogenetic tree with <span class="math inline">\(B\)</span> branch segments, the mean branch length (weighted by branch relative abundance) can be expressed as <span class="math inline">\(\bar T = \sum_{i = 1}^B L_i a_i\)</span>. <span class="citation" data-cites="Chao2010">Chao, Chiu, and Jost (<a href="#ref-Chao2010" role="doc-biblioref">2010</a>)</span> defined the phylogenetic diversity of order <span class="math inline">\(q\)</span> as:</p>
 <p><span id="eq-hillpd"><span class="math display">\[
 ^q \text{PD} = \left[ \sum_{i = 1}^B L_i \left( \frac{a_i}{\bar T} \right)^q  \right]^{1/(1-q)}
 \tag{7}\]</span></span></p>
-<p>The <a href="#eq-hillpd">Equation&nbsp;7</a> becomes the Faith’s PD for <span class="math inline">\(q = 0\)</span>, which do not considers the actual total branch length and branch abundances. The measure <span class="math inline">\(^1 \text{PD}\)</span> represents a monotonic transformation of the phylogenetic entropy <span class="math inline">\(H_P\)</span>, which weighs each branch proportional to its abundance. The measure <span class="math inline">\(^2 \text{PD}\)</span> is a monotonic transformation of Rao’s quadratic entropy <span class="math inline">\(Q\)</span>, which puts more weight on abundant/dominant branches and discounts rare branches <span class="citation" data-cites="Chao2010 Hsieh2017">(<a href="#ref-Chao2010" role="doc-biblioref">Chao, Chiu, and Jost 2010</a>; <a href="#ref-Hsieh2017" role="doc-biblioref">Hsieh and Chao 2017</a>)</span>. The rarefaction and extrapolation methods were used to fairly compare these phylogenetic diversity measures across the plots <span class="citation" data-cites="Chao2015 Hsieh2017">(<a href="#ref-Chao2015" role="doc-biblioref">Chao et al. 2015</a>; <a href="#ref-Hsieh2017" role="doc-biblioref">Hsieh and Chao 2017</a>)</span>. We computed these metrics using the package <code>iNextPD</code> version 0.3.1 <span class="citation" data-cites="R-iNextPD">(<a href="#ref-R-iNextPD" role="doc-biblioref">Hsieh and Chao 2016</a>)</span>.</p>
-<p>Further, we used the Non-metric Multidimensional Scaling (NMDS) to find the similarities and patterns among the species assemblages. NMDS is considered as the most robust unconstrained ordination method in vegetation ecology <span class="citation" data-cites="Minchin1987">(<a href="#ref-Minchin1987" role="doc-biblioref">Minchin 1987</a>)</span>. The species abundance data was square-root transformed followed by a Wisconsin double standardisation, which involves dividing each species by its maximum and each site by its total. This standardisation minimises the influence of most abundant groups and therefore, prevents overwhelming distance measures of the dominant species. We used the widely recommended Bray-Curtis distance since it has a good rank order relation to ordering sites along gradients <span class="citation" data-cites="Faith1987">(<a href="#ref-Faith1987" role="doc-biblioref">Faith, Minchin, and Belbin 1987</a>)</span>. The goodness of fit was assessed by the degree of stress, which is a measure of rank-order disagreement between observed and fitted values <span class="citation" data-cites="Kruskal1964">(<a href="#ref-Kruskal1964" role="doc-biblioref">Kruskal 1964</a>)</span>. If <span class="math inline">\(d_{ij}\)</span> represents the distance in original dissimilarity matrix and <span class="math inline">\(\hat{d_{ij}}\)</span> represent the fitted distance in ordination space, then the stress (S) can be expressed as <a href="#eq-stress">Equation&nbsp;8</a>:</p>
+<p>The <a href="#eq-hillpd" class="quarto-xref">Equation&nbsp;7</a> becomes the Faith’s PD for <span class="math inline">\(q = 0\)</span>, which do not considers the actual total branch length and branch abundances. The measure <span class="math inline">\(^1 \text{PD}\)</span> represents a monotonic transformation of the phylogenetic entropy <span class="math inline">\(H_P\)</span>, which weighs each branch proportional to its abundance. The measure <span class="math inline">\(^2 \text{PD}\)</span> is a monotonic transformation of Rao’s quadratic entropy <span class="math inline">\(Q\)</span>, which puts more weight on abundant/dominant branches and discounts rare branches <span class="citation" data-cites="Chao2010 Hsieh2017">(<a href="#ref-Chao2010" role="doc-biblioref">Chao, Chiu, and Jost 2010</a>; <a href="#ref-Hsieh2017" role="doc-biblioref">Hsieh and Chao 2017</a>)</span>. The rarefaction and extrapolation methods were used to fairly compare these phylogenetic diversity measures across the plots <span class="citation" data-cites="Chao2015 Hsieh2017">(<a href="#ref-Chao2015" role="doc-biblioref">Chao et al. 2015</a>; <a href="#ref-Hsieh2017" role="doc-biblioref">Hsieh and Chao 2017</a>)</span>. We computed these metrics using the package <code>iNextPD</code> version 0.3.1 <span class="citation" data-cites="R-iNextPD">(<a href="#ref-R-iNextPD" role="doc-biblioref">Hsieh and Chao 2016</a>)</span>.</p>
+<p>Further, we used the Non-metric Multidimensional Scaling (NMDS) to find the similarities and patterns among the species assemblages. NMDS is considered as the most robust unconstrained ordination method in vegetation ecology <span class="citation" data-cites="Minchin1987">(<a href="#ref-Minchin1987" role="doc-biblioref">Minchin 1987</a>)</span>. The species abundance data was square-root transformed followed by a Wisconsin double standardisation, which involves dividing each species by its maximum and each site by its total. This standardisation minimises the influence of most abundant groups and therefore, prevents overwhelming distance measures of the dominant species. We used the widely recommended Bray-Curtis distance since it has a good rank order relation to ordering sites along gradients <span class="citation" data-cites="Faith1987">(<a href="#ref-Faith1987" role="doc-biblioref">Faith, Minchin, and Belbin 1987</a>)</span>. The goodness of fit was assessed by the degree of stress, which is a measure of rank-order disagreement between observed and fitted values <span class="citation" data-cites="Kruskal1964">(<a href="#ref-Kruskal1964" role="doc-biblioref">Kruskal 1964</a>)</span>. If <span class="math inline">\(d_{ij}\)</span> represents the distance in original dissimilarity matrix and <span class="math inline">\(\hat{d_{ij}}\)</span> represent the fitted distance in ordination space, then the stress (S) can be expressed as <a href="#eq-stress" class="quarto-xref">Equation&nbsp;8</a>:</p>
 <p><span id="eq-stress"><span class="math display">\[
 S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij})^2}{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} d_{ij}^2}}
 \tag{8}\]</span></span></p>
-<p>A stress value of greater than 0.2 is generally considered as poor fit leading to risk in interpretation of distances <span class="citation" data-cites="Clarke1993">(<a href="#ref-Clarke1993" role="doc-biblioref">Clarke 1993</a>)</span>. The NMDS was performed with two dimensions from minimum 20 to maximum 50 random iterations using the function<code>metaMDS()</code> from the <code>vegan</code> package version 2.6.4 <span class="citation" data-cites="R-vegan">(<a href="#ref-R-vegan" role="doc-biblioref">Oksanen et al. 2022</a>)</span>. To test the differences in the multivariate centroids of the samples, we used the permutational multivariate analyses of variance (perMANOVA) on the dissimilarity matrix with 9,999 permutations using the <code>adonis2()</code> function from the <code>vegan</code> package. Across all the computed p-values, we considered p &lt; 0.05 as significant. All statistical analyses were performed in <code>R</code> statistical environment version 4.3.0 <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2023</a>)</span> and package <code>tidyverse</code> was used for general data manipulation and visualisation <span class="citation" data-cites="R-tidyverse">(<a href="#ref-R-tidyverse" role="doc-biblioref">Wickham et al. 2019</a>)</span></p>
+<p>A stress value of greater than 0.2 is generally considered as poor fit leading to risk in interpretation of distances <span class="citation" data-cites="Clarke1993">(<a href="#ref-Clarke1993" role="doc-biblioref">Clarke 1993</a>)</span>. The NMDS was performed with two dimensions from minimum 20 to maximum 50 random iterations using the function<code>metaMDS()</code> from the <code>vegan</code> package version 2.6.6.1 <span class="citation" data-cites="R-vegan">(<a href="#ref-R-vegan" role="doc-biblioref">Oksanen et al. 2022</a>)</span>. To test the differences in the multivariate centroids of the samples, we used the permutational multivariate analyses of variance (perMANOVA) on the dissimilarity matrix with 9,999 permutations using the <code>adonis2()</code> function from the <code>vegan</code> package. Across all the computed p-values, we considered p &lt; 0.05 as significant. All statistical analyses were performed in <code>R</code> statistical environment version 4.3.1 <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2023</a>)</span> and package <code>tidyverse</code> was used for general data manipulation and visualisation <span class="citation" data-cites="R-tidyverse">(<a href="#ref-R-tidyverse" role="doc-biblioref">Wickham et al. 2019</a>)</span></p>
 </section>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>The bounds of our study area consisted of total 220 pixels, out of which 58 pixels had their centres within the boundary of lake reserve forest and 52 pixels within the Sukhna lake. The median values of NDVI showed seasonal variations for both forest and lake areas (<a href="#fig-monthly-NDVI">Figure&nbsp;4</a>). In general, the median NDVI values for forest were higher during July to September reaching maximum in August and lower during April to June reaching minimum in May.</p>
-<div id="fig-monthly-NDVI" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig4.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Monthly median NDVI values during 2001-2021 for the Sukhna lake and lake reserve forest indicating seasonality in the vegetation and water components.</figcaption>
+<p>The bounds of our study area consisted of total 220 pixels, out of which 58 pixels had their centres within the boundary of lake reserve forest and 52 pixels within the Sukhna lake. The median values of NDVI showed seasonal variations for both forest and lake areas (<a href="#fig-monthly-NDVI" class="quarto-xref">Figure&nbsp;4</a>). In general, the median NDVI values for forest were higher during July to September reaching maximum in August and lower during April to June reaching minimum in May.</p>
+<div id="fig-monthly-NDVI" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-monthly-NDVI-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig4.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-monthly-NDVI-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Monthly median NDVI values during 2001-2021 for the Sukhna lake and lake reserve forest indicating seasonality in the vegetation and water components.
+</figcaption>
 </figure>
 </div>
 <section id="disturbance-pattern" class="level3">
 <h3 class="anchored" data-anchor-id="disturbance-pattern">Disturbance pattern</h3>
-<p>During 2001 to 2021, the median NDVI value for the forest was 0.5 reaching a maximum of 0.65. The Sukhna lake had an median NDVI of 0.17 reaching a minimum of –0.19 (<a href="#fig-bfm">Figure&nbsp;5</a> A). A dense patch of vegetation is present in the eastern part of the lake reserve forest. <a href="#fig-bfm">Figure&nbsp;5</a> B shows the length of stable history selected based on ROC to detect changes in the monitoring period. A shorter length of stable history indicates more recent disturbance. The timing and magnitude of breaks detected in NDVI time series are shown in <a href="#fig-bfm">Figure&nbsp;5</a> C and D.</p>
-<div id="fig-bfm" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig5.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: Results of NDVI time series analysis during 2001-2021 for study area. (A) Median NDVI for all MODIS images, (B) Length of stable history period in years, (C) Timing of break in decimal years, and (D) Magnitude of changes in NDVI units.</figcaption>
+<p>During 2001 to 2021, the median NDVI value for the forest was 0.5 reaching a maximum of 0.65. The Sukhna lake had an median NDVI of 0.17 reaching a minimum of –0.19 (<a href="#fig-bfm" class="quarto-xref">Figure&nbsp;5</a> A). A dense patch of vegetation is present in the eastern part of the lake reserve forest. <a href="#fig-bfm" class="quarto-xref">Figure&nbsp;5</a> B shows the length of stable history selected based on ROC to detect changes in the monitoring period. A shorter length of stable history indicates more recent disturbance. The timing and magnitude of breaks detected in NDVI time series are shown in <a href="#fig-bfm" class="quarto-xref">Figure&nbsp;5</a> C and D.</p>
+<div id="fig-bfm" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bfm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig5.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bfm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Results of NDVI time series analysis during 2001-2021 for study area. (A) Median NDVI for all MODIS images, (B) Length of stable history period in years, (C) Timing of break in decimal years, and (D) Magnitude of changes in NDVI units.
+</figcaption>
 </figure>
 </div>
-<p>The results of Wilcoxon’s rank sum test suggested that the forest area has significantly higher median NDVI (<em>W</em> = 3225, <em>p</em> &lt; 0.0001), longer stable history period (<em>W</em> = 2814, <em>p</em> &lt; 0.0001), more recent timings of breaks during 2019-2021 (<em>W</em> = 2592, <em>p</em> &lt; 0.0001), and more positive magnitude of NDVI change (<em>W</em> = 3122, <em>p</em> &lt; 0.0001) than the corresponding lake area (<a href="#fig-bfm-fl">Figure&nbsp;6</a>).</p>
-<div id="fig-bfm-fl" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig6.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;6: Comparison of Median NDVI, Length of stable history, Timing of break, and Magnitude of change in NDVI time series analysis for Sukhna lake (n = 53) and lake reserve forest (n = 61) during 2001-2021. The significance of difference was determined with Wilcoxon’s rank sum test and <em>p</em>-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>, <code>*</code>, and <code>ns</code>, respectively.</figcaption>
+<p>The results of Wilcoxon’s rank sum test suggested that the forest area has significantly higher median NDVI (<em>W</em> = 3225, <em>p</em> &lt; 0.0001), longer stable history period (<em>W</em> = 2814, <em>p</em> &lt; 0.0001), more recent timings of breaks during 2019-2021 (<em>W</em> = 2592, <em>p</em> &lt; 0.0001), and more positive magnitude of NDVI change (<em>W</em> = 3122, <em>p</em> &lt; 0.0001) than the corresponding lake area (<a href="#fig-bfm-fl" class="quarto-xref">Figure&nbsp;6</a>).</p>
+<div id="fig-bfm-fl" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bfm-fl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig6.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bfm-fl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Comparison of Median NDVI, Length of stable history, Timing of break, and Magnitude of change in NDVI time series analysis for Sukhna lake (n = 53) and lake reserve forest (n = 61) during 2001-2021. The significance of difference was determined with Wilcoxon’s rank sum test and <em>p</em>-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and &gt;0.05 corresponds to <code>****</code>, <code>***</code>, <code>**</code>, <code>*</code>, and <code>ns</code>, respectively.
+</figcaption>
 </figure>
 </div>
-<p>The detected single largest shifts in trend component of NDVI were characterised following the recently proposed typology of trend shifts <span class="citation" data-cites="Bernardino2020 R-bfast">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>; <a href="#ref-R-bfast" role="doc-biblioref">Verbesselt et al. 2021</a>)</span>. The proposed eight shift types corresponds to (1) monotonic increase, (2) monotonic decrease, (3) monotonic increase (with positive break), (4) monotonic decrease (with negative break), (5) interruption: increase with negative break, (6) interruption: decrease with positive break, (7) reversal: increase to decrease, and (8) reversal: decrease to increase <span class="citation" data-cites="Bernardino2020 R-bfast">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>; <a href="#ref-R-bfast" role="doc-biblioref">Verbesselt et al. 2021</a>)</span>. Out of proposed eight types, our study area showed five types of trend shifts in NDVI time series (<a href="#fig-bf01-bty">Figure&nbsp;7</a>).</p>
-<div id="fig-bf01-bty" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig7.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;7: Examples of major trend shifts in NDVI time series observed for present study area <span class="citation" data-cites="Bernardino2020">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>)</span>.</figcaption>
+<p>The detected single largest shifts in trend component of NDVI were characterised following the recently proposed typology of trend shifts <span class="citation" data-cites="Bernardino2020 R-bfast">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>; <a href="#ref-R-bfast" role="doc-biblioref">Verbesselt et al. 2021</a>)</span>. The proposed eight shift types corresponds to (1) monotonic increase, (2) monotonic decrease, (3) monotonic increase (with positive break), (4) monotonic decrease (with negative break), (5) interruption: increase with negative break, (6) interruption: decrease with positive break, (7) reversal: increase to decrease, and (8) reversal: decrease to increase <span class="citation" data-cites="Bernardino2020 R-bfast">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>; <a href="#ref-R-bfast" role="doc-biblioref">Verbesselt et al. 2021</a>)</span>. Out of proposed eight types, our study area showed five types of trend shifts in NDVI time series (<a href="#fig-bf01-bty" class="quarto-xref">Figure&nbsp;7</a>).</p>
+<div id="fig-bf01-bty" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bf01-bty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig7.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bf01-bty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Examples of major trend shifts in NDVI time series observed for present study area <span class="citation" data-cites="Bernardino2020">(<a href="#ref-Bernardino2020" role="doc-biblioref">Bernardino et al. 2020</a>)</span>.
+</figcaption>
 </figure>
 </div>
-<p>Of the total analysed 218 pixels, about 57% pixels (n = 124) indicated an interrupted increase in NDVI with a negative break and about 17% pixels (n = 38) indicated monotonic increase with positive break whereas about 4% pixels (n = 8) showed consistent monotonic increase with little or no change in NDVI trend during 2001-2021. Further, about 9% pixels (n = 20) indicated a negative reversal from increase to decrease and about 13% pixels (n = 28) indicated positive reversal from decrease to increase in NDVI (<a href="#fig-bf01">Figure&nbsp;8</a> A).</p>
-<div id="fig-bf01" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig8.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;8: (A) Map showing the spatial distribution of chracterised trend shift types in study area during 2001-2021. (B) Distribution of different shift types across pixels covering the lake reserve forest (n = 61) and Sukhna lake (n = 53). The shift type key corresponds to 1, monotonic increase; 2, monotonic decrease; 3, monotonic increase (with positive break); 4, monotonic decrease (with negative break); 5, interruption: increase with negative break; 6, interruption: decrease with positive break; 7, reversal: increase to decrease; 8, reversal: decrease to increase.</figcaption>
+<p>Of the total analysed 218 pixels, about 57% pixels (n = 124) indicated an interrupted increase in NDVI with a negative break and about 17% pixels (n = 38) indicated monotonic increase with positive break whereas about 4% pixels (n = 8) showed consistent monotonic increase with little or no change in NDVI trend during 2001-2021. Further, about 9% pixels (n = 20) indicated a negative reversal from increase to decrease and about 13% pixels (n = 28) indicated positive reversal from decrease to increase in NDVI (<a href="#fig-bf01" class="quarto-xref">Figure&nbsp;8</a> A).</p>
+<div id="fig-bf01" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bf01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig8.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bf01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: (A) Map showing the spatial distribution of chracterised trend shift types in study area during 2001-2021. (B) Distribution of different shift types across pixels covering the lake reserve forest (n = 61) and Sukhna lake (n = 53). The shift type key corresponds to 1, monotonic increase; 2, monotonic decrease; 3, monotonic increase (with positive break); 4, monotonic decrease (with negative break); 5, interruption: increase with negative break; 6, interruption: decrease with positive break; 7, reversal: increase to decrease; 8, reversal: decrease to increase.
+</figcaption>
 </figure>
 </div>
-<p>About 85% pixels (n = 52) covering the forest area depicted a positive trend in NDVI. Out of these 85% pixels, about 8% pixels (n = 5) indicated no break, about 29.5% (n = 18) indicated positive break and 47.5% pixels (n = 29) indicated a negative break in the NDVI time series (<a href="#fig-bf01">Figure&nbsp;8</a> B). Out of total 61 pixels covering forest area, nine pixels showed a trend reversal in NDVI. Out of these nine pixels, two pixels indicated negative reversal from increasing to decreasing trend in NDVI. On the other hand, out of total 53 pixels covered by Sukhna lake about 64% pixels showed monotonic increase whereas 36% pixels indicated a trend reversal in NDVI. Among 19 pixels indicating a trend reversal, 14 pixels suggested a negative reversal from increasing to decreasing NDVI values whereas five pixels showed a positive reversal (<a href="#fig-bf01">Figure&nbsp;8</a> B).</p>
+<p>About 85% pixels (n = 52) covering the forest area depicted a positive trend in NDVI. Out of these 85% pixels, about 8% pixels (n = 5) indicated no break, about 29.5% (n = 18) indicated positive break and 47.5% pixels (n = 29) indicated a negative break in the NDVI time series (<a href="#fig-bf01" class="quarto-xref">Figure&nbsp;8</a> B). Out of total 61 pixels covering forest area, nine pixels showed a trend reversal in NDVI. Out of these nine pixels, two pixels indicated negative reversal from increasing to decreasing trend in NDVI. On the other hand, out of total 53 pixels covered by Sukhna lake about 64% pixels showed monotonic increase whereas 36% pixels indicated a trend reversal in NDVI. Among 19 pixels indicating a trend reversal, 14 pixels suggested a negative reversal from increasing to decreasing NDVI values whereas five pixels showed a positive reversal (<a href="#fig-bf01" class="quarto-xref">Figure&nbsp;8</a> B).</p>
 </section>
 <section id="vegetation-structure" class="level3">
 <h3 class="anchored" data-anchor-id="vegetation-structure">Vegetation structure</h3>
 <p>During the field sampling, we recorded a total of 2,124 individuals representing 38 species of 34 genera belonging to 22 families of flowering plants. These 38 species consisted of 18 herbs, 13 trees, five shrubs and two climbers. Further, 17 species were native and 14 species were invasive to the region, whereas seven species were introduced in the region. Family Fabaceae was most dominant (n = 8) followed by Asteraceae (n = 4), Malvaceae (n = 4) and Poaceae (n = 3). Among all the species, about 50% of total species (n = 19) were present in both disturbed and undisturbed plots. However, the disturbed plots showed more number of unique species (n = 11) as compared to undisturbed plots (n = 8). Further, nine invasive species were common in both disturbed and undisturbed plots. Interestingly, undisturbed plots recorded greater number of unique invasive species (n = 4) than the disturbed plots (n = 1). Among all the plots, <em>Oplismenus burmanni</em> was the most common species, whereas <em>Ageratum houstonianum</em> was the most abundant invasive species.</p>
-<div id="fig-diversity" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig9.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;9: Sample coverage-based rarefaction and extrapolation curves of species diversity (A) species richness (q = 0), (B) Shannon diversity (q = 1), and (C) Simpson diveristy (q = 2), and phylogenetic diversity (D) Faith’s PD (q = 0), (E) Phylogenetic entropy (q = 1), and (F) Rao’s Q (q = 2) based on first three orders of Hill numbers for the disturbed and undisturbed plots in the study region.</figcaption>
+<div id="fig-diversity" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diversity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig9.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diversity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Sample coverage-based rarefaction and extrapolation curves of species diversity (A) species richness (q = 0), (B) Shannon diversity (q = 1), and (C) Simpson diveristy (q = 2), and phylogenetic diversity (D) Faith’s PD (q = 0), (E) Phylogenetic entropy (q = 1), and (F) Rao’s Q (q = 2) based on first three orders of Hill numbers for the disturbed and undisturbed plots in the study region.
+</figcaption>
 </figure>
 </div>
-<p>Both species diversity and phylogenetic diversity generally increased with sample coverage (<a href="#fig-diversity">Figure&nbsp;9</a>). However, the rarefaction curves for first three orders of Hill numbers usually overlapped for disturbed and undisturbed plots. Thus, little or no difference was observed in species diversity or phylogenetic diversity due to disturbance. Further, the curves disproportionately represented the rarefaction and extrapolation is achieved for only first order Hill number (Species richness and Faith’s PD). Such curves indicate that current samples of vegetation may be incomplete and diversity may differ with increased number of samples.</p>
+<p>Both species diversity and phylogenetic diversity generally increased with sample coverage (<a href="#fig-diversity" class="quarto-xref">Figure&nbsp;9</a>). However, the rarefaction curves for first three orders of Hill numbers usually overlapped for disturbed and undisturbed plots. Thus, little or no difference was observed in species diversity or phylogenetic diversity due to disturbance. Further, the curves disproportionately represented the rarefaction and extrapolation is achieved for only first order Hill number (Species richness and Faith’s PD). Such curves indicate that current samples of vegetation may be incomplete and diversity may differ with increased number of samples.</p>
 <div class="cell">
+<div id="tbl-estimates" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-estimates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of observed and estimated values for species diversity and phylogenetic diversity measures for disturbed (D) and undisturbed (U) vegetation plots. The estimated values are represented as mean ± SE and the 95% confidence intervals were estimated with 100 bootstrap replications.
+</figcaption>
+<div aria-describedby="tbl-estimates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tbl-estimates" class="anchored">
-
-<div id="dcqscxvqag" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dcqscxvqag table {
+<div id="wmopmptfdn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wmopmptfdn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dcqscxvqag thead, #dcqscxvqag tbody, #dcqscxvqag tfoot, #dcqscxvqag tr, #dcqscxvqag td, #dcqscxvqag th {
+#wmopmptfdn thead, #wmopmptfdn tbody, #wmopmptfdn tfoot, #wmopmptfdn tr, #wmopmptfdn td, #wmopmptfdn th {
   border-style: none;
 }
 
-#dcqscxvqag p {
+#wmopmptfdn p {
   margin: 0;
   padding: 0;
 }
 
-#dcqscxvqag .gt_table {
+#wmopmptfdn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -443,12 +573,12 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-left-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_caption {
+#wmopmptfdn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dcqscxvqag .gt_title {
+#wmopmptfdn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -460,7 +590,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-bottom-width: 0;
 }
 
-#dcqscxvqag .gt_subtitle {
+#wmopmptfdn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -472,7 +602,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-top-width: 0;
 }
 
-#dcqscxvqag .gt_heading {
+#wmopmptfdn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -484,13 +614,13 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-right-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_bottom_border {
+#wmopmptfdn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_col_headings {
+#wmopmptfdn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #000000;
@@ -505,7 +635,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-right-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_col_heading {
+#wmopmptfdn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -525,7 +655,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   overflow-x: hidden;
 }
 
-#dcqscxvqag .gt_column_spanner_outer {
+#wmopmptfdn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -537,15 +667,15 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   padding-right: 4px;
 }
 
-#dcqscxvqag .gt_column_spanner_outer:first-child {
+#wmopmptfdn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dcqscxvqag .gt_column_spanner_outer:last-child {
+#wmopmptfdn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dcqscxvqag .gt_column_spanner {
+#wmopmptfdn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -557,11 +687,11 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   width: 100%;
 }
 
-#dcqscxvqag .gt_spanner_row {
+#wmopmptfdn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dcqscxvqag .gt_group_heading {
+#wmopmptfdn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -587,7 +717,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   text-align: left;
 }
 
-#dcqscxvqag .gt_empty_group_heading {
+#wmopmptfdn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -602,15 +732,15 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   vertical-align: middle;
 }
 
-#dcqscxvqag .gt_from_md > :first-child {
+#wmopmptfdn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dcqscxvqag .gt_from_md > :last-child {
+#wmopmptfdn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dcqscxvqag .gt_row {
+#wmopmptfdn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -629,7 +759,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   overflow-x: hidden;
 }
 
-#dcqscxvqag .gt_stub {
+#wmopmptfdn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -642,7 +772,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   padding-right: 5px;
 }
 
-#dcqscxvqag .gt_stub_row_group {
+#wmopmptfdn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -656,15 +786,15 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   vertical-align: top;
 }
 
-#dcqscxvqag .gt_row_group_first td {
+#wmopmptfdn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dcqscxvqag .gt_row_group_first th {
+#wmopmptfdn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dcqscxvqag .gt_summary_row {
+#wmopmptfdn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -674,16 +804,16 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   padding-right: 5px;
 }
 
-#dcqscxvqag .gt_first_summary_row {
+#wmopmptfdn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_first_summary_row.thick {
+#wmopmptfdn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dcqscxvqag .gt_last_summary_row {
+#wmopmptfdn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -693,7 +823,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-bottom-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_grand_summary_row {
+#wmopmptfdn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -703,7 +833,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   padding-right: 5px;
 }
 
-#dcqscxvqag .gt_first_grand_summary_row {
+#wmopmptfdn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -713,7 +843,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-top-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_last_grand_summary_row_top {
+#wmopmptfdn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -723,11 +853,11 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-bottom-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_striped {
+#wmopmptfdn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dcqscxvqag .gt_table_body {
+#wmopmptfdn .gt_table_body {
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: #000000;
@@ -736,7 +866,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-bottom-color: #000000;
 }
 
-#dcqscxvqag .gt_footnotes {
+#wmopmptfdn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -750,7 +880,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-right-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_footnote {
+#wmopmptfdn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -759,7 +889,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   padding-right: 5px;
 }
 
-#dcqscxvqag .gt_sourcenotes {
+#wmopmptfdn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -773,7 +903,7 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   border-right-color: #D3D3D3;
 }
 
-#dcqscxvqag .gt_sourcenote {
+#wmopmptfdn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -781,157 +911,177 @@ S = \sqrt{\frac{\sum_{i = 1}^{n - 1} \sum_{j = i + 1}^{n} (d_{ij} - \hat{d}_{ij}
   padding-right: 5px;
 }
 
-#dcqscxvqag .gt_left {
+#wmopmptfdn .gt_left {
   text-align: left;
 }
 
-#dcqscxvqag .gt_center {
+#wmopmptfdn .gt_center {
   text-align: center;
 }
 
-#dcqscxvqag .gt_right {
+#wmopmptfdn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dcqscxvqag .gt_font_normal {
+#wmopmptfdn .gt_font_normal {
   font-weight: normal;
 }
 
-#dcqscxvqag .gt_font_bold {
+#wmopmptfdn .gt_font_bold {
   font-weight: bold;
 }
 
-#dcqscxvqag .gt_font_italic {
+#wmopmptfdn .gt_font_italic {
   font-style: italic;
 }
 
-#dcqscxvqag .gt_super {
+#wmopmptfdn .gt_super {
   font-size: 65%;
 }
 
-#dcqscxvqag .gt_footnote_marks {
+#wmopmptfdn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dcqscxvqag .gt_asterisk {
+#wmopmptfdn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dcqscxvqag .gt_indent_1 {
+#wmopmptfdn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dcqscxvqag .gt_indent_2 {
+#wmopmptfdn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dcqscxvqag .gt_indent_3 {
+#wmopmptfdn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dcqscxvqag .gt_indent_4 {
+#wmopmptfdn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dcqscxvqag .gt_indent_5 {
+#wmopmptfdn .gt_indent_5 {
   text-indent: 25px;
 }
+
+#wmopmptfdn .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#wmopmptfdn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;1:  <p>Summary of observed and estimated values for species diversity and
-phylogenetic diversity measures for disturbed (D) and undisturbed (U)
-vegetation plots. The estimated values are represented as mean ± SE and
-the 95% confidence intervals were estimated with 100 bootstrap
-replications.</p> </caption>
-  <thead>
-    
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Diversity">Diversity</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Observed">
-        <span class="gt_column_spanner">Observed</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Estimated">
-        <span class="gt_column_spanner">Estimated</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="95% CI">
-        <span class="gt_column_spanner">95% CI</span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="D">D</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="U">U</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="D">D</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="U">U</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="D">D</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="U">U</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="Diversity" class="gt_row gt_left">Species richness</td>
-<td headers="Observed.d" class="gt_row gt_left">30</td>
-<td headers="Observed.u" class="gt_row gt_left">27</td>
-<td headers="Estimated.d" class="gt_row gt_left">40.66 ± 7.08</td>
-<td headers="Estimated.u" class="gt_row gt_left">44.98 ± 11.3</td>
-<td headers="95% CI.d" class="gt_row gt_left">[30, 54.54]</td>
-<td headers="95% CI.u" class="gt_row gt_left">[27, 67.14]</td></tr>
-    <tr><td headers="Diversity" class="gt_row gt_left">Shannon diversity</td>
-<td headers="Observed.d" class="gt_row gt_left">6.77</td>
-<td headers="Observed.u" class="gt_row gt_left">6.03</td>
-<td headers="Estimated.d" class="gt_row gt_left">6.9 ± 0.33</td>
-<td headers="Estimated.u" class="gt_row gt_left">6.14 ± 0.31</td>
-<td headers="95% CI.d" class="gt_row gt_left">[6.25, 7.56]</td>
-<td headers="95% CI.u" class="gt_row gt_left">[5.53, 6.76]</td></tr>
-    <tr><td headers="Diversity" class="gt_row gt_left">Simpson diversity</td>
-<td headers="Observed.d" class="gt_row gt_left">3.15</td>
-<td headers="Observed.u" class="gt_row gt_left">3.12</td>
-<td headers="Estimated.d" class="gt_row gt_left">3.15 ± 0.15</td>
-<td headers="Estimated.u" class="gt_row gt_left">3.13 ± 0.15</td>
-<td headers="95% CI.d" class="gt_row gt_left">[2.86, 3.44]</td>
-<td headers="95% CI.u" class="gt_row gt_left">[2.84, 3.42]</td></tr>
-    <tr><td headers="Diversity" class="gt_row gt_left">Faith's PD</td>
-<td headers="Observed.d" class="gt_row gt_left">2265.69</td>
-<td headers="Observed.u" class="gt_row gt_left">2184.26</td>
-<td headers="Estimated.d" class="gt_row gt_left">3053.96 ± 466.17</td>
-<td headers="Estimated.u" class="gt_row gt_left">3644.34 ± 792.19</td>
-<td headers="95% CI.d" class="gt_row gt_left">[2265.69, 3967.63]</td>
-<td headers="95% CI.u" class="gt_row gt_left">[2184.26, 5197.01]</td></tr>
-    <tr><td headers="Diversity" class="gt_row gt_left">Phylogenetic entropy</td>
-<td headers="Observed.d" class="gt_row gt_left">615.44</td>
-<td headers="Observed.u" class="gt_row gt_left">641.3</td>
-<td headers="Estimated.d" class="gt_row gt_left">622.07 ± 15.39</td>
-<td headers="Estimated.u" class="gt_row gt_left">648.22 ± 18.04</td>
-<td headers="95% CI.d" class="gt_row gt_left">[615.44, 652.24]</td>
-<td headers="95% CI.u" class="gt_row gt_left">[641.3, 683.57]</td></tr>
-    <tr><td headers="Diversity" class="gt_row gt_left">Rao's Q</td>
-<td headers="Observed.d" class="gt_row gt_left">351.54</td>
-<td headers="Observed.u" class="gt_row gt_left">390.81</td>
-<td headers="Estimated.d" class="gt_row gt_left">352.08 ± 8.07</td>
-<td headers="Estimated.u" class="gt_row gt_left">391.49 ± 9.28</td>
-<td headers="95% CI.d" class="gt_row gt_left">[351.54, 367.89]</td>
-<td headers="95% CI.u" class="gt_row gt_left">[390.81, 409.68]</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings gt_spanner_row">
+<th rowspan="2" id="Diversity" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Diversity</th>
+<th colspan="2" id="Observed" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Observed</span></th>
+<th colspan="2" id="Estimated" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Estimated</span></th>
+<th colspan="2" id="95% CI" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">95% CI</span></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="D" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">D</th>
+<th id="U" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">U</th>
+<th id="D" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">D</th>
+<th id="U" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">U</th>
+<th id="D" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">D</th>
+<th id="U" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">U</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Diversity">Species richness</td>
+<td class="gt_row gt_left" headers="Observed.d">30</td>
+<td class="gt_row gt_left" headers="Observed.u">27</td>
+<td class="gt_row gt_left" headers="Estimated.d">40.66 ± 7.08</td>
+<td class="gt_row gt_left" headers="Estimated.u">44.98 ± 11.3</td>
+<td class="gt_row gt_left" headers="95% CI.d">[30, 54.54]</td>
+<td class="gt_row gt_left" headers="95% CI.u">[27, 67.14]</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Diversity">Shannon diversity</td>
+<td class="gt_row gt_left" headers="Observed.d">6.77</td>
+<td class="gt_row gt_left" headers="Observed.u">6.03</td>
+<td class="gt_row gt_left" headers="Estimated.d">6.9 ± 0.33</td>
+<td class="gt_row gt_left" headers="Estimated.u">6.14 ± 0.31</td>
+<td class="gt_row gt_left" headers="95% CI.d">[6.25, 7.56]</td>
+<td class="gt_row gt_left" headers="95% CI.u">[5.53, 6.76]</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Diversity">Simpson diversity</td>
+<td class="gt_row gt_left" headers="Observed.d">3.15</td>
+<td class="gt_row gt_left" headers="Observed.u">3.12</td>
+<td class="gt_row gt_left" headers="Estimated.d">3.15 ± 0.15</td>
+<td class="gt_row gt_left" headers="Estimated.u">3.13 ± 0.15</td>
+<td class="gt_row gt_left" headers="95% CI.d">[2.86, 3.44]</td>
+<td class="gt_row gt_left" headers="95% CI.u">[2.84, 3.42]</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Diversity">Faith's PD</td>
+<td class="gt_row gt_left" headers="Observed.d">2265.69</td>
+<td class="gt_row gt_left" headers="Observed.u">2184.26</td>
+<td class="gt_row gt_left" headers="Estimated.d">3053.96 ± 466.17</td>
+<td class="gt_row gt_left" headers="Estimated.u">3644.34 ± 792.19</td>
+<td class="gt_row gt_left" headers="95% CI.d">[2265.69, 3967.63]</td>
+<td class="gt_row gt_left" headers="95% CI.u">[2184.26, 5197.01]</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Diversity">Phylogenetic entropy</td>
+<td class="gt_row gt_left" headers="Observed.d">615.44</td>
+<td class="gt_row gt_left" headers="Observed.u">641.3</td>
+<td class="gt_row gt_left" headers="Estimated.d">622.07 ± 15.39</td>
+<td class="gt_row gt_left" headers="Estimated.u">648.22 ± 18.04</td>
+<td class="gt_row gt_left" headers="95% CI.d">[615.44, 652.24]</td>
+<td class="gt_row gt_left" headers="95% CI.u">[641.3, 683.57]</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Diversity">Rao's Q</td>
+<td class="gt_row gt_left" headers="Observed.d">351.54</td>
+<td class="gt_row gt_left" headers="Observed.u">390.81</td>
+<td class="gt_row gt_left" headers="Estimated.d">352.08 ± 8.07</td>
+<td class="gt_row gt_left" headers="Estimated.u">391.49 ± 9.28</td>
+<td class="gt_row gt_left" headers="95% CI.d">[351.54, 367.89]</td>
+<td class="gt_row gt_left" headers="95% CI.u">[390.81, 409.68]</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
-</div>
-<p>The observed and estimated measures of species and phylogenetic diversity were found to be similar among disturbed and undisturbed plots (<a href="#tbl-estimates">Table&nbsp;1</a>). Despite non-significant differences, the disturbed plots exhibited higher values of species richness, Shannon diversity and Simpson diversity as compared to undisturbed plots (<a href="#fig-div-estimates">Figure&nbsp;10</a>). Further, the estimated values were substantially higher than the observed values of diversity metrics. On average, the observed species richness and Faith’s phylogenetic diversity was 26% lower in disturbed plots and 40% lower in undisturbed plots than the estimated values of species richness. However, the observed and estimated values of Simpson diversity and Rao’s Q values were almost identical for both disturbed and undisturbed plots. Among all measures of species and phylogenetic diversity, the 95% confidence intervals were non-overlapping only for Rao’s Q values, suggesting that there were significant differences in the Rao’s Q phylogenetic diversity for the disturbed and undisturbed plots (<a href="#tbl-estimates">Table&nbsp;1</a>). The undisturbed plots exhibited significantly higher value of Rao’Q than the disturbed plots.</p>
-<div id="fig-div-estimates" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig10.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;10: Comparison of asymptotically estimated species and phylogenetic diversity metrics (A) species richness, (B) Shannon’s diversity, (C) Simpson’s diversity, (D) Faith’s phylogenetic diversity, (E) phylogenetic entropy and (F) Rao’s quadratic entropy for disturbed and undisturbed vegetation plots <span class="citation" data-cites="Chao2010 Chao2014">(<a href="#ref-Chao2010" role="doc-biblioref">Chao, Chiu, and Jost 2010</a>; <a href="#ref-Chao2014" role="doc-biblioref">Chao et al. 2014</a>)</span>. The points represent the estimated mean values, the error bars represent the associated standard error (SE) and the shaded region represent the 95% confidence intervals from 100 bootstrap replications.</figcaption>
 </figure>
 </div>
-<p>Non-metric multidimensional scaling (NMDS) ordination analysis indicated intermixing of disturbed and undisturbed vegetation plots (<a href="#fig-nmds">Figure&nbsp;11</a>). The permutational multivariate analysis of variance (perMANOVA) showed that the disturbed and undisturbed plots did not significantly differ in vegetation composition (<em>F</em><sub>1,12</sub> = 0.91, <em>p</em> = 0.575). There was a good to fair fit of ordination as indicated by relatively low stress (stress = 0.11). Despite high similarity in vegetation composition, two disturbed plots indicated unique species composition. One disturbed plot is solely dominated by <em>Justicia adhatoda</em>, whereas other is dominated by <em>Dendrocalamus strictus</em> with few <em>Bougainvillea spectabilis</em>.</p>
-<div id="fig-nmds" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/fig11.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;11: Non-metric multidimensional scaling (NMDS) for differences in species composition between the disturbed and undisturbed vegetation plots. Permutational multivariate analysis of variance (perMANOVA) with 9,999 permutations was used to test the differences between disturbed and undisturbed plots. The goodness-of-fit was assessed by stress value.</figcaption>
+</div>
+<p>The observed and estimated measures of species and phylogenetic diversity were found to be similar among disturbed and undisturbed plots (<a href="#tbl-estimates" class="quarto-xref">Table&nbsp;1</a>). Despite non-significant differences, the disturbed plots exhibited higher values of species richness, Shannon diversity and Simpson diversity as compared to undisturbed plots (<a href="#fig-div-estimates" class="quarto-xref">Figure&nbsp;10</a>). Further, the estimated values were substantially higher than the observed values of diversity metrics. On average, the observed species richness and Faith’s phylogenetic diversity was 26% lower in disturbed plots and 40% lower in undisturbed plots than the estimated values of species richness. However, the observed and estimated values of Simpson diversity and Rao’s Q values were almost identical for both disturbed and undisturbed plots. Among all measures of species and phylogenetic diversity, the 95% confidence intervals were non-overlapping only for Rao’s Q values, suggesting that there were significant differences in the Rao’s Q phylogenetic diversity for the disturbed and undisturbed plots (<a href="#tbl-estimates" class="quarto-xref">Table&nbsp;1</a>). The undisturbed plots exhibited significantly higher value of Rao’Q than the disturbed plots.</p>
+<div id="fig-div-estimates" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-div-estimates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig10.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-div-estimates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Comparison of asymptotically estimated species and phylogenetic diversity metrics (A) species richness, (B) Shannon’s diversity, (C) Simpson’s diversity, (D) Faith’s phylogenetic diversity, (E) phylogenetic entropy and (F) Rao’s quadratic entropy for disturbed and undisturbed vegetation plots <span class="citation" data-cites="Chao2010 Chao2014">(<a href="#ref-Chao2010" role="doc-biblioref">Chao, Chiu, and Jost 2010</a>; <a href="#ref-Chao2014" role="doc-biblioref">Chao et al. 2014</a>)</span>. The points represent the estimated mean values, the error bars represent the associated standard error (SE) and the shaded region represent the 95% confidence intervals from 100 bootstrap replications.
+</figcaption>
+</figure>
+</div>
+<p>Non-metric multidimensional scaling (NMDS) ordination analysis indicated intermixing of disturbed and undisturbed vegetation plots (<a href="#fig-nmds" class="quarto-xref">Figure&nbsp;11</a>). The permutational multivariate analysis of variance (perMANOVA) showed that the disturbed and undisturbed plots did not significantly differ in vegetation composition (<em>F</em><sub>1,12</sub> = 0.91, <em>p</em> = 0.575). There was a good to fair fit of ordination as indicated by relatively low stress (stress = 0.11). Despite high similarity in vegetation composition, two disturbed plots indicated unique species composition. One disturbed plot is solely dominated by <em>Justicia adhatoda</em>, whereas other is dominated by <em>Dendrocalamus strictus</em> with few <em>Bougainvillea spectabilis</em>.</p>
+<div id="fig-nmds" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/fig11.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Non-metric multidimensional scaling (NMDS) for differences in species composition between the disturbed and undisturbed vegetation plots. Permutational multivariate analysis of variance (perMANOVA) with 9,999 permutations was used to test the differences between disturbed and undisturbed plots. The goodness-of-fit was assessed by stress value.
+</figcaption>
 </figure>
 </div>
 </section>
@@ -942,7 +1092,7 @@ replications.</p> </caption>
 <p>One notable finding was the overall declining trend in NDVI values observed over the Sukhna lake. Sukhna lake not only showed greater decrease in NDVI but also indicated high variation in magnitude of NDVI decrease. In context of Sukhna lake, this trend suggests a degradation of water quality. The negative changes in NDVI reflect the deterioration of the lake ecosystem. These changes can have adverse effects on water quality, biodiversity, and overall ecological balance <span class="citation" data-cites="CSE2012">(<a href="#ref-CSE2012" role="doc-biblioref">CSE 2012</a>)</span>. Since more than half of the Sukhna lake catchment is severely prone to soil erosion <span class="citation" data-cites="Semwal2017">(<a href="#ref-Semwal2017" role="doc-biblioref">Semwal, Khobragade, and Nainwal 2017</a>)</span>, sedimentation and siltation appear to be most prominent factor contributing to the declining water quality. Further, it has been suggested that the effects of siltation are more prominent than the urbanisation and climate change <span class="citation" data-cites="Singh2019">(<a href="#ref-Singh2019" role="doc-biblioref">D. K. Singh and Singh 2019</a>)</span>. Despite numerous efforts from the administration, siltation has remained a major problem during past decades <span class="citation" data-cites="Shrimali2001 Singh2002">(<a href="#ref-Shrimali2001" role="doc-biblioref">Shrimali, Aggarwal, and Samra 2001</a>; <a href="#ref-Singh2002" role="doc-biblioref">Y. Singh 2002</a>)</span>. Apart from siltation, the degraded water quality can be attributed to numerous factors including pollution, sedimentation or changes in water flow patterns. These findings align with previous studies highlighting the degradation of the Sukhna lake <span class="citation" data-cites="Maansi2021 Singh2019">(<a href="#ref-Maansi2021" role="doc-biblioref">Maansi, Jindal, and Wats 2021</a>; <a href="#ref-Singh2019" role="doc-biblioref">D. K. Singh and Singh 2019</a>)</span>.</p>
 <p>Our study indicated that both lake reserve forest and Sukhna lake are experiencing substantial changes in ecosystem health during the past two decades <span class="citation" data-cites="Singh2002">(<a href="#ref-Singh2002" role="doc-biblioref">Y. Singh 2002</a>)</span>. These findings highlight the vulnerability of urban forests to anthropogenic influences and the need for effective management and conservation strategies. The multi-temporal remote sensing datasets are useful for monitoring the temporary and long-term disturbances <span class="citation" data-cites="Verbesselt2012">(<a href="#ref-Verbesselt2012" role="doc-biblioref">Verbesselt, Zeileis, and Herold 2012</a>)</span>. The integration of satellite imagery analysis and statistical algorithms are emerging as potential tools for monitoring changes in vegetation patterns due to climate change or invasive species encroachment. Such studies can provide valuable insights into the vegetation dynamics in urban forests due to disturbance events. However, the accuracy and reliability of disturbance detection need to be further enhanced by incorporating ground data and validation techniques. The remote sensing approach can prove to be a powerful tool for identification and mapping of various disturbances such as construction activities, pollution, invasive species, and climate change impacts. Such techniques can capture large-scale disturbances, enabling comprehensive assessments and informed decision-making for forest management.</p>
 <p>Another objective of present study was to analyse the effects of disturbance events on vegetation structure of urban forests and therefore, we compared the taxonomic and phylogenetic diversity between the disturbed and undisturbed plots. Contrary to our expectations, we did not find any significant differences in taxonomic and phylogenetic diversity metrics for the disturbed vegetation plots as compared to undisturbed plots. The species richness and Simpson diversity was similar for the disturbed and undisturbed plots suggesting that disturbance had little influence on the species richness and Simpson diversity. However, the Shannon’s diversity was higher for disturbed plots than the undisturbed plots, though there was little statistical evidence for significant differences. The higher Shannon’s diversity in disturbed plots indicate that disturbance might have promoted the evenness of species. Further, disturbance may have selectively promoted some species while discouraging others. These findings are consistent with previous studies investigating the disturbance effects on vegetation structure <span class="citation" data-cites="Erfanian2021 Gogoi2018">(<a href="#ref-Erfanian2021" role="doc-biblioref">Erfanian, Alatalo, and Ejtehadi 2021</a>; <a href="#ref-Gogoi2018" role="doc-biblioref">Gogoi and Sahoo 2018</a>)</span>. However, multiple direct and indirect effects of disturbance can shape the biodiversity and vegetation structure <span class="citation" data-cites="Bowd2021 Roman2018">(<a href="#ref-Bowd2021" role="doc-biblioref">Bowd et al. 2021</a>; <a href="#ref-Roman2018" role="doc-biblioref">Roman et al. 2018</a>)</span>.</p>
-<p>An important finding of the present study is the significantly lower phylogenetic Rao’s Quadratic Entropy (Rao’s Q) for disturbed plots as compared to the undisturbed plots (<a href="#fig-div-estimates">Figure&nbsp;10</a> F). The lower phylogenetic diversity of disturbed plots suggests the presence of closely related evolutionary lineages. On the other hand, the higher phylogenetic diversity of undisturbed plots suggests presence of species from diverse evolutionary lineages. It appears that disturbance events discourage the coexistence of species lineages that are more distantly-related in evolutionary history. Disturbance may promote phylogenetically similar species reducing the phylogenetic diversity of species within a community. This observation is complemented by lower levels of Faith’s phylogenetic diversity (PD) and phylogenetic entropy for disturbed plots. The lower levels of Faith’s PD for disturbed plots indicates the presence of species with shared evolutionary history. Similarly, the lower phylogenetic entropy for disturbed plots suggests species are clustered on the phylogenetic tree indicating dominance or specialisation of some specific lineages. These findings align with previous studies examining the disturbance effects on phylogenetic structure of vegetation <span class="citation" data-cites="Dinnage2009 Erfanian2021 Liendo2020">(<a href="#ref-Dinnage2009" role="doc-biblioref">Dinnage 2009</a>; <a href="#ref-Erfanian2021" role="doc-biblioref">Erfanian, Alatalo, and Ejtehadi 2021</a>; <a href="#ref-Liendo2020" role="doc-biblioref">Liendo et al. 2020</a>)</span>.</p>
+<p>An important finding of the present study is the significantly lower phylogenetic Rao’s Quadratic Entropy (Rao’s Q) for disturbed plots as compared to the undisturbed plots (<a href="#fig-div-estimates" class="quarto-xref">Figure&nbsp;10</a> F). The lower phylogenetic diversity of disturbed plots suggests the presence of closely related evolutionary lineages. On the other hand, the higher phylogenetic diversity of undisturbed plots suggests presence of species from diverse evolutionary lineages. It appears that disturbance events discourage the coexistence of species lineages that are more distantly-related in evolutionary history. Disturbance may promote phylogenetically similar species reducing the phylogenetic diversity of species within a community. This observation is complemented by lower levels of Faith’s phylogenetic diversity (PD) and phylogenetic entropy for disturbed plots. The lower levels of Faith’s PD for disturbed plots indicates the presence of species with shared evolutionary history. Similarly, the lower phylogenetic entropy for disturbed plots suggests species are clustered on the phylogenetic tree indicating dominance or specialisation of some specific lineages. These findings align with previous studies examining the disturbance effects on phylogenetic structure of vegetation <span class="citation" data-cites="Dinnage2009 Erfanian2021 Liendo2020">(<a href="#ref-Dinnage2009" role="doc-biblioref">Dinnage 2009</a>; <a href="#ref-Erfanian2021" role="doc-biblioref">Erfanian, Alatalo, and Ejtehadi 2021</a>; <a href="#ref-Liendo2020" role="doc-biblioref">Liendo et al. 2020</a>)</span>.</p>
 <p>Our study suggest that the effects of disturbance are more prominent on phylogenetic structure of vegetation as compared to taxonomic diversity. While taxonomic diversity remained similar, the phylogenetic diversity appeared to be declined under the influence of disturbance. This reduction could be a result of indirect effects of disturbance through various factors, such as invasive species, climate change or altered community dynamics. Invasive species were found to have a considerable influence on the vegetation structure in the urban forests <span class="citation" data-cites="Aryal2022">(<a href="#ref-Aryal2022" role="doc-biblioref">Aryal et al. 2022</a>)</span>. The encroachment of invasive species, such as <em>Lantana camara</em> and <em>Prosopis juliflora</em>, might have disrupted the native plant communities, reducing the phylogenetic diversity and altering the composition of the forest under-story. The spread of invasive species can also affect ecosystem processes, such as nutrient cycling <span class="citation" data-cites="Patil2020">(<a href="#ref-Patil2020" role="doc-biblioref">Patil et al. 2020</a>)</span>, further impacting the overall vegetation structure and ecological functioning of the urban forests. Ongoing climate change is another important factor affecting the vegetation structure in urban forests. Specifically, hydrological disturbance due to erratic frequency and intensity of rainfall events might have impacted the tree growth, species composition, and overall forest structure <span class="citation" data-cites="Shafroth2002">(<a href="#ref-Shafroth2002" role="doc-biblioref">Shafroth, Stromberg, and Patten 2002</a>)</span>. Further, water logged conditions and increased susceptibility to diseases may be leading to decreased tree vitality and increased mortality rates in some areas.</p>
 </section>
 <section id="conclusion" class="level2">
@@ -963,8 +1113,8 @@ replications.</p> </caption>
 <p>Authors are thankful to Forest and Wildlife Department, Chandigarh for providing permission to conduct study in Sukhna lake catchment area.</p>
 </div></section><section id="data-availability" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Data availability</h2><div class="quarto-appendix-contents">
 
-<p>A reproducible preprint with all data and <code>R</code> codes used for analysis is currently available from <a href="https://github.com/kumar-a" class="uri">https://github.com/kumar-a</a>. We will be deposit our all data and code to suitable free repository after acceptance of article.</p>
-</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<p>The data and R codes that support the findings of this study are openly available in figshare at <a href="https://doi.org/10.6084/m9.figshare.24531031" class="uri">https://doi.org/10.6084/m9.figshare.24531031</a></p>
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Aryal2022" class="csl-entry" role="listitem">
 Aryal, Prakash Chandra, Chandramani Aryal, Kiran Bhusal, Devendra Chapagain, Man Kumar Dhamala, Sanu Raja Maharjan, and Parveen K. Chhetri. 2022. <span>“Forest Structure and Anthropogenic Disturbances Regulate Plant Invasion in Urban Forests.”</span> <em>Urban Ecosystems</em> 25 (2): 367–77. <a href="https://doi.org/10.1007/s11252-021-01159-7">https://doi.org/10.1007/s11252-021-01159-7</a>.
 </div>
@@ -1187,7 +1337,27 @@ Wohlgemuth, Thomas, Anke Jentsch, and Rupert Seidl, eds. 2022. <em>Disturbance E
 <div id="ref-Zanne2014" class="csl-entry" role="listitem">
 Zanne, Amy E., David C. Tank, William K. Cornwell, Jonathan M. Eastman, Stephen A. Smith, Richard G. FitzJohn, Daniel J. McGlinn, et al. 2014. <span>“Three Keys to the Radiation of Angiosperms into Freezing Environments.”</span> <em>Nature</em> 506 (7486): 89–92. <a href="https://doi.org/10.1038/nature12872">https://doi.org/10.1038/nature12872</a>.
 </div>
-</div></section></div></main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{kumar2024,
+  author = {Kumar, Abhishek and Kumar, Pardeep and Patil, Meenu and
+    Hussain, Sabir and Yadav, Rajni and Sharma, Sheenu and Tokas, Diksha
+    and Singh, Siril and Narain Singh, Anand},
+  title = {Disturbance and Vegetation Structure in an Urban Forest of
+    {Indian} {Siwaliks}},
+  journal = {Environmental Monitoring and Assessment},
+  volume = {196},
+  number = {8},
+  pages = {691},
+  date = {2024-07-04},
+  doi = {10.1007/s10661-024-12801-0},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kumar2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Kumar, Abhishek, Pardeep Kumar, Meenu Patil, Sabir Hussain, Rajni Yadav,
+Sheenu Sharma, Diksha Tokas, Siril Singh, and Anand Narain Singh. 2024.
+<span>“Disturbance and Vegetation Structure in an Urban Forest of Indian
+Siwaliks.”</span> <em>Environmental Monitoring and Assessment</em> 196
+(8): 691. <a href="https://doi.org/10.1007/s10661-024-12801-0">https://doi.org/10.1007/s10661-024-12801-0</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1267,10 +1437,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1280,8 +1467,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1293,7 +1489,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1337,6 +1656,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1362,6 +1682,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1422,6 +1768,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -28,6 +28,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -68,7 +69,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -77,6 +84,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -91,9 +99,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Abhishek Kumar</span>
     </a>
@@ -105,40 +113,48 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../accomplishments.html"> <i class="bi bi-trophy" role="img">
+</i> 
+<span class="menu-text">Accomplishments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog.html"> <i class="bi bi-pen" role="img">
+</i> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../../publications.html"> <i class="bi bi-journals" role="img">
+</i> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> <i class="bi bi-mic" role="img">
+</i> 
+<span class="menu-text">Talks</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/kumar-a" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/kumar-a"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/abkumar_" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/abkumar_"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
@@ -155,7 +171,7 @@ div.csl-indent {
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -186,20 +202,20 @@ div.csl-indent {
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://www.researchgate.net/profile/Anand-Singh-15">Anand Narain Singh</a> <a href="https://orcid.org/0000-0002-0148-8680" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://akumar.netlify.app">Abhishek Kumar</a> <a href="https://orcid.org/0000-0003-2252-7623" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Panjab University, Chandigarh
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -223,7 +239,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -287,10 +305,15 @@ Note
 <h2 class="anchored" data-anchor-id="results">Results</h2>
 <section id="survival" class="level3">
 <h3 class="anchored" data-anchor-id="survival">Survival</h3>
-<p>Plantations’ survival has been estimated as the stocking density (Individual stems ha<sup>-1</sup>) for each species (three plots) under exotic and native plantations, and the results are tabulated in <a href="#tbl-a">Table&nbsp;1</a>.</p>
+<p>Plantations’ survival has been estimated as the stocking density (Individual stems ha<sup>-1</sup>) for each species (three plots) under exotic and native plantations, and the results are tabulated in <a href="#tbl-a" class="quarto-xref">Table&nbsp;1</a>.</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-a" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Stocking density (Individuals / ha) of 5-yr old planted exotic and native woody species on coal mine spoil
+</figcaption>
+<div aria-describedby="tbl-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="fyybpybnqx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -703,9 +726,7 @@ Note
 }
 </style>
 
-<div id="tbl-a" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;1: Stocking density (Individuals / ha) of 5-yr old planted exotic and native woody species on coal mine spoil</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 20%">
 <col style="width: 20%">
@@ -737,7 +758,9 @@ Note
 <td class="gt_row gt_center" headers="**Exotic**  V3">1760 (70.4)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V4">1670 (66.8)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V5"><div class="gt_from_md">
+<center>
 1677 ± 46<sup>cd</sup> (67)
+</center>
 </div></td>
 </tr>
 <tr class="odd">
@@ -748,7 +771,9 @@ Note
 <td class="gt_row gt_center" headers="**Exotic**  V3">1600 (64)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V4">1650 (66)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V5"><div class="gt_from_md">
+<center>
 1566 ± 61<sup>d</sup> (63)
+</center>
 </div></td>
 </tr>
 <tr class="even">
@@ -759,7 +784,9 @@ Note
 <td class="gt_row gt_center" headers="**Exotic**  V3">1778 (71)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V4">1790 (72)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V5"><div class="gt_from_md">
+<center>
 1822 ± 39<sup>bc</sup> (73)
+</center>
 </div></td>
 </tr>
 <tr class="odd">
@@ -770,7 +797,9 @@ Note
 <td class="gt_row gt_center" headers="**Exotic**  V3">2000 (80)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V4">1786 (71)</td>
 <td class="gt_row gt_center" headers="**Exotic**  V5"><div class="gt_from_md">
+<center>
 1858 ± 71<sup>bc</sup> (74)
+</center>
 </div></td>
 </tr>
 <tr class="even gt_group_heading_row">
@@ -784,7 +813,9 @@ Note
 <td class="gt_row gt_center" headers="**Native**  V3">2160 (86)</td>
 <td class="gt_row gt_center" headers="**Native**  V4">2208 (88)</td>
 <td class="gt_row gt_center" headers="**Native**  V5"><div class="gt_from_md">
+<center>
 2187 ± 14<sup>a</sup> (87)
+</center>
 </div></td>
 </tr>
 <tr class="even">
@@ -795,7 +826,9 @@ Note
 <td class="gt_row gt_center" headers="**Native**  V3">2192 (88)</td>
 <td class="gt_row gt_center" headers="**Native**  V4">2208 (88)</td>
 <td class="gt_row gt_center" headers="**Native**  V5"><div class="gt_from_md">
+<center>
 2208 ± 9<sup>a</sup> (88)
+</center>
 </div></td>
 </tr>
 <tr class="odd">
@@ -806,7 +839,9 @@ Note
 <td class="gt_row gt_center" headers="**Native**  V3">1822 (73)</td>
 <td class="gt_row gt_center" headers="**Native**  V4">1867 (75)</td>
 <td class="gt_row gt_center" headers="**Native**  V5"><div class="gt_from_md">
+<center>
 1778 ± 68<sup>cd</sup> (71)
+</center>
 </div></td>
 </tr>
 <tr class="even">
@@ -817,7 +852,9 @@ Note
 <td class="gt_row gt_center" headers="**Native**  V3">2000 (80)</td>
 <td class="gt_row gt_center" headers="**Native**  V4">2088 (84)</td>
 <td class="gt_row gt_center" headers="**Native**  V5"><div class="gt_from_md">
+<center>
 2029 ± 29<sup>ab</sup> (81)
+</center>
 </div></td>
 </tr>
 </tbody><tfoot class="gt_sourcenotes">
@@ -833,15 +870,22 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>The stocking density (individual stem ha<sup>-1</sup>) at the time of plantation was 2,500 in both types of plantations. After five years of plantation establishment, about 71-88% of individuals were survived in native and 63-74% in exotic plantations. Among all plantations, the highest survival rate was observed in the native species (<em>A. procera</em>) and lowest in the exotic species (<em>C. equisetifolia</em>); therefore, ANOVA indicated significant differences in stocking density due to species (<a href="#tbl-b">Table&nbsp;2</a>).</p>
+</figure>
+</div>
+</div>
+<p>The stocking density (individual stem ha<sup>-1</sup>) at the time of plantation was 2,500 in both types of plantations. After five years of plantation establishment, about 71-88% of individuals were survived in native and 63-74% in exotic plantations. Among all plantations, the highest survival rate was observed in the native species (<em>A. procera</em>) and lowest in the exotic species (<em>C. equisetifolia</em>); therefore, ANOVA indicated significant differences in stocking density due to species (<a href="#tbl-b" class="quarto-xref">Table&nbsp;2</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-b" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Summary of ANOVA for plantation species’ effect on growth parameters, biomass, and net primary production components
+</figcaption>
+<div aria-describedby="tbl-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="oqoohdoxxs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -1254,9 +1298,7 @@ Note
 }
 </style>
 
-<div id="tbl-b" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;2: Summary of ANOVA for plantation species’ effect on growth parameters, biomass, and net primary production components</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead class="gt_col_headings">
 <tr class="header">
 <th id="Components" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Components</th>
@@ -1337,19 +1379,25 @@ Note
 </tr>
 </tbody>
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>However, the survival rates were significantly higher in native plantations than in exotic species (<a href="#fig-a">Figure&nbsp;1</a>).</p>
+</figure>
+</div>
+</div>
+<p>However, the survival rates were significantly higher in native plantations than in exotic species (<a href="#fig-a" class="quarto-xref">Figure&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
 <pre><code>#&gt; [1] FALSE</code></pre>
 <div class="cell-output-display">
-<div id="fig-a" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-a-1.svg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Violin plots with mean and standard deviation for survival, growth, biomass, and net primary productivity among the exotic and native woody species plantations on coal mine spoil. The statistical significance was determined by using student’s <em>t</em>-test and the <em>p</em>-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and 0.1 corresponds to <code>****</code>, <code>***</code>, <code>**</code>, <code>*</code> and <code>ns</code>, respectively.</figcaption>
+<div id="fig-a" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-a-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Violin plots with mean and standard deviation for survival, growth, biomass, and net primary productivity among the exotic and native woody species plantations on coal mine spoil. The statistical significance was determined by using student’s <em>t</em>-test and the <em>p</em>-values &lt;0.0001, &lt;0.001, &lt;0.01, &lt;0.05 and 0.1 corresponds to <code>****</code>, <code>***</code>, <code>**</code>, <code>*</code> and <code>ns</code>, respectively.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1357,10 +1405,15 @@ Note
 </section>
 <section id="growth-performance" class="level3">
 <h3 class="anchored" data-anchor-id="growth-performance">Growth performance</h3>
-<p>The growth performance of exotic and native species was determined in terms of height and diameter. Height and diameter (growth parameter) were significantly varied among all plantations of exotic and native species (<a href="#tbl-b">Table&nbsp;2</a>). Among all plantation species (native and exotics), the maximum height was attained by <em>G. pteridifolia</em>, whereas maximum diameter was observed for <em>A. lebbeck</em> after 5-years of their establishment. The height and diameter values varied from 2.19 to 5.18 m and 4.32 to 7.58 cm, respectively, in native and 2.75 to 5.88 m and 2.99 to 4.90 cm, respectively, in exotic plantations (<a href="#tbl-c">Table&nbsp;3</a>). However, the height was significantly higher, and the diameter was significantly smaller in exotic species plantations than native species plantations (<a href="#fig-a">Figure&nbsp;1</a>).</p>
+<p>The growth performance of exotic and native species was determined in terms of height and diameter. Height and diameter (growth parameter) were significantly varied among all plantations of exotic and native species (<a href="#tbl-b" class="quarto-xref">Table&nbsp;2</a>). Among all plantation species (native and exotics), the maximum height was attained by <em>G. pteridifolia</em>, whereas maximum diameter was observed for <em>A. lebbeck</em> after 5-years of their establishment. The height and diameter values varied from 2.19 to 5.18 m and 4.32 to 7.58 cm, respectively, in native and 2.75 to 5.88 m and 2.99 to 4.90 cm, respectively, in exotic plantations (<a href="#tbl-c" class="quarto-xref">Table&nbsp;3</a>). However, the height was significantly higher, and the diameter was significantly smaller in exotic species plantations than native species plantations (<a href="#fig-a" class="quarto-xref">Figure&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-c" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Growth performance of 5-yr-old planted exotic and native woody species on coal mine spoil
+</figcaption>
+<div aria-describedby="tbl-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-
 <div id="sncjrvketn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -1773,9 +1826,7 @@ Note
 }
 </style>
 
-<div id="tbl-c" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;3: Growth performance of 5-yr-old planted exotic and native woody species on coal mine spoil</caption>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 11%">
 <col style="width: 11%">
@@ -1937,18 +1988,24 @@ Note
 </tfoot>
 
 </table>
-</div>
 
 </div>
 </div>
 </div>
-<p>Consequently, the height to diameter ratio was significantly smaller in native species. A significant positive correlation is observed for height and diameter in exotic species, whereas selected native species did not exhibit any significant correlation (<a href="#fig-b">Figure&nbsp;2</a> a). Further, non-legumes showed a significant negative correlation (<a href="#fig-b">Figure&nbsp;2</a> b).</p>
+</figure>
+</div>
+</div>
+<p>Consequently, the height to diameter ratio was significantly smaller in native species. A significant positive correlation is observed for height and diameter in exotic species, whereas selected native species did not exhibit any significant correlation (<a href="#fig-b" class="quarto-xref">Figure&nbsp;2</a> a). Further, non-legumes showed a significant negative correlation (<a href="#fig-b" class="quarto-xref">Figure&nbsp;2</a> b).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-b" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-b-1.svg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: Relationship between Height and Diameter for exotic and native woody species (a), and legume and non-leguminous species plantations (b). The regression line was fitted using the linear model, and Pearson’s correlation coefficient values are represented by letter ‘<em>R</em>’ with corresponding probability <em>p</em>-values.</figcaption>
+<div id="fig-b" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-b-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Relationship between Height and Diameter for exotic and native woody species (a), and legume and non-leguminous species plantations (b). The regression line was fitted using the linear model, and Pearson’s correlation coefficient values are represented by letter ‘<em>R</em>’ with corresponding probability <em>p</em>-values.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1956,11 +2013,15 @@ Note
 </section>
 <section id="biomass-production" class="level3">
 <h3 class="anchored" data-anchor-id="biomass-production">Biomass production</h3>
-<p>The observed values for the biomass of different plant components are summarised in <a href="#tbl-d">Table&nbsp;4</a>. It was noted that <em>D. strictus</em> had shown the highest total biomass production among all the species, whereas <em>A. auriculiformis</em> exhibited the highest total biomass production among the exotic species. The biomass of different plant components was significantly varied due to species among all the plantations (<a href="#tbl-b">Table&nbsp;2</a>). Therefore, values in native plantations significantly varied from 7.68 to 74.68 t ha<sup>-1</sup>, minimum for <em>T. grandis</em> and maximum for <em>D. strictus</em> plantation and 8.49-31.03 t ha<sup>-1</sup> exotic plantations, being maximum in <em>A. auriculiformis</em> and minimum in <em>C. siamea</em> (<a href="#tbl-d">Table&nbsp;4</a>).</p>
+<p>The observed values for the biomass of different plant components are summarised in <a href="#tbl-d" class="quarto-xref">Table&nbsp;4</a>. It was noted that <em>D. strictus</em> had shown the highest total biomass production among all the species, whereas <em>A. auriculiformis</em> exhibited the highest total biomass production among the exotic species. The biomass of different plant components was significantly varied due to species among all the plantations (<a href="#tbl-b" class="quarto-xref">Table&nbsp;2</a>). Therefore, values in native plantations significantly varied from 7.68 to 74.68 t ha<sup>-1</sup>, minimum for <em>T. grandis</em> and maximum for <em>D. strictus</em> plantation and 8.49-31.03 t ha<sup>-1</sup> exotic plantations, being maximum in <em>A. auriculiformis</em> and minimum in <em>C. siamea</em> (<a href="#tbl-d" class="quarto-xref">Table&nbsp;4</a>).</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-d" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Biomass production (t / ha) under 5-yr old planted exotic and native woody species on coal mine spoil
+</figcaption>
+<div aria-describedby="tbl-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tbl-d" class="anchored">
-
 <div id="vyzesyyich" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -2372,8 +2433,7 @@ Note
   text-indent: 25px;
 }
 </style>
-<table class="gt_table"><caption>Table&nbsp;4:  <p>Biomass production (t / ha) under 5-yr old planted exotic and native
-woody species on coal mine spoil</p> </caption>
+<table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -2511,14 +2571,20 @@ woody species on coal mine spoil</p> </caption>
 </div>
 </div>
 </div>
+</figure>
 </div>
-<p>Among plant parts, stem contributed more than 50% to the total biomass for both exotic and native species (<a href="#fig-c">Figure&nbsp;3</a> a) and leguminous and non-leguminous species (<a href="#fig-c">Figure&nbsp;3</a> b). The share of aboveground components in the total biomass in the present study was 65.3-91.1% in native and 66.3-84.5% in exotic and belowground contribution was in the range of 8.9-34.7% in native and 15.5-33.7% in exotic plantations, respectively (<a href="#fig-c">Figure&nbsp;3</a> c). However, the belowground biomass was higher for leguminous species than the non-leguminous species (<a href="#fig-c">Figure&nbsp;3</a> d). Moreover, relative contributions of short-lived components (foliage and fine root &lt; 5 mm) were small as compared to long-lived tree component (stem) to the tree layer biomass for both types of plantations calculated at 5-yr age (<a href="#fig-c">Figure&nbsp;3</a> e), and a similar pattern was observed for the leguminous and non-leguminous species (<a href="#fig-c">Figure&nbsp;3</a> f). Further, all components’ biomass production except fine root biomass was significantly higher in native species plantations compared to exotic species plantations (<a href="#fig-a">Figure&nbsp;1</a>).</p>
+</div>
+<p>Among plant parts, stem contributed more than 50% to the total biomass for both exotic and native species (<a href="#fig-c" class="quarto-xref">Figure&nbsp;3</a> a) and leguminous and non-leguminous species (<a href="#fig-c" class="quarto-xref">Figure&nbsp;3</a> b). The share of aboveground components in the total biomass in the present study was 65.3-91.1% in native and 66.3-84.5% in exotic and belowground contribution was in the range of 8.9-34.7% in native and 15.5-33.7% in exotic plantations, respectively (<a href="#fig-c" class="quarto-xref">Figure&nbsp;3</a> c). However, the belowground biomass was higher for leguminous species than the non-leguminous species (<a href="#fig-c" class="quarto-xref">Figure&nbsp;3</a> d). Moreover, relative contributions of short-lived components (foliage and fine root &lt; 5 mm) were small as compared to long-lived tree component (stem) to the tree layer biomass for both types of plantations calculated at 5-yr age (<a href="#fig-c" class="quarto-xref">Figure&nbsp;3</a> e), and a similar pattern was observed for the leguminous and non-leguminous species (<a href="#fig-c" class="quarto-xref">Figure&nbsp;3</a> f). Further, all components’ biomass production except fine root biomass was significantly higher in native species plantations compared to exotic species plantations (<a href="#fig-a" class="quarto-xref">Figure&nbsp;1</a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-c" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-c-1.svg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Biomass partitioning among different plant parts (a, b), aboveground and below ground (c, d), and short-lived and long-lived components (e, f) for exotic vs.&nbsp;native and legume vs.&nbsp;non-legume species plantation, respectively.</figcaption>
+<div id="fig-c" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-c-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Biomass partitioning among different plant parts (a, b), aboveground and below ground (c, d), and short-lived and long-lived components (e, f) for exotic vs.&nbsp;native and legume vs.&nbsp;non-legume species plantation, respectively.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -2526,11 +2592,15 @@ woody species on coal mine spoil</p> </caption>
 </section>
 <section id="net-primary-production" class="level3">
 <h3 class="anchored" data-anchor-id="net-primary-production">Net primary production</h3>
-<p>The net primary productivity of different components of plant species is given in <a href="#tbl-e">Table&nbsp;5</a>. Total net production (above + below ground) among these plantations on mine spoil varied from 4.76 to 32.04 t ha<sup>-1</sup> yr<sup>-1</sup> in native and 3.72-18.24 t ha<sup>-1</sup> yr<sup>-1</sup> exotic species (<a href="#tbl-e">Table&nbsp;5</a>). The differences in net production of all plant values components were significantly varied due to species, as indicated by ANOVA (<a href="#tbl-b">Table&nbsp;2</a>). The aboveground net production of present planted species ranged from 3.75-24.28 t ha<sup>-1</sup> yr<sup>-1</sup> in native plantations, maximum in <em>D. strictus</em>, and minimum in <em>T. grandis</em> where 2.55-12.55 t ha<sup>-1</sup> yr<sup>-1</sup> in exotic plantations, being maximum in <em>A. auriculiformis</em> and minimum in <em>C. siamea</em> plantation. Similar to biomass, relative contributions of short-lived (foliage and fine root &lt;5 mm) were lower long-lived tree components (stem) to the tree layer biomass and NPP for both types of plantations calculated at 5-yr age. The foliage contribution and fine root (&lt;5 mm diameter) to the biomass were much smaller than that of NPP in all four native species, while it was the opposite of exotic species. For example, foliage component contributed in exotic plantations were in the range of 8.5-22.1%, being maximum by <em>G. pteridifolia</em> and minimum by <em>C. siamea</em>. Fine roots were in the range of 1.8-9.8%, being maximum by <em>A. auriculiformis</em> and minimum by <em>C. equisetifolia</em>.</p>
+<p>The net primary productivity of different components of plant species is given in <a href="#tbl-e" class="quarto-xref">Table&nbsp;5</a>. Total net production (above + below ground) among these plantations on mine spoil varied from 4.76 to 32.04 t ha<sup>-1</sup> yr<sup>-1</sup> in native and 3.72-18.24 t ha<sup>-1</sup> yr<sup>-1</sup> exotic species (<a href="#tbl-e" class="quarto-xref">Table&nbsp;5</a>). The differences in net production of all plant values components were significantly varied due to species, as indicated by ANOVA (<a href="#tbl-b" class="quarto-xref">Table&nbsp;2</a>). The aboveground net production of present planted species ranged from 3.75-24.28 t ha<sup>-1</sup> yr<sup>-1</sup> in native plantations, maximum in <em>D. strictus</em>, and minimum in <em>T. grandis</em> where 2.55-12.55 t ha<sup>-1</sup> yr<sup>-1</sup> in exotic plantations, being maximum in <em>A. auriculiformis</em> and minimum in <em>C. siamea</em> plantation. Similar to biomass, relative contributions of short-lived (foliage and fine root &lt;5 mm) were lower long-lived tree components (stem) to the tree layer biomass and NPP for both types of plantations calculated at 5-yr age. The foliage contribution and fine root (&lt;5 mm diameter) to the biomass were much smaller than that of NPP in all four native species, while it was the opposite of exotic species. For example, foliage component contributed in exotic plantations were in the range of 8.5-22.1%, being maximum by <em>G. pteridifolia</em> and minimum by <em>C. siamea</em>. Fine roots were in the range of 1.8-9.8%, being maximum by <em>A. auriculiformis</em> and minimum by <em>C. equisetifolia</em>.</p>
 <div class="cell" data-layout-align="center">
+<div id="tbl-e" class="cell quarto-float anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Net primary production (t ha<sup>-1</sup> yr<sup>-1</sup>) under 5-yr old planted exotic and native woody species on coal mine spoil.
+</figcaption>
+<div aria-describedby="tbl-e-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tbl-e" class="anchored">
-
 <div id="zgjisdnqkg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -2942,8 +3012,7 @@ woody species on coal mine spoil</p> </caption>
   text-indent: 25px;
 }
 </style>
-<table class="gt_table"><caption>Table&nbsp;5:  <p>Net primary production (t ha<sup>-1</sup> yr<sup>-1</sup>) under 5-yr
-old planted exotic and native woody species on coal mine spoil.</p> </caption>
+<table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -3081,24 +3150,34 @@ old planted exotic and native woody species on coal mine spoil.</p> </caption>
 </div>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-npp" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-npp-1.svg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Net primary productivity (NPP) partitioning among different plant parts (a, b), aboveground and below ground (c, d), and short-lived and long-lived components (e, f) for exotic vs.&nbsp;native and legume vs.&nbsp;non-legume species plantation, respectively.</figcaption>
+<div id="fig-npp" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-npp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-npp-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-npp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Net primary productivity (NPP) partitioning among different plant parts (a, b), aboveground and below ground (c, d), and short-lived and long-lived components (e, f) for exotic vs.&nbsp;native and legume vs.&nbsp;non-legume species plantation, respectively.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Similarly, in native species, foliage contributed 12.7-32.1% being maximum by <em>T. grandis</em> and minimum by <em>A. lebbeck</em>, whereas fine root was in the range of 1.6-5.1%, respectively. Interestingly, the foliage and total net primary production of exotic species were significantly higher in native species than the exotic species (<a href="#fig-a">Figure&nbsp;1</a>). However, stem and roots’ net primary production did not significantly differ among the exotic and native species (<a href="#fig-a">Figure&nbsp;1</a>). A significant positive correlation was observed for total and stem net primary production with the foliage biomass (<a href="#fig-d">Figure&nbsp;5</a>).</p>
+<p>Similarly, in native species, foliage contributed 12.7-32.1% being maximum by <em>T. grandis</em> and minimum by <em>A. lebbeck</em>, whereas fine root was in the range of 1.6-5.1%, respectively. Interestingly, the foliage and total net primary production of exotic species were significantly higher in native species than the exotic species (<a href="#fig-a" class="quarto-xref">Figure&nbsp;1</a>). However, stem and roots’ net primary production did not significantly differ among the exotic and native species (<a href="#fig-a" class="quarto-xref">Figure&nbsp;1</a>). A significant positive correlation was observed for total and stem net primary production with the foliage biomass (<a href="#fig-d" class="quarto-xref">Figure&nbsp;5</a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-d" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-d-1.svg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: Relationships between net primary production and foliage biomass for 5-yr-old plantations of all exotic and all native woody species on coal mine spoil. The linear regression equation (<em>y</em> = <em>a</em> + <em>bx</em>), Pearson’s correlation coefficient (<em>r</em>), and corresponding probability values (<em>p</em>) are shown in the top-left corner of each subplot.</figcaption>
+<div id="fig-d" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-d-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Relationships between net primary production and foliage biomass for 5-yr-old plantations of all exotic and all native woody species on coal mine spoil. The linear regression equation (<em>y</em> = <em>a</em> + <em>bx</em>), Pearson’s correlation coefficient (<em>r</em>), and corresponding probability values (<em>p</em>) are shown in the top-left corner of each subplot.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -3147,7 +3226,7 @@ old planted exotic and native woody species on coal mine spoil.</p> </caption>
 
 
 
-</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Adibee2013" class="csl-entry" role="listitem">
 Adibee, N., M. Osanloo, and M. Rahmanpour. 2013. <span>“Adverse Effects of Coal Mine Waste Dumps on the Environment and Their Management.”</span> <em>Environmental Earth Sciences</em> 70 (4): 1581–92. <a href="https://doi.org/10.1007/s12665-013-2243-0">https://doi.org/10.1007/s12665-013-2243-0</a>.
 </div>
@@ -3295,7 +3374,7 @@ Sun, Jun, Mantang Wang, Min Lyu, Karl J. Niklas, Quanlin Zhong, Man Li, and Dong
 <div id="ref-Yan2020" class="csl-entry" role="listitem">
 Yan, Meifang, Feifei Cui, Yang Liu, Zeyu Zhang, Jianbiao Zhang, Hongrui Ren, and Zhiping Li. 2020. <span>“Vegetation Type and Plant Diversity Affected Soil Carbon Accumulation in a Postmining Area in Shanxi Province, China.”</span> <em>Land Degradation <span>&amp;</span> Development</em> 31 (2): 181–89. <a href="https://doi.org/10.1002/ldr.3438">https://doi.org/10.1002/ldr.3438</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{narain singh2021,
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{narain singh2021,
   author = {Narain Singh, Anand and Kumar, Abhishek},
   title = {Ecological Performances of Exotic and Native Woody Species on
     Coal Mine Spoil in {Indian} Dry Tropical Region},
@@ -3392,10 +3471,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -3405,8 +3501,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -3418,7 +3523,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -3462,6 +3690,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -3487,6 +3716,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -3547,6 +3802,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
